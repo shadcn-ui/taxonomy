@@ -1,15 +1,15 @@
-<p align="center">
-  <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 3a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3H6a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3V6a3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3h12a3 3 0 0 0 3-3 3 3 0 0 0-3-3z"></path></svg>
-  <br/>
-  <h1 align="center">Taxonomy</h1>
-	<p align="center">An open source application built using the new router, server components and everything new in Next.js 13.</p>
-</p>
+# Taxonomy
 
-> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com).
+An open source application built using the new router, server components and everything new in Next.js 13.
+
+> **Warning**
+> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com). 
+> See the roadmap below.
 
 ## Demo
 
-See https://www.youtube.com/watch?v=G5vCj8wWkuc
+![screenshot-2](https://user-images.githubusercontent.com/124599/198038921-2b16b18b-cb4d-44b1-bd1d-6419d4a8d92c.png)
+
 
 ## Features
 
@@ -28,22 +28,23 @@ See https://www.youtube.com/watch?v=G5vCj8wWkuc
 
 ## Roadmap
 
+> **Warning**
 > This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com).
 
-- Responsive styles.
-- Subscriptions using Stripe.
-- Add Media Library.
-- Add Pages.
-- Build the front-end for blogs.
-- Add support for custom domains for blogs.
-- Build marketing pages (use a headless CMS?)
-- Add MDX support for basic pages.
-- Add OG image for blog using @vercel/og.
-- Dark mode.
+- [ ] Responsive styles.
+- [ ] Subscriptions using Stripe.
+- [ ] Add Media Library.
+- [ ] Add Pages.
+- [ ] Build the front-end for blogs.
+- [ ] Add support for custom domains for blogs.
+- [ ] Build marketing pages (use a headless CMS?)
+- [ ] Add MDX support for basic pages.
+- [ ] Add OG image for blog using @vercel/og.
+- [ ] Dark mode.
 
-## Issues
+## Known Issues
 
-A list of things not working for now:
+A list of things not working right now:
 
 1. GitHub authentication (use email)
 2. NextAuth.js middleware (getSession not updated to work with Next.js 13)
