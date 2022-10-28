@@ -1,7 +1,7 @@
 import { Session } from "next-auth"
 
 export async function getSession(cookie: string): Promise<Session> {
-  const response = await fetch("http://localhost:3000/api/auth/session", {
+  const response = await fetch(`${process.env.NEXTAUTH_URL}/api/auth/session`, {
     headers: { cookie },
   })
 
