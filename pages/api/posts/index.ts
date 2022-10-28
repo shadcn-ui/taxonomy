@@ -5,7 +5,6 @@ import * as z from "zod"
 import { db } from "@/lib/db"
 import { withMethods } from "@/lib/api-middlewares/with-methods"
 import { withAuthentication } from "@/lib/api-middlewares/with-authentication"
-import { withPost } from "@/lib/api-middlewares/with-post"
 
 const postCreateSchema = z.object({
   title: z.string().optional(),
