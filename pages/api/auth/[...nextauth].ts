@@ -63,9 +63,8 @@ export const authOptions: NextAuthOptions = {
           ],
         })
 
-        if (result.ErrorCode) {
-          throw new Error(result.Message)
-        }
+        if (result.ErrorCode) throw new Error(result.Message)
+
       },
     }),
   ],
