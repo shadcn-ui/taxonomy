@@ -1,5 +1,5 @@
 import { headers } from "next/headers"
-// import { notFound } from "next/dist/client/components/not-found"
+import { notFound } from "next/navigation"
 
 import { getSession } from "@/lib/session"
 import { DashboardHeader } from "@/components/dashboard-header"
@@ -19,12 +19,9 @@ async function getUser() {
 export default async function SettingsPage() {
   const user = await getUser()
 
-  // TODO: If I return notFound here, I get a linting error.
-  // Type error: Page "app/(dashboard)/dashboard/settings/page.tsx" does not match the required types of a Next.js Page.
-  // Expected "ReactNode", got "void | Element".
-  // if (!user) {
-  // return notFound()
-  // }
+  if (!user) {
+    notFound()
+  }
 
   return (
     <DashboardShell>
