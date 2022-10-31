@@ -13,7 +13,6 @@
     "lint": "next lint",
     "preview": "next build && next start"
   },
-  "packageManager": "yarn@1.22.19",
   "dependencies": {
     "@editorjs/code": "^2.7.0",
     "@editorjs/editorjs": "^2.25.0",
@@ -33,9 +32,13 @@
     "@radix-ui/react-popover": "1.0.0",
     "@radix-ui/react-toggle": "^1.0.0",
     "clsx": "^1.2.1",
+    "fast-glob": "^3.2.12",
+    "hasha": "^5.2.2",
     "lucide-react": "^0.92.0",
     "next": "^13.0.0",
     "next-auth": "^4.15.0",
+    "next-mdx-remote": "^4.1.0",
+    "node-cache": "^5.1.2",
     "nodemailer": "^6.8.0",
     "postmark": "^3.0.14",
     "prop-types": "^15.8.1",

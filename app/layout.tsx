@@ -8,7 +8,8 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html>
+    <html lang="en">
+      <head />
       <body className="min-h-screen">
         {children}
         <Toaster position="bottom-right" />

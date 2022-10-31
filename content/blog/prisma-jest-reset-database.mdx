@@ -1,0 +1,40 @@
+---
+title: Reset Prisma database before running tests with Jest
+date: "2023-01-02"
+---
+
+Add a custom setup file to your `jest.config.ts`:
+
+```ts title="jest.config.ts"
+import type { Config } from "@jest/types"
+
+const config: Config.InitialOptions = {
+  // ...
+  setupFilesAfterEnv: ["./src/tests/setup.ts"], // highlight-line
+  // ...
+}
+
+export default config
+```
+
+Then in `setup.ts`
+
+```ts title="setup.ts"
+import { Prisma } from ".prisma/client"
+
+export async function resetDatabase() {
+  const tables = Prisma.dmmf.datamodel.models.map((model) => model.dbName)
+
+  for (const table of tables) {
+    await prisma.$executeRawUnsafe(`TRUNCATE TABLE ${table} CASCADE`)
+  }
+}
+
+beforeEach(async () => {
+  await resetDatabase()
+})
+
+afterAll(async () => {
+  prisma.$disconnect()
+})
+```

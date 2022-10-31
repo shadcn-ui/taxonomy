@@ -1,0 +1,83 @@
+---
+title: Single-page Pagination in Next.js
+excerpt: Implement pagination with route parameters and rewrites.
+date: "2023-04-09"
+---
+
+Let's say:
+
+1. We have an API (local or from a headless CMS) returning **150 posts**.
+2. We want to display **10 posts per page**.
+
+We want to implement paginated static routes as follows: `/blog/1`, `blog/2` up to `blog/15`.
+
+You can do this in a single page using [route parameters](https://nextjs.org/docs/routing/dynamic-routes) and [rewrites](https://nextjs.org/docs/api-reference/next.config.js/rewrites):
+
+```tsx title="pages/blog/[page].tsx"
+interface BlogPageProps {
+  posts: Post[]
+}
+
+export default function BlogPage({ posts }: BlogPageProps) {
+  // Loop and render posts.
+}
+
+export async function getStaticPaths(context): Promise<GetStaticPathsResult> {
+  // Get total number of posts from API.
+  const totalPages = await getTotalPagesFromAPI()
+  const numberOfPages = Math.ceil(totalPages / 10)
+
+  // Build paths `blog/0`, `blog/1` ...etc.
+  const paths = Array(numberOfPages)
+    .fill(0)
+    .map((_, page) => ({
+      params: {
+        page: `${page + 1}`,
+      },
+    }))
+
+  return {
+    paths,
+    fallback: "false",
+  }
+}
+
+export async function getStaticProps(
+  context
+): Promise<GetStaticPropsResult<BlogPageProps>> {
+  // Call your API and get the posts for the current page.
+  const posts = await getPostsFromAPI({
+    limit: 10,
+    offset: context.params.page ? 10 * context.params.page : 0,
+  })
+
+  if (!posts.length) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      posts,
+    },
+  }
+}
+```
+
+If we visit `/blog/0` we should see the first 10 posts, `/blog/1` the next 10 posts and so on.
+
+We can use a rewrite to map `/blog` to `/blog/0`.
+
+```js title="next.config.js"
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: "/blog",
+        destination: "/blog/0",
+      },
+    ]
+  },
+}
+```
