@@ -10,6 +10,14 @@ An open source application built using the new router, server components and eve
 
 ![screenshot-2](https://user-images.githubusercontent.com/124599/198038921-2b16b18b-cb4d-44b1-bd1d-6419d4a8d92c.png)
 
+## About this project
+
+Right now, I'm using this project as an experiment to see how a modern app (with features like authentication, subscriptions, API routes, static pages for docs ...etc) would work in Next.js 13 and server components.
+
+I'll be posting updates and issues here.
+
+A few people have asked me to turn this into a starter. I think we could do that once the new features are out of beta.
+
 
 ## Features
 
