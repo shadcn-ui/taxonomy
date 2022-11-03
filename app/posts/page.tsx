@@ -1,7 +1,10 @@
 import { db } from "@/lib/db"
+import { headers } from "next/headers"
 
 export default async function PostsPage() {
   const posts = await db.post.findMany()
+
+  headers()
 
   return (
     <div>
