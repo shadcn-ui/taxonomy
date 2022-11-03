@@ -35,7 +35,7 @@
     "fast-glob": "^3.2.12",
     "hasha": "^5.2.2",
     "lucide-react": "^0.92.0",
-    "next": "^13.0.0",
+    "next": "^13.0.1",
     "next-auth": "^4.15.0",
     "next-mdx-remote": "^4.1.0",
     "node-cache": "^5.1.2",

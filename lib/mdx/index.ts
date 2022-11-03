@@ -26,7 +26,7 @@ interface MdxFile {
   url: string
 }
 
-export interface MdxFileData<TFrontmatter> {
+interface MdxFileData<TFrontmatter> {
   raw: string
   hash: string
   frontMatter: TFrontmatter

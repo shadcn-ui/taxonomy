@@ -12,3 +12,11 @@ export const Blog = createSource({
     excerpt: z.string().optional(),
   }),
 })
+
+export const Page = createSource({
+  contentPath: "content/pages",
+  basePath: "/",
+  frontMatter: z.object({
+    title: z.string(),
+  }),
+})
