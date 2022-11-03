@@ -1,3 +1,5 @@
+import { notFound } from "next/navigation"
+
 import { Blog } from "@/lib/mdx/sources"
 import { MdxContent } from "@/components/mdx-content"
 import { formatDate } from "@/lib/utils"
@@ -20,6 +22,10 @@ export async function generateStaticParams() {
 
 export default async function PostPage({ params }) {
   const post = await Blog.getMdxNode(params?.slug?.join("/"))
+
+  if (!post) {
+    notFound()
+  }
 
   return (
     <article className="mx-auto max-w-2xl py-12">
