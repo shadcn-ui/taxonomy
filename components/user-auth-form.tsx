@@ -26,30 +26,29 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
   async function onSubmit(data: FormData) {
-    return toast({
-      message:
-        "I've temporarily disabled authentication until I figure out a deployment issue.",
-      type: "error",
+    setIsLoading(true)
+
+    const signInResult = await signIn("email", {
+      email: data.email.toLowerCase(),
+      redirect: false,
+      callbackUrl: `${window.location.origin}/dashboard`,
     })
-    // setIsLoading(true)
-    // const signInResult = await signIn("email", {
-    //   email: data.email.toLowerCase(),
-    //   redirect: false,
-    //   callbackUrl: `${window.location.origin}/dashboard`,
-    // })
-    // setIsLoading(false)
-    // if (!signInResult?.ok) {
-    //   return toast({
-    //     title: "Something went wrong.",
-    //     message: "Your post was not saved. Please try again.",
-    //     type: "error",
-    //   })
-    // }
-    // return toast({
-    //   title: "Check your email",
-    //   message: "We sent you a login link. Be sure to check your spam too.",
-    //   type: "success",
-    // })
+
+    setIsLoading(false)
+
+    if (!signInResult?.ok) {
+      return toast({
+        title: "Something went wrong.",
+        message: "Your post was not saved. Please try again.",
+        type: "error",
+      })
+    }
+
+    return toast({
+      title: "Check your email",
+      message: "We sent you a login link. Be sure to check your spam too.",
+      type: "success",
+    })
   }
 
   return (
@@ -97,7 +96,6 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       <button
         type="button"
         className="inline-flex w-full items-center justify-center rounded-lg border bg-white px-5 py-2.5 text-center text-sm font-medium text-black hover:bg-slate-100 focus:outline-none focus:ring-4 focus:ring-[#24292F]/50 dark:hover:bg-[#050708]/30 dark:focus:ring-slate-500"
-        disabled={true}
         onClick={() => signIn("github")}
       >
         <svg
