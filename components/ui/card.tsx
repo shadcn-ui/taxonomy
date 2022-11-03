@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils"
+import { Skeleton } from "@/components/ui/skeleton"
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -54,12 +55,12 @@ Card.Skeleton = function CardSeleton() {
   return (
     <Card>
       <Card.Header className="gap-2">
-        <div className="h-5 w-1/5 animate-pulse rounded-lg bg-slate-100"></div>
-        <div className="h-4 w-4/5 animate-pulse rounded-lg bg-slate-100"></div>
+        <Skeleton className="h-5 w-1/5" />
+        <Skeleton className="h-4 w-4/5" />
       </Card.Header>
       <Card.Content className="h-10" />
       <Card.Footer>
-        <div className="h-8 w-[120px] animate-pulse rounded-lg bg-slate-200"></div>
+        <Skeleton className="h-8 w-[120px] bg-slate-200" />
       </Card.Footer>
     </Card>
   )

@@ -1,8 +1,9 @@
-import { formatDate } from "@/lib/utils"
 import { Post } from "@prisma/client"
 import Link from "next/link"
 
+import { formatDate } from "@/lib/utils"
 import { PostOperations } from "@/components/post-operations"
+import { Skeleton } from "@/components/ui/skeleton"
 
 interface PostItemProps {
   post: Pick<Post, "id" | "title" | "published" | "createdAt">
@@ -34,8 +35,8 @@ PostItem.Skeleton = function PostItemSkeleton() {
   return (
     <div className="p-4">
       <div className="space-y-3">
-        <div className="h-5 w-2/5 animate-pulse rounded-lg bg-slate-100"></div>
-        <div className="h-4 w-4/5 animate-pulse rounded-lg bg-slate-100"></div>
+        <Skeleton className="h-5 w-2/5" />
+        <Skeleton className="h-4 w-4/5" />
       </div>
     </div>
   )
