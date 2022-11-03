@@ -1,18 +1,19 @@
 import { notFound } from "next/navigation"
+import { serialize } from "next-mdx-remote/serialize"
 
 import { Blog } from "@/lib/mdx/sources"
 import { MdxContent } from "@/components/mdx-content"
 import { formatDate } from "@/lib/utils"
 
-// TODO: Properly type this file once the following fix lands.
-// @see https://github.com/vercel/next.js/pull/42019
 interface PostPageProps {
   params: {
     slug: string[]
   }
 }
 
-export async function generateStaticParams() {
+export async function generateStaticParams(): Promise<
+  PostPageProps["params"][]
+> {
   const files = await Blog.getMdxFiles()
 
   return files?.map((file) => ({
@@ -20,8 +21,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export default async function PostPage({ params }) {
-  const post = await Blog.getMdxNode(params?.slug?.join("/"))
+export default async function PostPage({ params }: PostPageProps) {
+  const post = await Blog.getMdxNode(params?.slug)
+  const mdx = await serialize(post.content)
 
   if (!post) {
     notFound()
@@ -40,9 +42,11 @@ export default async function PostPage({ params }) {
         )}
       </div>
       <hr className="my-6" />
-      <div className="prose max-w-none">
-        <MdxContent source={post.mdx} />
-      </div>
+      {mdx && (
+        <div className="prose max-w-none">
+          <MdxContent source={mdx} />
+        </div>
+      )}
     </article>
   )
 }

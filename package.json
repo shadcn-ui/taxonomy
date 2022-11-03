@@ -51,6 +51,8 @@
     "sharp": "^0.31.1",
     "tailwind-merge": "^1.6.2",
     "tailwindcss-animate": "^1.0.5",
+    "vfile": "^5.3.5",
+    "vfile-matter": "^4.0.0",
     "zod": "^3.19.1"
   },
   "devDependencies": {

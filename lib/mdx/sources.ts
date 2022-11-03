@@ -18,5 +18,6 @@ export const Page = createSource({
   basePath: "/",
   frontMatter: z.object({
     title: z.string(),
+    excerpt: z.string().optional(),
   }),
 })

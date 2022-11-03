@@ -3,11 +3,8 @@ import hasha from "hasha"
 import glob from "fast-glob"
 import path from "path"
 import NodeCache from "node-cache"
-import { serialize } from "next-mdx-remote/serialize"
-import {
-  SerializeOptions,
-  MDXRemoteSerializeResult,
-} from "next-mdx-remote/dist/types"
+import { VFile } from "vfile"
+import { matter } from "vfile-matter"
 import * as z from "zod"
 
 const mdxCache = new NodeCache()
@@ -30,7 +27,7 @@ interface MdxFileData<TFrontmatter> {
   raw: string
   hash: string
   frontMatter: TFrontmatter
-  mdx: MDXRemoteSerializeResult
+  content: string
 }
 
 export function createSource<T extends z.ZodType>(source: Source<T>) {
@@ -57,10 +54,7 @@ export function createSource<T extends z.ZodType>(source: Source<T>) {
     })
   }
 
-  async function getFileData(
-    file: MdxFile,
-    mdxOptions?: SerializeOptions
-  ): Promise<MdxFileData<z.infer<T>>> {
+  async function getFileData(file: MdxFile): Promise<MdxFileData<z.infer<T>>> {
     const raw = await fs.readFile(file.filepath, "utf-8")
     const hash = hasha(raw.toString())
 
@@ -69,19 +63,23 @@ export function createSource<T extends z.ZodType>(source: Source<T>) {
       return cachedContent
     }
 
-    const mdx = await serialize(raw, {
-      parseFrontmatter: true,
-      ...mdxOptions,
-    })
-    const frontMatter = mdx.frontmatter
-      ? (source.frontMatter.parse(mdx.frontmatter) as z.infer<T>)
-      : null
+    // serialize.parseFrontmatter not working in head.tsx.
+    // Error: Unsupported Server Component type: Module.
+    // For now, we parse the frontMatter separately.
+    // This is convenient since we sometimes want the frontMatter
+    // without serializing the mdx.
+    const vfile = new VFile({ value: raw })
+    matter(vfile, { strip: true })
+
+    const frontMatter = source.frontMatter.parse(
+      vfile.data.matter
+    ) as z.infer<T>
 
     const fileData = {
       raw,
       frontMatter,
       hash,
-      mdx,
+      content: String(vfile.value),
     }
 
     mdxCache.set(hash, fileData)
@@ -89,10 +87,7 @@ export function createSource<T extends z.ZodType>(source: Source<T>) {
     return fileData
   }
 
-  async function getMdxNode(
-    slug: string | string[],
-    mdxOptions?: SerializeOptions
-  ) {
+  async function getMdxNode(slug: string | string[]) {
     const _slug = Array.isArray(slug) ? slug.join("/") : slug
 
     const files = await getMdxFiles()
@@ -103,7 +98,7 @@ export function createSource<T extends z.ZodType>(source: Source<T>) {
 
     if (!file) return null
 
-    const data = await getFileData(file, mdxOptions)
+    const data = await getFileData(file)
 
     return {
       ...file,

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 
 import { Page } from "@/lib/mdx/sources"
 import { MdxContent } from "@/components/mdx-content"
+import { serialize } from "next-mdx-remote/serialize"
 
 interface PageProps {
   params: {
@@ -19,6 +20,7 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
 
 export default async function BasicPage({ params }: PageProps) {
   const page = await Page.getMdxNode(params.slug)
+  const mdx = await serialize(page.content)
 
   if (!page) {
     notFound()
@@ -32,9 +34,11 @@ export default async function BasicPage({ params }: PageProps) {
         </h1>
       </div>
       <hr className="my-6" />
-      <div className="prose max-w-none">
-        <MdxContent source={page.mdx} />
-      </div>
+      {mdx && (
+        <div className="prose max-w-none">
+          <MdxContent source={mdx} />
+        </div>
+      )}
     </article>
   )
 }
