@@ -1,4 +1,5 @@
 import { headers } from "next/headers"
+import { User } from "@prisma/client"
 
 import { db } from "@/lib/db"
 import { getSession } from "@/lib/session"
@@ -8,14 +9,10 @@ import { DashboardShell } from "@/components/dashboard-shell"
 import { PostItem } from "@/components/post-item"
 import { EmptyPlaceholder } from "@/components/empty-placeholder"
 
-export const dynamic = "force-dynamic"
-
-async function getPosts() {
-  const session = await getSession(headers().get("cookie"))
-
+async function getPostsForUser(userId: User["id"]) {
   return await db.post.findMany({
     where: {
-      authorId: session?.user.id,
+      authorId: userId,
     },
     select: {
       id: true,
@@ -30,7 +27,8 @@ async function getPosts() {
 }
 
 export default async function DashboardPage() {
-  const posts = await getPosts()
+  const session = await getSession(headers().get("cookie"))
+  const posts = await getPostsForUser(session?.user.id)
 
   return (
     <DashboardShell>

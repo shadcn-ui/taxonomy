@@ -42,7 +42,7 @@ export function DashboardNav() {
   const path = usePathname()
 
   return (
-    <nav className="grid items-start gap-1">
+    <nav className="grid items-start gap-2">
       {navigationItems.map((navigationItem, index) => (
         <Link
           key={index}
@@ -50,7 +50,7 @@ export function DashboardNav() {
         >
           <span
             className={clsx(
-              "group flex items-center rounded-md px-3 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100",
+              "group flex items-center rounded-md px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-100",
               path === navigationItem.href ? "bg-slate-200" : "transparent",
               navigationItem.disabled && "cursor-not-allowed opacity-50"
             )}

@@ -1,12 +1,16 @@
 import { notFound } from "next/navigation"
+import { headers } from "next/headers"
+import { Post, User } from "@prisma/client"
 
 import { Editor } from "@/components/editor"
 import { db } from "@/lib/db"
+import { getSession } from "@/lib/session"
 
-async function getPost(postId: string) {
+async function getPostForUser(postId: Post["id"], userId: User["id"]) {
   return await db.post.findFirst({
     where: {
       id: postId,
+      authorId: userId,
     },
   })
 }
@@ -16,7 +20,8 @@ interface EditorPageProps {
 }
 
 export default async function EditorPage({ params }: EditorPageProps) {
-  const post = await getPost(params.postId)
+  const session = await getSession(headers().get("cookie"))
+  const post = await getPostForUser(params.postId, session?.user.id)
 
   if (!post) {
     notFound()

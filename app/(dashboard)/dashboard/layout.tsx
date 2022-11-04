@@ -1,10 +1,11 @@
 import { headers } from "next/headers"
+import { notFound } from "next/navigation"
+import Link from "next/link"
 
 import { getSession } from "@/lib/session"
-import { DashboardBranding } from "@/components/dashboard-branding"
 import { DashboardNav } from "@/components/dashboard-nav"
 import { UserAccountNav } from "@/components/user-account-nav"
-import { notFound } from "next/navigation"
+import { Icons } from "@/components/icons"
 
 interface DashboardLayoutProps {
   children?: React.ReactNode
@@ -30,25 +31,28 @@ export default async function DashboardLayout({
   }
 
   return (
-    <>
-      <div className="flex h-screen overflow-hidden">
-        <aside className="hidden w-14 flex-col border-r border-slate-100 bg-slate-50 py-4 md:flex lg:w-56 lg:flex-shrink-0 lg:px-4">
-          <div className="flex flex-1 flex-col space-y-4">
-            <DashboardBranding />
-            <DashboardNav />
-          </div>
-          <UserAccountNav
-            user={{
-              name: user.name,
-              image: user.image,
-              email: user.email,
-            }}
-          />
+    <div className="mx-auto flex h-screen max-w-[1440px] flex-col space-y-6 overflow-hidden px-6">
+      <header className="flex h-[64px] items-center justify-between pl-2">
+        <Link href="/" className="flex items-center space-x-2">
+          <Icons.logo />
+          <span className="text-lg font-bold">Taxonomy</span>
+        </Link>
+        <UserAccountNav
+          user={{
+            name: user.name,
+            image: user.image,
+            email: user.email,
+          }}
+        />
+      </header>
+      <div className="grid grid-cols-[200px_1fr] gap-12">
+        <aside className="flex w-[200px] flex-col">
+          <DashboardNav />
         </aside>
-        <main className="flex w-0 flex-1 flex-col overflow-hidden px-12 py-10">
+        <main className="flex w-full flex-1 flex-col overflow-hidden">
           {children}
         </main>
       </div>
-    </>
+    </div>
   )
 }

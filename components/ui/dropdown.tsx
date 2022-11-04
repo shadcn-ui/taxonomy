@@ -29,7 +29,7 @@ DropdownMenu.Content = React.forwardRef<
       ref={ref}
       align="end"
       className={cn(
-        "overflow-hidden rounded-md  bg-white shadow-md animate-in slide-in-from-top-1 md:w-32",
+        "overflow-hidden rounded-md border border-slate-50 bg-white shadow-md animate-in slide-in-from-top-1 md:w-32",
         className
       )}
       {...props}
