@@ -8,7 +8,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-white text-slate-900 antialiased">
       <head />
       <body className="min-h-screen">
         {children}
