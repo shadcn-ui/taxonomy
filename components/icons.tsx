@@ -5,9 +5,11 @@ import {
   Command,
   File,
   FileText,
+  HelpCircle,
   Image,
   Loader2,
   MoreVertical,
+  Pizza,
   Plus,
   Settings,
   Trash,
@@ -31,4 +33,6 @@ export const Icons = {
   warning: AlertTriangle,
   user: User,
   arrowRight: ArrowRight,
+  help: HelpCircle,
+  pizza: Pizza,
 }
