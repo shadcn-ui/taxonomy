@@ -11,7 +11,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "preview": "next build && next start"
+    "preview": "next build && next start",
+    "vercel-build": "prisma generate && next build"
   },
   "dependencies": {
     "@editorjs/code": "^2.7.0",
