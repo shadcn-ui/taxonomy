@@ -1,5 +1,5 @@
 import { headers } from "next/headers"
-import { User } from "@prisma/client"
+import { User } from "@/lib/prisma"
 
 import { db } from "@/lib/db"
 import { getSession } from "@/lib/session"

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation"
 import { headers } from "next/headers"
-import { Post, User } from "@prisma/client"
+import { Post, User } from "@/lib/prisma"
 
 import { Editor } from "@/components/editor"
 import { db } from "@/lib/db"

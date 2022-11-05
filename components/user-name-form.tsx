@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { User } from "@prisma/client"
+import { User } from "@/lib/prisma"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"

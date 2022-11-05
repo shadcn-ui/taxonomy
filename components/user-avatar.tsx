@@ -1,4 +1,4 @@
-import { User } from "@prisma/client"
+import { User } from "@/lib/prisma"
 import { AvatarProps } from "@radix-ui/react-avatar"
 
 import { Icons } from "@/components/icons"

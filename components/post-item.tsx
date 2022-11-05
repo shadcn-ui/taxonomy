@@ -1,4 +1,4 @@
-import { Post } from "@prisma/client"
+import { Post } from "@/lib/prisma"
 import Link from "next/link"
 
 import { formatDate } from "@/lib/utils"
