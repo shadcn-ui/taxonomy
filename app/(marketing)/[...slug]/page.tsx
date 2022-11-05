@@ -20,11 +20,12 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
 
 export default async function BasicPage({ params }: PageProps) {
   const page = await Page.getMdxNode(params.slug)
-  const mdx = await serialize(page.content)
 
   if (!page) {
     notFound()
   }
+
+  const mdx = await serialize(page.content)
 
   return (
     <article className="mx-auto max-w-2xl py-12">

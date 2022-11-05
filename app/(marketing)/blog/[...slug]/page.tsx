@@ -23,11 +23,12 @@ export async function generateStaticParams(): Promise<
 
 export default async function PostPage({ params }: PostPageProps) {
   const post = await Blog.getMdxNode(params?.slug)
-  const mdx = await serialize(post.content)
 
   if (!post) {
     notFound()
   }
+
+  const mdx = await serialize(post.content)
 
   return (
     <article className="mx-auto max-w-2xl py-12">
