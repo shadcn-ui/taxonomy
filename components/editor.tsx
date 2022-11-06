@@ -8,6 +8,7 @@ import Link from "next/link"
 import TextareaAutosize from "react-textarea-autosize"
 import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
+import { useRouter } from "next/navigation"
 
 import { Icons } from "@/components/icons"
 import { postPatchSchema } from "@/lib/validations/post"
@@ -24,6 +25,7 @@ export function Editor({ post }: EditorProps) {
     resolver: zodResolver(postPatchSchema),
   })
   const ref = React.useRef<EditorJS>()
+  const router = useRouter()
   const [isSaving, setIsSaving] = React.useState<boolean>(false)
   const [isMounted, setIsMounted] = React.useState<boolean>(false)
 
@@ -100,6 +102,8 @@ export function Editor({ post }: EditorProps) {
         type: "error",
       })
     }
+
+    router.refresh()
 
     return toast({
       message: "Your post has been saved.",
