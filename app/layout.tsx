@@ -1,6 +1,6 @@
 import "styles/globals.css"
 
-import { Toaster } from "@/components/ui/toast"
+import { Toaster } from "@/ui/toast"
 import { Help } from "@/components/help"
 import { Analytics } from "@/components/analytics"
 

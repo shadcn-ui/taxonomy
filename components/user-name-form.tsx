@@ -9,9 +9,9 @@ import { useRouter } from "next/navigation"
 
 import { cn } from "@/lib/utils"
 import { userNameSchema } from "@/lib/validations/user"
-import { Card } from "@/components/ui/card"
+import { Card } from "@/ui/card"
 import { Icons } from "@/components/icons"
-import toast from "@/components/ui/toast"
+import toast from "@/ui/toast"
 
 interface UserNameFormProps extends React.HTMLAttributes<HTMLFormElement> {
   user: Pick<User, "id" | "name">

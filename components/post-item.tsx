@@ -3,7 +3,7 @@ import Link from "next/link"
 
 import { formatDate } from "@/lib/utils"
 import { PostOperations } from "@/components/post-operations"
-import { Skeleton } from "@/components/ui/skeleton"
+import { Skeleton } from "@/ui/skeleton"
 
 interface PostItemProps {
   post: Pick<Post, "id" | "title" | "published" | "createdAt">

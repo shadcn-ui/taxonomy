@@ -5,10 +5,10 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { Post } from "@/lib/prisma"
 
-import { DropdownMenu } from "@/components/ui/dropdown"
+import { DropdownMenu } from "@/ui/dropdown"
 import { Icons } from "@/components/icons"
-import { Alert } from "@/components/ui/alert"
-import toast from "@/components/ui/toast"
+import { Alert } from "@/ui/alert"
+import toast from "@/ui/toast"
 
 async function deletePost(postId: string) {
   const response = await fetch(`/api/posts/${postId}`, {

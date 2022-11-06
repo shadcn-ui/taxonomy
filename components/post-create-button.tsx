@@ -6,7 +6,7 @@ import { Post } from "@/lib/prisma"
 
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
-import toast from "@/components/ui/toast"
+import toast from "@/ui/toast"
 
 async function createPost(): Promise<Pick<Post, "id">> {
   const response = await fetch("/api/posts", {

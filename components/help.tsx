@@ -1,6 +1,6 @@
 "use client"
 
-import { Popover } from "@/components/ui/popover"
+import { Popover } from "@/ui/popover"
 import { Icons } from "@/components/icons"
 
 import OgImage from "public/og.jpg"

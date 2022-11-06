@@ -8,7 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 
 import { cn } from "@/lib/utils"
 import { userAuthSchema } from "@/lib/validations/auth"
-import toast from "@/components/ui/toast"
+import toast from "@/ui/toast"
 import { Icons } from "@/components/icons"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
