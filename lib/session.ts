@@ -1,15 +1,13 @@
-import { Session } from "next-auth"
+import { unstable_getServerSession } from "next-auth"
 
-export async function getSession(cookie: string): Promise<Session> {
-  const response = await fetch(`${process.env.NEXTAUTH_URL}/api/auth/session`, {
-    headers: { cookie },
-  })
+import { authOptions } from "@/lib/auth"
 
-  if (!response?.ok) {
-    return null
-  }
+export async function getSession() {
+  return await unstable_getServerSession(authOptions)
+}
 
-  const session = await response.json()
+export async function getCurrentUser() {
+  const session = await getSession()
 
-  return Object.keys(session).length > 0 ? session : null
+  return session?.user
 }

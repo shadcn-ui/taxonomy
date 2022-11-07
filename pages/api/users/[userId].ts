@@ -2,10 +2,9 @@ import { NextApiRequest, NextApiResponse } from "next"
 import * as z from "zod"
 import { getSession } from "next-auth/react"
 
-import { withAuthentication } from "@/lib/api-middlewares/with-authentication"
-import { withMethods } from "@/lib/api-middlewares/with-methods"
 import { db } from "@/lib/db"
-import { withUser } from "@/lib/api-middlewares/with-user"
+import { withMethods } from "@/lib/api-middlewares/with-methods"
+import { withCurrentUser } from "@/lib/api-middlewares/with-current-user"
 import { userNameSchema } from "@/lib/validations/user"
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -31,6 +30,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
       return res.end()
     } catch (error) {
+      console.log(error)
       if (error instanceof z.ZodError) {
         return res.status(422).json(error.issues)
       }
@@ -40,4 +40,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default withMethods(["PATCH"], withAuthentication(withUser(handler)))
+export default withMethods(["PATCH"], withCurrentUser(handler))

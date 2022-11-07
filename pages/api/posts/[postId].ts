@@ -1,7 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next"
 import * as z from "zod"
 
-import { withAuthentication } from "@/lib/api-middlewares/with-authentication"
 import { withMethods } from "@/lib/api-middlewares/with-methods"
 import { withPost } from "@/lib/api-middlewares/with-post"
 import { db } from "@/lib/db"
@@ -56,7 +55,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default withMethods(
-  ["DELETE", "PATCH"],
-  withAuthentication(withPost(handler))
-)
+export default withMethods(["DELETE", "PATCH"], withPost(handler))

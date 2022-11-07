@@ -1,8 +1,7 @@
-import { headers } from "next/headers"
 import { notFound } from "next/navigation"
 import Link from "next/link"
 
-import { getSession } from "@/lib/session"
+import { getCurrentUser } from "@/lib/session"
 import { DashboardNav } from "@/components/dashboard-nav"
 import { UserAccountNav } from "@/components/user-account-nav"
 import { Icons } from "@/components/icons"
@@ -11,20 +10,10 @@ interface DashboardLayoutProps {
   children?: React.ReactNode
 }
 
-async function getUser() {
-  const session = await getSession(headers().get("cookie"))
-
-  if (!session?.user) {
-    return null
-  }
-
-  return session.user
-}
-
 export default async function DashboardLayout({
   children,
 }: DashboardLayoutProps) {
-  const user = await getUser()
+  const user = await getCurrentUser()
 
   if (!user) {
     return notFound()

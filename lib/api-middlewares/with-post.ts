@@ -1,7 +1,9 @@
 import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next"
-import { getSession } from "next-auth/react"
+import { unstable_getServerSession } from "next-auth"
 import * as z from "zod"
-import { db } from "../db"
+
+import { authOptions } from "@/lib/auth"
+import { db } from "@/lib/db"
 
 export const schema = z.object({
   postId: z.string(),
@@ -13,7 +15,7 @@ export function withPost(handler: NextApiHandler) {
       const query = await schema.parse(req.query)
 
       // Check if the user has access to this post.
-      const session = await getSession({ req })
+      const session = await unstable_getServerSession(req, res, authOptions)
       const count = await db.post.count({
         where: {
           id: query.postId,

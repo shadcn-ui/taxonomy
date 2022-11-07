@@ -1,8 +1,9 @@
-import { headers } from "next/headers"
-import { User } from "@/lib/prisma"
+import { redirect } from "next/navigation"
 
 import { db } from "@/lib/db"
-import { getSession } from "@/lib/session"
+import { getCurrentUser } from "@/lib/session"
+import { User } from "@/lib/prisma"
+import { authOptions } from "@/lib/auth"
 import { DashboardHeader } from "@/components/dashboard-header"
 import { PostCreateButton } from "@/components/post-create-button"
 import { DashboardShell } from "@/components/dashboard-shell"
@@ -27,8 +28,13 @@ async function getPostsForUser(userId: User["id"]) {
 }
 
 export default async function DashboardPage() {
-  const session = await getSession(headers().get("cookie"))
-  const posts = await getPostsForUser(session?.user.id)
+  const user = await getCurrentUser()
+
+  if (!user) {
+    return redirect(authOptions.pages.signIn)
+  }
+
+  const posts = await getPostsForUser(user.id)
 
   return (
     <DashboardShell>
