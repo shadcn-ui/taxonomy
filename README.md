@@ -37,7 +37,7 @@ A few people have asked me to turn this into a starter. I think we could do that
 ## Roadmap
 
 > **Warning**
-> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com).
+> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com/shadcn).
 
 - [x] ~Add MDX support for basic pages.~
 - [ ] Responsive styles.
