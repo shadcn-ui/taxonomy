@@ -31,7 +31,7 @@ export default async function DashboardPage() {
   const user = await getCurrentUser()
 
   if (!user) {
-    return redirect(authOptions.pages.signIn)
+    redirect(authOptions.pages.signIn)
   }
 
   const posts = await getPostsForUser(user.id)
