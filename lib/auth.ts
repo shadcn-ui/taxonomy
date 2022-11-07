@@ -4,7 +4,7 @@ import EmailProvider from "next-auth/providers/email"
 import { PrismaAdapter } from "@next-auth/prisma-adapter"
 import { Client } from "postmark"
 
-import { PrismaClient } from "@/lib/prisma"
+import { PrismaClient } from "@prisma/client"
 import { db } from "@/lib/db"
 
 const postmarkClient = new Client(process.env.POSTMARK_API_TOKEN)

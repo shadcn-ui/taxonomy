@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import EditorJS from "@editorjs/editorjs"
-import { Post } from "@/lib/prisma"
+import { Post } from "@prisma/client"
 import { useForm } from "react-hook-form"
 import Link from "next/link"
 import TextareaAutosize from "react-textarea-autosize"

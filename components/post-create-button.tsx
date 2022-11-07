@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { Post } from "@/lib/prisma"
+import { Post } from "@prisma/client"
 
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"

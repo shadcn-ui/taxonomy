@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { Post } from "@/lib/prisma"
+import { Post } from "@prisma/client"
 
 import { DropdownMenu } from "@/ui/dropdown"
 import { Icons } from "@/components/icons"

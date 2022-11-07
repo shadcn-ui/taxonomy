@@ -2,7 +2,7 @@ import { redirect } from "next/navigation"
 
 import { db } from "@/lib/db"
 import { getCurrentUser } from "@/lib/session"
-import { User } from "@/lib/prisma"
+import { User } from "@prisma/client"
 import { authOptions } from "@/lib/auth"
 import { DashboardHeader } from "@/components/dashboard-header"
 import { PostCreateButton } from "@/components/post-create-button"
@@ -29,7 +29,6 @@ async function getPostsForUser(userId: User["id"]) {
 
 export default async function DashboardPage() {
   const user = await getCurrentUser()
-  console.log({ user })
 
   if (!user) {
     redirect(authOptions.pages.signIn)

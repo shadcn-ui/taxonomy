@@ -1,6 +1,6 @@
 import { notFound, redirect } from "next/navigation"
 
-import { Post, User } from "@/lib/prisma"
+import { Post, User } from "@prisma/client"
 import { db } from "@/lib/db"
 import { getCurrentUser } from "@/lib/session"
 import { authOptions } from "@/lib/auth"
