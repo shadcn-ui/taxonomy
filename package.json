@@ -12,7 +12,6 @@
     "start": "next start",
     "lint": "next lint",
     "preview": "next build && next start",
-    "vercel-build": "prisma generate && next build",
     "postinstall": "prisma generate"
   },
   "dependencies": {
