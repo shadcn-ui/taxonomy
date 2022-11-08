@@ -24,6 +24,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     resolver: zodResolver(userAuthSchema),
   })
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
+  const searchParams = useSearchParams();
 
   async function onSubmit(data: FormData) {
     setIsLoading(true)
@@ -31,7 +32,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     const signInResult = await signIn("email", {
       email: data.email.toLowerCase(),
       redirect: false,
-      callbackUrl: `${window.location.origin}/dashboard`,
+      callbackUrl: searchParams.get("from") || "/dashboard",
     })
 
     setIsLoading(false)
