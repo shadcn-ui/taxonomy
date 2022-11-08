@@ -1,5 +1,5 @@
 import type { NextApiHandler, NextApiRequest, NextApiResponse } from "next"
-import { unstable_getServerSession } from "next-auth"
+import { unstable_getServerSession } from "next-auth/next"
 
 import { authOptions } from "@/lib/auth"
 
