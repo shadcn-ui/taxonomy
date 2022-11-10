@@ -31,23 +31,26 @@ export default async function PostPage({ params }: PostPageProps) {
   const mdx = await serialize(post.content)
 
   return (
-    <article className="mx-auto max-w-2xl py-12">
-      <div className="flex flex-col space-y-2">
-        <h1 className="max-w-[90%] text-4xl font-bold leading-normal">
+    <article className="container pt-8 md:max-w-3xl md:pt-12 lg:pt-24">
+      <div className="flex flex-col space-y-4">
+        <h1 className="md:leading-12 text-2xl font-bold leading-[1.2] sm:text-3xl md:text-5xl">
           {post.frontMatter.title}
         </h1>
         {post.frontMatter.date && (
-          <p className="text-sm text-slate-600">
-            {formatDate(post.frontMatter.date)}
-          </p>
+          <p className="text-slate-800">{formatDate(post.frontMatter.date)}</p>
         )}
       </div>
-      <hr className="my-6" />
+      <div className="pt-12 pb-8 md:pt-10 md:pb-8 lg:pt-12 lg:pb-12">
+        <hr className="border-slate-100" />
+      </div>
       {mdx && (
         <div className="prose max-w-none">
           <MdxContent source={mdx} />
         </div>
       )}
+      <div className="pt-12 pb-8 md:pt-10 md:pb-8 lg:pt-12 lg:pb-12">
+        <hr className="border-slate-100" />
+      </div>
     </article>
   )
 }

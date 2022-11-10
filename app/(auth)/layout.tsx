@@ -5,5 +5,5 @@ interface AuthLayoutProps {
 }
 
 export default function RootLayout({ children }: AuthLayoutProps) {
-  return <div className="grid min-h-screen grid-cols-2">{children}</div>
+  return <div className="min-h-screen">{children}</div>
 }
