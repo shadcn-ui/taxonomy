@@ -5,6 +5,7 @@ import {
   Command,
   File,
   FileText,
+  Github,
   HelpCircle,
   Image,
   Loader2,
@@ -35,4 +36,5 @@ export const Icons = {
   arrowRight: ArrowRight,
   help: HelpCircle,
   pizza: Pizza,
+  gitHub: Github,
 }
