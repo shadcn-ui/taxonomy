@@ -144,6 +144,9 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
+      <div className="md:py-18 container py-12 lg:py-24">
+        <hr className="border-slate-100" />
+      </div>
     </>
   )
 }
