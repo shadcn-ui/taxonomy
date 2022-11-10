@@ -11,7 +11,7 @@ export default function IndexPage() {
             href="https://twitter.com/shadcn"
             className="group inline-flex items-center space-x-2 rounded-full px-1 text-sm font-medium"
           >
-            <span>Follow the development on Twitter</span>
+            <span>Follow development on Twitter</span>
             <span className="rounded-full bg-slate-100 p-1 transition-colors group-hover:bg-slate-900 group-hover:text-white">
               <Icons.arrowRight className="h-3 w-3" />
             </span>
@@ -116,7 +116,7 @@ export default function IndexPage() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="1"
+                strokeWidth="1"
                 className="h-12 w-12"
               >
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
