@@ -20,13 +20,13 @@ export default function MarketingLayout({ children }: MarketingLayoutProps) {
             </Link>
             <Link
               href="#"
-              className="cursor-not-allowed text-sm font-medium opacity-40 hover:underline"
+              className="cursor-not-allowed text-sm font-medium opacity-60 hover:underline"
             >
               Pricing
             </Link>
             <Link
               href="#"
-              className="cursor-not-allowed text-sm font-medium opacity-40 hover:underline"
+              className="cursor-not-allowed text-sm font-medium opacity-60 hover:underline"
             >
               Docs
             </Link>
