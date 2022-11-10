@@ -1,15 +1,34 @@
 import Link from "next/link"
+import { toWords } from "number-to-words"
 
 import { Icons } from "@/components/icons"
 
-export default function IndexPage() {
+async function getGitHubStars(): Promise<string | null> {
+  const response = await fetch("https://api.github.com/repos/shadcn/taxonomy", {
+    next: {
+      revalidate: 60,
+    },
+  })
+
+  if (!response?.ok) {
+    return null
+  }
+
+  const json = await response.json()
+
+  return toWords(json["stargazers_count"])
+}
+
+export default async function IndexPage() {
+  const stars = await getGitHubStars()
+
   return (
     <>
       <section className="container grid items-center justify-center gap-6 pt-8 md:pt-12 lg:pt-24">
         <div className="flex flex-col items-start gap-4 md:max-w-[800px]">
           <Link
             href="https://twitter.com/shadcn"
-            className="group inline-flex items-center space-x-2 rounded-full px-1 text-sm font-medium"
+            className="group inline-flex items-center space-x-2 rounded-full text-sm font-medium"
           >
             <span>Follow development on Twitter</span>
             <span className="rounded-full bg-slate-100 p-1 transition-colors group-hover:bg-slate-900 group-hover:text-white">
@@ -143,6 +162,40 @@ export default function IndexPage() {
             </div>
           </div>
         </div>
+      </section>
+      <div className="md:py-18 container py-12 lg:py-24">
+        <hr className="border-slate-100" />
+      </div>
+      <section className="container grid justify-center gap-6">
+        <div className="mx-auto flex flex-col gap-4 md:max-w-[800px]">
+          <h2 className="text-2xl font-bold leading-[1.1] sm:text-3xl md:text-6xl">
+            Proudly Open Source
+          </h2>
+          <p className="max-w-[85%] leading-normal text-slate-700 sm:text-lg sm:leading-7">
+            Taxonomy is open source and powered by open source software. The
+            code is available on{" "}
+            <Link
+              href="https://github.com/shadcn/taxonomy"
+              target="_blank"
+              rel="noreferrer"
+              className="border-b"
+            >
+              GitHub
+            </Link>
+            . I copied this footer from{" "}
+            <Link
+              href="https://dub.sh"
+              target="_blank"
+              rel="noreferrer"
+              className="border-b"
+            >
+              dub.sh
+            </Link>
+          </p>
+        </div>
+        <h3 className="inline-flex items-center gap-2 text-lg font-medium capitalize md:text-xl">
+          <span>{stars} stars on GitHub</span>
+        </h3>
       </section>
       <div className="md:py-18 container py-12 lg:py-24">
         <hr className="border-slate-100" />

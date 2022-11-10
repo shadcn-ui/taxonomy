@@ -42,6 +42,7 @@
     "next-mdx-remote": "^4.1.0",
     "node-cache": "^5.1.2",
     "nodemailer": "^6.8.0",
+    "number-to-words": "^1.2.4",
     "postmark": "^3.0.14",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
