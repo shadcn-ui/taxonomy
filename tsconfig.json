@@ -18,9 +18,12 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/ui/*": ["ui/*"],
+      "@/hooks/*": ["hooks/*"],
       "@/lib/*": ["lib/*"],
+      "@/config/*": ["config/*"],
       "@/styles/*": ["styles/*"],
-      "@/prisma/*": ["prisma/*"]
+      "@/prisma/*": ["prisma/*"],
+      "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "plugins": [
       {
@@ -28,6 +31,13 @@
       }
     ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".contentlayer/generated",
+    "content/pages/about.mdx"
+  ],
   "exclude": ["node_modules"]
 }

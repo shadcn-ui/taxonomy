@@ -1,0 +1,73 @@
+---
+title: Code Blocks
+description: Advanced code blocks with highlighting, file names and more.
+---
+
+The code blocks on the documentation site and the blog are powered by [rehype-pretty-code](https://github.com/atomiks/rehype-pretty-code). The syntax highlighting is done using [shiki](https://github.com/shikijs/shiki).
+
+It has the following features:
+
+1. Beautiful code blocks with syntax highlighting.
+2. Support for VS Code themes.
+3. Works with hundreds of languages.
+4. Line and word highlighting.
+5. Support for line numbers.
+6. Show code block titles using meta strings.
+
+<Callout>
+
+Thanks to Shiki, highlighting is done at build time. No JavaScript is sent to the client for runtime highlighting.
+
+</Callout>
+
+## Example
+
+```ts showLineNumbers title="next.config.js" {3} /appDir: true/
+import { withContentlayer } from "next-contentlayer"
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    domains: ["avatars.githubusercontent.com"],
+  },
+  experimental: {
+    appDir: true,
+    serverComponentsExternalPackages: ["@prisma/client"],
+  },
+}
+
+export default withContentlayer(nextConfig)
+```
+
+## Title
+
+````mdx
+```ts title="path/to/file.ts"
+// Code here
+```
+````
+
+## Line Highlight
+
+````mdx
+```ts {1,3-6}
+// Highlight line 1 and line 3 to 6
+```
+````
+
+## Word Highlight
+
+````mdx
+```ts /shadcn/
+// Highlight the word shadcn.
+```
+````
+
+## Line Numbers
+
+````mdx
+```ts showLineNumbers
+// This will show line numbers.
+```
+````

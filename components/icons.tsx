@@ -2,6 +2,7 @@ import {
   AlertTriangle,
   ArrowRight,
   ChevronLeft,
+  ChevronRight,
   Command,
   File,
   FileText,
@@ -14,7 +15,9 @@ import {
   Plus,
   Settings,
   Trash,
+  Twitter,
   User,
+  X,
 } from "lucide-react"
 import type { Icon as LucideIcon } from "lucide-react"
 
@@ -22,8 +25,10 @@ export type Icon = LucideIcon
 
 export const Icons = {
   logo: Command,
+  close: X,
   spinner: Loader2,
   chevronLeft: ChevronLeft,
+  chevronRight: ChevronRight,
   trash: Trash,
   post: FileText,
   page: File,
@@ -37,4 +42,5 @@ export const Icons = {
   help: HelpCircle,
   pizza: Pizza,
   gitHub: Github,
+  twitter: Twitter,
 }

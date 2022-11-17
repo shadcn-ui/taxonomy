@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-import { EmptyPlaceholder } from "@/components/empty-placeholder"
+import { EmptyPlaceholder } from "@/components/dashboard/empty-placeholder"
 
 export default function NotFound() {
   return (

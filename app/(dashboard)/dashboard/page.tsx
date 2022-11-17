@@ -4,11 +4,11 @@ import { db } from "@/lib/db"
 import { getCurrentUser } from "@/lib/session"
 import { User } from "@prisma/client"
 import { authOptions } from "@/lib/auth"
-import { DashboardHeader } from "@/components/dashboard-header"
-import { PostCreateButton } from "@/components/post-create-button"
-import { DashboardShell } from "@/components/dashboard-shell"
-import { PostItem } from "@/components/post-item"
-import { EmptyPlaceholder } from "@/components/empty-placeholder"
+import { DashboardHeader } from "@/components/dashboard/header"
+import { PostCreateButton } from "@/components/dashboard/post-create-button"
+import { DashboardShell } from "@/components/dashboard/shell"
+import { PostItem } from "@/components/dashboard/post-item"
+import { EmptyPlaceholder } from "@/components/dashboard/empty-placeholder"
 
 async function getPostsForUser(userId: User["id"]) {
   return await db.post.findMany({
