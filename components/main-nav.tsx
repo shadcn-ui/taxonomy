@@ -35,7 +35,7 @@ export function MainNav({ items, children }: MainNavProps) {
             className={cn(
               "flex items-center text-lg font-semibold text-slate-600 sm:text-sm",
               item.href.startsWith(`/${segment}`) && "text-slate-900",
-              item.disabled && "cursor-not-allowed opacity-60"
+              item.disabled && "cursor-not-allowed opacity-80"
             )}
           >
             {item.title}
