@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation"
+import { allPages } from "contentlayer/generated"
 
-import { Page } from "@/lib/mdx/sources"
-import { MdxContent } from "@/components/mdx-content"
-import { serialize } from "next-mdx-remote/serialize"
+import { Mdx } from "@/components/docs/mdx"
+import "@/styles/mdx.css"
 
 interface PageProps {
   params: {
@@ -11,35 +11,31 @@ interface PageProps {
 }
 
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
-  const files = await Page.getMdxFiles()
-
-  return files?.map((file) => ({
-    slug: file.slug.split("/"),
+  return allPages.map((page) => ({
+    slug: page.slugAsParams.split("/"),
   }))
 }
 
-export default async function BasicPage({ params }: PageProps) {
-  const page = await Page.getMdxNode(params.slug)
+export default async function PagePage({ params }: PageProps) {
+  const slug = params?.slug?.join("/")
+  const page = allPages.find((page) => page.slugAsParams === slug)
 
   if (!page) {
     notFound()
   }
 
-  const mdx = await serialize(page.content)
-
   return (
-    <article className="mx-auto max-w-2xl py-12">
-      <div className="flex flex-col space-y-2">
-        <h1 className="max-w-[90%] text-4xl font-bold leading-normal">
-          {page.frontMatter.title}
+    <article className="container max-w-3xl py-6 lg:py-10">
+      <div className="space-y-4">
+        <h1 className="inline-block text-4xl font-extrabold tracking-tight text-slate-900 lg:text-5xl">
+          {page.title}
         </h1>
+        {page.description && (
+          <p className="text-xl text-slate-600">{page.description}</p>
+        )}
       </div>
-      <hr className="my-6" />
-      {mdx && (
-        <div className="prose max-w-none">
-          <MdxContent source={mdx} />
-        </div>
-      )}
+      <hr className="my-4 border-slate-200" />
+      <Mdx code={page.body.code} />
     </article>
   )
 }

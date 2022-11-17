@@ -1,10 +1,11 @@
 "use client"
 
+import Image from "next/image"
+
 import { Popover } from "@/ui/popover"
 import { Icons } from "@/components/icons"
-
+import { siteConfig } from "@/config/site"
 import OgImage from "public/og.jpg"
-import Image from "next/image"
 
 export function Help() {
   return (
@@ -26,7 +27,7 @@ export function Help() {
           <p>
             You can follow the progress on Twitter{" "}
             <a
-              href="https://twitter.com/shadcn"
+              href={siteConfig.links.twitter}
               target="_blank"
               rel="noreferrer"
               className="border-b border-b-white"
@@ -35,7 +36,7 @@ export function Help() {
             </a>{" "}
             or on{" "}
             <a
-              href="https://github.com/shadcn/taxonomy"
+              href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
               className="border-b border-b-white"

@@ -1,7 +1,3 @@
-import Link from "next/link"
-
-import { Icons } from "@/components/icons"
-
 interface EditorProps {
   children?: React.ReactNode
 }

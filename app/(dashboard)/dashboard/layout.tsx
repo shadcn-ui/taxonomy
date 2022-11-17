@@ -2,8 +2,8 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 
 import { getCurrentUser } from "@/lib/session"
-import { DashboardNav } from "@/components/dashboard-nav"
-import { UserAccountNav } from "@/components/user-account-nav"
+import { DashboardNav } from "@/components/dashboard/nav"
+import { UserAccountNav } from "@/components/dashboard/user-account-nav"
 import { Icons } from "@/components/icons"
 
 interface DashboardLayoutProps {

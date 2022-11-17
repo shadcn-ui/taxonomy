@@ -1,0 +1,157 @@
+---
+title: Components
+description: Use React components in Markdown using MDX.
+---
+
+The following components are available out of the box for use in Markdown.
+
+If you'd like to build and add your own custom components, see the [Custom Components](#custom-components) section below.
+
+## Built-in Components
+
+### 1. Callout
+
+```mdx
+<Callout type=" default | warning | danger ">
+
+This is a default callout. You can embed **Markdown** inside a `callout`.
+
+</Callout>
+```
+
+<Callout>
+
+This is a default callout. You can embed **Markdown** inside a `callout`.
+
+</Callout>
+
+<Callout type="warning">
+
+This is a warning callout. It uses the props `type="warning"`.
+
+</Callout>
+
+<Callout type="danger">
+
+This is a danger callout. It uses the props `type="danger"`.
+
+</Callout>
+
+### 2. Card
+
+```mdx
+<Card href="#">
+
+#### Heading
+
+You can use **markdown** inside cards.
+
+</Card>
+```
+
+<Card href="#">
+
+#### Heading
+
+You can use **markdown** inside cards.
+
+</Card>
+
+You can also use HTML to embed cards in a grid.
+
+```mdx
+<div className="grid grid-cols-2 gap-4">
+  <Card href="#">
+    #### Card One 
+    You can use **markdown** inside cards.
+  </Card>
+
+  <Card href="#">
+    #### Card Two 
+    You can also use `inline code` and code blocks.
+  </Card>
+</div>
+```
+
+<div className="grid grid-cols-2 gap-4">
+  <Card href="#">
+    #### Card One 
+    You can use **markdown** inside cards.
+  </Card>
+
+  <Card href="#">
+    #### Card Two 
+    You can also use `inline code` and code blocks.
+  </Card>
+</div>
+
+---
+
+## Custom Components
+
+You can add your own custom components using the `components` props from `useMDXComponent`.
+
+```ts title="components/mdx.tsx" {2,6}
+import { Callout } from "@/components/callout"
+import { CustomComponent } from "@/components/custom"
+
+const components = {
+  Callout,
+  CustomComponent,
+}
+
+export function Mdx({ code }) {
+  const Component = useMDXComponent(code)
+
+  return (
+    <div className="mdx">
+      <Component components={components} />
+    </div>
+  )
+}
+```
+
+Once you've added your custom component, you can use it in MDX as follows:
+
+```js
+<CustomComponent propName="value" />
+```
+
+---
+
+## HTML Elements
+
+You can overwrite HTML elements using the same technique above.
+
+```ts {4}
+const components = {
+  Callout,
+  CustomComponent,
+  hr: ({ ...props }) => <hr className="my-4 border-slate-200 md:my-6" />,
+}
+```
+
+This will overwrite the `<hr />` tag or `---` in Mardown with the HTML output above.
+
+---
+
+## Styling
+
+Tailwind CSS classes can be used inside MDX for styling.
+
+```mdx
+<p className="text-red-600">This text will be red.</p>
+```
+
+Make sure you have configured the path to your content in your `tailwind.config.js` file:
+
+```js title="tailwind.config.js" {6}
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./content/**/*.{md,mdx}",
+  ],
+}
+```
