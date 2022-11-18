@@ -39,7 +39,7 @@
     "contentlayer": "^0.2.9",
     "date-fns": "^2.29.3",
     "lucide-react": "^0.92.0",
-    "next": "^13.0.3",
+    "next": "^13.0.4-canary.5",
     "next-auth": "^4.16.4",
     "next-contentlayer": "^0.2.9",
     "nodemailer": "^6.8.0",
