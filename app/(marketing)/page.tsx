@@ -49,12 +49,10 @@ export default async function IndexPage() {
         </div>
         <div className="flex gap-4">
           <Link
-            href={siteConfig.links.twitter}
-            target="_blank"
-            rel="noreferrer"
+            href="/login"
             className="relative inline-flex h-11 items-center rounded-md border border-transparent bg-brand-500 px-8 py-2 font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
           >
-            Start Here
+            Get Started
           </Link>
           <Link
             href={siteConfig.links.github}
