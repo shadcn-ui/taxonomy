@@ -8,7 +8,7 @@ import { Post } from "@prisma/client"
 import { DropdownMenu } from "@/ui/dropdown"
 import { Icons } from "@/components/icons"
 import { Alert } from "@/ui/alert"
-import toast from "@/ui/toast"
+import { toast } from "@/ui/toast"
 
 async function deletePost(postId: string) {
   const response = await fetch(`/api/posts/${postId}`, {

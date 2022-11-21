@@ -66,10 +66,8 @@ interface ToastOpts {
   duration?: number
 }
 
-export default function toast(opts: ToastOpts) {
+export function toast(opts: ToastOpts) {
   const { title, message, type = "default", duration = 3000 } = opts
-
-  // alert(message)
 
   return hotToast.custom(
     ({ visible }) => (

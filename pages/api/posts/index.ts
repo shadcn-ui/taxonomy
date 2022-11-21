@@ -5,6 +5,8 @@ import * as z from "zod"
 import { db } from "@/lib/db"
 import { withMethods } from "@/lib/api-middlewares/with-methods"
 import { withAuthentication } from "@/lib/api-middlewares/with-authentication"
+import { getUserSubscriptionPlan } from "@/lib/subscription"
+import { RequiresProPlanError } from "@/lib/exceptions"
 
 const postCreateSchema = z.object({
   title: z.string().optional(),
@@ -13,6 +15,7 @@ const postCreateSchema = z.object({
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = await getSession({ req })
+  const user = session?.user
 
   if (req.method === "GET") {
     try {
@@ -24,7 +27,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
           createdAt: true,
         },
         where: {
-          authorId: session.user.id,
+          authorId: user.id,
         },
       })
 
@@ -36,6 +39,22 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === "POST") {
     try {
+      const subscriptionPlan = await getUserSubscriptionPlan(user.id)
+
+      // If user is on a free plan.
+      // Check if user has reached limit of 3 posts.
+      if (!subscriptionPlan?.isPro) {
+        const count = await db.post.count({
+          where: {
+            authorId: user.id,
+          },
+        })
+
+        if (count >= 3) {
+          throw new RequiresProPlanError()
+        }
+      }
+
       const body = postCreateSchema.parse(JSON.parse(req.body))
 
       const post = await db.post.create({
@@ -53,6 +72,10 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     } catch (error) {
       if (error instanceof z.ZodError) {
         return res.status(422).json(error.issues)
+      }
+
+      if (error instanceof RequiresProPlanError) {
+        return res.status(402).end()
       }
 
       return res.status(500).end()

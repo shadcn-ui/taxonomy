@@ -12,7 +12,7 @@ import { useRouter } from "next/navigation"
 
 import { Icons } from "@/components/icons"
 import { postPatchSchema } from "@/lib/validations/post"
-import toast from "@/ui/toast"
+import { toast } from "@/ui/toast"
 
 interface EditorProps {
   post: Pick<Post, "id" | "title" | "content" | "published">

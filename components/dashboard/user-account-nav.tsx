@@ -37,11 +37,21 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
             </Link>
           </DropdownMenu.Item>
           <DropdownMenu.Item>
+            <Link href="/dashboard/billing" className="w-full">
+              Billing
+            </Link>
+          </DropdownMenu.Item>
+          <DropdownMenu.Item>
             <Link href="/dashboard/settings" className="w-full">
               Settings
             </Link>
           </DropdownMenu.Item>
           <DropdownMenu.Separator />
+          <DropdownMenu.Item>
+            <Link href="/docs" target="_blank" className="w-full">
+              Documentation
+            </Link>
+          </DropdownMenu.Item>
           <DropdownMenu.Item>
             <Link
               href={siteConfig.links.github}
