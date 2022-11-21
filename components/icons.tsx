@@ -1,6 +1,7 @@
 import {
   AlertTriangle,
   ArrowRight,
+  Check,
   ChevronLeft,
   ChevronRight,
   Command,
@@ -45,4 +46,5 @@ export const Icons = {
   pizza: Pizza,
   gitHub: Github,
   twitter: Twitter,
+  check: Check,
 }
