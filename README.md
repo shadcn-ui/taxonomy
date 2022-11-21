@@ -21,31 +21,32 @@ A few people have asked me to turn this into a starter. I think we could do that
 ## Features
 
 - New `/app` dir,
-- Routing, Layouts, Nested Layouts and Layout Groups.
-- Data fetching, Caching and Mutation.
-- Loading UI,
-- Server and Client Components.
-- API Routes and Middlewares.
-- Authentication using **NextAuth.js**.
-- ORM using **Prisma**.
-- UI Components built using **Radix UI**.
+- Routing, Layouts, Nested Layouts and Layout Groups
+- Data Fetching, Caching and Mutation
+- Loading UI
+- Server and Client Components
+- API Routes and Middlewares
+- Authentication using **NextAuth.js**
+- ORM using **Prisma**
+- Database on **PlanetScale**
+- UI Components built using **Radix UI**
 - Documentation and blog using **MDX** and **Contentlayer**
 - Subscriptions using **Stripe**
-- Styled using **Tailwind CSS**.
-- Validations using **Zod**.
-- Written in **TypeScript**.
+- Styled using **Tailwind CSS**
+- Validations using **Zod**
+- Written in **TypeScript**
 
 ## Roadmap
 
 > **Warning**
 > This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com/shadcn).
 
-- [x] ~Add MDX support for basic pages.~
-- [x] Build marketing pages
-- [x] Subscriptions using Stripe.
-- [ ] Responsive styles.
-- [ ] Add OG image for blog using @vercel/og.
-- [ ] Dark mode.
+- [x] ~Add MDX support for basic pages~
+- [x] ~Build marketing pages~
+- [x] ~Subscriptions using Stripe~
+- [ ] Responsive styles
+- [ ] Add OG image for blog using @vercel/og
+- [ ] Dark mode
 
 ## Known Issues
 
