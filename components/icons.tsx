@@ -1,9 +1,11 @@
 import {
   AlertTriangle,
   ArrowRight,
+  Check,
   ChevronLeft,
   ChevronRight,
   Command,
+  CreditCard,
   File,
   FileText,
   Github,
@@ -34,6 +36,7 @@ export const Icons = {
   page: File,
   media: Image,
   settings: Settings,
+  billing: CreditCard,
   ellipsis: MoreVertical,
   add: Plus,
   warning: AlertTriangle,
@@ -43,4 +46,5 @@ export const Icons = {
   pizza: Pizza,
   gitHub: Github,
   twitter: Twitter,
+  check: Check,
 }

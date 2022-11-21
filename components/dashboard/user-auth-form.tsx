@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 
 import { cn } from "@/lib/utils"
 import { userAuthSchema } from "@/lib/validations/auth"
-import toast from "@/ui/toast"
+import { toast } from "@/ui/toast"
 import { Icons } from "@/components/icons"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
@@ -25,7 +25,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     resolver: zodResolver(userAuthSchema),
   })
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams()
 
   async function onSubmit(data: FormData) {
     setIsLoading(true)

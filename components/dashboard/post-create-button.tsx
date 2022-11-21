@@ -2,30 +2,10 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { Post } from "@prisma/client"
 
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
-import toast from "@/ui/toast"
-
-async function createPost(): Promise<Pick<Post, "id">> {
-  const response = await fetch("/api/posts", {
-    method: "POST",
-    body: JSON.stringify({
-      title: "Untitled Post",
-    }),
-  })
-
-  if (!response?.ok) {
-    toast({
-      title: "Something went wrong.",
-      message: "Your post was not created. Please try again.",
-      type: "error",
-    })
-  }
-
-  return await response.json()
-}
+import { toast } from "@/ui/toast"
 
 interface PostCreateButtonProps
   extends React.HTMLAttributes<HTMLButtonElement> {}
@@ -38,9 +18,34 @@ export function PostCreateButton({
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
 
   async function onClick() {
-    setIsLoading(!isLoading)
+    setIsLoading(true)
 
-    const post = await createPost()
+    const response = await fetch("/api/posts", {
+      method: "POST",
+      body: JSON.stringify({
+        title: "Untitled Post",
+      }),
+    })
+
+    setIsLoading(false)
+
+    if (!response?.ok) {
+      if (response.status === 402) {
+        return toast({
+          title: "Limit of 3 posts reached.",
+          message: "Please upgrade to the PRO plan.",
+          type: "error",
+        })
+      }
+
+      return toast({
+        title: "Something went wrong.",
+        message: "Your post was not created. Please try again.",
+        type: "error",
+      })
+    }
+
+    const post = await response.json()
 
     // This forces a cache invalidation.
     router.refresh()

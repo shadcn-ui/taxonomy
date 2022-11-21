@@ -1,4 +1,4 @@
-import { SiteConfig } from "types/config"
+import { SiteConfig } from "types"
 
 export const siteConfig: SiteConfig = {
   name: "Taxonomy",

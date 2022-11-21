@@ -45,6 +45,7 @@
     "nodemailer": "^6.8.0",
     "postmark": "^3.0.14",
     "prop-types": "^15.8.1",
+    "raw-body": "^2.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-editor-js": "^2.1.0",
@@ -53,13 +54,14 @@
     "react-textarea-autosize": "^8.3.4",
     "sharp": "^0.31.1",
     "shiki": "^0.11.1",
+    "stripe": "^11.1.0",
     "tailwind-merge": "^1.6.2",
     "tailwindcss-animate": "^1.0.5",
     "zod": "^3.19.1"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.7",
-    "@types/node": "18.6.4",
+    "@types/node": "^18.11.9",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "autoprefixer": "^10.4.8",

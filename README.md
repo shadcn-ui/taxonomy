@@ -29,6 +29,8 @@ A few people have asked me to turn this into a starter. I think we could do that
 - Authentication using **NextAuth.js**.
 - ORM using **Prisma**.
 - UI Components built using **Radix UI**.
+- Documentation and blog using **MDX** and **Contentlayer**
+- Subscriptions using **Stripe**
 - Styled using **Tailwind CSS**.
 - Validations using **Zod**.
 - Written in **TypeScript**.
@@ -39,13 +41,9 @@ A few people have asked me to turn this into a starter. I think we could do that
 > This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com/shadcn).
 
 - [x] ~Add MDX support for basic pages.~
+- [x] Build marketing pages
+- [x] Subscriptions using Stripe.
 - [ ] Responsive styles.
-- [ ] Subscriptions using Stripe.
-- [ ] Add Media Library.
-- [ ] Add Pages.
-- [ ] Build the front-end for blogs.
-- [ ] Add support for custom domains for blogs.
-- [ ] Build marketing pages (use a headless CMS?)
 - [ ] Add OG image for blog using @vercel/og.
 - [ ] Dark mode.
 
@@ -54,7 +52,7 @@ A few people have asked me to turn this into a starter. I think we could do that
 A list of things not working right now:
 
 1. ~GitHub authentication (use email)~
-2. [Prisma: Error: ENOENT: no such file or directory, open '/var/task/.next/server/chunks/schema.prisma'](https://github.com/prisma/prisma/issues/16117)
+2. ~[Prisma: Error: ENOENT: no such file or directory, open '/var/task/.next/server/chunks/schema.prisma'](https://github.com/prisma/prisma/issues/16117)~
 3. ~[Next.js 13: Client side navigation does not update head](https://github.com/vercel/next.js/issues/42414)~
 
 ## Why not trpc, Turborepo, pnpm or X?
