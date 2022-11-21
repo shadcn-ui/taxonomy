@@ -14,7 +14,6 @@ export function formatDate(input: string | number): string {
   })
 }
 
-// Since we're already setting NEXTAUTH_URL, we can use same to create absolute URLs.
 export function absoluteUrl(path: string) {
-  return `${process.env.NEXTAUTH_URL}${path}`
+  return `${process.env.NEXT_PUBLIC_APP_URL}${path}`
 }
