@@ -11,6 +11,7 @@ export default function DashboardBillingLoading() {
       />
       <div className="grid gap-10">
         <Card.Skeleton />
+        <Card.Skeleton />
       </div>
     </DashboardShell>
   )
