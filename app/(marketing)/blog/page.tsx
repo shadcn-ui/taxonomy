@@ -33,7 +33,7 @@ export default async function BlogPage() {
       <hr className="my-8 border-slate-200" />
       {posts?.length ? (
         <div className="grid gap-10 sm:grid-cols-2">
-          {posts.map((post) => (
+          {posts.map((post, index) => (
             <article
               key={post._id}
               className="group relative flex flex-col space-y-2"
@@ -45,6 +45,7 @@ export default async function BlogPage() {
                   width={804}
                   height={452}
                   className="rounded-md border border-slate-200 bg-slate-200 transition-colors group-hover:border-slate-900"
+                  priority={index <= 1}
                 />
               )}
               <h2 className="text-2xl font-extrabold">{post.title}</h2>

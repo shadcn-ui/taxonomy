@@ -1,17 +1,17 @@
 :root {
   --shiki-color-text: #414141;
   --shiki-color-background: transparent;
-  --shiki-token-constant: #1976d2;
-  --shiki-token-string: #22863a;
+  --shiki-token-constant: #114b84;
+  --shiki-token-string: #0e7226;
   --shiki-token-comment: #aaa;
   --shiki-token-keyword: #d32f2f;
   --shiki-token-parameter: #ff9800;
   --shiki-token-function: #6f42c1;
-  --shiki-token-string-expression: #22863a;
+  --shiki-token-string-expression: #0e7226;
   --shiki-token-punctuation: #212121;
-  --shiki-token-link: #22863a;
+  --shiki-token-link: #0e7226;
   --nextra-shiki-deleted: #f00;
-  --nextra-shiki-inserted: #22863a;
+  --nextra-shiki-inserted: #0e7226;
 }
 
 [data-rehype-pretty-code-fragment] code {

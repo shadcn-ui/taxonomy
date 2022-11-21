@@ -172,6 +172,7 @@ export default makeSource({
         {
           properties: {
             className: ["subheading-anchor"],
+            ariaLabel: "Link to section",
           },
         },
       ],
