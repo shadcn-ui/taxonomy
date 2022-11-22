@@ -54,11 +54,11 @@ export function BillingForm({
           </Card.Description>
         </Card.Header>
         <Card.Content>{subscriptionPlan.description}</Card.Content>
-        <Card.Footer className="flex items-center justify-between">
+        <Card.Footer className="flex flex-col items-start space-y-2 md:flex-row md:justify-between md:space-x-0">
           <button
             type="submit"
             className={cn(
-              "relative inline-flex h-9 items-center rounded-md border border-transparent bg-brand-500 px-4 py-2 text-sm font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2",
+              "relative inline-flex h-9 items-center justify-center rounded-md border border-transparent bg-brand-500 px-4 py-2 text-center text-sm font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2",
               {
                 "cursor-not-allowed opacity-60": isLoading,
               }

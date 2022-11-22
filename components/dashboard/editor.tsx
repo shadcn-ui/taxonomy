@@ -10,9 +10,9 @@ import * as z from "zod"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useRouter } from "next/navigation"
 
-import { Icons } from "@/components/icons"
 import { postPatchSchema } from "@/lib/validations/post"
 import { toast } from "@/ui/toast"
+import { Icons } from "@/components/icons"
 
 interface EditorProps {
   post: Pick<Post, "id" | "title" | "content" | "published">

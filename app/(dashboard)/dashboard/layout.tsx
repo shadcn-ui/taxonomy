@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation"
-import Link from "next/link"
 
+import { dashboardConfig } from "@/config/dashboard"
 import { getCurrentUser } from "@/lib/session"
 import { DashboardNav } from "@/components/dashboard/nav"
 import { UserAccountNav } from "@/components/dashboard/user-account-nav"
-import { Icons } from "@/components/icons"
+import { MainNav } from "@/components/main-nav"
 
 interface DashboardLayoutProps {
   children?: React.ReactNode
@@ -20,23 +20,22 @@ export default async function DashboardLayout({
   }
 
   return (
-    <div className="mx-auto flex h-screen max-w-[1440px] flex-col space-y-6 overflow-hidden px-6">
-      <header className="flex h-[64px] items-center justify-between pl-2">
-        <Link href="/" className="flex items-center space-x-2">
-          <Icons.logo />
-          <span className="text-lg font-bold">Taxonomy</span>
-        </Link>
-        <UserAccountNav
-          user={{
-            name: user.name,
-            image: user.image,
-            email: user.email,
-          }}
-        />
+    <div className="mx-auto flex flex-col space-y-6">
+      <header className="container sticky top-0 z-40 bg-white">
+        <div className="flex h-16 items-center justify-between border-b border-b-slate-200 py-4">
+          <MainNav items={dashboardConfig.mainNav} />
+          <UserAccountNav
+            user={{
+              name: user.name,
+              image: user.image,
+              email: user.email,
+            }}
+          />
+        </div>
       </header>
-      <div className="grid grid-cols-[200px_1fr] gap-12">
-        <aside className="flex w-[200px] flex-col">
-          <DashboardNav />
+      <div className="container grid gap-12 md:grid-cols-[200px_1fr]">
+        <aside className="hidden w-[200px] flex-col md:flex">
+          <DashboardNav items={dashboardConfig.sidebarNav} />
         </aside>
         <main className="flex w-full flex-1 flex-col overflow-hidden">
           {children}
