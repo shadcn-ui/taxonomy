@@ -4,7 +4,6 @@ import { unstable_getServerSession } from "next-auth/next"
 
 import { db } from "@/lib/db"
 import { withMethods } from "@/lib/api-middlewares/with-methods"
-import { withAuthentication } from "@/lib/api-middlewares/with-authentication"
 import { getUserSubscriptionPlan } from "@/lib/subscription"
 import { RequiresProPlanError } from "@/lib/exceptions"
 import { authOptions } from "@/lib/auth"
@@ -16,7 +15,12 @@ const postCreateSchema = z.object({
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   const session = await unstable_getServerSession(req, res, authOptions)
-  const user = session?.user
+
+  if (!session) {
+    return res.status(403).end()
+  }
+
+  const { user } = session
 
   if (req.method === "GET") {
     try {
@@ -84,4 +88,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default withMethods(["GET", "POST"], withAuthentication(handler))
+export default withMethods(["GET", "POST"], handler)
