@@ -87,6 +87,9 @@ export function Editor({ post }: EditorProps) {
 
     const response = await fetch(`/api/posts/${post.id}`, {
       method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         title: data.title,
         content: blocks,

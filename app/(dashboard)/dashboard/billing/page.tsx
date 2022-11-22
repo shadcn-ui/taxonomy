@@ -2,6 +2,7 @@ import { redirect } from "next/navigation"
 
 import { getCurrentUser } from "@/lib/session"
 import { authOptions } from "@/lib/auth"
+import { stripe } from "@/lib/stripe"
 import { getUserSubscriptionPlan as getUserSubscriptionPlan } from "@/lib/subscription"
 import { Card } from "@/ui/card"
 import { DashboardHeader } from "@/components/dashboard/header"
@@ -17,6 +18,15 @@ export default async function BillingPage() {
 
   const subscriptionPlan = await getUserSubscriptionPlan(user.id)
 
+  // If user has a pro plan, check cancel status on Stripe.
+  let isCanceled = false
+  if (subscriptionPlan.isPro) {
+    const stripePlan = await stripe.subscriptions.retrieve(
+      subscriptionPlan.stripeSubscriptionId
+    )
+    isCanceled = stripePlan.cancel_at_period_end
+  }
+
   return (
     <DashboardShell>
       <DashboardHeader
@@ -24,7 +34,12 @@ export default async function BillingPage() {
         text="Manage billing and your subscription plan."
       />
       <div className="grid gap-10">
-        <BillingForm subscriptionPlan={subscriptionPlan} />
+        <BillingForm
+          subscriptionPlan={{
+            ...subscriptionPlan,
+            isCanceled,
+          }}
+        />
         <Card>
           <Card.Header>
             <Card.Title>Note</Card.Title>

@@ -1,12 +1,13 @@
 import { NextApiRequest, NextApiResponse } from "next"
-import { getSession } from "next-auth/react"
 import * as z from "zod"
+import { unstable_getServerSession } from "next-auth/next"
 
 import { db } from "@/lib/db"
 import { withMethods } from "@/lib/api-middlewares/with-methods"
 import { withAuthentication } from "@/lib/api-middlewares/with-authentication"
 import { getUserSubscriptionPlan } from "@/lib/subscription"
 import { RequiresProPlanError } from "@/lib/exceptions"
+import { authOptions } from "@/lib/auth"
 
 const postCreateSchema = z.object({
   title: z.string().optional(),
@@ -14,7 +15,7 @@ const postCreateSchema = z.object({
 })
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = await getSession({ req })
+  const session = await unstable_getServerSession(req, res, authOptions)
   const user = session?.user
 
   if (req.method === "GET") {
@@ -55,7 +56,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         }
       }
 
-      const body = postCreateSchema.parse(JSON.parse(req.body))
+      const body = postCreateSchema.parse(req.body)
 
       const post = await db.post.create({
         data: {

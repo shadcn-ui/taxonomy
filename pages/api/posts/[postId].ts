@@ -30,7 +30,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         },
       })
 
-      const body = postPatchSchema.parse(JSON.parse(req.body))
+      const body = postPatchSchema.parse(req.body)
 
       // TODO: Implement sanitization for content.
 

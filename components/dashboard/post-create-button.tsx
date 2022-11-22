@@ -22,6 +22,9 @@ export function PostCreateButton({
 
     const response = await fetch("/api/posts", {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         title: "Untitled Post",
       }),

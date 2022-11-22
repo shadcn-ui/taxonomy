@@ -8,7 +8,7 @@ export function withValidation<T extends ZodSchema>(
 ) {
   return async function (req: NextApiRequest, res: NextApiResponse) {
     try {
-      const body = req.body ? JSON.parse(req.body) : {}
+      const body = req.body ? req.body : {}
 
       await schema.parse(body)
 
