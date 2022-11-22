@@ -44,7 +44,7 @@ A few people have asked me to turn this into a starter. I think we could do that
 - [x] ~Add MDX support for basic pages~
 - [x] ~Build marketing pages~
 - [x] ~Subscriptions using Stripe~
-- [x] Responsive styles
+- [x] ~Responsive styles~
 - [ ] Add OG image for blog using @vercel/og
 - [ ] Dark mode
 
