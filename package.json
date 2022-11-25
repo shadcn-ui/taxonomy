@@ -1,10 +1,9 @@
 {
-  "name": "taxonomy",
+  "name": "bloggers",
   "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "shadcn",
-    "url": "https://twitter.com/shadcn"
+    "name": "shairkh ahmed"
   },
   "scripts": {
     "dev": "next dev",
