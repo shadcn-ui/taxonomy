@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useSearchParams } from "next/navigation"
-import { signIn } from "next-auth/react"
-import * as z from "zod"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
+import * as React from "react";
+import { useSearchParams } from "next/navigation";
+import { signIn } from "next-auth/react";
+import * as z from "zod";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
-import { cn } from "@/lib/utils"
-import { userAuthSchema } from "@/lib/validations/auth"
-import { toast } from "@/ui/toast"
-import { Icons } from "@/components/icons"
+import { cn } from "@/lib/utils";
+import { userAuthSchema } from "@/lib/validations/auth";
+import { toast } from "@/ui/toast";
+import { Icons } from "@/components/icons";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-type FormData = z.infer<typeof userAuthSchema>
+type FormData = z.infer<typeof userAuthSchema>;
 
 export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const {
@@ -23,34 +23,34 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(userAuthSchema),
-  })
-  const [isLoading, setIsLoading] = React.useState<boolean>(false)
-  const searchParams = useSearchParams()
+  });
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
+  const searchParams = useSearchParams();
 
   async function onSubmit(data: FormData) {
-    setIsLoading(true)
+    setIsLoading(true);
 
     const signInResult = await signIn("email", {
       email: data.email.toLowerCase(),
       redirect: false,
       callbackUrl: searchParams.get("from") || "/dashboard",
-    })
+    });
 
-    setIsLoading(false)
+    setIsLoading(false);
 
     if (!signInResult?.ok) {
       return toast({
         title: "Something went wrong.",
-        message: "Your post was not saved. Please try again.",
+        message: "Your sign in request failed. Please try again.",
         type: "error",
-      })
+      });
     }
 
     return toast({
       title: "Check your email",
       message: "We sent you a login link. Be sure to check your spam too.",
       type: "success",
-    })
+    });
   }
 
   return (
@@ -122,5 +122,5 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         Github
       </button>
     </div>
-  )
+  );
 }
