@@ -4,8 +4,7 @@ export const marketingConfig: MarketingConfig = {
   mainNav: [
     {
       title: "Features",
-      href: "/features",
-      disabled: true,
+      href: "/#features",
     },
     {
       title: "Pricing",
@@ -16,13 +15,12 @@ export const marketingConfig: MarketingConfig = {
       href: "/blog",
     },
     {
-      title: "Documentation",
-      href: "/docs",
+      title: "Stats",
+      href: "/stats",
     },
     {
-      title: "Contact",
-      href: "/contact",
-      disabled: true,
+      title: "Documentation",
+      href: "/docs",
     },
   ],
 }

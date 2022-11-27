@@ -14,6 +14,10 @@ export function formatDate(input: string | number): string {
   })
 }
 
+export function formatNumber(input: number | bigint) {
+  return Intl.NumberFormat("en-US").format(input)
+}
+
 export function absoluteUrl(path: string) {
   return `${process.env.NEXT_PUBLIC_APP_URL}${path}`
 }
