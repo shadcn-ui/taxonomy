@@ -51,7 +51,7 @@ A few people have asked me to turn this into a starter. I think we could do that
 - [x] ~Subscriptions using Stripe~
 - [x] ~Responsive styles~
 - [x] ~Add OG image for blog using @vercel/og~
-- [ ] ~Add tests~
+- [ ] Add tests
 - [ ] Dark mode
 
 ## Known Issues
