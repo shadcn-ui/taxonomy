@@ -30,6 +30,7 @@ export default function MdxHead({ params, og }: MdxHeadProps) {
     ogUrl = new URL(`${url}/api/og`)
     ogUrl.searchParams.set("heading", ogTitle)
     ogUrl.searchParams.set("type", og.type)
+    ogUrl.searchParams.set("mode", og.mode || "dark")
   }
 
   return (

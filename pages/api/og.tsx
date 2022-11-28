@@ -26,18 +26,25 @@ export default async function handler(req: NextRequest) {
         ? `${values.heading.substring(0, 140)}...`
         : values.heading
 
+    const { mode } = values
+    const paint = mode === "dark" ? "#fff" : "#000"
+
     const fontSize = heading.length > 100 ? "70px" : "100px"
 
     return new ImageResponse(
       (
         <div
-          tw="flex relative flex-col p-12 w-full h-full items-start bg-white text-black"
+          tw="flex relative flex-col p-12 w-full h-full items-start"
           style={{
-            background: "linear-gradient(90deg, #000 0%, #222 100%)",
+            color: paint,
+            background:
+              mode === "dark"
+                ? "linear-gradient(90deg, #000 0%, #121 100%)"
+                : "white",
           }}
         >
           <svg width="212" height="50" viewBox="0 0 212 50" fill="none">
-            <g clip-path="url(#a)" fill="#fff">
+            <g clip-path="url(#a)" fill={paint}>
               <path d="M99.715 9.784h26.128v4.823h-10.365v25.37h-5.182v-25.37h-10.58V9.784ZM56.746 9.784v4.823H35.803v7.757h16.842v4.823H35.803v7.967h20.943v4.823H30.62v-25.37h-.002V9.784h26.128ZM69.792 9.797H63.01l24.292 30.192h6.801L81.956 24.903 94.084 9.82l-6.782.01-8.742 10.856-8.768-10.89ZM76.751 31.363l-3.396-4.222L62.99 40.012h6.802l6.96-8.649Z" />
               <path
                 fill-rule="evenodd"
@@ -48,7 +55,7 @@ export default async function handler(req: NextRequest) {
             </g>
             <path
               d="M181.335 14.636V35h-5.528V19.727h-.119l-4.455 2.665v-4.693l5.011-3.063h5.091Zm12.136 20.642c-1.604 0-3.029-.275-4.276-.825-1.239-.557-2.214-1.322-2.923-2.297-.709-.974-1.067-2.094-1.074-3.36h5.568c.007.39.126.742.358 1.053.239.305.564.544.975.716.411.173.881.259 1.412.259.51 0 .961-.09 1.352-.269.391-.185.696-.44.915-.765.218-.325.325-.696.318-1.114a1.637 1.637 0 0 0-.378-1.094c-.252-.318-.606-.566-1.064-.745-.457-.18-.984-.269-1.581-.269h-2.068V22.75h2.068c.55 0 1.034-.09 1.452-.268.424-.18.752-.428.984-.746.239-.318.355-.683.348-1.094a1.824 1.824 0 0 0-.288-1.054 2.012 2.012 0 0 0-.835-.716c-.352-.172-.759-.258-1.223-.258-.504 0-.955.09-1.353.268a2.25 2.25 0 0 0-.924.746 1.891 1.891 0 0 0-.348 1.094h-5.29c.007-1.247.348-2.347 1.024-3.302.683-.954 1.617-1.703 2.804-2.247 1.187-.543 2.549-.815 4.087-.815 1.504 0 2.833.255 3.987.766 1.16.51 2.065 1.213 2.714 2.107.657.889.981 1.906.975 3.053.013 1.14-.378 2.075-1.174 2.804-.788.73-1.789 1.16-3.002 1.293v.159c1.644.179 2.88.683 3.708 1.511.829.822 1.237 1.856 1.223 3.102.007 1.194-.351 2.25-1.073 3.172-.716.922-1.714 1.644-2.993 2.168-1.273.524-2.741.785-4.405.785Z"
-              fill="#fff"
+              fill={paint}
             />
             <rect
               x="163"
@@ -56,16 +63,16 @@ export default async function handler(req: NextRequest) {
               width="48"
               height="48"
               rx="9"
-              stroke="#fff"
+              stroke={paint}
               stroke-width="2"
             />
             <defs>
               <clipPath id="a">
-                <path fill="#fff" d="M0 9.771h150v30.457H0z" />
+                <path fill={paint} d="M0 9.771h150v30.457H0z" />
               </clipPath>
             </defs>
           </svg>
-          <div tw="flex flex-col text-white flex-1 py-10">
+          <div tw="flex flex-col flex-1 py-10">
             <div
               tw="flex text-xl uppercase font-bold tracking-tight"
               style={{ fontFamily: "Inter", fontWeight: "normal" }}
@@ -84,7 +91,7 @@ export default async function handler(req: NextRequest) {
               {heading}
             </div>
           </div>
-          <div tw="flex text-white items-center w-full justify-between">
+          <div tw="flex items-center w-full justify-between">
             <div
               tw="flex text-xl"
               style={{ fontFamily: "Inter", fontWeight: "normal" }}
@@ -98,14 +105,14 @@ export default async function handler(req: NextRequest) {
               <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
                 <path
                   d="M30 44v-8a9.6 9.6 0 0 0-2-7c6 0 12-4 12-11 .16-2.5-.54-4.96-2-7 .56-2.3.56-4.7 0-7 0 0-2 0-6 3-5.28-1-10.72-1-16 0-4-3-6-3-6-3-.6 2.3-.6 4.7 0 7a10.806 10.806 0 0 0-2 7c0 7 6 11 12 11a9.43 9.43 0 0 0-1.7 3.3c-.34 1.2-.44 2.46-.3 3.7v8"
-                  stroke="#fff"
+                  stroke={paint}
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
                 <path
                   d="M18 36c-9.02 4-10-4-14-4"
-                  stroke="#fff"
+                  stroke={paint}
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"

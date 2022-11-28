@@ -8,7 +8,7 @@ export default function Head({ params }) {
   return (
     <MdxHead
       params={params}
-      og={{ heading: doc.description, type: "Documentation" }}
+      og={{ heading: doc.description, type: "Documentation", mode: "light" }}
     />
   )
 }
