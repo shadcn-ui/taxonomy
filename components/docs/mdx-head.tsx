@@ -1,6 +1,8 @@
 import * as z from "zod"
 import { allDocuments } from "contentlayer/generated"
+
 import { ogImageSchema } from "@/lib/validations/og"
+import { absoluteUrl } from "@/lib/utils"
 
 interface MdxHeadProps {
   params: {
@@ -30,10 +32,13 @@ export default function MdxHead({ params, og }: MdxHeadProps) {
   return (
     <>
       <title>{title}</title>
+      <link rel="canonical" href={absoluteUrl(mdxDoc.slug)} />
       <meta name="description" content={mdxDoc.description} />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width" />
       <meta property="og:type" content="website" />
+      <meta property="og:title" content={og.heading || mdxDoc.title} />
+      <meta property="og:description" content={mdxDoc.description} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={ogUrl.toString()} />
       <meta property="twitter:card" content="summary_large_image" />
