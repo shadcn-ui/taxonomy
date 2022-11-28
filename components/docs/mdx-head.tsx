@@ -21,7 +21,7 @@ export default function MdxHead({ params, og }: MdxHeadProps) {
   const url = process.env.NEXT_PUBLIC_APP_URL
   let ogUrl = new URL(`${url}/og.jpg`)
 
-  if (og.type) {
+  if (og?.type) {
     ogUrl = new URL(`${url}/api/og`)
     ogUrl.searchParams.set("heading", og.heading || mdxDoc.title)
     ogUrl.searchParams.set("type", og.type)
