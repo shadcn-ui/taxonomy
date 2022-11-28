@@ -23,9 +23,12 @@ export default function MdxHead({ params, og }: MdxHeadProps) {
   const url = process.env.NEXT_PUBLIC_APP_URL
   let ogUrl = new URL(`${url}/og.jpg`)
 
+  const ogTitle = og?.heading || mdxDoc.title
+  const ogDescription = mdxDoc.description
+
   if (og?.type) {
     ogUrl = new URL(`${url}/api/og`)
-    ogUrl.searchParams.set("heading", og.heading || mdxDoc.title)
+    ogUrl.searchParams.set("heading", ogTitle)
     ogUrl.searchParams.set("type", og.type)
   }
 
@@ -33,14 +36,16 @@ export default function MdxHead({ params, og }: MdxHeadProps) {
     <>
       <title>{title}</title>
       <link rel="canonical" href={absoluteUrl(mdxDoc.slug)} />
-      <meta name="description" content={mdxDoc.description} />
+      <meta name="description" content={ogDescription} />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content={og.heading || mdxDoc.title} />
-      <meta property="og:description" content={mdxDoc.description} />
+      <meta property="og:title" content={ogTitle} />
+      <meta property="og:description" content={ogDescription} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={ogUrl.toString()} />
+      <meta property="twitter:title" content={ogTitle} />
+      <meta property="twitter:description" content={ogDescription} />
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
       <meta property="twitter:image" content={ogUrl.toString()} />
