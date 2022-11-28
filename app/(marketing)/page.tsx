@@ -187,7 +187,7 @@ export default async function IndexPage() {
             >
               GitHub
             </Link>
-            .
+            .{" "}
             <Link href="/docs" className="underline underline-offset-4">
               I&apos;m also documenting everything here
             </Link>
