@@ -1,6 +1,7 @@
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
 import { cn } from "@/lib/utils"
+import Image, { ImageProps } from "next/image"
 
 type AvatarProps = AvatarPrimitive.AvatarProps
 
@@ -16,10 +17,22 @@ export function Avatar({ className, ...props }: AvatarProps) {
   )
 }
 
-type AvatarImageProps = AvatarPrimitive.AvatarImageProps
-
-Avatar.Image = function AvatarImage({ className, ...props }: AvatarImageProps) {
-  return <AvatarPrimitive.Image className={cn("", className)} {...props} />
+Avatar.Image = function AvatarImage({
+  className,
+  alt,
+  width = 32,
+  height = 32,
+  ...props
+}: ImageProps) {
+  return (
+    <Image
+      className={cn("", className)}
+      alt={alt}
+      width={width}
+      height={height}
+      {...props}
+    />
+  )
 }
 
 Avatar.Fallback = function AvatarFallback({
