@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation"
+import { cache } from "react"
 
 import { db } from "@/lib/db"
 import { getCurrentUser } from "@/lib/session"
@@ -10,7 +11,7 @@ import { DashboardShell } from "@/components/dashboard/shell"
 import { PostItem } from "@/components/dashboard/post-item"
 import { EmptyPlaceholder } from "@/components/dashboard/empty-placeholder"
 
-async function getPostsForUser(userId: User["id"]) {
+const getPostsForUser = cache(async (userId: User["id"]) => {
   return await db.post.findMany({
     where: {
       authorId: userId,
@@ -25,7 +26,7 @@ async function getPostsForUser(userId: User["id"]) {
       updatedAt: "desc",
     },
   })
-}
+})
 
 export default async function DashboardPage() {
   const user = await getCurrentUser()
