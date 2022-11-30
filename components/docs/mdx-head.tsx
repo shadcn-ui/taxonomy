@@ -45,11 +45,11 @@ export default function MdxHead({ params, og }: MdxHeadProps) {
       <meta property="og:description" content={ogDescription} />
       <meta property="og:url" content={url} />
       <meta property="og:image" content={ogUrl.toString()} />
-      <meta property="twitter:title" content={ogTitle} />
-      <meta property="twitter:description" content={ogDescription} />
-      <meta property="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={ogTitle} />
+      <meta name="twitter:description" content={ogDescription} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={url} />
-      <meta property="twitter:image" content={ogUrl.toString()} />
+      <meta name="twitter:image" content={ogUrl.toString()} />
     </>
   )
 }
