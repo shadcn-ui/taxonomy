@@ -18,14 +18,20 @@ export function Avatar({ className, ...props }: AvatarProps) {
 }
 
 Avatar.Image = function AvatarImage({
+  src,
   className,
   alt,
   width = 32,
   height = 32,
   ...props
 }: ImageProps) {
+  if (!src) {
+    return <Avatar.Fallback />
+  }
+
   return (
     <Image
+      src={src}
       className={cn("", className)}
       alt={alt}
       width={width}
