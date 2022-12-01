@@ -8,8 +8,12 @@ import { db } from "@/lib/db"
 
 const postmarkClient = new Client(process.env.POSTMARK_API_TOKEN)
 
-const POSTMARK_SIGN_IN_TEMPLATE = process.env.POSTMARK_SIGN_IN_TEMPLATE
-const POSTMARK_ACTIVATION_TEMPLATE = process.env.POSTMARK_ACTIVATION_TEMPLATE
+const POSTMARK_SIGN_IN_TEMPLATE = parseInt(
+  process.env.POSTMARK_SIGN_IN_TEMPLATE
+)
+const POSTMARK_ACTIVATION_TEMPLATE = parseInt(
+  process.env.POSTMARK_ACTIVATION_TEMPLATE
+)
 
 export const authOptions: NextAuthOptions = {
   // huh any! I know.
