@@ -31,9 +31,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     >
       <head />
       <body className="min-h-screen">
-        <MenuProvider>
-        {children}
-        </MenuProvider>
+        <MenuProvider>{children}</MenuProvider>
         <Analytics />
         <Help />
         <Toaster position="bottom-right" />

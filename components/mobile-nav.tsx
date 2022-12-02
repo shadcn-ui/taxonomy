@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import * as React from "react"
 import Link from "next/link"
@@ -16,7 +16,12 @@ interface MobileNavProps {
   toggleFunction: (toggle: boolean) => void
 }
 
-export function MobileNav({ items, children, toggle, toggleFunction }: MobileNavProps) {
+export function MobileNav({
+  items,
+  children,
+  toggle,
+  toggleFunction,
+}: MobileNavProps) {
   useLockBody()
 
   return (

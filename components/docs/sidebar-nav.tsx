@@ -38,7 +38,7 @@ export function DocsSidebarNavItems({
   items,
   pathname,
 }: DocsSidebarNavItemsProps) {
-  const { toggle, toggleFunction } = useContext(MenuContext);
+  const { toggle, toggleFunction } = useContext(MenuContext)
 
   return items?.length ? (
     <div className="grid grid-flow-row auto-rows-max text-sm">

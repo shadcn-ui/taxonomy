@@ -1,21 +1,24 @@
-import { createContext, useState } from "react";
+import { createContext, useState } from "react"
 
 interface MenuContextProps {
   toggle: boolean
   toggleFunction: (toggle: boolean) => void
 }
 
-export const MenuContext = createContext<MenuContextProps>({toggle: false, toggleFunction: () => {}});
+export const MenuContext = createContext<MenuContextProps>({
+  toggle: false,
+  toggleFunction: () => {},
+})
 
-export const MenuProvider = ({ children })  =>  {
-  const  [toggle, setToggle] = useState(false);
+export const MenuProvider = ({ children }) => {
+  const [toggle, setToggle] = useState(false)
   const toggleFunction = () => {
-    setToggle(!toggle);
+    setToggle(!toggle)
   }
 
   return (
     <MenuContext.Provider value={{ toggle, toggleFunction }}>
-    {children}
+      {children}
     </MenuContext.Provider>
   )
-};
+}

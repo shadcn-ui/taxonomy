@@ -19,7 +19,7 @@ interface MainNavProps {
 
 export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment()
-  const { toggle, toggleFunction } = useContext(MenuContext);
+  const { toggle, toggleFunction } = useContext(MenuContext)
 
   return (
     <div className="flex gap-6 md:gap-10">
@@ -53,7 +53,15 @@ export function MainNav({ items, children }: MainNavProps) {
         {toggle ? <Icons.close /> : <Icons.logo />}
         <span className="font-bold">Menu</span>
       </button>
-      {toggle && <MobileNav toggleFunction={toggleFunction} toggle={toggle} items={items}>{children}</MobileNav>}
+      {toggle && (
+        <MobileNav
+          toggleFunction={toggleFunction}
+          toggle={toggle}
+          items={items}
+        >
+          {children}
+        </MobileNav>
+      )}
     </div>
   )
 }
