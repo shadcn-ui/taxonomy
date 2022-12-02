@@ -17,7 +17,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-40 w-full border-b border-b-slate-200 bg-white">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-          <MainNav items={docsConfig.mainNav}>
+          <MainNav navLinks={docsConfig.mainNav}>
             <DocsSidebarNav items={docsConfig.sidebarNav} />
           </MainNav>
           <div className="flex flex-1 items-center space-x-4 sm:justify-end">
