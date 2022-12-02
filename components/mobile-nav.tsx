@@ -8,13 +8,13 @@ import { Icons } from "./icons"
 import { siteConfig } from "@/config/site"
 
 interface MobileNavProps {
-  navLinks: MainNavItem[]
+  items: MainNavItem[]
   handleShowMobileMenu: () => void
   children?: React.ReactNode
 }
 
 export function MobileNav({
-  navLinks,
+  items,
   handleShowMobileMenu,
   children,
 }: MobileNavProps) {
@@ -32,7 +32,7 @@ export function MobileNav({
           <span className="font-bold">{siteConfig.name}</span>
         </Link>
         <nav className="grid grid-flow-row auto-rows-max text-sm">
-          {navLinks.map((item, index) => (
+          {items.map((item, index) => (
             <Link
               key={index}
               href={item.disabled ? "#" : item.href}

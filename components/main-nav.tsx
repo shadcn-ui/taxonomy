@@ -11,12 +11,12 @@ import { Icons } from "@/components/icons"
 import { MobileNav } from "@/components/mobile-nav"
 
 interface MainNavProps {
-  navLinks?: MainNavItem[]
+  items?: MainNavItem[]
   children?: React.ReactNode
 }
 
 
-export function MainNav({ navLinks, children }: MainNavProps) {
+export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment()
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
   
@@ -32,9 +32,9 @@ export function MainNav({ navLinks, children }: MainNavProps) {
           {siteConfig.name}
         </span>
       </Link>
-      {navLinks?.length ? (
+      {items?.length ? (
         <nav className="hidden gap-6 md:flex">
-          {navLinks?.map((item, index) => (
+          {items?.map((item, index) => (
             <Link
               key={index}
               href={item.disabled ? "#" : item.href}
@@ -56,7 +56,7 @@ export function MainNav({ navLinks, children }: MainNavProps) {
         {showMobileMenu ? <Icons.close /> : <Icons.logo />}
         <span className="font-bold">Menu</span>
       </button>
-      {showMobileMenu && <MobileNav navLinks={navLinks} handleShowMobileMenu={handleShowMobileMenu}>{children}</MobileNav>}
+      {showMobileMenu && <MobileNav items={items} handleShowMobileMenu={handleShowMobileMenu}>{children}</MobileNav>}
     </div>
   )
 }
