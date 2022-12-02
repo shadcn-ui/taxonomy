@@ -1,3 +1,5 @@
+"use client"
+
 import { Inter as FontSans } from "@next/font/google"
 
 import "@/styles/globals.css"
@@ -7,6 +9,7 @@ import { Toaster } from "@/ui/toast"
 import { Help } from "@/components/help"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
+import { MenuProvider } from "context"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -28,7 +31,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
     >
       <head />
       <body className="min-h-screen">
+        <MenuProvider>
         {children}
+        </MenuProvider>
         <Analytics />
         <Help />
         <Toaster position="bottom-right" />

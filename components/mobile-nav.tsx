@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from "react"
 import Link from "next/link"
 
@@ -10,9 +12,11 @@ import { siteConfig } from "@/config/site"
 interface MobileNavProps {
   items: MainNavItem[]
   children?: React.ReactNode
+  toggle: boolean
+  toggleFunction: (toggle: boolean) => void
 }
 
-export function MobileNav({ items, children }: MobileNavProps) {
+export function MobileNav({ items, children, toggle, toggleFunction }: MobileNavProps) {
   useLockBody()
 
   return (
@@ -31,6 +35,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
             <Link
               key={index}
               href={item.disabled ? "#" : item.href}
+              onClick={() => toggleFunction(!toggle)}
               className={cn(
                 "flex w-full items-center rounded-md px-2 py-2 text-sm font-medium hover:underline",
                 item.disabled && "cursor-not-allowed opacity-60"

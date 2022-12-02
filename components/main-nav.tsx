@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils"
 import { siteConfig } from "@/config/site"
 import { Icons } from "@/components/icons"
 import { MobileNav } from "@/components/mobile-nav"
+import { useContext } from "react"
+import { MenuContext } from "context"
 
 interface MainNavProps {
   items?: MainNavItem[]
@@ -17,7 +19,7 @@ interface MainNavProps {
 
 export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment()
-  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
+  const { toggle, toggleFunction } = useContext(MenuContext);
 
   return (
     <div className="flex gap-6 md:gap-10">
@@ -46,12 +48,12 @@ export function MainNav({ items, children }: MainNavProps) {
       ) : null}
       <button
         className="flex items-center space-x-2 md:hidden"
-        onClick={() => setShowMobileMenu(!showMobileMenu)}
+        onClick={() => toggleFunction(!toggle)}
       >
-        {showMobileMenu ? <Icons.close /> : <Icons.logo />}
+        {toggle ? <Icons.close /> : <Icons.logo />}
         <span className="font-bold">Menu</span>
       </button>
-      {showMobileMenu && <MobileNav items={items}>{children}</MobileNav>}
+      {toggle && <MobileNav toggleFunction={toggleFunction} toggle={toggle} items={items}>{children}</MobileNav>}
     </div>
   )
 }

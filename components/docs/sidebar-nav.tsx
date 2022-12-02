@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation"
 
 import { SidebarNavItem } from "types"
 import { cn } from "@/lib/utils"
+import { useContext } from "react"
+import { MenuContext } from "context"
 
 export interface DocsSidebarNavProps {
   items: SidebarNavItem[]
@@ -36,12 +38,15 @@ export function DocsSidebarNavItems({
   items,
   pathname,
 }: DocsSidebarNavItemsProps) {
+  const { toggle, toggleFunction } = useContext(MenuContext);
+
   return items?.length ? (
     <div className="grid grid-flow-row auto-rows-max text-sm">
       {items.map((item, index) => (
         <Link
           key={index}
           href={item.disabled ? "#" : item.href}
+          onClick={() => toggleFunction(!toggle)}
           className={cn(
             "flex w-full items-center rounded-md px-2 py-2 hover:underline",
             item.disabled && "cursor-not-allowed opacity-60",
