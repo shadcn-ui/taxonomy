@@ -8,11 +8,16 @@ import { Icons } from "./icons"
 import { siteConfig } from "@/config/site"
 
 interface MobileNavProps {
-  items: MainNavItem[]
+  navLinks: MainNavItem[]
+  handleShowMobileMenu: () => void
   children?: React.ReactNode
 }
 
-export function MobileNav({ items, children }: MobileNavProps) {
+export function MobileNav({
+  navLinks,
+  handleShowMobileMenu,
+  children,
+}: MobileNavProps) {
   useLockBody()
 
   return (
@@ -27,10 +32,11 @@ export function MobileNav({ items, children }: MobileNavProps) {
           <span className="font-bold">{siteConfig.name}</span>
         </Link>
         <nav className="grid grid-flow-row auto-rows-max text-sm">
-          {items.map((item, index) => (
+          {navLinks.map((item, index) => (
             <Link
               key={index}
               href={item.disabled ? "#" : item.href}
+              onClick={handleShowMobileMenu}
               className={cn(
                 "flex w-full items-center rounded-md px-2 py-2 text-sm font-medium hover:underline",
                 item.disabled && "cursor-not-allowed opacity-60"

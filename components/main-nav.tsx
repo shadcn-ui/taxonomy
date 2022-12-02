@@ -11,13 +11,18 @@ import { Icons } from "@/components/icons"
 import { MobileNav } from "@/components/mobile-nav"
 
 interface MainNavProps {
-  items?: MainNavItem[]
+  navLinks?: MainNavItem[]
   children?: React.ReactNode
 }
 
-export function MainNav({ items, children }: MainNavProps) {
+
+export function MainNav({ navLinks, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment()
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
+  
+  const handleShowMobileMenu = () => {
+    setShowMobileMenu(!showMobileMenu)
+  }
 
   return (
     <div className="flex gap-6 md:gap-10">
@@ -27,9 +32,9 @@ export function MainNav({ items, children }: MainNavProps) {
           {siteConfig.name}
         </span>
       </Link>
-      {items?.length ? (
+      {navLinks?.length ? (
         <nav className="hidden gap-6 md:flex">
-          {items?.map((item, index) => (
+          {navLinks?.map((item, index) => (
             <Link
               key={index}
               href={item.disabled ? "#" : item.href}
@@ -46,12 +51,12 @@ export function MainNav({ items, children }: MainNavProps) {
       ) : null}
       <button
         className="flex items-center space-x-2 md:hidden"
-        onClick={() => setShowMobileMenu(!showMobileMenu)}
+        onClick={handleShowMobileMenu}
       >
         {showMobileMenu ? <Icons.close /> : <Icons.logo />}
         <span className="font-bold">Menu</span>
       </button>
-      {showMobileMenu && <MobileNav items={items}>{children}</MobileNav>}
+      {showMobileMenu && <MobileNav navLinks={navLinks} handleShowMobileMenu={handleShowMobileMenu}>{children}</MobileNav>}
     </div>
   )
 }
