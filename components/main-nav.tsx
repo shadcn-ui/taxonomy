@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils"
 import { siteConfig } from "@/config/site"
 import { Icons } from "@/components/icons"
 import { MobileNav } from "@/components/mobile-nav"
+import { docsConfig } from "@/config/docs"
+import { DocsSidebarNav } from "./docs/sidebar-nav"
 
 interface MainNavProps {
   items?: MainNavItem[]
@@ -56,7 +58,12 @@ export function MainNav({ items, children }: MainNavProps) {
         {showMobileMenu ? <Icons.close /> : <Icons.logo />}
         <span className="font-bold">Menu</span>
       </button>
-      {showMobileMenu && <MobileNav items={items} handleShowMobileMenu={handleShowMobileMenu}>{children}</MobileNav>}
+      {showMobileMenu && <MobileNav items={items} handleShowMobileMenu={handleShowMobileMenu}>
+        {(segment === 'docs') ? 
+        <DocsSidebarNav items={docsConfig.sidebarNav} handleShowMobileMenu={handleShowMobileMenu} /> :
+        children
+              }
+        </MobileNav>}
     </div>
   )
 }
