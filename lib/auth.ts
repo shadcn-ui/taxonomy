@@ -5,15 +5,9 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter"
 import { Client } from "postmark"
 
 import { db } from "@/lib/db"
+import { siteConfig } from "@/config/site"
 
 const postmarkClient = new Client(process.env.POSTMARK_API_TOKEN)
-
-const POSTMARK_SIGN_IN_TEMPLATE = parseInt(
-  process.env.POSTMARK_SIGN_IN_TEMPLATE
-)
-const POSTMARK_ACTIVATION_TEMPLATE = parseInt(
-  process.env.POSTMARK_ACTIVATION_TEMPLATE
-)
 
 export const authOptions: NextAuthOptions = {
   // huh any! I know.
@@ -32,14 +26,6 @@ export const authOptions: NextAuthOptions = {
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),
     EmailProvider({
-      server: {
-        host: process.env.SMTP_HOST,
-        port: Number(process.env.SMTP_PORT),
-        auth: {
-          user: process.env.SMTP_USER,
-          pass: process.env.SMTP_PASSWORD,
-        },
-      },
       from: process.env.SMTP_FROM,
       sendVerificationRequest: async ({ identifier, url, provider }) => {
         const user = await db.user.findUnique({
@@ -51,15 +37,16 @@ export const authOptions: NextAuthOptions = {
           },
         })
 
+        const templateId = user?.emailVerified
+          ? process.env.POSTMARK_SIGN_IN_TEMPLATE
+          : process.env.POSTMARK_ACTIVATION_TEMPLATE
         const result = await postmarkClient.sendEmailWithTemplate({
-          TemplateId: user?.emailVerified
-            ? POSTMARK_SIGN_IN_TEMPLATE
-            : POSTMARK_ACTIVATION_TEMPLATE,
+          TemplateId: parseInt(templateId),
           To: identifier,
           From: provider.from,
           TemplateModel: {
             action_url: url,
-            product_name: "Taxonomy",
+            product_name: siteConfig.name,
           },
           Headers: [
             {
