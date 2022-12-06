@@ -41,7 +41,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
     if (!signInResult?.ok) {
       return toast({
         title: "Something went wrong.",
-        message: "Your post was not saved. Please try again.",
+        message: "Your sign in request failed. Please try again.",
         type: "error",
       })
     }

@@ -40,6 +40,7 @@ export function PostOperations({ post }: PostOperationsProps) {
       <DropdownMenu>
         <DropdownMenu.Trigger className="flex h-8 w-8 items-center justify-center rounded-md border transition-colors hover:bg-slate-50">
           <Icons.ellipsis className="h-4 w-4" />
+          <span className="sr-only">Open</span>
         </DropdownMenu.Trigger>
         <DropdownMenu.Portal>
           <DropdownMenu.Content>

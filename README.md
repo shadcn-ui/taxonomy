@@ -50,7 +50,8 @@ A few people have asked me to turn this into a starter. I think we could do that
 - [x] ~Build marketing pages~
 - [x] ~Subscriptions using Stripe~
 - [x] ~Responsive styles~
-- [ ] Add OG image for blog using @vercel/og
+- [x] ~Add OG image for blog using @vercel/og~
+- [ ] Add tests
 - [ ] Dark mode
 
 ## Known Issues
@@ -76,6 +77,10 @@ pnpm install
 ```
 
 2. Copy `.env.example` to `.env.local` and update the variables.
+
+```sh
+cp .env.example .env.local
+```
 
 3. Start the development server:
 
