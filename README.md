@@ -90,4 +90,4 @@ pnpm dev
 
 ## License
 
-Licensed under the [MIT license](https://github.com/reflexjs/reflex/blob/master/LICENSE).
+Licensed under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).
