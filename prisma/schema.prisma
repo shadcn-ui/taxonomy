@@ -3,13 +3,12 @@
 
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
   provider             = "mysql"
   url                  = env("DATABASE_URL")
-  referentialIntegrity = "prisma"
+  relationMode = "prisma"
 }
 
 model Account {
@@ -32,6 +31,8 @@ model Account {
 
   @@unique([provider, providerAccountId])
   @@map(name: "accounts")
+  @@index([userId])
+
 }
 
 model Session {
@@ -42,6 +43,8 @@ model Session {
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map(name: "sessions")
+  @@index([userId])
+
 }
 
 model User {
@@ -86,4 +89,5 @@ model Post {
   author User @relation(fields: [authorId], references: [id])
 
   @@map(name: "posts")
+  @@index([authorId])
 }
