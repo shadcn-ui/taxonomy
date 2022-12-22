@@ -1,0 +1,3 @@
+.portableText a {
+  @apply underline transition-colors duration-200 ;
+}

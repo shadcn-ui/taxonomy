@@ -1,0 +1,25 @@
+.portableText {
+  @apply text-lg leading-relaxed;
+}
+
+.portableText p,
+.portableText ul,
+.portableText ol,
+.portableText blockquote {
+  @apply my-6;
+}
+
+.portableText h2 {
+  @apply mt-12 mb-4 text-3xl leading-snug;
+}
+
+.portableText h3 {
+  @apply mt-8 mb-4 text-2xl leading-snug;
+}
+
+.portableText a {
+  @apply text-blue-500 underline;
+}
+.portableText a:hover {
+  @apply text-blue-800;
+}

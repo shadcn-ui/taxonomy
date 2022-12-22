@@ -1,39 +1,14 @@
-import { Inter as FontSans } from "@next/font/google"
+import 'tailwindcss/tailwind.css'
 
-import "@/styles/globals.css"
-
-import { cn } from "@/lib/utils"
-import { Toaster } from "@/ui/toast"
-import { Help } from "@/components/help"
-import { Analytics } from "@/components/analytics"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
-
-const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-inter",
-})
-
-interface RootLayoutProps {
+export default function RootLayout({
+  children,
+}: {
   children: React.ReactNode
-}
-
-export default function RootLayout({ children }: RootLayoutProps) {
+}) {
   return (
-    <html
-      lang="en"
-      className={cn(
-        "bg-white font-sans text-slate-900 antialiased",
-        fontSans.variable
-      )}
-    >
+    <html lang="en">
       <head />
-      <body className="min-h-screen">
-        {children}
-        <Analytics />
-        <Help />
-        <Toaster position="bottom-right" />
-        <TailwindIndicator />
-      </body>
+      <body className="bg-white text-black">{children}</body>
     </html>
   )
 }

@@ -1,0 +1,8 @@
+{
+  "description": "Check the readme: https://github.com/sanity-io/renovate-presets/blob/main/ecosystem/README.md",
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "github>sanity-io/renovate-presets//ecosystem/auto",
+    "github>sanity-io/renovate-presets//ecosystem/studio-v3"
+  ]
+}
