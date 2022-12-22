@@ -14,13 +14,15 @@ export default function AuthorAvatar(props: Author) {
               : 'https://source.unsplash.com/96x96/?face'
           }
           className="rounded-full"
-          height={96}
-          width={96}
+          height={42}
+          width={42}
           // @TODO add alternative text to avatar image schema
-          alt=""
+          alt={name}
         />
       </div>
-      <div className="text-xl font-bold">{name}</div>
+      <div className="flex-1 text-left leading-tight">
+          <p className="font-medium text-slate-900">{name}</p>
+        </div>
     </div>
   )
 }
