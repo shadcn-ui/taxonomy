@@ -1,7 +1,7 @@
+import Image, { ImageProps } from "next/image"
 import * as AvatarPrimitive from "@radix-ui/react-avatar"
 
 import { cn } from "@/lib/utils"
-import Image, { ImageProps } from "next/image"
 
 type AvatarProps = AvatarPrimitive.AvatarProps
 
@@ -32,7 +32,7 @@ Avatar.Image = function AvatarImage({
   return (
     <Image
       src={src}
-      className={cn("", className)}
+      className={cn("object-cover", className)}
       alt={alt}
       width={width}
       height={height}
