@@ -15,6 +15,7 @@ specifiers:
   "@hookform/resolvers": ^2.9.10
   "@next-auth/prisma-adapter": ^1.0.4
   "@next/font": ^13.0.3
+  "@planetscale/database": ^1.4.0
   "@prisma/client": ^4.5.0
   "@radix-ui/react-alert-dialog": ^1.0.2
   "@radix-ui/react-avatar": ^1.0.1
@@ -33,6 +34,7 @@ specifiers:
   date-fns: ^2.29.3
   eslint: 8.21.0
   eslint-config-next: ^13.0.0
+  framer-motion: ^7.6.12
   husky: ^8.0.2
   lucide-react: ^0.92.0
   mdast-util-toc: ^6.1.0
@@ -83,6 +85,7 @@ dependencies:
   "@hookform/resolvers": 2.9.10_react-hook-form@7.39.5
   "@next-auth/prisma-adapter": 1.0.5_oxrzh4zbpojkypzd3tdxppynue
   "@next/font": 13.0.4
+  "@planetscale/database": 1.5.0
   "@prisma/client": 4.6.1_prisma@4.6.1
   "@radix-ui/react-alert-dialog": 1.0.2_bb2bxwco6ptpubzwpazr52qf6i
   "@radix-ui/react-avatar": 1.0.1_biqbaboplfbrettd7655fr4n2y
@@ -94,6 +97,7 @@ dependencies:
   clsx: 1.2.1
   contentlayer: 0.2.9_esbuild@0.14.54
   date-fns: 2.29.3
+  framer-motion: 7.6.19_biqbaboplfbrettd7655fr4n2y
   lucide-react: 0.92.0_sh5qlbywuemxd2y3xkrw2y2kr4
   next: 13.1.0_biqbaboplfbrettd7655fr4n2y
   next-auth: 4.18.7_idzega45vxhfgiuuxa3rl6d5b4
@@ -685,6 +689,25 @@ packages:
       }
     dev: false
 
+  /@emotion/is-prop-valid/0.8.8:
+    resolution:
+      {
+        integrity: sha512-u5WtneEAr5IDG2Wv65yhunPSMLIpuKsbuOktRojfrEiEvRyC85LgPMZI63cr7NUqT8ZIGdSVg8ZKGxIug4lXcA==,
+      }
+    requiresBuild: true
+    dependencies:
+      "@emotion/memoize": 0.7.4
+    dev: false
+    optional: true
+
+  /@emotion/memoize/0.7.4:
+    resolution:
+      {
+        integrity: sha512-Ja/Vfqe3HpuzRsG1oBtWTHk2PGZ7GR+2Vz5iYGelAw8dx32K0y7PjVuxK6z1nMpZOqAFsRUPCkK1YjJ56qJlgw==,
+      }
+    dev: false
+    optional: true
+
   /@esbuild-plugins/node-resolve/0.1.4_esbuild@0.14.54:
     resolution:
       {
@@ -928,6 +951,71 @@ packages:
       vfile: 5.3.6
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /@motionone/animation/10.15.1:
+    resolution:
+      {
+        integrity: sha512-mZcJxLjHor+bhcPuIFErMDNyrdb2vJur8lSfMCsuCB4UyV8ILZLvK+t+pg56erv8ud9xQGK/1OGPt10agPrCyQ==,
+      }
+    dependencies:
+      "@motionone/easing": 10.15.1
+      "@motionone/types": 10.15.1
+      "@motionone/utils": 10.15.1
+      tslib: 2.4.1
+    dev: false
+
+  /@motionone/dom/10.13.1:
+    resolution:
+      {
+        integrity: sha512-zjfX+AGMIt/fIqd/SL1Lj93S6AiJsEA3oc5M9VkUr+Gz+juRmYN1vfvZd6MvEkSqEjwPQgcjN7rGZHrDB9APfQ==,
+      }
+    dependencies:
+      "@motionone/animation": 10.15.1
+      "@motionone/generators": 10.15.1
+      "@motionone/types": 10.15.1
+      "@motionone/utils": 10.15.1
+      hey-listen: 1.0.8
+      tslib: 2.4.1
+    dev: false
+
+  /@motionone/easing/10.15.1:
+    resolution:
+      {
+        integrity: sha512-6hIHBSV+ZVehf9dcKZLT7p5PEKHGhDwky2k8RKkmOvUoYP3S+dXsKupyZpqx5apjd9f+php4vXk4LuS+ADsrWw==,
+      }
+    dependencies:
+      "@motionone/utils": 10.15.1
+      tslib: 2.4.1
+    dev: false
+
+  /@motionone/generators/10.15.1:
+    resolution:
+      {
+        integrity: sha512-67HLsvHJbw6cIbLA/o+gsm7h+6D4Sn7AUrB/GPxvujse1cGZ38F5H7DzoH7PhX+sjvtDnt2IhFYF2Zp1QTMKWQ==,
+      }
+    dependencies:
+      "@motionone/types": 10.15.1
+      "@motionone/utils": 10.15.1
+      tslib: 2.4.1
+    dev: false
+
+  /@motionone/types/10.15.1:
+    resolution:
+      {
+        integrity: sha512-iIUd/EgUsRZGrvW0jqdst8st7zKTzS9EsKkP+6c6n4MPZoQHwiHuVtTQLD6Kp0bsBLhNzKIBlHXponn/SDT4hA==,
+      }
+    dev: false
+
+  /@motionone/utils/10.15.1:
+    resolution:
+      {
+        integrity: sha512-p0YncgU+iklvYr/Dq4NobTRdAPv9PveRDUXabPEeOjBLSO/1FNB2phNTZxOxpi1/GZwYpAoECEa0Wam+nsmhSw==,
+      }
+    dependencies:
+      "@motionone/types": 10.15.1
+      hey-listen: 1.0.8
+      tslib: 2.4.1
     dev: false
 
   /@next-auth/prisma-adapter/1.0.5_oxrzh4zbpojkypzd3tdxppynue:
@@ -1377,6 +1465,14 @@ packages:
       tiny-glob: 0.2.9
       tslib: 2.4.1
     dev: true
+
+  /@planetscale/database/1.5.0:
+    resolution:
+      {
+        integrity: sha512-Qwh7Or1W5dB5mZ9EQqDkgvkDKhBBmQe58KIVUy0SGocNtr5fP4JAWtvZ6EdLAV6C6hVpzNlCA2xIg9lKTswm1Q==,
+      }
+    engines: { node: ">=16" }
+    dev: false
 
   /@prisma/client/4.6.1_prisma@4.6.1:
     resolution:
@@ -4623,6 +4719,35 @@ packages:
       }
     dev: true
 
+  /framer-motion/7.6.19_biqbaboplfbrettd7655fr4n2y:
+    resolution:
+      {
+        integrity: sha512-U+ogwGwNw6Y+pdq6GZB5xvnvLDlq3FTmcKaG5MCUjXuqRLrjKbKTqN4iwZISv3ajwUfgNHM6+tu31LRbYfF9YQ==,
+      }
+    peerDependencies:
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    dependencies:
+      "@motionone/dom": 10.13.1
+      framesync: 6.1.2
+      hey-listen: 1.0.8
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      style-value-types: 5.1.2
+      tslib: 2.4.0
+    optionalDependencies:
+      "@emotion/is-prop-valid": 0.8.8
+    dev: false
+
+  /framesync/6.1.2:
+    resolution:
+      {
+        integrity: sha512-jBTqhX6KaQVDyus8muwZbBeGGP0XgujBRbQ7gM7BRdS3CadCZIHiawyzYLnafYcvZIh5j8WE7cxZKFn7dXhu9g==,
+      }
+    dependencies:
+      tslib: 2.4.0
+    dev: false
+
   /fs-constants/1.0.0:
     resolution:
       {
@@ -5136,6 +5261,13 @@ packages:
       property-information: 6.2.0
       space-separated-tokens: 2.0.2
     dev: true
+
+  /hey-listen/1.0.8:
+    resolution:
+      {
+        integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==,
+      }
+    dev: false
 
   /hosted-git-info/2.8.9:
     resolution:
@@ -8752,6 +8884,16 @@ packages:
       inline-style-parser: 0.1.1
     dev: false
 
+  /style-value-types/5.1.2:
+    resolution:
+      {
+        integrity: sha512-Vs9fNreYF9j6W2VvuDTP7kepALi7sk0xtk2Tu8Yxi9UoajJdEVpNpCov0HsLTqXvNGKX+Uv09pkozVITi1jf3Q==,
+      }
+    dependencies:
+      hey-listen: 1.0.8
+      tslib: 2.4.0
+    dev: false
+
   /styled-jsx/5.1.1_react@18.2.0:
     resolution:
       {
@@ -9042,6 +9184,13 @@ packages:
         integrity: sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==,
       }
     dev: true
+
+  /tslib/2.4.0:
+    resolution:
+      {
+        integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==,
+      }
+    dev: false
 
   /tslib/2.4.1:
     resolution:

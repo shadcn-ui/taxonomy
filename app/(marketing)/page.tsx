@@ -65,7 +65,10 @@ export default async function IndexPage() {
         </div>
       </section>
       <hr className="border-slate-200" />
-      <section className="container grid justify-center gap-6 py-8 md:py-12 lg:py-24">
+      <section
+        id="features"
+        className="container grid justify-center gap-6 py-8 md:py-12 lg:py-24"
+      >
         <div className="mx-auto flex flex-col gap-4 md:max-w-[52rem]">
           <h2 className="text-3xl font-bold leading-[1.1] tracking-tighter sm:text-3xl md:text-6xl">
             Features
@@ -76,7 +79,7 @@ export default async function IndexPage() {
             Next.js 13 app dir.
           </p>
         </div>
-        <div className="grid justify-center gap-4 sm:grid-cols-2 md:max-w-[56rem] md:grid-cols-3">
+        <div className="grid justify-center gap-4 sm:grid-cols-2 md:max-w-[60rem] md:grid-cols-3">
           <div className="relative overflow-hidden rounded-lg border border-slate-200 bg-white p-2 shadow-2xl">
             <div className="flex h-[180px] flex-col justify-between rounded-md bg-[#000000] p-6 text-slate-200">
               <svg viewBox="0 0 24 24" className="h-12 w-12 fill-current">
