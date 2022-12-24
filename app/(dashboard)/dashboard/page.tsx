@@ -39,7 +39,7 @@ export default async function DashboardPage() {
 
   return (
     <DashboardShell>
-      <DashboardHeader heading="Posts" text="Create and manage posts.">
+      <DashboardHeader heading="DB Posts" text="Use the Content Manager for managed Content.  Posts below are directly to the DB.">
         <PostCreateButton />
       </DashboardHeader>
       <div>

@@ -31,21 +31,21 @@ export default function BlogPostPage(props: {
 
   return (
     <Layout preview={preview} loading={loading}>
+      
       <Container>
       <Link
               href="/blog"
-              className="relative top-14 -left-[200px] hidden items-center justify-center text-sm font-medium text-slate-600 hover:text-slate-900 xl:inline-flex"
+              className="relative  -left-[200px] hidden items-center justify-center text-sm font-medium text-slate-600 hover:text-slate-900 xl:inline-flex"
             >
               <Icons.chevronLeft className="mr-2 h-4 w-4" />
               See all posts
-            </Link>
-        <BlogHeader title={title} level={2} />
+        </Link>
         {preview && !post ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
             <article className="relative max-w-3xl py-6 lg:py-10">
-            
+                  
               <PostHeader
                 title={post.title}
                 coverImage={post.coverImage}

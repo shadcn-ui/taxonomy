@@ -17,7 +17,7 @@ export function SiteFooter() {
             >
               shadcn
             </a>
-            . Hosted on{" "}
+            . Adapted for Sanity by Rooted Software. Hosted on{" "}
             <a
               href="https://vercel.com"
               target="_blank"

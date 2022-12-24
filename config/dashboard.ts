@@ -3,32 +3,37 @@ import { DashboardConfig } from "types"
 export const dashboardConfig: DashboardConfig = {
   mainNav: [
     {
+      title: "Features",
+      href: "/features",
+      disabled: true,
+    },
+    {
+      title: "Pricing",
+      href: "/pricing",
+    },
+    {
+      title: "Blog",
+      href: "/blog",
+    },
+    {
       title: "Documentation",
       href: "/docs",
     },
     {
       title: "Support",
       href: "/support",
+    },
+    {
+      title: "Contact",
+      href: "/contact",
       disabled: true,
     },
   ],
   sidebarNav: [
     {
-      title: "Posts",
-      href: "/dashboard",
+      title: "Content Management",
+      href: "/studio",
       icon: "post",
-    },
-    {
-      title: "Pages",
-      href: "/",
-      icon: "page",
-      disabled: true,
-    },
-    {
-      title: "Media",
-      href: "/",
-      icon: "media",
-      disabled: true,
     },
     {
       title: "Billing",

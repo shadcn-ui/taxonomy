@@ -6,7 +6,7 @@ import { PostItem } from "@/components/dashboard/post-item"
 export default function DashboardLoading() {
   return (
     <DashboardShell>
-      <DashboardHeader heading="Posts" text="Create and manage posts.">
+      <DashboardHeader heading="DB Posts" text="Use the Content Manager for managed Content.  Posts below are directly to the DB">
         <PostCreateButton />
       </DashboardHeader>
       <div className="divide-y divide-neutral-200 rounded-md border border-slate-200">

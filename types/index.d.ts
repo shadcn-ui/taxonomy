@@ -19,10 +19,12 @@ export type SidebarNavItem = {
   | {
       href: string
       items?: never
+      slug?: string
     }
   | {
       href?: string
       items: NavLink[]
+      slug?: string
     }
 )
 

@@ -1,4 +1,4 @@
-import PostPage from '@/components/BlogPostPage'
+import PostPage from '@/components/blog/BlogPostPage'
 import PreviewPostPage from '@/components/blog/PreviewPostPage'
 import { PreviewSuspense } from 'components/PreviewSuspense'
 import {

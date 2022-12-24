@@ -32,10 +32,10 @@ export default function IndexPage(props: {
               </p>
             </div>
             <Link
-              href="/guides"
+              href="/register"
               className="relative inline-flex h-11 items-center rounded-md border border-slate-900 bg-white px-8 py-2 text-center font-medium text-slate-900 transition-colors hover:bg-slate-900 hover:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
             >
-              Build your own
+              Sign Up
             </Link>
           </div>
           <hr className="my-8 border-slate-200" />
