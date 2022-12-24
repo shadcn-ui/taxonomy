@@ -8,9 +8,10 @@ import { cn } from "@/lib/utils"
 
 export interface DocsSidebarNavProps {
   items: SidebarNavItem[]
+  handleShowMobileMenu?: () => void
 }
 
-export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
+export function DocsSidebarNav({ items, handleShowMobileMenu }: DocsSidebarNavProps) {
   const pathname = usePathname()
 
   return items.length ? (
@@ -20,7 +21,7 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
           <h4 className="mb-1 rounded-md px-2 py-1 text-sm font-medium">
             {item.title}
           </h4>
-          <DocsSidebarNavItems items={item.items} pathname={pathname} />
+          <DocsSidebarNavItems items={item.items} pathname={pathname} handleShowMobileMenu={handleShowMobileMenu} />
         </div>
       ))}
     </div>
@@ -29,12 +30,14 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
 
 interface DocsSidebarNavItemsProps {
   items: SidebarNavItem[]
-  pathname: string
+  pathname: string  
+  handleShowMobileMenu?: () => void
 }
 
 export function DocsSidebarNavItems({
   items,
   pathname,
+  handleShowMobileMenu
 }: DocsSidebarNavItemsProps) {
   return items?.length ? (
     <div className="grid grid-flow-row auto-rows-max text-sm">
@@ -42,6 +45,7 @@ export function DocsSidebarNavItems({
         <Link
           key={index}
           href={item.disabled ? "#" : item.href}
+          onClick={handleShowMobileMenu}
           className={cn(
             "flex w-full items-center rounded-md px-2 py-2 hover:underline",
             item.disabled && "cursor-not-allowed opacity-60",

@@ -9,15 +9,22 @@ import { cn } from "@/lib/utils"
 import { siteConfig } from "@/config/site"
 import { Icons } from "@/components/icons"
 import { MobileNav } from "@/components/mobile-nav"
+import { docsConfig } from "@/config/docs"
+import { DocsSidebarNav } from "./docs/sidebar-nav"
 
 interface MainNavProps {
   items?: MainNavItem[]
   children?: React.ReactNode
 }
 
+
 export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment()
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
+  
+  const handleShowMobileMenu = () => {
+    setShowMobileMenu(!showMobileMenu)
+  }
 
   return (
     <div className="flex gap-6 md:gap-10">
@@ -46,12 +53,17 @@ export function MainNav({ items, children }: MainNavProps) {
       ) : null}
       <button
         className="flex items-center space-x-2 md:hidden"
-        onClick={() => setShowMobileMenu(!showMobileMenu)}
+        onClick={handleShowMobileMenu}
       >
         {showMobileMenu ? <Icons.close /> : <Icons.logo />}
         <span className="font-bold">Menu</span>
       </button>
-      {showMobileMenu && <MobileNav items={items}>{children}</MobileNav>}
+      {showMobileMenu && <MobileNav items={items} handleShowMobileMenu={handleShowMobileMenu}>
+        {(segment === 'docs') ? 
+        <DocsSidebarNav items={docsConfig.sidebarNav} handleShowMobileMenu={handleShowMobileMenu} /> :
+        children
+              }
+        </MobileNav>}
     </div>
   )
 }
