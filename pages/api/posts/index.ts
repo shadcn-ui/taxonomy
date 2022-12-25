@@ -1,12 +1,12 @@
-import { NextApiRequest, NextApiResponse } from "next"
-import * as z from "zod"
-import { unstable_getServerSession } from "next-auth/next"
+import { NextApiRequest, NextApiResponse } from 'next'
+import { unstable_getServerSession } from 'next-auth/next'
+import * as z from 'zod'
 
-import { db } from "@/lib/db"
-import { withMethods } from "@/lib/api-middlewares/with-methods"
-import { getUserSubscriptionPlan } from "@/lib/subscription"
-import { RequiresProPlanError } from "@/lib/exceptions"
-import { authOptions } from "@/lib/auth"
+import { withMethods } from '@/lib/api-middlewares/with-methods'
+import { authOptions } from '@/lib/auth'
+import { db } from '@/lib/db'
+import { RequiresProPlanError } from '@/lib/exceptions'
+import { getUserSubscriptionPlan } from '@/lib/subscription'
 
 const postCreateSchema = z.object({
   title: z.string().optional(),
@@ -22,7 +22,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const { user } = session
 
-  if (req.method === "GET") {
+  if (req.method === 'GET') {
     try {
       const posts = await db.post.findMany({
         select: {
@@ -42,7 +42,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   }
 
-  if (req.method === "POST") {
+  if (req.method === 'POST') {
     try {
       const subscriptionPlan = await getUserSubscriptionPlan(user.id)
 
@@ -88,4 +88,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default withMethods(["GET", "POST"], handler)
+export default withMethods(['GET', 'POST'], handler)

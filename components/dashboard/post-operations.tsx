@@ -1,25 +1,25 @@
-"use client"
+'use client'
 
-import * as React from "react"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
-import { Post } from "@prisma/client"
+import { Post } from '@prisma/client'
+import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import * as React from 'react'
 
-import { DropdownMenu } from "@/ui/dropdown"
-import { Icons } from "@/components/icons"
-import { Alert } from "@/ui/alert"
-import { toast } from "@/ui/toast"
+import { Icons } from '@/components/icons'
+import { Alert } from '@/ui/alert'
+import { DropdownMenu } from '@/ui/dropdown'
+import { toast } from '@/ui/toast'
 
 async function deletePost(postId: string) {
   const response = await fetch(`/api/posts/${postId}`, {
-    method: "DELETE",
+    method: 'DELETE',
   })
 
   if (!response?.ok) {
     toast({
-      title: "Something went wrong.",
-      message: "Your post was not deleted. Please try again.",
-      type: "error",
+      title: 'Something went wrong.',
+      message: 'Your post was not deleted. Please try again.',
+      type: 'error',
     })
   }
 
@@ -27,7 +27,7 @@ async function deletePost(postId: string) {
 }
 
 interface PostOperationsProps {
-  post: Pick<Post, "id" | "title">
+  post: Pick<Post, 'id' | 'title'>
 }
 
 export function PostOperations({ post }: PostOperationsProps) {

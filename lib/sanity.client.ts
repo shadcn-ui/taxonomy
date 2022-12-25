@@ -4,22 +4,21 @@ import { apiVersion, dataset, projectId, useCdn } from 'lib/sanity.api'
 import {
   type Post,
   type Settings,
-  indexQuery,
-  docsCategoriesWithArticleLinksQuery, 
-  docBySlugQuery,
-  docSlugsQuery,
   DocArticle,
+  docBySlugQuery,
+  DocCategory,
+  docsCategoriesWithArticleLinksQuery,
+  docSlugsQuery,
+  indexQuery,
   postAndMoreStoriesQuery,
   postBySlugQuery,
   postSlugsQuery,
   settingsQuery,
-  DocCategory,
   Support,
   SupportCategory,
+  supportCategoryArticlesQuery,
   supportCategoryQuery,
   supportCategorySlugsQuery,
-  supportCategoryArticlesQuery, 
-  
 } from 'lib/sanity.queries'
 import { createClient } from 'next-sanity'
 
@@ -37,7 +36,7 @@ export async function getSettings(): Promise<Settings> {
   return {}
 }
 
-// Blog 
+// Blog
 export async function getAllPosts(): Promise<Post[]> {
   if (client) {
     return (await client.fetch(indexQuery)) || []
@@ -77,7 +76,7 @@ export async function getPostAndMoreStories(
   return { post: null, morePosts: [] }
 }
 
-// Support Articles 
+// Support Articles
 
 export async function getDocBySlug(slug: string): Promise<DocArticle> {
   if (client) {
@@ -101,23 +100,33 @@ export async function getAllSupportCategories(): Promise<SupportCategory[]> {
   return []
 }
 
-export async function getAllSupportCategorySlugs(): Promise<Pick<SupportCategory, 'slug'>[]> {
+export async function getAllSupportCategorySlugs(): Promise<
+  Pick<SupportCategory, 'slug'>[]
+> {
   if (client) {
-    const slugs = (await client.fetch<string[]>(supportCategorySlugsQuery)) || []
+    const slugs =
+      (await client.fetch<string[]>(supportCategorySlugsQuery)) || []
     return slugs.map((slug) => ({ slug }))
   }
   return []
 }
 
-export async function getAllSupportCategoryArticles(categorySlug: string): Promise<Support[]> {
+export async function getAllSupportCategoryArticles(
+  categorySlug: string
+): Promise<Support[]> {
   if (client) {
-    const slugs = (await client.fetch<string[]>(supportCategorySlugsQuery)) || []
-    return (await client.fetch(supportCategoryArticlesQuery(categorySlug))) || []
+    const slugs =
+      (await client.fetch<string[]>(supportCategorySlugsQuery)) || []
+    return (
+      (await client.fetch(supportCategoryArticlesQuery(categorySlug))) || []
+    )
   }
   return []
 }
 
-export async function getDocsCategoriesWithArticleLinks(): Promise<DocCategory[]>  {
+export async function getDocsCategoriesWithArticleLinks(): Promise<
+  DocCategory[]
+> {
   if (client) {
     return (await client.fetch(docsCategoriesWithArticleLinksQuery)) || []
   }

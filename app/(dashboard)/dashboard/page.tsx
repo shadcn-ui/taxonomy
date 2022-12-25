@@ -1,17 +1,16 @@
-import { redirect } from "next/navigation"
-import { cache } from "react"
+import { EmptyPlaceholder } from '@/components/dashboard/empty-placeholder'
+import { DashboardHeader } from '@/components/dashboard/header'
+import { PostCreateButton } from '@/components/dashboard/post-create-button'
+import { PostItem } from '@/components/dashboard/post-item'
+import { DashboardShell } from '@/components/dashboard/shell'
+import { authOptions } from '@/lib/auth'
+import { db } from '@/lib/db'
+import { getCurrentUser } from '@/lib/session'
+import { User } from '@prisma/client'
+import { redirect } from 'next/navigation'
+import { cache } from 'react'
 
-import { db } from "@/lib/db"
-import { getCurrentUser } from "@/lib/session"
-import { User } from "@prisma/client"
-import { authOptions } from "@/lib/auth"
-import { DashboardHeader } from "@/components/dashboard/header"
-import { PostCreateButton } from "@/components/dashboard/post-create-button"
-import { DashboardShell } from "@/components/dashboard/shell"
-import { PostItem } from "@/components/dashboard/post-item"
-import { EmptyPlaceholder } from "@/components/dashboard/empty-placeholder"
-
-const getPostsForUser = cache(async (userId: User["id"]) => {
+const getPostsForUser = cache(async (userId: User['id']) => {
   return await db.post.findMany({
     where: {
       authorId: userId,
@@ -23,7 +22,7 @@ const getPostsForUser = cache(async (userId: User["id"]) => {
       createdAt: true,
     },
     orderBy: {
-      updatedAt: "desc",
+      updatedAt: 'desc',
     },
   })
 })
@@ -39,7 +38,10 @@ export default async function DashboardPage() {
 
   return (
     <DashboardShell>
-      <DashboardHeader heading="DB Posts" text="Use the Content Manager for managed Content.  Posts below are directly to the DB.">
+      <DashboardHeader
+        heading="DB Posts"
+        text="Use the Content Manager for managed Content.  Posts below are directly to the DB."
+      >
         <PostCreateButton />
       </DashboardHeader>
       <div>

@@ -25,7 +25,7 @@ export default defineType({
       name: 'description',
       description:
         'Used both for the <meta> description tag for SEO, and the blog subheader.',
-      title: 'Descriprion',
+      title: 'Description',
       type: 'array',
       initialValue: demo.description,
       of: [
@@ -37,18 +37,7 @@ export default defineType({
           marks: {
             decorators: [],
             annotations: [
-              defineType({
-                type: 'object',
-                name: 'link',
-                fields: [
-                  {
-                    type: 'string',
-                    name: 'href',
-                    title: 'URL',
-                    validation: (rule) => rule.required(),
-                  },
-                ],
-              }),
+              
             ],
           },
         }),

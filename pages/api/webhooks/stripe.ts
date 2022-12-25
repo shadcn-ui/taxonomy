@@ -1,9 +1,9 @@
-import { NextApiRequest, NextApiResponse } from "next"
-import Stripe from "stripe"
-import rawBody from "raw-body"
+import { NextApiRequest, NextApiResponse } from 'next'
+import rawBody from 'raw-body'
+import Stripe from 'stripe'
 
-import { stripe } from "@/lib/stripe"
-import { db } from "@/lib/db"
+import { db } from '@/lib/db'
+import { stripe } from '@/lib/stripe'
 
 export const config = {
   api: {
@@ -17,7 +17,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const body = await rawBody(req)
-  const signature = req.headers["stripe-signature"]
+  const signature = req.headers['stripe-signature']
 
   let event: Stripe.Event
 
@@ -33,7 +33,7 @@ export default async function handler(
 
   const session = event.data.object as Stripe.Checkout.Session
 
-  if (event.type === "checkout.session.completed") {
+  if (event.type === 'checkout.session.completed') {
     // Retrieve the subscription details from Stripe.
     const subscription = await stripe.subscriptions.retrieve(
       session.subscription as string
@@ -57,7 +57,7 @@ export default async function handler(
     })
   }
 
-  if (event.type === "invoice.payment_succeeded") {
+  if (event.type === 'invoice.payment_succeeded') {
     // Retrieve the subscription details from Stripe.
     const subscription = await stripe.subscriptions.retrieve(
       session.subscription as string

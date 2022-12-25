@@ -92,4 +92,4 @@ pnpm dev
 
 Licensed under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).
 
-Thanks to https://kittygiraudel.com/2022/05/19/table-of-contents-with-sanity-portable-text/ for the TOC generation from portabletext 
+Thanks to https://kittygiraudel.com/2022/05/19/table-of-contents-with-sanity-portable-text/ for the TOC generation from portabletext

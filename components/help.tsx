@@ -1,11 +1,11 @@
-"use client"
+'use client'
 
-import Image from "next/image"
+import Image from 'next/image'
+import OgImage from 'public/og.jpg'
 
-import { Popover } from "@/ui/popover"
-import { Icons } from "@/components/icons"
-import { siteConfig } from "@/config/site"
-import OgImage from "public/og.jpg"
+import { Icons } from '@/components/icons'
+import { siteConfig } from '@/config/site'
+import { Popover } from '@/ui/popover'
 
 export function Help() {
   return (
@@ -25,7 +25,7 @@ export function Help() {
             This app is a work in progress. I&apos;m building this in public.
           </p>
           <p>
-            You can follow the progress on Twitter{" "}
+            You can follow the progress on Twitter{' '}
             <a
               href={siteConfig.links.twitter}
               target="_blank"
@@ -33,8 +33,8 @@ export function Help() {
               className="border-b border-b-white"
             >
               @shadcn
-            </a>{" "}
-            or on{" "}
+            </a>{' '}
+            or on{' '}
             <a
               href={siteConfig.links.github}
               target="_blank"

@@ -1,7 +1,7 @@
+import docCategoryType from './docCategory'
 import { BookIcon } from '@sanity/icons'
 import { format, parseISO } from 'date-fns'
 import { defineField, defineType } from 'sanity'
-import docCategoryType from './docCategory'
 
 /**
  * This file is the schema definition for a post.
@@ -64,7 +64,6 @@ export default defineType({
       type: 'reference',
       to: [{ type: docCategoryType.name }],
     }),
-
   ],
   preview: {
     select: {
@@ -73,10 +72,7 @@ export default defineType({
       media: 'coverImage',
     },
     prepare({ title, media, category }) {
-      const subtitles = [
-        category && `by ${category}`,
-   
-      ].filter(Boolean)
+      const subtitles = [category && `by ${category}`].filter(Boolean)
 
       return { title, media, subtitle: subtitles.join(' ') }
     },

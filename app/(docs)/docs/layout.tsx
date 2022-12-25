@@ -1,4 +1,4 @@
-import { DocsSidebarNav } from "@/components/docs/sidebar-nav"
+import { DocsSidebarNav } from '@/components/docs/sidebar-nav'
 import { getDocsCategoriesWithArticleLinks } from 'lib/sanity.client'
 
 interface DocsLayoutProps {

@@ -1,5 +1,6 @@
-import PostPreview from '@/components/blog/PostPreview'
 import type { Post } from 'lib/sanity.queries'
+
+import PostPreview from '@/components/blog/PostPreview'
 
 export default function MoreStories({ posts }: { posts: Post[] }) {
   return (

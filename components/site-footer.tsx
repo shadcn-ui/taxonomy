@@ -1,5 +1,5 @@
-import { siteConfig } from "@/config/site"
-import { Icons } from "@/components/icons"
+import { Icons } from '@/components/icons'
+import { siteConfig } from '@/config/site'
 
 export function SiteFooter() {
   return (
@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
           <Icons.logo />
           <p className="text-center text-sm leading-loose md:text-left">
-            Built by{" "}
+            Built by{' '}
             <a
               href={siteConfig.links.twitter}
               target="_blank"
@@ -17,7 +17,7 @@ export function SiteFooter() {
             >
               shadcn
             </a>
-            . Adapted for Sanity by Rooted Software. Hosted on{" "}
+            . Adapted for Sanity by Rooted Software. Hosted on{' '}
             <a
               href="https://vercel.com"
               target="_blank"
@@ -26,7 +26,7 @@ export function SiteFooter() {
             >
               Vercel
             </a>
-            . Illustrations by{" "}
+            . Illustrations by{' '}
             <a
               href="https://popsy.co"
               target="_blank"
@@ -39,7 +39,7 @@ export function SiteFooter() {
           </p>
         </div>
         <p className="text-center text-sm md:text-left">
-          The source code is available on{" "}
+          The source code is available on{' '}
           <a
             href={siteConfig.links.github}
             target="_blank"

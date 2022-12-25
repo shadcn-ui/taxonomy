@@ -1,11 +1,11 @@
-"use client"
+'use client'
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { SidebarNavItem } from 'types'
 
-import { SidebarNavItem } from "types"
-import { cn } from "@/lib/utils"
-import { Icons } from "@/components/icons"
+import { Icons } from '@/components/icons'
+import { cn } from '@/lib/utils'
 
 interface DashboardNavProps {
   items: SidebarNavItem[]
@@ -23,12 +23,12 @@ export function DashboardNav({ items }: DashboardNavProps) {
       {items.map((item, index) => {
         const Icon = Icons[item.icon]
         return (
-          <Link key={index} href={item.disabled ? "/" : item.href}>
+          <Link key={index} href={item.disabled ? '/' : item.href}>
             <span
               className={cn(
-                "group flex items-center rounded-md px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-100",
-                path === item.href ? "bg-slate-200" : "transparent",
-                item.disabled && "cursor-not-allowed opacity-80"
+                'group flex items-center rounded-md px-3 py-2 text-sm font-medium text-slate-800 hover:bg-slate-100',
+                path === item.href ? 'bg-slate-200' : 'transparent',
+                item.disabled && 'cursor-not-allowed opacity-80'
               )}
             >
               <Icon className="mr-2 h-4 w-4" />

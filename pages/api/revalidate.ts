@@ -19,7 +19,6 @@
  * 13. Add the secret to Vercel: `npx vercel env add SANITY_REVALIDATE_SECRET`
  * 14. Redeploy with `npx vercel --prod` to apply the new environment variable
  */
-
 import { apiVersion, dataset, projectId } from 'lib/sanity.api'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { type SanityClient, createClient, groq } from 'next-sanity'

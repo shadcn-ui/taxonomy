@@ -1,8 +1,8 @@
-import { remark } from "remark"
-import { toc } from "mdast-util-toc"
-import { visit } from "unist-util-visit"
+import { toc } from 'mdast-util-toc'
+import { remark } from 'remark'
+import { visit } from 'unist-util-visit'
 
-const textTypes = ["text", "emphasis", "strong", "inlineCode"]
+const textTypes = ['text', 'emphasis', 'strong', 'inlineCode']
 
 function flattenNode(node) {
   const p = []
@@ -28,14 +28,14 @@ function getItems(node, current): Items {
     return {}
   }
 
-  if (node.type === "paragraph") {
+  if (node.type === 'paragraph') {
     visit(node, (item) => {
-      if (item.type === "link") {
+      if (item.type === 'link') {
         current.url = item.url
         current.title = flattenNode(node)
       }
 
-      if (item.type === "text") {
+      if (item.type === 'text') {
         current.title = flattenNode(node)
       }
     })
@@ -43,11 +43,11 @@ function getItems(node, current): Items {
     return current
   }
 
-  if (node.type === "list") {
+  if (node.type === 'list') {
     current.items = node.children.map((i) => getItems(i, {}))
 
     return current
-  } else if (node.type === "listItem") {
+  } else if (node.type === 'listItem') {
     const heading = getItems(node.children[0], {})
 
     if (node.children.length > 1) {

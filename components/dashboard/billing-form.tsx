@@ -1,12 +1,12 @@
-"use client"
+'use client'
 
-import * as React from "react"
+import * as React from 'react'
+import { UserSubscriptionPlan } from 'types'
 
-import { UserSubscriptionPlan } from "types"
-import { cn, formatDate } from "@/lib/utils"
-import { Card } from "@/ui/card"
-import { toast } from "@/ui/toast"
-import { Icons } from "@/components/icons"
+import { Icons } from '@/components/icons'
+import { cn, formatDate } from '@/lib/utils'
+import { Card } from '@/ui/card'
+import { toast } from '@/ui/toast'
 
 interface BillingFormProps extends React.HTMLAttributes<HTMLFormElement> {
   subscriptionPlan: UserSubscriptionPlan & {
@@ -26,13 +26,13 @@ export function BillingForm({
     setIsLoading(!isLoading)
 
     // Get a Stripe session URL.
-    const response = await fetch("/api/users/stripe")
+    const response = await fetch('/api/users/stripe')
 
     if (!response?.ok) {
       return toast({
-        title: "Something went wrong.",
-        message: "Please refresh the page and try again.",
-        type: "error",
+        title: 'Something went wrong.',
+        message: 'Please refresh the page and try again.',
+        type: 'error',
       })
     }
 
@@ -51,7 +51,7 @@ export function BillingForm({
         <Card.Header>
           <Card.Title>Plan</Card.Title>
           <Card.Description>
-            You are currently on the <strong>{subscriptionPlan.name}</strong>{" "}
+            You are currently on the <strong>{subscriptionPlan.name}</strong>{' '}
             plan.
           </Card.Description>
         </Card.Header>
@@ -60,9 +60,9 @@ export function BillingForm({
           <button
             type="submit"
             className={cn(
-              "relative inline-flex h-9 items-center justify-center rounded-md border border-transparent bg-brand-500 px-4 py-2 text-center text-sm font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2",
+              'relative inline-flex h-9 items-center justify-center rounded-md border border-transparent bg-brand-500 px-4 py-2 text-center text-sm font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2',
               {
-                "cursor-not-allowed opacity-60": isLoading,
+                'cursor-not-allowed opacity-60': isLoading,
               }
             )}
             disabled={isLoading}
@@ -70,13 +70,13 @@ export function BillingForm({
             {isLoading && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
-            {subscriptionPlan.isPro ? "Manage Subscription" : "Upgrade to PRO"}
+            {subscriptionPlan.isPro ? 'Manage Subscription' : 'Upgrade to PRO'}
           </button>
           {subscriptionPlan.isPro ? (
             <p className="rounded-full text-xs font-medium">
               {subscriptionPlan.isCanceled
-                ? "Your plan will be canceled on "
-                : "Your plan renews on "}
+                ? 'Your plan will be canceled on '
+                : 'Your plan renews on '}
               {formatDate(subscriptionPlan.stripeCurrentPeriodEnd)}.
             </p>
           ) : null}

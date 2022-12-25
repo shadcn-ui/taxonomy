@@ -1,16 +1,15 @@
-import Link from "next/link"
-import Image from "next/image"
-
-import hero from "../../public/images/hero.png"
-import { siteConfig } from "@/config/site"
+import hero from '../../public/images/hero.png'
+import { siteConfig } from '@/config/site'
+import Image from 'next/image'
+import Link from 'next/link'
 
 async function getGitHubStars(): Promise<string | null> {
   try {
     const response = await fetch(
-      "https://api.github.com/repos/shadcn/taxonomy",
+      'https://api.github.com/repos/shadcn/taxonomy',
       {
         headers: {
-          Accept: "application/vnd.github+json",
+          Accept: 'application/vnd.github+json',
           Authorization: `Bearer ${process.env.GITHUB_ACCESS_TOKEN}`,
         },
         next: {
@@ -25,7 +24,7 @@ async function getGitHubStars(): Promise<string | null> {
 
     const json = await response.json()
 
-    return parseInt(json["stargazers_count"]).toLocaleString()
+    return parseInt(json['stargazers_count']).toLocaleString()
   } catch (error) {
     return null
   }
@@ -178,7 +177,7 @@ export default async function IndexPage() {
           </h2>
           <p className="max-w-[85%] leading-normal text-slate-700 sm:text-lg sm:leading-7">
             Taxonomy is open source and powered by open source software. The
-            code is available on{" "}
+            code is available on{' '}
             <Link
               href={siteConfig.links.github}
               target="_blank"
@@ -187,7 +186,7 @@ export default async function IndexPage() {
             >
               GitHub
             </Link>
-            .{" "}
+            .{' '}
             <Link href="/docs" className="underline underline-offset-4">
               I&apos;m also documenting everything here
             </Link>

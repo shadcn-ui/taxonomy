@@ -1,17 +1,18 @@
-import { ogImageSchema } from "@/lib/validations/og"
-import { ImageResponse } from "@vercel/og"
-import { NextRequest } from "next/server"
+import { ImageResponse } from '@vercel/og'
+import { NextRequest } from 'next/server'
+
+import { ogImageSchema } from '@/lib/validations/og'
 
 export const config = {
-  runtime: "experimental-edge",
+  runtime: 'experimental-edge',
 }
 
 const interRegular = fetch(
-  new URL("../../assets/fonts/Inter-Regular.ttf", import.meta.url)
+  new URL('../../assets/fonts/Inter-Regular.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 const interBold = fetch(
-  new URL("../../assets/fonts/Inter-Bold.ttf", import.meta.url)
+  new URL('../../assets/fonts/Inter-Bold.ttf', import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 export default async function handler(req: NextRequest) {
@@ -27,9 +28,9 @@ export default async function handler(req: NextRequest) {
         : values.heading
 
     const { mode } = values
-    const paint = mode === "dark" ? "#fff" : "#000"
+    const paint = mode === 'dark' ? '#fff' : '#000'
 
-    const fontSize = heading.length > 100 ? "70px" : "100px"
+    const fontSize = heading.length > 100 ? '70px' : '100px'
 
     return new ImageResponse(
       (
@@ -38,9 +39,9 @@ export default async function handler(req: NextRequest) {
           style={{
             color: paint,
             background:
-              mode === "dark"
-                ? "linear-gradient(90deg, #000 0%, #121 100%)"
-                : "white",
+              mode === 'dark'
+                ? 'linear-gradient(90deg, #000 0%, #121 100%)'
+                : 'white',
           }}
         >
           <svg width="212" height="50" viewBox="0 0 212 50" fill="none">
@@ -75,16 +76,16 @@ export default async function handler(req: NextRequest) {
           <div tw="flex flex-col flex-1 py-10">
             <div
               tw="flex text-xl uppercase font-bold tracking-tight"
-              style={{ fontFamily: "Inter", fontWeight: "normal" }}
+              style={{ fontFamily: 'Inter', fontWeight: 'normal' }}
             >
               {values.type}
             </div>
             <div
               tw="flex leading-[1.1] text-[80px] font-bold tracking-tighter"
               style={{
-                fontFamily: "Inter",
-                fontWeight: "bolder",
-                marginLeft: "-3px",
+                fontFamily: 'Inter',
+                fontWeight: 'bolder',
+                marginLeft: '-3px',
                 fontSize,
               }}
             >
@@ -94,13 +95,13 @@ export default async function handler(req: NextRequest) {
           <div tw="flex items-center w-full justify-between">
             <div
               tw="flex text-xl"
-              style={{ fontFamily: "Inter", fontWeight: "normal" }}
+              style={{ fontFamily: 'Inter', fontWeight: 'normal' }}
             >
               tx.shadcn.com
             </div>
             <div
               tw="flex items-center text-xl"
-              style={{ fontFamily: "Inter", fontWeight: "normal" }}
+              style={{ fontFamily: 'Inter', fontWeight: 'normal' }}
             >
               <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
                 <path
@@ -128,16 +129,16 @@ export default async function handler(req: NextRequest) {
         height: 630,
         fonts: [
           {
-            name: "Inter",
+            name: 'Inter',
             data: fontRegular,
             weight: 400,
-            style: "normal",
+            style: 'normal',
           },
           {
-            name: "Inter",
+            name: 'Inter',
             data: fontBold,
             weight: 700,
-            style: "normal",
+            style: 'normal',
           },
         ],
       }

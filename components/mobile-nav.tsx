@@ -1,11 +1,12 @@
-import * as React from "react"
-import Link from "next/link"
+import Link from 'next/link'
+import * as React from 'react'
+import { MainNavItem } from 'types'
 
-import { MainNavItem } from "types"
-import { cn } from "@/lib/utils"
-import { useLockBody } from "@/hooks/use-lock-body"
-import { Icons } from "./icons"
-import { siteConfig } from "@/config/site"
+import { siteConfig } from '@/config/site'
+import { useLockBody } from '@/hooks/use-lock-body'
+import { cn } from '@/lib/utils'
+
+import { Icons } from './icons'
 
 interface MobileNavProps {
   items: MainNavItem[]
@@ -18,7 +19,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
   return (
     <div
       className={cn(
-        "fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md animate-in slide-in-from-bottom-80 md:hidden"
+        'fixed inset-0 top-16 z-50 grid h-[calc(100vh-4rem)] grid-flow-row auto-rows-max overflow-auto p-6 pb-32 shadow-md animate-in slide-in-from-bottom-80 md:hidden'
       )}
     >
       <div className="relative z-20 grid gap-6 rounded-md bg-white p-4 shadow-md">
@@ -30,10 +31,10 @@ export function MobileNav({ items, children }: MobileNavProps) {
           {items.map((item, index) => (
             <Link
               key={index}
-              href={item.disabled ? "#" : item.href}
+              href={item.disabled ? '#' : item.href}
               className={cn(
-                "flex w-full items-center rounded-md px-2 py-2 text-sm font-medium hover:underline",
-                item.disabled && "cursor-not-allowed opacity-60"
+                'flex w-full items-center rounded-md px-2 py-2 text-sm font-medium hover:underline',
+                item.disabled && 'cursor-not-allowed opacity-60'
               )}
             >
               {item.title}

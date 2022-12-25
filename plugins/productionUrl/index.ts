@@ -3,10 +3,8 @@
  * other actions like "Review changes" and "Inspect"
  * @TODO the code in this plugin is a candidate for moving into `@sanity/preview-kit/studio`
  */
-
-import { type Slug, definePlugin } from 'sanity'
-
 import { getSecret } from './utils'
+import { type Slug, definePlugin } from 'sanity'
 
 export const productionUrl = definePlugin<{
   previewSecretId: `${string}.${string}`

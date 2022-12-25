@@ -8,7 +8,7 @@ const nextConfig = {
   swcMinify: false,
   reactStrictMode: true,
   images: {
-    domains: ["avatars.githubusercontent.com"],
+    domains: ['avatars.githubusercontent.com'],
     remotePatterns: [
       { hostname: 'cdn.sanity.io' },
       { hostname: 'source.unsplash.com' },
@@ -16,7 +16,7 @@ const nextConfig = {
   },
   experimental: {
     appDir: true,
-    serverComponentsExternalPackages: ["@prisma/client"],
+    serverComponentsExternalPackages: ['@prisma/client'],
   },
   typescript: {
     // Set this to false if you want production builds to abort if there's type errors

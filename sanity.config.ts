@@ -1,25 +1,24 @@
 /**
  * This config is used to set up Sanity Studio that's mounted on the `/pages/studio/[[...index]].tsx` route
  */
-
+import { enhancedNavbar } from '@/components/studio/enhancedNavbar'
 import { visionTool } from '@sanity/vision'
 import { apiVersion, dataset, previewSecretId, projectId } from 'lib/sanity.api'
 import { previewDocumentNode } from 'plugins/previewPane'
 import { productionUrl } from 'plugins/productionUrl'
 import { settingsPlugin, settingsStructure } from 'plugins/settings'
 import { defineConfig } from 'sanity'
-import { deskTool } from 'sanity/desk'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
+import { deskTool } from 'sanity/desk'
 import authorType from 'schemas/author'
-import postType from 'schemas/post'
-import supportType from 'schemas/support'
-import settingsType from 'schemas/settings'
-import supportCategoryType from 'schemas/supportCategory'
 import docArticleType from 'schemas/docArticle'
 import docCategoryType from 'schemas/docCategory'
-import { enhancedNavbar } from '@/components/studio/enhancedNavbar'
-const title =
-  process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Rooted Template'
+import postType from 'schemas/post'
+import settingsType from 'schemas/settings'
+import supportType from 'schemas/support'
+import supportCategoryType from 'schemas/supportCategory'
+
+const title = process.env.NEXT_PUBLIC_SANITY_PROJECT_TITLE || 'Rooted Template'
 
 export default defineConfig({
   basePath: '/studio',
@@ -28,7 +27,15 @@ export default defineConfig({
   title,
   schema: {
     // If you want more content types, you can add them to this array
-    types: [authorType, postType, settingsType, supportType, docArticleType, supportCategoryType, docCategoryType],
+    types: [
+      authorType,
+      postType,
+      settingsType,
+      supportType,
+      docArticleType,
+      supportCategoryType,
+      docCategoryType,
+    ],
   },
   plugins: [
     deskTool({
@@ -42,16 +49,24 @@ export default defineConfig({
     productionUrl({
       apiVersion,
       previewSecretId,
-      types: [postType.name, settingsType.name, supportType.name, docArticleType.name, supportCategoryType.name, docCategoryType.name],
+      types: [
+        postType.name,
+        settingsType.name,
+        supportType.name,
+        docArticleType.name,
+        supportCategoryType.name,
+        docCategoryType.name,
+      ],
     }),
     // Add an image asset source for Unsplash
     unsplashImageAsset(),
     // Vision lets you query your content with GROQ in the studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
-  ],studio: {
+  ],
+  studio: {
     components: {
       navbar: enhancedNavbar,
-    }
-  }
+    },
+  },
 })

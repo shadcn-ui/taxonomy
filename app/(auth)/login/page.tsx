@@ -1,7 +1,6 @@
-import Link from "next/link"
-
-import { Icons } from "@/components/icons"
-import { UserAuthForm } from "@/components/dashboard/user-auth-form"
+import { UserAuthForm } from '@/components/dashboard/user-auth-form'
+import { Icons } from '@/components/icons'
+import Link from 'next/link'
 
 export default function LoginPage() {
   return (

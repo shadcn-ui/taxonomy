@@ -1,25 +1,21 @@
-import { notFound } from "next/navigation"
 import styles from '@/components/blog/PostBody.module.css'
-
-import { getTableOfContents } from "@/lib/toc"
-import { DashboardTableOfContents } from "@/components/docs/toc"
-import { DocsPageHeader } from "@/components/docs/page-header"
-import { DocsPager } from "@/components/docs/pager"
-import "@/styles/mdx.css"
+import {
+  LinkableH1Header,
+  LinkableH2Header,
+  LinkableH3Header,
+  LinkableH4Header,
+} from '@/components/docs/customComponents'
+import { DocsPageHeader } from '@/components/docs/page-header'
+import { DocsPager } from '@/components/docs/pager'
+import { DashboardTableOfContents } from '@/components/docs/toc'
+import { parseOutline } from '@/lib/sanity-toc'
+import { getDocBySlug, getAllDocsSlugs } from '@/lib/sanity.client'
+import { getTableOfContents } from '@/lib/toc'
+import '@/styles/mdx.css'
 import { PortableText, PortableTextComponents } from '@portabletext/react'
-import { getDocBySlug, 
-    getAllDocsSlugs
- } from "@/lib/sanity.client"
-import { parseOutline }  from '@/lib/sanity-toc'
-import { 
-  LinkableH1Header, 
-  LinkableH2Header, 
-  LinkableH3Header, 
-  LinkableH4Header
-} from "@/components/docs/customComponents" 
+import { notFound } from 'next/navigation'
 
-
-var getSlug = require('speakingurl');
+var getSlug = require('speakingurl')
 
 interface DocPageProps {
   params: {
@@ -27,16 +23,14 @@ interface DocPageProps {
   }
 }
 
-const getChildrenText = props =>
+const getChildrenText = (props) =>
   props.children
-    .map(node => (typeof node === 'string' ? node : node.text || ''))
+    .map((node) => (typeof node === 'string' ? node : node.text || ''))
     .join('')
 
-    
-    
-const TableOfContents = props => (
+const TableOfContents = (props) => (
   <ol>
-    {props.outline.map(heading => (
+    {props.outline.map((heading) => (
       <li key={heading.slug}>
         <a href={'#' + heading._key}>{getChildrenText(heading)}</a>
         {heading.subheadings.length > 0 && (
@@ -49,7 +43,7 @@ const TableOfContents = props => (
 
 export default async function DocPage({ params }: DocPageProps) {
   const slug = process.env.DEFAULT_DOC_SLUG || 'article-1'
-  /* load docs from slug */ 
+  /* load docs from slug */
   const doc = await getDocBySlug(slug)
   const outline = parseOutline(doc.content)
   if (!doc) {
@@ -75,5 +69,3 @@ export default async function DocPage({ params }: DocPageProps) {
     </main>
   )
 }
-
-

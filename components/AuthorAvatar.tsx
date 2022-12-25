@@ -21,8 +21,8 @@ export default function AuthorAvatar(props: Author) {
         />
       </div>
       <div className="flex-1 text-left leading-tight">
-          <p className="font-medium text-slate-900">{name}</p>
-        </div>
+        <p className="font-medium text-slate-900">{name}</p>
+      </div>
     </div>
   )
 }

@@ -1,13 +1,12 @@
-import { redirect } from "next/navigation"
-
-import { getCurrentUser } from "@/lib/session"
-import { authOptions } from "@/lib/auth"
-import { stripe } from "@/lib/stripe"
-import { getUserSubscriptionPlan as getUserSubscriptionPlan } from "@/lib/subscription"
-import { Card } from "@/ui/card"
-import { DashboardHeader } from "@/components/dashboard/header"
-import { DashboardShell } from "@/components/dashboard/shell"
-import { BillingForm } from "@/components/dashboard/billing-form"
+import { BillingForm } from '@/components/dashboard/billing-form'
+import { DashboardHeader } from '@/components/dashboard/header'
+import { DashboardShell } from '@/components/dashboard/shell'
+import { authOptions } from '@/lib/auth'
+import { getCurrentUser } from '@/lib/session'
+import { stripe } from '@/lib/stripe'
+import { getUserSubscriptionPlan } from '@/lib/subscription'
+import { Card } from '@/ui/card'
+import { redirect } from 'next/navigation'
 
 export default async function BillingPage() {
   const user = await getCurrentUser()
@@ -46,13 +45,13 @@ export default async function BillingPage() {
           </Card.Header>
           <Card.Content className="space-y-4 pb-6 text-sm">
             <p>
-              Taxonomy app is a demo app using a Stripe test environment.{" "}
+              Taxonomy app is a demo app using a Stripe test environment.{' '}
               <strong>
                 You can test the upgrade and won&apos;t be charged.
               </strong>
             </p>
             <p>
-              You can find a list of test card numbers on the{" "}
+              You can find a list of test card numbers on the{' '}
               <a
                 href="https://stripe.com/docs/testing#cards"
                 target="_blank"

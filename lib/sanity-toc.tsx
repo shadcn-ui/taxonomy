@@ -1,16 +1,16 @@
-var getSlug = require('speakingurl');
+var getSlug = require('speakingurl')
 
 const get = (object, path) => path.reduce((prev, curr) => prev[curr], object)
 
-const getObjectPath = path =>
+const getObjectPath = (path) =>
   path.length === 0
     ? path
     : ['subheadings'].concat(path.join('.subheadings.').split('.'))
 
-const getChildrenText = props =>
-    props.children
-      .map(node => (typeof node === 'string' ? node : node.text || ''))
-      .join('')
+const getChildrenText = (props) =>
+  props.children
+    .map((node) => (typeof node === 'string' ? node : node.text || ''))
+    .join('')
 
 const filter = (ast, match) =>
   ast.reduce((acc, node) => {
@@ -19,27 +19,26 @@ const filter = (ast, match) =>
     return acc
   }, [])
 
-  const findHeadings = ast => filter(ast, node => /h\d/.test(node.style)).map(node => {
+const findHeadings = (ast) =>
+  filter(ast, (node) => /h\d/.test(node.style)).map((node) => {
     const text = getChildrenText(node)
     const slug = getSlug(text)
 
     return { ...node, text, slug }
   })
 
-
-
-const TableOfContents = props => (
+const TableOfContents = (props) => (
   <ol>
-    {props.outline.map(heading => (
-      <li key={heading.slug }>
+    {props.outline.map((heading) => (
+      <li key={heading.slug}>
         <a href={'#' + heading.slug}>{getChildrenText(heading)}</a>
         {heading.subheadings && heading.subheadings?.length > 0 && (
           <TableOfContents outline={heading.subheadings} />
         )}
       </li>
     ))}
-  </ol> 
-) 
+  </ol>
+)
 
 export function parseOutline(ast): any {
   const outline = { subheadings: [] }
@@ -47,7 +46,7 @@ export function parseOutline(ast): any {
   const path = []
   let lastLevel = 0
 
-  headings.forEach(heading => {
+  headings.forEach((heading) => {
     const level = Number(heading.style.slice(1))
     heading.subheadings = []
 
@@ -62,7 +61,3 @@ export function parseOutline(ast): any {
   console.log(outline)
   return outline.subheadings
 }
-
-
-
-

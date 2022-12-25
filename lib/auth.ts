@@ -1,11 +1,11 @@
-import { NextAuthOptions } from "next-auth"
-import GitHubProvider from "next-auth/providers/github"
-import EmailProvider from "next-auth/providers/email"
-import { PrismaAdapter } from "@next-auth/prisma-adapter"
-import { Client } from "postmark"
+import { PrismaAdapter } from '@next-auth/prisma-adapter'
+import { NextAuthOptions } from 'next-auth'
+import EmailProvider from 'next-auth/providers/email'
+import GitHubProvider from 'next-auth/providers/github'
+import { Client } from 'postmark'
 
-import { db } from "@/lib/db"
-import { siteConfig } from "@/config/site"
+import { siteConfig } from '@/config/site'
+import { db } from '@/lib/db'
 
 const postmarkClient = new Client(process.env.POSTMARK_API_TOKEN)
 
@@ -15,10 +15,10 @@ export const authOptions: NextAuthOptions = {
   // @see https://github.com/prisma/prisma/issues/16117
   adapter: PrismaAdapter(db as any),
   session: {
-    strategy: "jwt",
+    strategy: 'jwt',
   },
   pages: {
-    signIn: "/login",
+    signIn: '/login',
   },
   providers: [
     GitHubProvider({
@@ -52,8 +52,8 @@ export const authOptions: NextAuthOptions = {
             {
               // Set this to prevent Gmail from threading emails.
               // See https://stackoverflow.com/questions/23434110/force-emails-not-to-be-grouped-into-conversations/25435722.
-              Name: "X-Entity-Ref-ID",
-              Value: new Date().getTime() + "",
+              Name: 'X-Entity-Ref-ID',
+              Value: new Date().getTime() + '',
             },
           ],
         })

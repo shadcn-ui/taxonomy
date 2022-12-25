@@ -1,12 +1,13 @@
-import Container from '@/components/GeneralContainer'
+import { compareDesc } from 'date-fns'
+import * as demo from 'lib/demo.data'
+import type { Post, Settings } from 'lib/sanity.queries'
+import Link from 'next/link'
+
 import BlogHeader from '@/components/blog/BlogHeader'
 import Layout from '@/components/blog/BlogLayout'
 import HeroPost from '@/components/blog/HeroPost'
 import MoreStories from '@/components/blog/MoreStories'
-import * as demo from 'lib/demo.data'
-import type { Post, Settings } from 'lib/sanity.queries'
-import { compareDesc } from "date-fns"
-import Link from "next/link"
+import Container from '@/components/GeneralContainer'
 
 export default function IndexPage(props: {
   preview?: boolean
@@ -28,7 +29,8 @@ export default function IndexPage(props: {
                 Blog
               </h1>
               <p className="text-xl text-slate-600">
-                A blog built using Sanity.io Posts are written using Portable Text.
+                A blog built using Sanity.io Posts are written using Portable
+                Text.
               </p>
             </div>
             <Link
@@ -52,7 +54,6 @@ export default function IndexPage(props: {
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-   
         </Container>
       </Layout>
     </>

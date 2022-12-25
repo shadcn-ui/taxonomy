@@ -1,9 +1,9 @@
-import { SiteConfig } from "types"
+import { SiteConfig } from 'types'
 
 export const siteConfig: SiteConfig = {
-  name: "Rooted Template",
+  name: 'Rooted Template',
   links: {
-    twitter: "https://twitter.com/RootedSoftware",
-    github: "https://github.com/Rooted-Software",
+    twitter: 'https://twitter.com/RootedSoftware',
+    github: 'https://github.com/Rooted-Software',
   },
 }

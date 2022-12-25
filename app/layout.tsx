@@ -1,17 +1,15 @@
-import { Inter as FontSans } from "@next/font/google"
+import { Analytics } from '@/components/analytics'
+import { Help } from '@/components/help'
+import { TailwindIndicator } from '@/components/tailwind-indicator'
+import { cn } from '@/lib/utils'
+import '@/styles/globals.css'
+import { Toaster } from '@/ui/toast'
+import { Inter as FontSans } from '@next/font/google'
 import 'tailwindcss/tailwind.css'
-import "@/styles/globals.css"
-
-
-import { cn } from "@/lib/utils"
-import { Toaster } from "@/ui/toast"
-import { Help } from "@/components/help"
-import { Analytics } from "@/components/analytics"
-import { TailwindIndicator } from "@/components/tailwind-indicator"
 
 const fontSans = FontSans({
-  subsets: ["latin"],
-  variable: "--font-inter",
+  subsets: ['latin'],
+  variable: '--font-inter',
 })
 
 interface RootLayoutProps {
@@ -23,7 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html
       lang="en"
       className={cn(
-        "bg-white font-sans text-slate-900 antialiased",
+        'bg-white font-sans text-slate-900 antialiased',
         fontSans.variable
       )}
     >
@@ -38,4 +36,3 @@ export default function RootLayout({ children }: RootLayoutProps) {
     </html>
   )
 }
-

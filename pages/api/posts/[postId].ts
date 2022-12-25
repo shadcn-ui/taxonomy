@@ -1,13 +1,13 @@
-import { NextApiRequest, NextApiResponse } from "next"
-import * as z from "zod"
+import { NextApiRequest, NextApiResponse } from 'next'
+import * as z from 'zod'
 
-import { withMethods } from "@/lib/api-middlewares/with-methods"
-import { withPost } from "@/lib/api-middlewares/with-post"
-import { db } from "@/lib/db"
-import { postPatchSchema } from "@/lib/validations/post"
+import { withMethods } from '@/lib/api-middlewares/with-methods'
+import { withPost } from '@/lib/api-middlewares/with-post'
+import { db } from '@/lib/db'
+import { postPatchSchema } from '@/lib/validations/post'
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "DELETE") {
+  if (req.method === 'DELETE') {
     try {
       await db.post.delete({
         where: {
@@ -21,7 +21,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   }
 
-  if (req.method === "PATCH") {
+  if (req.method === 'PATCH') {
     try {
       const postId = req.query.postId as string
       const post = await db.post.findUnique({
@@ -55,4 +55,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default withMethods(["DELETE", "PATCH"], withPost(handler))
+export default withMethods(['DELETE', 'PATCH'], withPost(handler))

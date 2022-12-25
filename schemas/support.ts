@@ -1,6 +1,6 @@
+import supportCategoryType from './supportCategory'
 import { HiOutlineLifebuoy } from 'react-icons/hi2'
 import { defineField, defineType } from 'sanity'
-import supportCategoryType from './supportCategory'
 
 /**
  * This file is the schema definition for a article.
@@ -40,7 +40,7 @@ export default defineType({
     defineField({
       name: 'content',
       title: 'Content',
-      type: 'text'
+      type: 'text',
     }),
     defineField({
       name: 'category',
@@ -56,11 +56,9 @@ export default defineType({
       date: 'date',
       media: 'image',
     },
-    prepare({ title, media, category}) {
+    prepare({ title, media, category }) {
       console.log(category)
-      const subtitles = [
-        category && `in ${category.title}`,
-      ].filter(Boolean)
+      const subtitles = [category && `in ${category.title}`].filter(Boolean)
 
       return { title, media, subtitle: subtitles.join(' ') }
     },

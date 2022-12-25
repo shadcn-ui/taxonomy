@@ -33,14 +33,16 @@ export const supportCategoryQuery = groq`
 export const supportCategorySlugsQuery = groq`
 *[_type == "supportCategory" && defined(slug.current)][].slug.current
 `
-export function supportCategoryArticlesQuery(categorySlug: string) {return  groq`
+export function supportCategoryArticlesQuery(categorySlug: string) {
+  return groq`
   *[_type == "support" && category->slug.current == "${categorySlug}" ] | order(date asc, _updatedAt asc) {
     _id,
   title,
   "slug": slug.current,
   content, 
 }
-`}  
+`
+}
 
 export const postAndMoreStoriesQuery = groq`
 {
@@ -77,7 +79,7 @@ export const docBySlugQuery = groq`
 } 
 `
 
-export const docsCategoriesWithArticleLinksQuery  = groq`*[_type == "docCategory"] | order(date asc, _updatedAt asc) {
+export const docsCategoriesWithArticleLinksQuery = groq`*[_type == "docCategory"] | order(date asc, _updatedAt asc) {
   title,
   "items" : *[_type == "documentation" && references(^._id) ] { title, "slug" : slug.current} ,
   }`
@@ -87,7 +89,7 @@ export interface Author {
   picture?: any
 }
 
-export interface DocArticle{
+export interface DocArticle {
   _id: string
   title: string
   description: string

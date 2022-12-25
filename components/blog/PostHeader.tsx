@@ -1,8 +1,9 @@
 import Avatar from 'components/AuthorAvatar'
 import CoverImage from 'components/CoverImage'
-import PostTitle from '@/components/blog/PostTitle'
-import { formatDate } from "@/lib/utils"
 import type { Post } from 'lib/sanity.queries'
+
+import PostTitle from '@/components/blog/PostTitle'
+import { formatDate } from '@/lib/utils'
 
 export default function PostHeader(
   props: Pick<Post, 'title' | 'coverImage' | 'date' | 'author' | 'slug'>
@@ -10,11 +11,11 @@ export default function PostHeader(
   const { title, coverImage, date, author, slug } = props
   return (
     <>
-    {date && (
-      <time dateTime={date} className="block text-sm text-slate-600">
-        Published on {formatDate(date)}
-      </time>
-    )}
+      {date && (
+        <time dateTime={date} className="block text-sm text-slate-600">
+          Published on {formatDate(date)}
+        </time>
+      )}
       <PostTitle>{title}</PostTitle>
       <div className="hidden md:mb-12 md:block">
         {author && <Avatar name={author.name} picture={author.picture} />}

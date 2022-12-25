@@ -1,15 +1,15 @@
-import { NextApiRequest, NextApiResponse } from "next"
-import * as z from "zod"
-import { unstable_getServerSession } from "next-auth/next"
+import { NextApiRequest, NextApiResponse } from 'next'
+import { unstable_getServerSession } from 'next-auth/next'
+import * as z from 'zod'
 
-import { db } from "@/lib/db"
-import { withMethods } from "@/lib/api-middlewares/with-methods"
-import { withCurrentUser } from "@/lib/api-middlewares/with-current-user"
-import { userNameSchema } from "@/lib/validations/user"
-import { authOptions } from "@/lib/auth"
+import { withCurrentUser } from '@/lib/api-middlewares/with-current-user'
+import { withMethods } from '@/lib/api-middlewares/with-methods'
+import { authOptions } from '@/lib/auth'
+import { db } from '@/lib/db'
+import { userNameSchema } from '@/lib/validations/user'
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === "PATCH") {
+  if (req.method === 'PATCH') {
     try {
       const session = await unstable_getServerSession(req, res, authOptions)
       const user = session?.user
@@ -40,4 +40,4 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 }
 
-export default withMethods(["PATCH"], withCurrentUser(handler))
+export default withMethods(['PATCH'], withCurrentUser(handler))

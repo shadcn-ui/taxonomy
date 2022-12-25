@@ -1,16 +1,16 @@
-"use client"
+'use client'
 
-import * as React from "react"
-import { useSearchParams } from "next/navigation"
-import { signIn } from "next-auth/react"
-import * as z from "zod"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
+import { zodResolver } from '@hookform/resolvers/zod'
+import { useSearchParams } from 'next/navigation'
+import { signIn } from 'next-auth/react'
+import * as React from 'react'
+import { useForm } from 'react-hook-form'
+import * as z from 'zod'
 
-import { cn } from "@/lib/utils"
-import { userAuthSchema } from "@/lib/validations/auth"
-import { toast } from "@/ui/toast"
-import { Icons } from "@/components/icons"
+import { Icons } from '@/components/icons'
+import { cn } from '@/lib/utils'
+import { userAuthSchema } from '@/lib/validations/auth'
+import { toast } from '@/ui/toast'
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
@@ -30,31 +30,31 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   async function onSubmit(data: FormData) {
     setIsLoading(true)
 
-    const signInResult = await signIn("email", {
+    const signInResult = await signIn('email', {
       email: data.email.toLowerCase(),
       redirect: false,
-      callbackUrl: searchParams.get("from") || "/dashboard",
+      callbackUrl: searchParams.get('from') || '/dashboard',
     })
 
     setIsLoading(false)
 
     if (!signInResult?.ok) {
       return toast({
-        title: "Something went wrong.",
-        message: "Your sign in request failed. Please try again.",
-        type: "error",
+        title: 'Something went wrong.',
+        message: 'Your sign in request failed. Please try again.',
+        type: 'error',
       })
     }
 
     return toast({
-      title: "Check your email",
-      message: "We sent you a login link. Be sure to check your spam too.",
-      type: "success",
+      title: 'Check your email',
+      message: 'We sent you a login link. Be sure to check your spam too.',
+      type: 'success',
     })
   }
 
   return (
-    <div className={cn("grid gap-6", className)} {...props}>
+    <div className={cn('grid gap-6', className)} {...props}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid gap-2">
           <div className="grid gap-1">
@@ -71,7 +71,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
               autoCorrect="off"
               name="email"
               disabled={isLoading}
-              {...register("email")}
+              {...register('email')}
             />
             {errors?.email && (
               <p className="px-1 text-xs text-red-600">
@@ -101,7 +101,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
       <button
         type="button"
         className="inline-flex w-full items-center justify-center rounded-lg border bg-white px-5 py-2.5 text-center text-sm font-medium text-black hover:bg-slate-100 focus:outline-none focus:ring-4 focus:ring-[#24292F]/50 disabled:opacity-50 dark:hover:bg-[#050708]/30 dark:focus:ring-slate-500"
-        onClick={() => signIn("github")}
+        onClick={() => signIn('github')}
         disabled={isLoading}
       >
         <svg
