@@ -1,7 +1,8 @@
-import { absoluteUrl } from '@/lib/utils'
-import { ogImageSchema } from '@/lib/validations/og'
 import { getDocBySlug, getSettings } from 'lib/sanity.client'
 import * as z from 'zod'
+
+import { absoluteUrl } from '@/lib/utils'
+import { ogImageSchema } from '@/lib/validations/og'
 
 interface HeadProps {
   params: {
@@ -11,8 +12,8 @@ interface HeadProps {
 }
 
 export default async function Head({ params }: HeadProps) {
-  const slug = params?.slug
-
+  const slug = params?.slug || process.env.DEFAULT_DOC_SLUG 
+  
   const doc = await getDocBySlug(slug)
 
   if (!doc) {
