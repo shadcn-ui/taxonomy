@@ -1,18 +1,16 @@
-import { notFound } from "next/navigation"
-import styles from '@/components/blog/PostBody.module.css'
-
-import { DocsPageHeader } from "@/components/docs/page-header"
-import { DocsPager } from "@/components/docs/pager"
 import "@/styles/mdx.css"
 
-import {PortableText, toPlainText, PortableTextComponents} from '@portabletext/react'
-import { getDocBySlug, getAllDocsSlugs } from "@/lib/sanity.client"
-import { parseOutline }  from '@/lib/sanity-toc'
+import {PortableText, PortableTextComponents} from '@portabletext/react'
+import { notFound } from "next/navigation"
+
+import styles from '@/components/blog/PostBody.module.css'
 import { 
   LinkableH1Header, LinkableH2Header, LinkableH3Header, LinkableH4Header
 } from "@/components/docs/customComponents" 
-
-var getSlug = require('speakingurl');
+import { DocsPageHeader } from "@/components/docs/page-header"
+import { DocsPager } from "@/components/docs/pager"
+import { getAllDocsSlugs,getDocBySlug } from "@/lib/sanity.client"
+import { parseOutline }  from '@/lib/sanity-toc'
 
 interface DocPageProps {
   params: {
@@ -20,15 +18,6 @@ interface DocPageProps {
   }
 }
 
-
-const components: PortableTextComponents = {
-  block: {
-    h1: LinkableH1Header,
-    h2: LinkableH2Header,
-    h3: LinkableH3Header,
-    h4: LinkableH4Header,
-  },
-}
 
 const getChildrenText = props =>
   props.children
@@ -38,7 +27,7 @@ const getChildrenText = props =>
 const TableOfContents = props => (
   <ol>
     {props.outline.map(heading => (
-      <li>
+      <li key= {heading.slug } >
         <a href={'#' + heading.slug}>{getChildrenText(heading)}</a>
         {heading.subheadings && heading.subheadings?.length > 0 && (
           <TableOfContents outline={heading.subheadings} />
@@ -67,7 +56,7 @@ export default async function DocPage({ params }: DocPageProps) {
     <main className="relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_300px]">
       <div className={`mx-auto w-full min-w-0 ${styles.portabletext} `}>
         <DocsPageHeader heading={doc.title} text={''} />
-        <PortableText value={doc.content} components={components} />
+        <PortableText value={doc.content} />
         <hr className="my-4 border-slate-200 md:my-6" />
         {/* <DocsPager doc={doc} /> */}
       </div>

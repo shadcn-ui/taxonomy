@@ -31,7 +31,7 @@ const filter = (ast, match) =>
 const TableOfContents = props => (
   <ol>
     {props.outline.map(heading => (
-      <li>
+      <li key={heading.slug }>
         <a href={'#' + heading.slug}>{getChildrenText(heading)}</a>
         {heading.subheadings && heading.subheadings?.length > 0 && (
           <TableOfContents outline={heading.subheadings} />

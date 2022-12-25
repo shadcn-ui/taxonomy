@@ -78,6 +78,7 @@ export function Editor({ post }: EditorProps) {
         ref.current = null
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMounted])
 
   async function onSubmit(data: FormData) {

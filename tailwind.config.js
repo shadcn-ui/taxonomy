@@ -7,7 +7,6 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./ui/**/*.{ts,tsx}",
-    "./content/**/*.{md,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./plugins/**/*.{js,ts,jsx,tsx}",
   ],

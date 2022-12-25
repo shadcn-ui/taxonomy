@@ -32,21 +32,12 @@ const getChildrenText = props =>
     .map(node => (typeof node === 'string' ? node : node.text || ''))
     .join('')
 
-
-const components: PortableTextComponents = {
-  block: {
-    h1: LinkableH1Header,
-    h2: LinkableH2Header,
-    h3: LinkableH3Header,
-    h4: LinkableH4Header,
-  },
-}
     
     
 const TableOfContents = props => (
   <ol>
     {props.outline.map(heading => (
-      <li>
+      <li key={heading.slug}>
         <a href={'#' + heading._key}>{getChildrenText(heading)}</a>
         {heading.subheadings.length > 0 && (
           <TableOfContents outline={heading.subheadings} />
@@ -78,7 +69,7 @@ export default async function DocPage({ params }: DocPageProps) {
       <div className="hidden text-sm xl:block">
         <div className="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-10">
           {/* <DashboardTableOfContents toc={toc} /> */}
-          <TableOfContents outline={outline} components={ components }/>
+          <TableOfContents outline={outline} />
         </div>
       </div>
     </main>
