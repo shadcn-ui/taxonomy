@@ -21,7 +21,7 @@ export default async function Head({ params }: HeadProps) {
   }
 
   const title = `${doc.title} - AddSiteName`
-  const url = process.env.NEXT_PUBLIC_APP_URL
+  const url = process.env.VERCEL_URL
   let ogUrl = new URL(`${url}/og.jpg`)
   let og = { heading: doc.description, type: 'Documentation', mode: 'light' }
   const ogTitle = og?.heading || doc.title
