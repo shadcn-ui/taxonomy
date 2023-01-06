@@ -23,7 +23,6 @@
       "@/config/*": ["config/*"],
       "@/styles/*": ["styles/*"],
       "@/prisma/*": ["prisma/*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "plugins": [
       {
@@ -36,8 +35,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated",
-    "content/pages/about.mdx"
   ],
   "exclude": ["node_modules"]
 }
