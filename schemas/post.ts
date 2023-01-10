@@ -1,7 +1,9 @@
-import authorType from './author'
 import { BookIcon } from '@sanity/icons'
+import { orderRankOrdering, orderRankField } from '@sanity/orderable-document-list'
 import { format, parseISO } from 'date-fns'
 import { defineField, defineType } from 'sanity'
+
+import authorType from './author'
 
 /**
  * This file is the schema definition for a post.
@@ -19,6 +21,7 @@ export default defineType({
   name: 'post',
   title: 'Post',
   icon: BookIcon,
+  orderings: [{ title: 'Rank', name:'rank',  by: [{ field: "orderRank",  direction: 'asc'}, { field: "orderRank",  direction: 'desc'},]} ],
   type: 'document',
   fields: [
     defineField({
@@ -69,6 +72,8 @@ export default defineType({
       type: 'reference',
       to: [{ type: authorType.name }],
     }),
+    orderRankField({type: 'post', hidden: false }),
+   
   ],
   preview: {
     select: {

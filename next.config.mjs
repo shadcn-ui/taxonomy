@@ -6,7 +6,8 @@ const nextConfig = {
   // @TODO turn swcMinify back on once the agressive dead code elimination bug that casues
   // `ReferenceError: FieldPresenceWithOverlay is not defined` is fixed
   swcMinify: false,
-  reactStrictMode: true,
+    //setting to false to enable draggable
+  reactStrictMode: false,
   images: {
     domains: ['avatars.githubusercontent.com'],
     remotePatterns: [
