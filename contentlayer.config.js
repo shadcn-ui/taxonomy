@@ -1,11 +1,17 @@
-import { defineDocumentType, makeSource } from "contentlayer/source-files"
+import {
+  defineDocumentType,
+  makeSource,
+  defineComputedFields,
+} from "contentlayer/source-files"
 import remarkGfm from "remark-gfm"
 import rehypePrettyCode from "rehype-pretty-code"
 import rehypeSlug from "rehype-slug"
 import rehypeAutolinkHeadings from "rehype-autolink-headings"
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
-const computedFields = {
+const computedFields = defineComputedFields<
+  "Page" | "Doc" | "Guide" | "Post" | "Author"
+>({
   slug: {
     type: "string",
     resolve: (doc) => `/${doc._raw.flattenedPath}`,
@@ -14,7 +20,7 @@ const computedFields = {
     type: "string",
     resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
   },
-}
+})
 
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
