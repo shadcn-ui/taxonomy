@@ -1,4 +1,4 @@
-# Taxonomy - Sanity
+       # Taxonomy - Sanity
 
 An open source application built using the new router, server components and everything new in Next.js 13.  Forked from shadcn to use Sanity.io / PortableText rather than MDX and Contentlayer (Contentlayer doesn't yet support Sanity)
 
