@@ -5,8 +5,8 @@ import Link from "next/link"
 import { useSelectedLayoutSegment } from "next/navigation"
 
 import { MainNavItem } from "types"
-import { cn } from "@/lib/utils"
 import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
 import { MobileNav } from "@/components/mobile-nav"
 
@@ -51,7 +51,9 @@ export function MainNav({ items, children }: MainNavProps) {
         {showMobileMenu ? <Icons.close /> : <Icons.logo />}
         <span className="font-bold">Menu</span>
       </button>
-      {showMobileMenu && <MobileNav items={items}>{children}</MobileNav>}
+      {showMobileMenu && items && (
+        <MobileNav items={items}>{children}</MobileNav>
+      )}
     </div>
   )
 }

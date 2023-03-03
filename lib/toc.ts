@@ -1,5 +1,8 @@
-import { remark } from "remark"
+// @ts-nocheck
+// TODO: Fix this when we turn strict mode on.
+
 import { toc } from "mdast-util-toc"
+import { remark } from "remark"
 import { visit } from "unist-util-visit"
 
 const textTypes = ["text", "emphasis", "strong", "inlineCode"]

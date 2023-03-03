@@ -1,9 +1,10 @@
-import { ogImageSchema } from "@/lib/validations/og"
-import { ImageResponse } from "@vercel/og"
 import { NextRequest } from "next/server"
+import { ImageResponse } from "@vercel/og"
+
+import { ogImageSchema } from "@/lib/validations/og"
 
 export const config = {
-  runtime: "experimental-edge",
+  runtime: "edge",
 }
 
 const interRegular = fetch(
@@ -39,7 +40,7 @@ export default async function handler(req: NextRequest) {
             color: paint,
             background:
               mode === "dark"
-                ? "linear-gradient(90deg, #000 0%, #121 100%)"
+                ? "linear-gradient(90deg, #000 0%, #111 100%)"
                 : "white",
           }}
         >

@@ -1,26 +1,31 @@
 import { NextApiRequest, NextApiResponse } from "next"
-import { unstable_getServerSession } from "next-auth/next"
+import { getServerSession } from "next-auth/next"
 
 import { proPlan } from "@/config/subscriptions"
-import { withMethods } from "@/lib/api-middlewares/with-methods"
-import { getUserSubscriptionPlan } from "@/lib/subscription"
-import { stripe } from "@/lib/stripe"
 import { withAuthentication } from "@/lib/api-middlewares/with-authentication"
-import { absoluteUrl } from "@/lib/utils"
+import { withMethods } from "@/lib/api-middlewares/with-methods"
 import { authOptions } from "@/lib/auth"
+import { stripe } from "@/lib/stripe"
+import { getUserSubscriptionPlan } from "@/lib/subscription"
+import { absoluteUrl } from "@/lib/utils"
 
 const billingUrl = absoluteUrl("/dashboard/billing")
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     try {
-      const session = await unstable_getServerSession(req, res, authOptions)
-      const user = session.user
+      const session = await getServerSession(req, res, authOptions)
+      const user = session?.user
+
+      if (!user || !user.email) {
+        throw new Error("User not found.")
+      }
+
       const subscriptionPlan = await getUserSubscriptionPlan(user.id)
 
       // The user is on the pro plan.
       // Create a portal session to manage subscription.
-      if (subscriptionPlan.isPro) {
+      if (subscriptionPlan.isPro && subscriptionPlan.stripeCustomerId) {
         const stripeSession = await stripe.billingPortal.sessions.create({
           customer: subscriptionPlan.stripeCustomerId,
           return_url: billingUrl,

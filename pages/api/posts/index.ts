@@ -1,20 +1,20 @@
 import { NextApiRequest, NextApiResponse } from "next"
+import { getServerSession } from "next-auth/next"
 import * as z from "zod"
-import { unstable_getServerSession } from "next-auth/next"
 
-import { db } from "@/lib/db"
 import { withMethods } from "@/lib/api-middlewares/with-methods"
-import { getUserSubscriptionPlan } from "@/lib/subscription"
-import { RequiresProPlanError } from "@/lib/exceptions"
 import { authOptions } from "@/lib/auth"
+import { db } from "@/lib/db"
+import { RequiresProPlanError } from "@/lib/exceptions"
+import { getUserSubscriptionPlan } from "@/lib/subscription"
 
 const postCreateSchema = z.object({
-  title: z.string().optional(),
+  title: z.string(),
   content: z.string().optional(),
 })
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const session = await unstable_getServerSession(req, res, authOptions)
+  const session = await getServerSession(req, res, authOptions)
 
   if (!session) {
     return res.status(403).end()

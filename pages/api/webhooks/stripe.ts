@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next"
-import Stripe from "stripe"
 import rawBody from "raw-body"
+import Stripe from "stripe"
 
-import { stripe } from "@/lib/stripe"
 import { db } from "@/lib/db"
+import { stripe } from "@/lib/stripe"
 
 export const config = {
   api: {
@@ -17,7 +17,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const body = await rawBody(req)
-  const signature = req.headers["stripe-signature"]
+  const signature = req.headers["stripe-signature"] as string
 
   let event: Stripe.Event
 
@@ -25,7 +25,7 @@ export default async function handler(
     event = stripe.webhooks.constructEvent(
       body,
       signature,
-      process.env.STRIPE_WEBHOOK_SECRET
+      process.env.STRIPE_WEBHOOK_SECRET || ""
     )
   } catch (error) {
     return res.status(400).send(`Webhook Error: ${error.message}`)
@@ -44,7 +44,7 @@ export default async function handler(
     // the subscription id and customer id.
     await db.user.update({
       where: {
-        id: session.metadata.userId,
+        id: session?.metadata?.userId,
       },
       data: {
         stripeSubscriptionId: subscription.id,

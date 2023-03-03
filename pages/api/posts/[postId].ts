@@ -30,10 +30,13 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
         },
       })
 
+      if (!post) {
+        throw new Error("Post not found.")
+      }
+
       const body = postPatchSchema.parse(req.body)
 
       // TODO: Implement sanitization for content.
-
       await db.post.update({
         where: {
           id: post.id,

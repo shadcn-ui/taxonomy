@@ -19,18 +19,6 @@ export const dashboardConfig: DashboardConfig = {
       icon: "post",
     },
     {
-      title: "Pages",
-      href: "/",
-      icon: "page",
-      disabled: true,
-    },
-    {
-      title: "Media",
-      href: "/",
-      icon: "media",
-      disabled: true,
-    },
-    {
       title: "Billing",
       href: "/dashboard/billing",
       icon: "billing",

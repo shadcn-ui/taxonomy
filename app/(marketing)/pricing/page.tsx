@@ -1,6 +1,12 @@
 import Link from "next/link"
 
+import { cn } from "@/lib/utils"
 import { Icons } from "@/components/icons"
+import { buttonVariants } from "@/components/ui/button"
+
+export const metadata = {
+  title: "Pricing",
+}
 
 export default function PricingPage() {
   return (
@@ -45,10 +51,7 @@ export default function PricingPage() {
             <h4 className="text-7xl font-bold">$19</h4>
             <p className="text-sm font-medium text-slate-600">Billed Monthly</p>
           </div>
-          <Link
-            href="/login"
-            className="relative inline-flex h-12 items-center justify-center rounded-md border border-transparent bg-brand-500 py-6 text-center font-medium text-white hover:bg-brand-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2"
-          >
+          <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
             Get Started
           </Link>
         </div>

@@ -1,15 +1,21 @@
-import { redirect } from "next/navigation"
 import { cache } from "react"
+import { redirect } from "next/navigation"
+import { User } from "@prisma/client"
 
+import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/db"
 import { getCurrentUser } from "@/lib/session"
-import { User } from "@prisma/client"
-import { authOptions } from "@/lib/auth"
-import { DashboardHeader } from "@/components/dashboard/header"
-import { PostCreateButton } from "@/components/dashboard/post-create-button"
-import { DashboardShell } from "@/components/dashboard/shell"
-import { PostItem } from "@/components/dashboard/post-item"
-import { EmptyPlaceholder } from "@/components/dashboard/empty-placeholder"
+import { cn } from "@/lib/utils"
+import { EmptyPlaceholder } from "@/components/empty-placeholder"
+import { DashboardHeader } from "@/components/header"
+import { PostCreateButton } from "@/components/post-create-button"
+import { PostItem } from "@/components/post-item"
+import { DashboardShell } from "@/components/shell"
+import { buttonVariants } from "@/components/ui/button"
+
+export const metadata = {
+  title: "Dashboard",
+}
 
 const getPostsForUser = cache(async (userId: User["id"]) => {
   return await db.post.findMany({
@@ -32,7 +38,7 @@ export default async function DashboardPage() {
   const user = await getCurrentUser()
 
   if (!user) {
-    redirect(authOptions.pages.signIn)
+    redirect(authOptions?.pages?.signIn || "/login")
   }
 
   const posts = await getPostsForUser(user.id)
@@ -56,7 +62,12 @@ export default async function DashboardPage() {
             <EmptyPlaceholder.Description>
               You don&apos;t have any posts yet. Start creating content.
             </EmptyPlaceholder.Description>
-            <PostCreateButton className="border-slate-200 bg-white text-brand-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2" />
+            <PostCreateButton
+              className={cn(
+                buttonVariants({ variant: "outline" }),
+                "text-slate-900"
+              )}
+            />
           </EmptyPlaceholder>
         )}
       </div>

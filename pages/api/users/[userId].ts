@@ -1,18 +1,22 @@
 import { NextApiRequest, NextApiResponse } from "next"
+import { getServerSession } from "next-auth/next"
 import * as z from "zod"
-import { unstable_getServerSession } from "next-auth/next"
 
-import { db } from "@/lib/db"
-import { withMethods } from "@/lib/api-middlewares/with-methods"
 import { withCurrentUser } from "@/lib/api-middlewares/with-current-user"
-import { userNameSchema } from "@/lib/validations/user"
+import { withMethods } from "@/lib/api-middlewares/with-methods"
 import { authOptions } from "@/lib/auth"
+import { db } from "@/lib/db"
+import { userNameSchema } from "@/lib/validations/user"
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "PATCH") {
     try {
-      const session = await unstable_getServerSession(req, res, authOptions)
+      const session = await getServerSession(req, res, authOptions)
       const user = session?.user
+
+      if (!user) {
+        throw new Error("User not found.")
+      }
 
       const body = req.body
 

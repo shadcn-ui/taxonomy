@@ -16,28 +16,22 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/components/*": ["components/*"],
-      "@/ui/*": ["ui/*"],
-      "@/hooks/*": ["hooks/*"],
-      "@/lib/*": ["lib/*"],
-      "@/config/*": ["config/*"],
-      "@/styles/*": ["styles/*"],
-      "@/prisma/*": ["prisma/*"],
+      "@/*": ["./*"],
       "contentlayer/generated": ["./.contentlayer/generated"]
     },
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "strictNullChecks": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated",
-    "content/pages/about.mdx"
+    ".contentlayer/generated"
   ],
   "exclude": ["node_modules"]
 }
