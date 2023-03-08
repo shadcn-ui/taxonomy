@@ -51,7 +51,7 @@ Card.Description = function CardDescription({
   return <p className={cn("text-sm text-gray-600", className)} {...props} />
 }
 
-Card.Skeleton = function CardSeleton() {
+Card.Skeleton = function CardSkeleton() {
   return (
     <Card>
       <Card.Header className="gap-2">
