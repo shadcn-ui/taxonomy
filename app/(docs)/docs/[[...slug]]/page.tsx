@@ -17,7 +17,7 @@ interface DocPageProps {
   }
 }
 
-async function getDocFromParams(params) {
+async function getDocFromParams({ params }: DocPageProps) {
   const slug = params.slug?.join("/") || ""
   const doc = allDocs.find((doc) => doc.slugAsParams === slug)
 
@@ -31,7 +31,7 @@ async function getDocFromParams(params) {
 export async function generateMetadata({
   params,
 }: DocPageProps): Promise<Metadata> {
-  const doc = await getDocFromParams(params)
+  const doc = await getDocFromParams({ params })
 
   if (!doc) {
     return {}
@@ -79,7 +79,7 @@ export async function generateStaticParams(): Promise<
 }
 
 export default async function DocPage({ params }: DocPageProps) {
-  const doc = await getDocFromParams(params)
+  const doc = await getDocFromParams({ params })
 
   if (!doc) {
     notFound()

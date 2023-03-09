@@ -28,7 +28,11 @@ export default async function handler(
       process.env.STRIPE_WEBHOOK_SECRET || ""
     )
   } catch (error) {
-    return res.status(400).send(`Webhook Error: ${error.message}`)
+    if (error instanceof Stripe.errors.StripeError) {
+      return res.status(400).send(`Webhook Error: ${error.message}`)
+    }
+
+    return res.status(400).send(`Error: ${error}`)
   }
 
   const session = event.data.object as Stripe.Checkout.Session

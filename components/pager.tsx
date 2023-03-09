@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { NavItem, SidebarNavItem } from "@/types"
 import { Doc } from "contentlayer/generated"
 
 import { docsConfig } from "@/config/docs"
@@ -19,7 +20,7 @@ export function DocsPager({ doc }: DocsPagerProps) {
     <div className="flex flex-row items-center justify-between">
       {pager?.prev && (
         <Link
-          href={pager.prev.href}
+          href={pager.prev.href ?? "#"}
           className="inline-flex items-center justify-center rounded-lg border border-transparent bg-transparent py-2 px-3 text-center text-sm  font-medium text-slate-900 hover:border-slate-200 hover:bg-slate-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-slate-200"
         >
           <Icons.chevronLeft className="mr-2 h-4 w-4" />
@@ -28,7 +29,7 @@ export function DocsPager({ doc }: DocsPagerProps) {
       )}
       {pager?.next && (
         <Link
-          href={pager.next.href}
+          href={pager.next.href ?? "#"}
           className="ml-auto inline-flex items-center justify-center rounded-lg border border-transparent bg-transparent py-2 px-3 text-center text-sm  font-medium text-slate-900 hover:border-slate-200 hover:bg-slate-100 focus:z-10 focus:outline-none focus:ring-4 focus:ring-slate-200"
         >
           {pager.next.title}
@@ -55,8 +56,8 @@ export function getPagerForDoc(doc: Doc) {
   }
 }
 
-export function flatten(links: { items? }[]) {
-  return links.reduce((flat, link) => {
+export function flatten(links: SidebarNavItem[]): SidebarNavItem[] {
+  return links.reduce<SidebarNavItem[]>((flat, link) => {
     return flat.concat(link.items ? flatten(link.items) : link)
   }, [])
 }

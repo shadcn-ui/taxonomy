@@ -1,12 +1,13 @@
 import * as React from "react"
 import Image from "next/image"
+import { MDXComponents } from "mdx/types"
 import { useMDXComponent } from "next-contentlayer/hooks"
 
 import { cn } from "@/lib/utils"
 import { Callout } from "@/components/callout"
 import { Card } from "@/components/card"
 
-const components = {
+const components: MDXComponents = {
   h1: ({ className, ...props }) => (
     <h1
       className={cn(
