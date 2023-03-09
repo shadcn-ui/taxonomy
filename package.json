@@ -90,6 +90,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.7",
+    "@types/mdx": "^2.0.3",
     "@types/node": "^18.11.9",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
