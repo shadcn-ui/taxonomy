@@ -144,7 +144,7 @@ const components = {
   pre: ({ className, ...props }) => (
     <pre
       className={cn(
-        "mt-6 mb-4 overflow-x-auto rounded-lg bg-slate-900 py-4",
+        "mb-4 mt-6 overflow-x-auto rounded-lg bg-slate-900 py-4",
         className
       )}
       {...props}
@@ -153,7 +153,7 @@ const components = {
   code: ({ className, ...props }) => (
     <code
       className={cn(
-        "relative rounded border bg-slate-300/25 py-[0.2rem] px-[0.3rem] font-mono text-sm text-slate-600",
+        "relative rounded border bg-slate-300/25 px-[0.3rem] py-[0.2rem] font-mono text-sm text-slate-600",
         className
       )}
       {...props}
