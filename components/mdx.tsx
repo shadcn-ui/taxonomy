@@ -146,8 +146,8 @@ const components = {
   ),
   pre: ({ className, ...props }) => (
     <div className="flex flex-col">
-      <div className="flex items-center space-x-1 justify-end -my-5 mr-1">
-        <CopyCodeButton onCopy={() => copyCodeContent(props.children)} />
+      <div className="-my-5 mr-1 flex items-center justify-end space-x-1">
+        <CopyCodeButton onCopy={async () => copyCodeContent(props.children)} />
       </div>
       <pre
         className={cn(
@@ -214,7 +214,7 @@ const CopyCodeButton: React.FC<CopyCodeButtonProps> = ({ onCopy }) => {
 
   return (
     <div
-      className="cursor-pointer hover:text-gray-900 flex transition-color duration-200"
+      className="transition-color flex cursor-pointer duration-200 hover:text-gray-900"
       onClick={handleCopyClick}
     >
       {isCopied ? (
