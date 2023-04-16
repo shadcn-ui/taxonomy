@@ -146,14 +146,8 @@ const components = {
   ),
   pre: ({ className, ...props }) => (
     <div className="flex flex-col">
-      <div className="flex items-center justify-end -my-5 mr-1">
-        <div
-          className="flex items-center cursor-pointer text-slate-600 hover:text-slate-700 active:text-slate-900 transition-colors duration-200 space-x-1"
-          onClick={() => copyCodeContent(props.children)}
-        >
-          <ClipboardIcon className="h-4 w-5" />
-          <span className="text-xs">Copy code</span>
-        </div>
+      <div className="flex items-center space-x-1 justify-end -my-5 mr-1">
+        <CopyCodeButton onCopy={() => copyCodeContent(props.children)} />
       </div>
       <pre
         className={cn(
@@ -201,6 +195,32 @@ const copyCodeToClipboard = async (content) => {
 const copyCodeContent = (children) => {
   const content = getContentFromChildren(children)
   copyCodeToClipboard(content)
+}
+
+interface CopyCodeButtonProps {
+  onCopy: () => Promise<void>
+}
+
+const CopyCodeButton: React.FC<CopyCodeButtonProps> = ({ onCopy }) => {
+  const [isCopied, setIsCopied] = React.useState(false)
+
+  const handleCopyClick = async () => {
+    await onCopy()
+    setIsCopied(true)
+    setTimeout(() => {
+      setIsCopied(false)
+    }, 2000)
+  }
+
+  return (
+    <div
+      className="cursor-pointer hover:text-gray-900 flex transition-color duration-200"
+      onClick={handleCopyClick}
+    >
+      <ClipboardIcon className="h-4 w-5" />
+      <span className="text-xs">{isCopied ? "Copied!" : "Copy code"}</span>
+    </div>
+  )
 }
 
 interface MdxProps {
