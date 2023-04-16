@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Image from "next/image"
-import { ClipboardIcon } from "@heroicons/react/24/outline"
+import { CheckIcon, ClipboardIcon } from "@heroicons/react/24/outline"
 import { useMDXComponent } from "next-contentlayer/hooks"
 
 import { cn } from "@/lib/utils"
@@ -217,8 +217,17 @@ const CopyCodeButton: React.FC<CopyCodeButtonProps> = ({ onCopy }) => {
       className="cursor-pointer hover:text-gray-900 flex transition-color duration-200"
       onClick={handleCopyClick}
     >
-      <ClipboardIcon className="h-4 w-5" />
-      <span className="text-xs">{isCopied ? "Copied!" : "Copy code"}</span>
+      {isCopied ? (
+        <>
+          <CheckIcon className="h-4 w-5" />
+          <span className="text-xs">Copied!</span>
+        </>
+      ) : (
+        <>
+          <ClipboardIcon className="h-4 w-5" />
+          <span className="text-xs">Copy code</span>
+        </>
+      )}
     </div>
   )
 }
