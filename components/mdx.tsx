@@ -1,5 +1,8 @@
+"use client"
+
 import * as React from "react"
 import Image from "next/image"
+import { ClipboardIcon } from "@heroicons/react/24/outline"
 import { useMDXComponent } from "next-contentlayer/hooks"
 
 import { cn } from "@/lib/utils"
@@ -142,13 +145,24 @@ const components = {
     />
   ),
   pre: ({ className, ...props }) => (
-    <pre
-      className={cn(
-        "mt-6 mb-4 overflow-x-auto rounded-lg bg-slate-900 py-4",
-        className
-      )}
-      {...props}
-    />
+    <div className="flex flex-col">
+      <div className="flex items-center justify-end -my-5 mr-1">
+        <div
+          className="flex items-center cursor-pointer text-slate-600 hover:text-slate-700 active:text-slate-900 transition-colors duration-200 space-x-1"
+          onClick={() => copyCodeContent(props.children)}
+        >
+          <ClipboardIcon className="h-4 w-5" />
+          <span className="text-xs">Copy code</span>
+        </div>
+      </div>
+      <pre
+        className={cn(
+          "mt-6 mb-4 overflow-x-auto rounded-lg bg-slate-900 py-4",
+          className
+        )}
+        {...props}
+      />
+    </div>
   ),
   code: ({ className, ...props }) => (
     <code
@@ -162,6 +176,31 @@ const components = {
   Image,
   Callout,
   Card,
+}
+
+const getContentFromChildren = (children) => {
+  if (Array.isArray(children)) {
+    return children.map(getContentFromChildren).join("")
+  } else if (typeof children === "string") {
+    return children
+  } else if (children && children.props && children.props.children) {
+    return getContentFromChildren(children.props.children)
+  }
+  return ""
+}
+
+const copyCodeToClipboard = async (content) => {
+  try {
+    await navigator.clipboard.writeText(content)
+    console.log("Code copied to clipboard")
+  } catch (err) {
+    console.error("Failed to copy code to clipboard", err)
+  }
+}
+
+const copyCodeContent = (children) => {
+  const content = getContentFromChildren(children)
+  copyCodeToClipboard(content)
 }
 
 interface MdxProps {
