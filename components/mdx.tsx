@@ -1,13 +1,11 @@
-"use client"
-
 import * as React from "react"
 import Image from "next/image"
-import { CheckIcon, ClipboardIcon } from "@heroicons/react/24/outline"
 import { useMDXComponent } from "next-contentlayer/hooks"
 
 import { cn } from "@/lib/utils"
 import { Callout } from "@/components/callout"
 import { Card } from "@/components/card"
+import { CodeBlock } from "@/components/code-block"
 
 const components = {
   h1: ({ className, ...props }) => (
@@ -144,19 +142,8 @@ const components = {
       {...props}
     />
   ),
-  pre: ({ className, ...props }) => (
-    <div className="flex flex-col">
-      <div className="-my-5 mr-1 flex items-center justify-end space-x-1">
-        <CopyCodeButton onCopy={async () => copyCodeContent(props.children)} />
-      </div>
-      <pre
-        className={cn(
-          "mt-6 mb-4 overflow-x-auto rounded-lg bg-slate-900 py-4",
-          className
-        )}
-        {...props}
-      />
-    </div>
+  pre: (props: React.HTMLAttributes<HTMLPreElement>) => (
+    <CodeBlock {...props} />
   ),
   code: ({ className, ...props }) => (
     <code
@@ -170,66 +157,6 @@ const components = {
   Image,
   Callout,
   Card,
-}
-
-const getContentFromChildren = (children) => {
-  if (Array.isArray(children)) {
-    return children.map(getContentFromChildren).join("")
-  } else if (typeof children === "string") {
-    return children
-  } else if (children && children.props && children.props.children) {
-    return getContentFromChildren(children.props.children)
-  }
-  return ""
-}
-
-const copyCodeToClipboard = async (content) => {
-  try {
-    await navigator.clipboard.writeText(content)
-    console.log("Code copied to clipboard")
-  } catch (err) {
-    console.error("Failed to copy code to clipboard", err)
-  }
-}
-
-const copyCodeContent = (children) => {
-  const content = getContentFromChildren(children)
-  copyCodeToClipboard(content)
-}
-
-interface CopyCodeButtonProps {
-  onCopy: () => Promise<void>
-}
-
-const CopyCodeButton: React.FC<CopyCodeButtonProps> = ({ onCopy }) => {
-  const [isCopied, setIsCopied] = React.useState(false)
-
-  const handleCopyClick = async () => {
-    await onCopy()
-    setIsCopied(true)
-    setTimeout(() => {
-      setIsCopied(false)
-    }, 2000)
-  }
-
-  return (
-    <div
-      className="transition-color flex cursor-pointer duration-200 hover:text-gray-900"
-      onClick={handleCopyClick}
-    >
-      {isCopied ? (
-        <>
-          <CheckIcon className="h-4 w-5" />
-          <span className="text-xs">Copied!</span>
-        </>
-      ) : (
-        <>
-          <ClipboardIcon className="h-4 w-5" />
-          <span className="text-xs">Copy code</span>
-        </>
-      )}
-    </div>
-  )
 }
 
 interface MdxProps {
