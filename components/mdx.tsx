@@ -5,6 +5,7 @@ import { useMDXComponent } from "next-contentlayer/hooks"
 import { cn } from "@/lib/utils"
 import { Callout } from "@/components/callout"
 import { Card } from "@/components/card"
+import { CodeBlock } from "@/components/code-block"
 
 const components = {
   h1: ({ className, ...props }) => (
@@ -141,14 +142,8 @@ const components = {
       {...props}
     />
   ),
-  pre: ({ className, ...props }) => (
-    <pre
-      className={cn(
-        "mt-6 mb-4 overflow-x-auto rounded-lg bg-slate-900 py-4",
-        className
-      )}
-      {...props}
-    />
+  pre: (props: React.HTMLAttributes<HTMLPreElement>) => (
+    <CodeBlock {...props} />
   ),
   code: ({ className, ...props }) => (
     <code
