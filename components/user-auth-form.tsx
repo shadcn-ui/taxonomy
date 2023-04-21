@@ -1,10 +1,11 @@
 "use client"
 
 import * as React from "react"
+import { useRouter } from "next/router"
 import { useSearchParams } from "next/navigation"
 import { toast } from "@/hooks/use-toast"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { signIn } from "next-auth/react"
+import { signIn, useSession } from "next-auth/react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 
@@ -31,6 +32,12 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [isGitHubLoading, setIsGitHubLoading] = React.useState<boolean>(false)
   const searchParams = useSearchParams()
 
+  const router = useRouter()
+  const { status } = useSession()
+  if(status === "authenticated") {
+    router.push("/dashboard")
+  }
+  
   async function onSubmit(data: FormData) {
     setIsLoading(true)
 
