@@ -36,8 +36,9 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const { status } = useSession()
   if(status === "authenticated") {
     router.push("/dashboard")
+    return <div className="text-center flex items-center justify-center h-screen">Redirecting...</div>
   }
-  
+
   async function onSubmit(data: FormData) {
     setIsLoading(true)
 
