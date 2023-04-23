@@ -1,0 +1,20 @@
+{
+  "title": "Not Implemented",
+  "description": "This page is in progress.",
+  "published": true,
+  "body": {
+    "raw": "\n<Callout>\n\nThis site is a work in progress. If you see dummy text on a page, it means I'm still working on it. You can follow updates on Twitter [@shadcn](https://twitter.com/shadcn).\n\n</Callout>\n",
+    "code": "var Component=(()=>{var l=Object.create;var r=Object.defineProperty;var p=Object.getOwnPropertyDescriptor;var u=Object.getOwnPropertyNames;var f=Object.getPrototypeOf,x=Object.prototype.hasOwnProperty;var h=(e,t)=>()=>(t||e((t={exports:{}}).exports,t),t.exports),_=(e,t)=>{for(var n in t)r(e,n,{get:t[n],enumerable:!0})},c=(e,t,n,i)=>{if(t&&typeof t==\"object\"||typeof t==\"function\")for(let s of u(t))!x.call(e,s)&&s!==n&&r(e,s,{get:()=>t[s],enumerable:!(i=p(t,s))||i.enumerable});return e};var g=(e,t,n)=>(n=e!=null?l(f(e)):{},c(t||!e||!e.__esModule?r(n,\"default\",{value:e,enumerable:!0}):n,e)),y=e=>c(r({},\"__esModule\",{value:!0}),e);var a=h((M,d)=>{d.exports=_jsx_runtime});var C={};_(C,{default:()=>b,frontmatter:()=>j});var o=g(a()),j={title:\"Not Implemented\",description:\"This page is in progress.\"};function m(e){let t=Object.assign({p:\"p\",a:\"a\"},e.components),{Callout:n}=t;return n||k(\"Callout\",!0,\"6:1-10:11\"),(0,o.jsx)(n,{children:(0,o.jsxs)(t.p,{children:[\"This site is a work in progress. If you see dummy text on a page, it means I'm still working on it. You can follow updates on Twitter \",(0,o.jsx)(t.a,{href:\"https://twitter.com/shadcn\",children:\"@shadcn\"}),\".\"]})})}function w(e={}){let{wrapper:t}=e.components||{};return t?(0,o.jsx)(t,Object.assign({},e,{children:(0,o.jsx)(m,e)})):m(e)}var b=w;function k(e,t,n){throw new Error(\"Expected \"+(t?\"component\":\"object\")+\" `\"+e+\"` to be defined: you likely forgot to import, pass, or provide it.\"+(n?\"\\nIt\\u2019s referenced in your code at `\"+n+\"` in `/Users/yousefabdelkhaleq/taxonomy/content/docs/_mdx_bundler_entry_point-447c7d8f-d575-41de-87b9-dd8c16d05381.mdx`\":\"\"))}return y(C);})();\n;return Component;"
+  },
+  "_id": "docs/in-progress.mdx",
+  "_raw": {
+    "sourceFilePath": "docs/in-progress.mdx",
+    "sourceFileName": "in-progress.mdx",
+    "sourceFileDir": "docs",
+    "contentType": "mdx",
+    "flattenedPath": "docs/in-progress"
+  },
+  "type": "Doc",
+  "slug": "/docs/in-progress",
+  "slugAsParams": "in-progress"
+}
