@@ -1,9 +1,10 @@
 "use client"
 
 import * as React from "react"
+import { useRouter } from "next/router"
 import { useSearchParams } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
-import { signIn } from "next-auth/react"
+import { signIn, useSession } from "next-auth/react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 
@@ -30,6 +31,13 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   const [isLoading, setIsLoading] = React.useState<boolean>(false)
   const [isGitHubLoading, setIsGitHubLoading] = React.useState<boolean>(false)
   const searchParams = useSearchParams()
+
+  const router = useRouter()
+  const { status } = useSession()
+  if(status === "authenticated") {
+    router.push("/dashboard")
+    return <div className="text-center flex items-center justify-center h-screen">Redirecting...</div>
+  }
 
   async function onSubmit(data: FormData) {
     setIsLoading(true)
