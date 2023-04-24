@@ -2,17 +2,17 @@
 
 import * as React from "react"
 import { useRouter } from "next/navigation"
-import { toast } from "@/hooks/use-toast"
 
 import { cn } from "@/lib/utils"
+import { ButtonProps, buttonVariants } from "@/components/ui/button"
+import { toast } from "@/components/ui/use-toast"
 import { Icons } from "@/components/icons"
-import { buttonVariants } from "@/components/ui/button"
 
-interface PostCreateButtonProps
-  extends React.HTMLAttributes<HTMLButtonElement> {}
+interface PostCreateButtonProps extends ButtonProps {}
 
 export function PostCreateButton({
   className,
+  variant,
   ...props
 }: PostCreateButtonProps) {
   const router = useRouter()
@@ -61,7 +61,7 @@ export function PostCreateButton({
     <button
       onClick={onClick}
       className={cn(
-        buttonVariants(),
+        buttonVariants({ variant }),
         {
           "cursor-not-allowed opacity-60": isLoading,
         },

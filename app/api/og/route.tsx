@@ -1,21 +1,18 @@
-import { NextRequest } from "next/server"
 import { ImageResponse } from "@vercel/og"
 
 import { ogImageSchema } from "@/lib/validations/og"
 
-export const config = {
-  runtime: "edge",
-}
+export const runtime = "edge"
 
 const interRegular = fetch(
-  new URL("../../assets/fonts/Inter-Regular.ttf", import.meta.url)
+  new URL("../../../assets/fonts/Inter-Regular.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
 const interBold = fetch(
-  new URL("../../assets/fonts/Inter-Bold.ttf", import.meta.url)
+  new URL("../../../assets/fonts/CalSans-SemiBold.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer())
 
-export default async function handler(req: NextRequest) {
+export async function GET(req: Request) {
   try {
     const fontRegular = await interRegular
     const fontBold = await interBold
@@ -81,10 +78,10 @@ export default async function handler(req: NextRequest) {
               {values.type}
             </div>
             <div
-              tw="flex leading-[1.1] text-[80px] font-bold tracking-tighter"
+              tw="flex leading-[1.1] text-[80px] font-bold"
               style={{
-                fontFamily: "Inter",
-                fontWeight: "bolder",
+                fontFamily: "Cal Sans",
+                fontWeight: "bold",
                 marginLeft: "-3px",
                 fontSize,
               }}
@@ -135,7 +132,7 @@ export default async function handler(req: NextRequest) {
             style: "normal",
           },
           {
-            name: "Inter",
+            name: "Cal Sans",
             data: fontBold,
             weight: 700,
             style: "normal",
