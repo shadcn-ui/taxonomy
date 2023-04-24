@@ -4,13 +4,15 @@ import { allGuides } from "contentlayer/generated"
 
 import { getTableOfContents } from "@/lib/toc"
 import { Icons } from "@/components/icons"
-import { Mdx } from "@/components/mdx"
+import { Mdx } from "@/components/mdx-components"
 import { DocsPageHeader } from "@/components/page-header"
 import { DashboardTableOfContents } from "@/components/toc"
+
 import "@/styles/mdx.css"
 import { Metadata } from "next"
 
-import { absoluteUrl } from "@/lib/utils"
+import { absoluteUrl, cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
 
 interface GuidePageProps {
   params: {
@@ -93,11 +95,11 @@ export default async function GuidePage({ params }: GuidePageProps) {
       <div>
         <DocsPageHeader heading={guide.title} text={guide.description} />
         <Mdx code={guide.body.code} />
-        <hr className="my-4 border-slate-200" />
+        <hr className="my-4" />
         <div className="flex justify-center py-6 lg:py-10">
           <Link
             href="/guides"
-            className="mb-4 inline-flex items-center justify-center text-sm font-medium text-slate-600 hover:text-slate-900"
+            className={cn(buttonVariants({ variant: "ghost" }))}
           >
             <Icons.chevronLeft className="mr-2 h-4 w-4" />
             See all guides

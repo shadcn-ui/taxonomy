@@ -3,10 +3,8 @@
 import * as React from "react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
-import { toast } from "@/hooks/use-toast"
 import { Post } from "@prisma/client"
 
-import { Icons } from "@/components/icons"
 import {
   AlertDialog,
   AlertDialogAction,
@@ -24,6 +22,8 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
+import { toast } from "@/components/ui/use-toast"
+import { Icons } from "@/components/icons"
 
 async function deletePost(postId: string) {
   const response = await fetch(`/api/posts/${postId}`, {
@@ -53,7 +53,7 @@ export function PostOperations({ post }: PostOperationsProps) {
   return (
     <>
       <DropdownMenu>
-        <DropdownMenuTrigger className="flex h-8 w-8 items-center justify-center rounded-md border transition-colors hover:bg-slate-50">
+        <DropdownMenuTrigger className="flex h-8 w-8 items-center justify-center rounded-md border transition-colors hover:bg-muted">
           <Icons.ellipsis className="h-4 w-4" />
           <span className="sr-only">Open</span>
         </DropdownMenuTrigger>
@@ -65,7 +65,7 @@ export function PostOperations({ post }: PostOperationsProps) {
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem
-            className="flex cursor-pointer items-center text-red-600 focus:bg-red-50"
+            className="flex cursor-pointer items-center text-destructive focus:text-destructive"
             onSelect={() => setShowDeleteAlert(true)}
           >
             Delete

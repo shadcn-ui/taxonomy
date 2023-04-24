@@ -2,10 +2,11 @@ import { notFound } from "next/navigation"
 import { allDocs } from "contentlayer/generated"
 
 import { getTableOfContents } from "@/lib/toc"
-import { Mdx } from "@/components/mdx"
+import { Mdx } from "@/components/mdx-components"
 import { DocsPageHeader } from "@/components/page-header"
 import { DocsPager } from "@/components/pager"
 import { DashboardTableOfContents } from "@/components/toc"
+
 import "@/styles/mdx.css"
 import { Metadata } from "next"
 
@@ -92,7 +93,7 @@ export default async function DocPage({ params }: DocPageProps) {
       <div className="mx-auto w-full min-w-0">
         <DocsPageHeader heading={doc.title} text={doc.description} />
         <Mdx code={doc.body.code} />
-        <hr className="my-4 border-slate-200 md:my-6" />
+        <hr className="my-4 md:my-6" />
         <DocsPager doc={doc} />
       </div>
       <div className="hidden text-sm xl:block">

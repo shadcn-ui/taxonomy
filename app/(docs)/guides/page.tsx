@@ -29,24 +29,24 @@ export default function GuidesPage() {
           {guides.map((guide) => (
             <article
               key={guide._id}
-              className="group relative rounded-lg border border-slate-200 bg-white p-6 shadow-md transition-shadow hover:shadow-lg"
+              className="group relative rounded-lg border p-6 shadow-md transition-shadow hover:shadow-lg"
             >
               {guide.featured && (
-                <span className="absolute top-4 right-4 rounded-full bg-slate-100 px-3 py-1 text-xs font-medium">
+                <span className="absolute right-4 top-4 rounded-full px-3 py-1 text-xs font-medium">
                   Featured
                 </span>
               )}
               <div className="flex flex-col justify-between space-y-4">
                 <div className="space-y-2">
-                  <h2 className="text-xl font-medium tracking-tight text-slate-900">
+                  <h2 className="text-xl font-medium tracking-tight">
                     {guide.title}
                   </h2>
                   {guide.description && (
-                    <p className="text-slate-700">{guide.description}</p>
+                    <p className="text-muted-foreground">{guide.description}</p>
                   )}
                 </div>
                 {guide.date && (
-                  <p className="text-sm text-slate-600">
+                  <p className="text-sm text-muted-foreground">
                     {formatDate(guide.date)}
                   </p>
                 )}

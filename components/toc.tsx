@@ -1,10 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { useMounted } from "@/hooks/use-mounted"
 
 import { TableOfContents } from "@/lib/toc"
 import { cn } from "@/lib/utils"
+import { useMounted } from "@/hooks/use-mounted"
 
 interface TocProps {
   toc: TableOfContents
@@ -97,8 +97,8 @@ function Tree({ tree, level = 1, activeItem }: TreeProps) {
               className={cn(
                 "inline-block no-underline",
                 item.url === `#${activeItem}`
-                  ? "text-state-900 font-medium"
-                  : "text-sm text-slate-600 hover:text-slate-900"
+                  ? "font-medium text-primary"
+                  : "text-sm text-muted-foreground"
               )}
             >
               {item.title}
