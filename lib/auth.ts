@@ -15,7 +15,6 @@ export const authOptions: NextAuthOptions = {
   // This is a temporary fix for prisma client.
   // @see https://github.com/prisma/prisma/issues/16117
   adapter: PrismaAdapter(db as any),
-  debug: true,
   session: {
     strategy: "jwt",
   },
@@ -63,8 +62,6 @@ export const authOptions: NextAuthOptions = {
             },
           ],
         })
-
-        console.log({ result })
 
         if (result.ErrorCode) {
           throw new Error(result.Message)
