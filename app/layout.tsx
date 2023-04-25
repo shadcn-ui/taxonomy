@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import { SessionProvider } from "@/components/session-provider"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -82,12 +83,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
           fontHeading.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-          <Analytics />
-          <Toaster />
-          <TailwindIndicator />
-        </ThemeProvider>
+        <SessionProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            {children}
+            <Analytics />
+            <Toaster />
+            <TailwindIndicator />
+          </ThemeProvider>
+        </SessionProvider>
       </body>
     </html>
   )
