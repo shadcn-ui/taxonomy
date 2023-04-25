@@ -7,7 +7,7 @@
     "url": "https://twitter.com/shadcn"
   },
   "scripts": {
-    "dev": "concurrently \"contentlayer dev\" \"next dev -p 3001\"",
+    "dev": "concurrently \"contentlayer dev\" \"next dev\"",
     "build": "contentlayer build && next build",
     "turbo": "next dev --turbo",
     "start": "next start",
