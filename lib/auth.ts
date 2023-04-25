@@ -14,13 +14,13 @@ export const authOptions: NextAuthOptions = {
   // huh any! I know.
   // This is a temporary fix for prisma client.
   // @see https://github.com/prisma/prisma/issues/16117
-  adapter: PrismaAdapter(db as any),
+  // adapter: PrismaAdapter(db as any),
   // session: {
   //   strategy: "jwt",
   // },
-  pages: {
-    signIn: "/login",
-  },
+  // pages: {
+  //   signIn: "/login",
+  // },
   providers: [
     GitHubProvider({
       clientId: process.env.GITHUB_CLIENT_ID || "",
