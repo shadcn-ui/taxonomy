@@ -65,6 +65,8 @@
     "concurrently": "^8.0.1",
     "contentlayer": "^0.3.1",
     "date-fns": "^2.29.3",
+    "encoding": "^0.1.13",
+    "jimp": "^0.22.7",
     "lucide-react": "^0.92.0",
     "next": "^13.3.1",
     "next-auth": "4.22.1",

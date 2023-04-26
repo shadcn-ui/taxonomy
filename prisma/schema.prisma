@@ -47,17 +47,19 @@ model Session {
 }
 
 model User {
-  id            String    @id @default(cuid())
+  id            String     @id @default(cuid())
   name          String?
-  email         String?   @unique
+  email         String?    @unique
   emailVerified DateTime?
   image         String?
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
+  createdAt     DateTime   @default(now()) @map(name: "created_at")
+  updatedAt     DateTime   @default(now()) @map(name: "updated_at")
+  purchases     Purchase[]
+  accounts      Account[]
+  sessions      Session[]
+  pixelArt      PixelArt[]
 
-  accounts Account[]
-  sessions Session[]
-  Post     Post[]
+  credits Int @default(3)
 
   stripeCustomerId       String?   @unique @map(name: "stripe_customer_id")
   stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
@@ -67,6 +69,32 @@ model User {
   @@map(name: "users")
 }
 
+model PixelArt {
+  id          String   @id @default(cuid())
+  replicateId String
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  inputPrompt String
+  outputImage String
+  prompt      String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([replicateId, userId])
+  @@index([userId])
+}
+
+model Purchase {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  creditAmount Int
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@index([userId])
+}
+
 model VerificationToken {
   identifier String
   token      String   @unique
@@ -74,18 +102,4 @@ model VerificationToken {
 
   @@unique([identifier, token])
   @@map(name: "verification_tokens")
-}
-
-model Post {
-  id        String   @id @default(cuid())
-  title     String
-  content   Json?
-  published Boolean  @default(false)
-  createdAt DateTime @default(now()) @map(name: "created_at")
-  updatedAt DateTime @default(now()) @map(name: "updated_at")
-  authorId  String
-
-  author User @relation(fields: [authorId], references: [id])
-
-  @@map(name: "posts")
 }
