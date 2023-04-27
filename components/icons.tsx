@@ -23,6 +23,7 @@ import {
     Twitter,
     User,
     X,
+    Terminal,
     type Icon as LucideIcon,
 } from "lucide-react"
 
@@ -156,6 +157,7 @@ export const Icons = {
             </g>
         </svg>
     ),
+    terminal: Terminal,
     twitter: Twitter,
     check: Check,
 }
