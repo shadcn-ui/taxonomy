@@ -47,17 +47,17 @@ model Session {
 }
 
 model User {
-  id            String     @id @default(cuid())
+  id            String       @id @default(cuid())
   name          String?
-  email         String?    @unique
+  email         String?      @unique
   emailVerified DateTime?
   image         String?
-  createdAt     DateTime   @default(now()) @map(name: "created_at")
-  updatedAt     DateTime   @default(now()) @map(name: "updated_at")
+  createdAt     DateTime     @default(now()) @map(name: "created_at")
+  updatedAt     DateTime     @default(now()) @map(name: "updated_at")
   purchases     Purchase[]
   accounts      Account[]
   sessions      Session[]
-  pixelArt      PixelArt[]
+  generations   Generation[]
 
   credits Int @default(3)
 
@@ -69,19 +69,42 @@ model User {
   @@map(name: "users")
 }
 
-model PixelArt {
-  id          String   @id @default(cuid())
-  replicateId String
-  userId      String
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  inputPrompt String
-  outputImage String
-  prompt      String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+model Generation {
+  id             String        @id @default(cuid())
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+  userId         String
+  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  modelId        String
+  prompt         String
+  outputImages   OutputImage[]
+  image          String?
+  mask           String?
+  inferenceSteps Int           @default(50)
+  modality       String?
+  seed           String?
+  strength       Float?
+  negativePrompt String?
+  guidance       Float?        @default(7.5)
+  numSamples     Int?          @default(4)
+  width          Int?          @default(512)
+  height         Int?          @default(512)
+  type           String?       @default("txt2img")
+  favorites      Int           @default(0)
 
-  @@unique([replicateId, userId])
+  @@unique([userId])
   @@index([userId])
+}
+
+model OutputImage {
+  id           String     @id @default(cuid())
+  createdAt    DateTime   @default(now()) @map(name: "created_at")
+  updatedAt    DateTime   @default(now()) @map(name: "updated_at")
+  image        String
+  generationId String
+  generation   Generation @relation(fields: [generationId], references: [id], onDelete: Cascade)
+
+  @@index([generationId])
 }
 
 model Purchase {

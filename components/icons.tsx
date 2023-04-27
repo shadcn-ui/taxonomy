@@ -23,6 +23,7 @@ import {
     Twitter,
     User,
     X,
+    ImagePlus,
     Terminal,
     type Icon as LucideIcon,
 } from "lucide-react"
@@ -102,6 +103,7 @@ export const Icons = {
     help: HelpCircle,
     pizza: Pizza,
     sun: SunMedium,
+    imagePlus: ImagePlus,
     moon: Moon,
     laptop: Laptop,
     gitHub: ({ ...props }: LucideProps) => (
