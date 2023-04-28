@@ -70,37 +70,48 @@ model User {
 }
 
 model Generation {
-  id             String        @id @default(cuid())
-  createdAt      DateTime      @default(now())
-  updatedAt      DateTime      @updatedAt
-  userId         String
-  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
-  modelId        String
-  prompt         String
-  outputImages   OutputImage[]
-  image          String?
-  mask           String?
-  inferenceSteps Int           @default(50)
-  modality       String?
-  seed           String?
-  strength       Float?
-  negativePrompt String?
-  guidance       Float?        @default(7.5)
-  numSamples     Int?          @default(4)
-  width          Int?          @default(512)
-  height         Int?          @default(512)
-  type           String?       @default("txt2img")
-  favorites      Int           @default(0)
+  id                String           @id @default(cuid())
+  createdAt         DateTime         @default(now())
+  updatedAt         DateTime         @updatedAt
+  userId            String
+  user              User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  modelId           String
+  inferenceId       String
+  prompt            String
+  outputImages      OutputImage[]
+  image             String?
+  mask              String?
+  numInferenceSteps Int              @default(50)
+  numImages         Int              @default(4)
+  modality          String?
+  seed              String?
+  strength          Float?
+  negativePrompt    String?
+  guidance          Float?           @default(7.5)
+  numSamples        Int?             @default(4)
+  width             Int?             @default(512)
+  height            Int?             @default(512)
+  type              String?          @default("txt2img")
+  favorites         Int              @default(0)
+  status            GENERATIONSTATUS @default(PROCESSING)
 
-  @@unique([userId])
+  @@unique([inferenceId, modelId], name: "uniqueGeneration")
   @@index([userId])
+  @@index([modelId])
+}
+
+enum GENERATIONSTATUS {
+  PROCESSING
+  COMPLETE
+  FAILED
 }
 
 model OutputImage {
   id           String     @id @default(cuid())
   createdAt    DateTime   @default(now()) @map(name: "created_at")
   updatedAt    DateTime   @default(now()) @map(name: "updated_at")
-  image        String
+  image        String     @db.LongText
+  seed         String     @db.LongText
   generationId String
   generation   Generation @relation(fields: [generationId], references: [id], onDelete: Cascade)
 

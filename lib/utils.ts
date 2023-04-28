@@ -33,8 +33,15 @@ export async function pixelateImage({
             image.pixelate(pixelSize, 0, 0, image.getWidth(), image.getHeight())
         )
 
+        console.log("Image", image)
+
         return image.getBase64Async(image.getMIME())
     } catch (error) {
         return null
     }
 }
+
+const scenarioToken = process.env.SCENARIO_API_TOKEN as string
+const scenarioSecret = process.env.SCENARIO_SECRET as string
+
+export const scenarioAuthToken = `${btoa(`${scenarioToken}:${scenarioSecret}`)}`

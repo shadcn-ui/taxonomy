@@ -1,10 +1,8 @@
-import { EmptyPlaceholder } from "@/components/empty-placeholder"
+import { GenerationForm } from "@/components/create/generation-form"
 import { DashboardHeader } from "@/components/header"
-import { PostCreateButton } from "@/components/post-create-button"
-import { PostItem } from "@/components/post-item"
+import { PixelatedImage } from "@/components/pixelated-image"
 import { DashboardShell } from "@/components/shell"
 import { authOptions } from "@/lib/auth"
-import { db } from "@/lib/db"
 import { getCurrentUser } from "@/lib/session"
 import { redirect } from "next/navigation"
 
@@ -25,9 +23,11 @@ export default async function DashboardPage() {
                 heading="Generations"
                 text="Create and view generations"
             >
-                <PostCreateButton />
+                {/* <PostCreateButton /> */}
             </DashboardHeader>
-            <div></div>
+            <div>
+                <GenerationForm user={{ id: user.id, name: user.name || "" }} />
+            </div>
         </DashboardShell>
     )
 }
