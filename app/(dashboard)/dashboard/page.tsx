@@ -20,8 +20,8 @@ export default async function DashboardPage() {
     return (
         <DashboardShell>
             <DashboardHeader
-                heading="Generations"
-                text="Create and view generations"
+                heading="Create"
+                text="Create and view pixel art generations"
             >
                 {/* <PostCreateButton /> */}
             </DashboardHeader>

@@ -1,6 +1,7 @@
 import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/db"
 import { scenarioAuthToken } from "@/lib/utils"
+import { pixelateImage } from "@/lib/utils"
 import { userNameSchema } from "@/lib/validations/user"
 import {
     ScenarioInferenceProgress,
@@ -58,6 +59,23 @@ export async function GET(
                 },
             })
 
+            const pixelatedImages = await Promise.all(
+                inferenceProgress.inference.images.map((image) => {
+                    return pixelateImage({
+                        remoteUrl: image.url,
+                    })
+                })
+            )
+
+            const imagesWithPixelated = inferenceProgress.inference.images.map(
+                (image, index) => {
+                    return {
+                        ...image,
+                        pixelated: pixelatedImages[index],
+                    }
+                }
+            )
+
             await db.$transaction([
                 db.user.update({
                     where: {
@@ -77,20 +95,32 @@ export async function GET(
                         status: "COMPLETE",
                         outputImages: {
                             createMany: {
-                                data: inferenceProgress.inference.images.map(
-                                    (image) => {
-                                        return {
-                                            image: image.url,
-                                            seed: image.seed,
-                                        }
+                                data: imagesWithPixelated.map((image) => {
+                                    return {
+                                        image: image.url,
+                                        seed: image.seed,
+                                        pixelatedImage: image.pixelated,
                                     }
-                                ),
+                                }),
                             },
                         },
                     },
                 }),
             ])
-        } else if (inferenceProgress.inference.status === "succeeded") {
+
+            let copiedInferenceProgressWithImagesPixelated: ScenarioInferenceProgressResponse =
+                {
+                    ...inferenceProgress,
+                    inference: {
+                        ...inferenceProgress.inference,
+                        images: imagesWithPixelated,
+                    },
+                }
+            return new Response(
+                JSON.stringify(copiedInferenceProgressWithImagesPixelated),
+                { status: 200 }
+            )
+        } else if (inferenceProgress.inference.status === "failed") {
             const generation = await db.generation.findUniqueOrThrow({
                 where: {
                     uniqueGeneration: {

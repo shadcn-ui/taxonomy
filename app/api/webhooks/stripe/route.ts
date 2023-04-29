@@ -19,18 +19,15 @@ export async function POST(req: Request) {
         return new Response(`Webhook Error: ${error.message}`, { status: 400 })
     }
 
-    const session = event.data.object as Stripe.Checkout.Session
-
-    if (
-        event.type === "payment_intent.succeeded" ||
-        event.type === "checkout.session.completed"
-    ) {
+    if (event.type === "checkout.session.completed") {
         const paymentIntent = event.data.object as Stripe.PaymentIntent
         console.log(`💰 PaymentIntent: ${JSON.stringify(paymentIntent)}`)
 
         // @ts-ignore
-        const userEmail = paymentIntent.customer_details.email
+        const userId = paymentIntent.client_reference_id
         let creditAmount = 0
+
+        console.log("USer id", userId)
 
         // @ts-ignore
         switch (paymentIntent.amount_subtotal) {
@@ -54,7 +51,7 @@ export async function POST(req: Request) {
         }
         await db.user.update({
             where: {
-                email: userEmail,
+                id: userId,
             },
             data: {
                 credits: {
@@ -68,7 +65,7 @@ export async function POST(req: Request) {
                 creditAmount: creditAmount,
                 user: {
                     connect: {
-                        email: userEmail,
+                        id: userId,
                     },
                 },
             },

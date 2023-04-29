@@ -15,6 +15,7 @@ import {
     LucideProps,
     Moon,
     MoreVertical,
+    Download,
     Pizza,
     Plus,
     Settings,
@@ -106,6 +107,7 @@ export const Icons = {
     imagePlus: ImagePlus,
     moon: Moon,
     laptop: Laptop,
+    download: Download,
     gitHub: ({ ...props }: LucideProps) => (
         <svg
             aria-hidden="true"

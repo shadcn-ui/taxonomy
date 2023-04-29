@@ -2,15 +2,15 @@ import { DashboardConfig } from "types"
 
 export const dashboardConfig: DashboardConfig = {
     mainNav: [
-        {
-            title: "Documentation",
-            href: "/docs",
-        },
-        {
-            title: "Support",
-            href: "/support",
-            disabled: true,
-        },
+        // {
+        //     title: "Documentation",
+        //     href: "/docs",
+        // },
+        // {
+        //     title: "Support",
+        //     href: "/support",
+        //     disabled: true,
+        // },
     ],
     sidebarNav: [
         {
@@ -24,8 +24,8 @@ export const dashboardConfig: DashboardConfig = {
             icon: "imagePlus",
         },
         {
-            title: "Billing",
-            href: "/dashboard/billing",
+            title: "Buy credits",
+            href: "/credits",
             icon: "billing",
         },
         {

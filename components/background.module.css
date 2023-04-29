@@ -1,0 +1,64 @@
+.main {
+    width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    padding: 120px 24px 160px 24px;
+    pointer-events: none;
+}
+
+.main:before {
+    background: radial-gradient(circle, rgba(255, 255, 255, 0) 0, #ffffff 100%);
+    position: absolute;
+    content: "";
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.main:after {
+    content: "";
+    /* background-image: url("/_static/grid.svg"); */
+
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    inset: 0;
+    opacity: 0.3;
+    filter: invert(0.5);
+}
+
+.content {
+    height: fit-content;
+    z-index: 3;
+    width: 100%;
+    max-width: 640px;
+    background-image: radial-gradient(
+            at 27% 37%,
+            hsla(215, 98%, 61%, 1) 0px,
+            transparent 0%
+        ),
+        radial-gradient(at 97% 21%, #d80000 0px, transparent 50%),
+        radial-gradient(at 52% 99%, #bb2424 0px, transparent 50%),
+        radial-gradient(at 10% 29%, #d80039 0px, transparent 50%),
+        radial-gradient(at 97% 96%, rgb(228, 149, 149) 0px, transparent 50%),
+        radial-gradient(at 33% 50%, #ec4848 0px, transparent 50%),
+        radial-gradient(at 79% 53%, #e90e0e 0px, transparent 50%);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    filter: blur(100px) saturate(150%);
+    top: 80px;
+    opacity: 0.15;
+}
+
+@media screen and (max-width: 640px) {
+    .content {
+        display: none;
+    }
+}

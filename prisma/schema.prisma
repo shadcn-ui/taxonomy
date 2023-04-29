@@ -107,13 +107,14 @@ enum GENERATIONSTATUS {
 }
 
 model OutputImage {
-  id           String     @id @default(cuid())
-  createdAt    DateTime   @default(now()) @map(name: "created_at")
-  updatedAt    DateTime   @default(now()) @map(name: "updated_at")
-  image        String     @db.LongText
-  seed         String     @db.LongText
-  generationId String
-  generation   Generation @relation(fields: [generationId], references: [id], onDelete: Cascade)
+  id             String     @id @default(cuid())
+  createdAt      DateTime   @default(now()) @map(name: "created_at")
+  updatedAt      DateTime   @default(now()) @map(name: "updated_at")
+  image          String     @db.LongText
+  pixelatedImage String     @db.LongText
+  seed           String     @db.LongText
+  generationId   String
+  generation     Generation @relation(fields: [generationId], references: [id], onDelete: Cascade)
 
   @@index([generationId])
 }

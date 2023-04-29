@@ -1,8 +1,9 @@
 "use client"
 
-import { PixelatedImage } from "../pixelated-image"
 import { Icons } from "@/components/icons"
-import { buttonVariants } from "@/components/ui/button"
+import { ImageLoadingCard } from "@/components/image-loading-card"
+import { GridBackground } from "@/components/image-loading-card"
+import { Button, buttonVariants } from "@/components/ui/button"
 import {
     Card,
     CardContent,
@@ -15,8 +16,10 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Progress } from "@/components/ui/progress"
 import { toast } from "@/components/ui/use-toast"
+import { downloadImage } from "@/lib/client-helpers"
 import { scenarioGenerators } from "@/lib/generators"
 import { cn, scenarioAuthToken } from "@/lib/utils"
+import { pixelatedImageTest } from "@/lib/utils"
 import { generateSchema } from "@/lib/validations/generate"
 import {
     ScenarioInferenceResponse,
@@ -25,6 +28,7 @@ import {
 } from "@/types/scenario"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { User } from "@prisma/client"
+import { motion, AnimatePresence } from "framer-motion"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import * as React from "react"
@@ -56,6 +60,7 @@ export function GenerationForm({
 
     const [images, setImages] = React.useState<ScenarioImage[]>([])
     const [isSaving, setIsSaving] = React.useState<boolean>(false)
+    const [isOpen, setIsOpen] = React.useState<boolean>(true)
     const [progress, setProgress] = React.useState<number>(0)
 
     async function onSubmit(data: FormData) {
@@ -95,6 +100,13 @@ export function GenerationForm({
             })
         }
 
+        toast({
+            title: "We've started your generation!",
+            description:
+                "This may take a few minutes. Don't worry, if it fails you will not be charged credits.",
+            variant: "default",
+        })
+
         const responseData: ScenarioInferenceResponse = await response.json()
 
         let generatedImages: null | ScenarioImage[] = null
@@ -127,72 +139,55 @@ export function GenerationForm({
         router.refresh()
     }
 
-    console.log(errors)
-
     return (
         <>
-            <form
-                className={cn(className)}
-                onSubmit={handleSubmit(onSubmit)}
-                {...props}
-            >
-                <Card>
-                    <CardHeader>
-                        <CardTitle>Generate Image</CardTitle>
-                        <CardDescription>
-                            Please enter a prompt for an image you would like to
-                            generate
-                        </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        <div className="grid gap-1">
-                            <Label className="sr-only" htmlFor="name">
-                                Name
-                            </Label>
-                            <Input
-                                id="name"
-                                className="w-[400px]"
-                                size={32}
-                                {...register("prompt")}
-                            />
-                            {errors?.prompt && (
-                                <p className="px-1 text-xs text-red-600">
-                                    {errors.prompt.message}
-                                </p>
-                            )}
-                        </div>
-                    </CardContent>
-                    <CardFooter>
-                        <button
-                            type="submit"
-                            className={cn(buttonVariants(), className)}
-                            disabled={isSaving}
+            <AnimatePresence initial={false}>
+                {isOpen && (
+                    <motion.div
+                        key="content"
+                        initial="collapsed"
+                        animate="open"
+                        exit="collapsed"
+                        variants={{
+                            open: { opacity: 1, height: "auto" },
+                            collapsed: { opacity: 0, height: 0 },
+                        }}
+                        transition={{
+                            duration: 0.8,
+                            ease: [0.04, 0.62, 0.23, 0.98],
+                        }}
+                    >
+                        <form
+                            className={cn(className)}
+                            onSubmit={handleSubmit(onSubmit)}
+                            {...props}
                         >
-                            {isSaving && (
-                                <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-                            )}
-                            <span>Generate</span>
-                        </button>
-                    </CardFooter>
-                </Card>
-            </form>
-            <div className="mt-4">
-                <Progress value={progress * 100} />
-            </div>
-            {images && (
-                <div className="mt-4">
-                    <div className="grid grid-cols-3 gap-4">
-                        {images.map((image) => (
-                            <Card key={image.seed}>
+                            <Card>
+                                <CardHeader>
+                                    <CardTitle>Generate Image</CardTitle>
+                                    <CardDescription>
+                                        Please enter a prompt for an image you
+                                        would like to generate
+                                    </CardDescription>
+                                </CardHeader>
                                 <CardContent>
                                     <div className="grid gap-1">
-                                        {/* @ts-expect-error Server Component */}
-                                        <PixelatedImage
-                                            height={512}
-                                            width={512}
-                                            alt="Image prompt result"
-                                            src={image.url}
+                                        <Label
+                                            className="sr-only"
+                                            htmlFor="name"
+                                        >
+                                            Name
+                                        </Label>
+                                        <Input
+                                            id="name"
+                                            size={32}
+                                            {...register("prompt")}
                                         />
+                                        {errors?.prompt && (
+                                            <p className="px-1 text-xs text-red-600">
+                                                {errors.prompt.message}
+                                            </p>
+                                        )}
                                     </div>
                                 </CardContent>
                                 <CardFooter>
@@ -211,6 +206,63 @@ export function GenerationForm({
                                     </button>
                                 </CardFooter>
                             </Card>
+                        </form>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* <button
+                onClick={() => setIsOpen(!isOpen)}
+                className={cn(buttonVariants(), className)}
+            >
+                collapse form
+            </button> */}
+
+            {isSaving && (
+                <>
+                    <div className="mt-4">
+                        <Progress value={progress * 100} />
+                    </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-4">
+                        <ImageLoadingCard />
+                        <ImageLoadingCard />
+                        <ImageLoadingCard />
+                    </div>
+                </>
+            )}
+
+            {images && (
+                <div className="mt-4 w-full">
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 w-full">
+                        {images.map((image) => (
+                            <div
+                                key={image.seed}
+                                className="rounded-lg overflow-hidden relative w-full"
+                            >
+                                {image?.pixelated && (
+                                    <>
+                                        <Image
+                                            className="object-cover w-full h-auto"
+                                            height={512}
+                                            width={512}
+                                            alt={"Image prompt result"}
+                                            src={image.pixelated}
+                                        />
+                                        <Button
+                                            onClick={() =>
+                                                downloadImage(
+                                                    image.pixelated ?? "",
+                                                    image.seed
+                                                )
+                                            }
+                                            className="absolute top-4 right-4"
+                                            variant="secondary"
+                                        >
+                                            <Icons.download className="h-4 w-4" />
+                                        </Button>
+                                    </>
+                                )}
+                            </div>
                         ))}
                     </div>
                 </div>

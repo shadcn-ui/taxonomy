@@ -50,4 +50,5 @@ export interface ScenarioImage {
     id: string
     url: string
     seed: string
+    pixelated?: string
 }
