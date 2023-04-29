@@ -14,12 +14,10 @@ export const StripePricingTable = ({
 
     return (
         <>
-            <Head>
-                <Script
-                    async
-                    src="https://js.stripe.com/v3/pricing-table.js"
-                ></Script>
-            </Head>
+            <Script
+                async
+                src="https://js.stripe.com/v3/pricing-table.js"
+            ></Script>
 
             {theme === "light" ? (
                 <>
