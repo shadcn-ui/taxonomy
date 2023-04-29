@@ -79,7 +79,38 @@ pnpm install
 cp .env.example .env.local
 ```
 
-3. Start the development server:
+3. Update `NEXTAUTH_SECRET` with a new secret generated via CLI:
+
+```sh
+openssl rand -base64 32
+```
+
+4. Set `POSTMARK_API_TOKEN` to a real API token by creating an account and copying from the API token tab of your server @ https://account.postmarkapp.com/
+
+5. Set `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET` to enable GitHub auth
+
+Login to Github, and navigate to settings > developer settings > Oauth Apps > New OAuth App and generate a new ID and secret.
+
+5. Create a mysql database
+
+```sh
+brew install mysql
+mysql_secure_installation // set a password
+mysql -h localhost -P 3306 -u root -p
+
+mysql> CREATE DATABASE taxonomy;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> quit
+```
+
+6. Run prisma migrations
+
+```sh
+pnpm run migrate
+```
+
+7. Start the development server:
 
 ```sh
 pnpm dev
