@@ -20,14 +20,14 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                         >
                             David Parks
                         </a>
-                        . Hosted on{" "}
+                        . Powered by{" "}
                         <a
-                            href="https://vercel.com"
+                            href="https://www.scenario.com/"
                             target="_blank"
                             rel="noreferrer"
                             className="font-medium underline underline-offset-4"
                         >
-                            Vercel
+                            Scenario
                         </a>
                         . The source code is available on{" "}
                         <a

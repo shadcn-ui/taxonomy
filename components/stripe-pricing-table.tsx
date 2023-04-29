@@ -1,6 +1,8 @@
 "use client"
 
 import { useTheme } from "next-themes"
+import Head from "next/head"
+import Script from "next/script"
 
 type TStripePricingTable = {
     clientReferenceId: string
@@ -12,12 +14,19 @@ export const StripePricingTable = ({
 
     return (
         <>
+            <Head>
+                <Script
+                    async
+                    src="https://js.stripe.com/v3/pricing-table.js"
+                ></Script>
+            </Head>
+
             {theme === "light" ? (
                 <>
                     {/* @ts-ignore */}
                     <stripe-pricing-table
-                        pricing-table-id="prctbl_1N21FiK3wHFLqQwQXQXGDrYi"
-                        publishable-key="pk_test_51N214gK3wHFLqQwQMJL9zicI2nOeSiKs3IdD1LOZhOqgRc7PaeGykfkR8asDAQVMxI4Dyno13kK3bl8oJDymLejP0099fOEQ5X"
+                        pricing-table-id="prctbl_1N2NKHK3wHFLqQwQhxJTKYqY"
+                        publishable-key="pk_live_51N214gK3wHFLqQwQq4AebH3hayjA9bJT3gzxhhRvBrU2hEmKpyAj9fx4PgRhtw1VgCdSN7CP6Dp0OU5KAamvN19Z00CiZzKgxU"
                         client-reference-id={clientReferenceId}
                     />
                 </>
@@ -25,8 +34,8 @@ export const StripePricingTable = ({
                 <>
                     {/* @ts-ignore */}
                     <stripe-pricing-table
-                        pricing-table-id="prctbl_1N245hK3wHFLqQwQkevsKkLz"
-                        publishable-key="pk_test_51N214gK3wHFLqQwQMJL9zicI2nOeSiKs3IdD1LOZhOqgRc7PaeGykfkR8asDAQVMxI4Dyno13kK3bl8oJDymLejP0099fOEQ5X"
+                        pricing-table-id="prctbl_1N2NLVK3wHFLqQwQPyabxItV"
+                        publishable-key="pk_live_51N214gK3wHFLqQwQq4AebH3hayjA9bJT3gzxhhRvBrU2hEmKpyAj9fx4PgRhtw1VgCdSN7CP6Dp0OU5KAamvN19Z00CiZzKgxU"
                         client-reference-id={clientReferenceId}
                     />
                 </>

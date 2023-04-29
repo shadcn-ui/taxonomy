@@ -10,10 +10,12 @@ import {
     SelectValue,
 } from "@/components/ui/select"
 import * as React from "react"
+import { ComponentProps } from "react"
 
-export function ModelSelectButton() {
+export type TModelSelectButton = ComponentProps<typeof Select> & {}
+export function ModelSelectButton({ ...props }: TModelSelectButton) {
     return (
-        <Select defaultValue={"apple"}>
+        <Select {...props} defaultValue={"apple"}>
             <SelectTrigger className="w-[180px]">
                 <SelectValue placeholder="Select a generator" />
             </SelectTrigger>

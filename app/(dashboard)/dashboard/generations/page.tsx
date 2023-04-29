@@ -1,9 +1,8 @@
+import { DownloadImageButton } from "@/components/download-image-button"
 import { EmptyPlaceholder } from "@/components/empty-placeholder"
 import { DashboardHeader } from "@/components/header"
 import { Icons } from "@/components/icons"
-import { MotionCardHover } from "@/components/motion-card-hover"
 import { DashboardShell } from "@/components/shell"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { Button } from "@/components/ui/button"
 import {
     HoverCard,
@@ -18,28 +17,54 @@ import Link from "next/link"
 import { redirect } from "next/navigation"
 
 export const metadata = {
-    title: "Billing",
-    description: "Manage billing and your subscription plan.",
+    title: "Generations",
+    description: "View all of your past generations",
 }
 
-export default async function BillingPage() {
+const pageSize = 20
+
+export default async function GenerationPage({
+    searchParams,
+}: {
+    searchParams: { [key: string]: string | undefined }
+}) {
+    const page = parseInt(searchParams?.page ?? "1") ?? 1
     const user = await getCurrentUser()
 
     if (!user) {
         redirect(authOptions?.pages?.signIn || "/login")
     }
 
-    const generations = await db.generation.findMany({
-        where: {
-            user: {
-                id: user.id,
+    const [generatedImageCount, generatedImages] = await Promise.all([
+        db.outputImage.count({
+            where: {
+                generation: {
+                    status: "COMPLETE",
+                    user: {
+                        id: user.id,
+                    },
+                },
             },
-            status: "COMPLETE",
-        },
-        include: {
-            outputImages: true,
-        },
-    })
+        }),
+        db.outputImage.findMany({
+            where: {
+                generation: {
+                    status: "COMPLETE",
+                    user: {
+                        id: user.id,
+                    },
+                },
+            },
+            take: pageSize,
+            skip: (page - 1) * pageSize,
+            include: {
+                generation: true,
+            },
+            orderBy: {
+                createdAt: "desc",
+            },
+        }),
+    ])
 
     return (
         <DashboardShell>
@@ -47,37 +72,74 @@ export default async function BillingPage() {
                 heading="Generations"
                 text="View all of your generations here"
             />
-            {generations?.length ? (
-                <div className="grid grid-cols-4 gap-8">
-                    {generations.map((generation) => (
-                        <HoverCard>
-                            <HoverCardTrigger asChild>
-                                <div
-                                    className={` rounded-lg  overflow-hidden relative grid grid-cols-${Math.ceil(
-                                        generation.outputImages.length / 2
-                                    )}`}
-                                    key={generation.id}
+            {generatedImages?.length ? (
+                <>
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                        {generatedImages.map((generatedImage) => (
+                            <HoverCard>
+                                <HoverCardTrigger asChild>
+                                    <div
+                                        className={` rounded-lg  overflow-hidden relative`}
+                                        key={generatedImage.id}
+                                    >
+                                        <Image
+                                            alt={
+                                                generatedImage.generation.prompt
+                                            }
+                                            height={512}
+                                            width={512}
+                                            src={generatedImage.pixelatedImage}
+                                        />
+                                        <DownloadImageButton
+                                            src={generatedImage.pixelatedImage}
+                                            name={generatedImage.seed}
+                                        />
+                                    </div>
+                                </HoverCardTrigger>
+                                <HoverCardContent className="w-80">
+                                    <p className="text-sm text-primary">
+                                        {generatedImage.generation.prompt}
+                                    </p>
+                                </HoverCardContent>
+                            </HoverCard>
+                        ))}
+                    </div>
+                    {generatedImageCount > 20 && (
+                        <div className="flex justify-end mt-4">
+                            {page > 1 && (
+                                <Link
+                                    href={`/dashboard/generations?page=${
+                                        page - 1
+                                    }`}
                                 >
-                                    {generation.outputImages.map(
-                                        (outputImage) => (
-                                            <Image
-                                                alt={generation.prompt}
-                                                height={512}
-                                                width={512}
-                                                src={outputImage.pixelatedImage}
-                                            />
-                                        )
-                                    )}
-                                </div>
-                            </HoverCardTrigger>
-                            <HoverCardContent className="w-80">
-                                <p className="text-sm text-primary">
-                                    {generation.prompt}
-                                </p>
-                            </HoverCardContent>
-                        </HoverCard>
-                    ))}
-                </div>
+                                    <Button
+                                        disabled={page === 1}
+                                        className="mr-4"
+                                    >
+                                        Previous
+                                    </Button>
+                                </Link>
+                            )}
+
+                            {page * pageSize < generatedImageCount && (
+                                <Link
+                                    href={`/dashboard/generations?page=${
+                                        page + 1
+                                    }`}
+                                >
+                                    <Button
+                                        disabled={
+                                            page * pageSize >=
+                                            generatedImageCount
+                                        }
+                                    >
+                                        Next
+                                    </Button>
+                                </Link>
+                            )}
+                        </div>
+                    )}
+                </>
             ) : (
                 <EmptyPlaceholder>
                     <EmptyPlaceholder.Icon name="terminal" />

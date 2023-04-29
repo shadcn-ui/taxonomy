@@ -1,14 +1,8 @@
 "use client"
 
-import { ImageSelector } from "../images-selector"
-import { Slider } from "../ui/slider"
 import { Textarea } from "../ui/textarea"
-import { GuidanceSelector } from "@/components/guidance-selector"
 import { Icons } from "@/components/icons"
 import { ImageLoadingCard } from "@/components/image-loading-card"
-import { GridBackground } from "@/components/image-loading-card"
-import { ModelSelectButton } from "@/components/model-select-button"
-import { SamplingStepSelector } from "@/components/sampling-step-selector"
 import { Button, buttonVariants } from "@/components/ui/button"
 import {
     Card,
@@ -18,28 +12,30 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import {
-    Collapsible,
-    CollapsibleContent,
-    CollapsibleTrigger,
-} from "@/components/ui/collapsible"
-import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Progress } from "@/components/ui/progress"
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectLabel,
+    SelectTrigger,
+    SelectValue,
+} from "@/components/ui/select"
 import { toast } from "@/components/ui/use-toast"
 import { downloadImage } from "@/lib/client-helpers"
 import { scenarioGenerators } from "@/lib/generators"
-import { cn, scenarioAuthToken } from "@/lib/utils"
-import { pixelatedImageTest } from "@/lib/utils"
+import { cn } from "@/lib/utils"
 import { generateSchema } from "@/lib/validations/generate"
 import {
-    ScenarioInferenceResponse,
-    ScenarioInferenceProgressResponse,
     ScenarioImage,
+    ScenarioInferenceProgressResponse,
+    ScenarioInferenceResponse,
 } from "@/types/scenario"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { User } from "@prisma/client"
-import { motion, AnimatePresence } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 import * as React from "react"
@@ -75,6 +71,9 @@ export function GenerationForm({
     const [showAdvancedOptions, setShowAdvancedOptions] =
         React.useState<boolean>(true)
     const [progress, setProgress] = React.useState<number>(0)
+    const [modelId, setModelId] = React.useState<string>(
+        scenarioGenerators.fantasyRpg
+    )
 
     async function onSubmit(data: FormData) {
         setIsSaving(true)
@@ -89,7 +88,7 @@ export function GenerationForm({
                 },
                 body: JSON.stringify({
                     parameters: {
-                        modelId: scenarioGenerators.sciFiCharacter,
+                        modelId,
                         prompt: data.prompt,
                     },
                 }),
@@ -128,7 +127,7 @@ export function GenerationForm({
         while (!generatedImages) {
             // Loop in 1s intervals until the alt text is ready
             let finalResponse = await fetch(
-                `/api/generate/${responseData.inference.id}?modelId=${scenarioGenerators.sciFiCharacter}`,
+                `/api/generate/${responseData.inference.id}?modelId=${modelId}`,
                 {
                     method: "GET",
                     headers: {
@@ -201,7 +200,47 @@ export function GenerationForm({
                                         <div>
                                             <Label htmlFor="name">Style</Label>
                                             <div className="flex items-baseline gap-4 mt-1">
-                                                <ModelSelectButton />
+                                                <Select
+                                                    value={modelId}
+                                                    onValueChange={setModelId}
+                                                    defaultValue={
+                                                        scenarioGenerators.fantasyRpg
+                                                    }
+                                                >
+                                                    <SelectTrigger className="w-[180px]">
+                                                        <SelectValue placeholder="Select a generator" />
+                                                    </SelectTrigger>
+                                                    <SelectContent>
+                                                        <SelectGroup>
+                                                            <SelectLabel>
+                                                                Style
+                                                            </SelectLabel>
+
+                                                            <SelectItem
+                                                                value={
+                                                                    scenarioGenerators.fantasyRpg
+                                                                }
+                                                            >
+                                                                Fantasy RPG
+                                                            </SelectItem>
+                                                            <SelectItem
+                                                                value={
+                                                                    scenarioGenerators.landscapePortrait
+                                                                }
+                                                            >
+                                                                Landscape
+                                                                Portrait
+                                                            </SelectItem>
+                                                            <SelectItem
+                                                                value={
+                                                                    scenarioGenerators.animeStyle
+                                                                }
+                                                            >
+                                                                Anime Style
+                                                            </SelectItem>
+                                                        </SelectGroup>
+                                                    </SelectContent>
+                                                </Select>
                                             </div>
 
                                             <div className="grid gap-1 mt-6 ">

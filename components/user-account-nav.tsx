@@ -30,7 +30,7 @@ export function UserAccountNav({ user, credits }: UserAccountNavProps) {
         <div className="flex items-center gap-4">
             <span className="text-sm text-foreground hidden lg:block">
                 {" "}
-                {credits} credits remaining
+                {credits.toLocaleString()} credits remaining
             </span>
             <Link href="/credits">
                 <Button size="sm">Buy credits</Button>

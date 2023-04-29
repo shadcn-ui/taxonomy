@@ -45,7 +45,7 @@ export async function POST(req: Request) {
         }
 
         const generation: ScenarioInferenceResponse = await fetch(
-            `https://api.cloud.scenario.com/v1/models/${scenarioGenerators.sciFiCharacter}/inferences`,
+            `https://api.cloud.scenario.com/v1/models/${parameters.modelId}/inferences`,
             {
                 method: "POST",
                 headers: {
