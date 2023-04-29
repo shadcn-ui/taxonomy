@@ -170,8 +170,9 @@ export default makeSource({
       [
         rehypeAutolinkHeadings,
         {
+          behavior: "wrap",
           properties: {
-            className: ["subheading-anchor"],
+            className: ["before:content-['#'] before:absolute before:invisible before:-ml-[1em] hover:before:visible before:text-slate-300 pl-[1em] -ml-[1em]"],
             ariaLabel: "Link to section",
           },
         },
