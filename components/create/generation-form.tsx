@@ -123,6 +123,8 @@ export function GenerationForm({
         const responseData: ScenarioInferenceResponse = await response.json()
 
         let generatedImages: null | ScenarioImage[] = null
+        let secondCount = 0
+        let showedPatienceModal = false
         while (!generatedImages) {
             // Loop in 1s intervals until the alt text is ready
             let finalResponse = await fetch(
@@ -144,6 +146,16 @@ export function GenerationForm({
             } else if (jsonFinalResponse.inference.status === "failed") {
                 break
             } else {
+                if (secondCount >= 60 && !showedPatienceModal) {
+                    toast({
+                        title: "Still generating!",
+                        description:
+                            "Sorry this is taking a while. Your generation should be done soon. Thanks for your patience",
+                        variant: "default",
+                    })
+                    showedPatienceModal = true
+                }
+                secondCount++
                 await new Promise((resolve) => setTimeout(resolve, 1000))
             }
         }

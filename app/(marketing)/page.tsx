@@ -130,7 +130,7 @@ export default async function IndexPage() {
                     </h2>
                     <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
                         Pixelfy provides a variety of battle-tested generators
-                        to create all types of images, and we're always adding
+                        to create all types of images, and we are always adding
                         more.
                     </p>
                 </div>
