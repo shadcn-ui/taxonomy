@@ -97,6 +97,7 @@ export async function GET(
                             createMany: {
                                 data: imagesWithPixelated.map((image) => {
                                     return {
+                                        scenarioImageId: image.id,
                                         image: image.url,
                                         seed: image.seed,
                                         pixelatedImage: image.pixelated,

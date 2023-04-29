@@ -45,9 +45,6 @@ export function UserAccountNav({ user, credits }: UserAccountNavProps) {
                         }}
                         className="h-8 w-8"
                     />
-                    <span className="absolute -top-2 -right-3 text-xs h-5 w-5 inline-flex items-center justify-center rounded-full bg-primary text-primary-foreground lg:hidden">
-                        {credits}
-                    </span>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent align="end">
                     <div className="flex items-center justify-start gap-2 p-2">

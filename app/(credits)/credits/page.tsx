@@ -1,23 +1,8 @@
-import { BillingForm } from "@/components/billing-form"
-import { DashboardHeader } from "@/components/header"
 import { Icons } from "@/components/icons"
 import { DashboardShell } from "@/components/shell"
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { buttonVariants } from "@/components/ui/button"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
+import { StripePricingTable } from "@/components/stripe-pricing-table"
 import { authOptions } from "@/lib/auth"
 import { getCurrentUser } from "@/lib/session"
-import { stripe } from "@/lib/stripe"
-import { getUserSubscriptionPlan } from "@/lib/subscription"
-import { cn } from "@/lib/utils"
-import Head from "next/head"
-import Link from "next/link"
 import { redirect } from "next/navigation"
 import Script from "next/script"
 
@@ -48,11 +33,7 @@ export default async function CreditsPage() {
 
             <div className="grid gap-8 mt-8">
                 {/* @ts-ignore */}
-                <stripe-pricing-table
-                    pricing-table-id="prctbl_1N21FiK3wHFLqQwQXQXGDrYi"
-                    publishable-key="pk_test_51N214gK3wHFLqQwQMJL9zicI2nOeSiKs3IdD1LOZhOqgRc7PaeGykfkR8asDAQVMxI4Dyno13kK3bl8oJDymLejP0099fOEQ5X"
-                    client-reference-id={user.id}
-                />
+                <StripePricingTable clientReferenceId={user.id} />
             </div>
             <div className="grid w-full items-start gap-10 rounded-lg border p-10 container mx-auto max-w-lg mt-6">
                 <div className="grid gap-6">

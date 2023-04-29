@@ -88,8 +88,8 @@ export default async function IndexPage() {
                     </h1>
                     <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
                         Pixelfy is a tool that harnesses bleeding-edge AI models
-                        to generate beautiful pixel art images for your creative
-                        projects
+                        to generate professional pixel art images for your
+                        creative projects
                     </p>
                     <div className="space-x-4">
                         <Link

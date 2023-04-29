@@ -1,5 +1,6 @@
 import { GenerationForm } from "@/components/create/generation-form"
 import { DashboardHeader } from "@/components/header"
+import { ModelSelectButton } from "@/components/model-select-button"
 import { PixelatedImage } from "@/components/pixelated-image"
 import { DashboardShell } from "@/components/shell"
 import { authOptions } from "@/lib/auth"
@@ -23,7 +24,7 @@ export default async function DashboardPage() {
                 heading="Create"
                 text="Create and view pixel art generations"
             >
-                {/* <PostCreateButton /> */}
+                {/* <ModelSelectButton /> */}
             </DashboardHeader>
             <div>
                 <GenerationForm user={{ id: user.id, name: user.name || "" }} />

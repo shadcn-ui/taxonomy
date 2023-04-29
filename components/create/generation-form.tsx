@@ -1,8 +1,14 @@
 "use client"
 
+import { ImageSelector } from "../images-selector"
+import { Slider } from "../ui/slider"
+import { Textarea } from "../ui/textarea"
+import { GuidanceSelector } from "@/components/guidance-selector"
 import { Icons } from "@/components/icons"
 import { ImageLoadingCard } from "@/components/image-loading-card"
 import { GridBackground } from "@/components/image-loading-card"
+import { ModelSelectButton } from "@/components/model-select-button"
+import { SamplingStepSelector } from "@/components/sampling-step-selector"
 import { Button, buttonVariants } from "@/components/ui/button"
 import {
     Card,
@@ -12,6 +18,11 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import {
+    Collapsible,
+    CollapsibleContent,
+    CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Progress } from "@/components/ui/progress"
@@ -61,6 +72,8 @@ export function GenerationForm({
     const [images, setImages] = React.useState<ScenarioImage[]>([])
     const [isSaving, setIsSaving] = React.useState<boolean>(false)
     const [isOpen, setIsOpen] = React.useState<boolean>(true)
+    const [showAdvancedOptions, setShowAdvancedOptions] =
+        React.useState<boolean>(true)
     const [progress, setProgress] = React.useState<number>(0)
 
     async function onSubmit(data: FormData) {
@@ -164,46 +177,71 @@ export function GenerationForm({
                         >
                             <Card>
                                 <CardHeader>
-                                    <CardTitle>Generate Image</CardTitle>
+                                    <CardTitle>Create Images</CardTitle>
+
                                     <CardDescription>
-                                        Please enter a prompt for an image you
-                                        would like to generate
+                                        Enter a prompt for a series of images
+                                        you would like to create
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent>
-                                    <div className="grid gap-1">
-                                        <Label
-                                            className="sr-only"
-                                            htmlFor="name"
-                                        >
-                                            Name
-                                        </Label>
-                                        <Input
-                                            id="name"
-                                            size={32}
-                                            {...register("prompt")}
-                                        />
-                                        {errors?.prompt && (
-                                            <p className="px-1 text-xs text-red-600">
-                                                {errors.prompt.message}
-                                            </p>
-                                        )}
+                                    <div className="grid  gap-8">
+                                        <div>
+                                            <Label htmlFor="name">Style</Label>
+                                            <div className="flex items-baseline gap-4 mt-1">
+                                                <ModelSelectButton />
+                                            </div>
+
+                                            <div className="grid gap-1 mt-6 ">
+                                                <Label htmlFor="name">
+                                                    Prompt
+                                                </Label>
+                                                <Textarea
+                                                    disabled={isSaving}
+                                                    placeholder="Ex. Ekko from league of legends, vivid colors, full body, portrait"
+                                                    className="mt-1"
+                                                    id="Prompt"
+                                                    maxLength={32}
+                                                    {...register("prompt")}
+                                                />
+                                                {errors?.prompt && (
+                                                    <p className="px-1 text-xs text-red-600">
+                                                        {errors.prompt.message}
+                                                    </p>
+                                                )}
+                                            </div>
+                                        </div>
                                     </div>
                                 </CardContent>
-                                <CardFooter>
-                                    <button
-                                        type="submit"
-                                        className={cn(
-                                            buttonVariants(),
-                                            className
-                                        )}
-                                        disabled={isSaving}
-                                    >
-                                        {isSaving && (
-                                            <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
-                                        )}
-                                        <span>Generate</span>
-                                    </button>
+                                <CardFooter className="flex-col items-start w-full">
+                                    <div className="flex flex-col lg:flex-row items-center gap-4 w-full">
+                                        <button
+                                            type="submit"
+                                            className={cn(
+                                                buttonVariants(),
+                                                className,
+                                                "w-full lg:w-auto"
+                                            )}
+                                            disabled={isSaving}
+                                        >
+                                            {isSaving && (
+                                                <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                                            )}
+                                            <span>Generate</span>
+                                        </button>
+                                        <Button
+                                            className={cn("w-full lg:w-auto")}
+                                            onClick={(e) => {
+                                                e.preventDefault()
+                                                setShowAdvancedOptions(
+                                                    !showAdvancedOptions
+                                                )
+                                            }}
+                                            variant={"outline"}
+                                        >
+                                            Show advanced options
+                                        </Button>
+                                    </div>
                                 </CardFooter>
                             </Card>
                         </form>
@@ -224,6 +262,7 @@ export function GenerationForm({
                         <Progress value={progress * 100} />
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-4">
+                        <ImageLoadingCard />
                         <ImageLoadingCard />
                         <ImageLoadingCard />
                         <ImageLoadingCard />
