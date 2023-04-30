@@ -1,90 +1,65 @@
-# Taxonomy
+<a href="https://vamp.sh">
+  <img alt="Pixelfy, an open source platform for generating pixel art with AI." src="https://www.pixelfy.ai/pixelfy-og.png">
+  <h1 align="center">Pixelfy</h1>
+</a>
 
-An open source application built using the new router, server components and everything new in Next.js 13.
+<p align="center">
+Generate high-quality pixel art with AI
+</p>
 
-> **Warning**
-> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com/shadcn).
-> See the roadmap below.
+<p align="center">
+  <a href="https://github.com/davidtparks/vamp/blob/main/LICENSE.md">
+    <img src="https://img.shields.io/github/license/davidtparks/vamp?label=license&logo=github&color=f80&logoColor=fff" alt="License" />
+  </a>
+</p>
 
-## About this project
+<p align="center">
+  <a href="#introduction"><strong>Introduction</strong></a> ·
+  <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
+  <a href="#contributing"><strong>Contributing</strong></a>
+</p>
+<br/>
 
-This project as an experiment to see how a modern app (with features like authentication, subscriptions, API routes, static pages for docs ...etc) would work in Next.js 13 and server components.
+## Introduction
 
-**This is not a starter template.**
+Pixelfy is an open-source application that uses AI to generate stunning pixel art images for your creative projects. Your limit is your imagination. Built with [Next 13 app dir](http://beta.nextjs.org), and [Planetscale MySQL](https://planetscale.com/).
 
-A few people have asked me to turn this into a starter. I think we could do that once the new features are out of beta.
+## Tech Stack
 
-## Note on Performance
+-   [Next.js](https://nextjs.org/) – framework
+-   [Shacdn/ui](https://ui.shadcn.com/) – component templates
+-   [Typescript](https://www.typescriptlang.org/) – language
+-   [cva](https://github.com/joe-bell/cva) - component variants
+-   [Tailwind](https://tailwindcss.com/) – CSS
+-   [PlanetScale](https://planetscale.com/) – database
+-   [NextAuth.js](https://next-auth.js.org/) – auth
+-   [Vercel](https://vercel.com/) – hosting
+-   [Stripe](https://stripe.com/) – payments
+-   [Postmark](https://postmarkapp.com/) - email delivery
 
-> **Warning**
-> This app is using the unstable releases for Next.js 13 and React 18. The new router and app dir is still in beta and not production-ready.
-> **Expect some performance hits when testing the dashboard**.
-> If you see something broken, you can ping me [@shadcn](https://twitter.com/shadcn).
+## Acknowledgments
 
-## Features
+This project would not have been possible without the amazing work from:
 
-- New `/app` dir,
-- Routing, Layouts, Nested Layouts and Layout Groups
-- Data Fetching, Caching and Mutation
-- Loading UI
-- Route handlers
-- Metadata files
-- Server and Client Components
-- API Routes and Middlewares
-- Authentication using **NextAuth.js**
-- ORM using **Prisma**
-- Database on **PlanetScale**
-- UI Components built using **Radix UI**
-- Documentation and blog using **MDX** and **Contentlayer**
-- Subscriptions using **Stripe**
-- Styled using **Tailwind CSS**
-- Validations using **Zod**
-- Written in **TypeScript**
+-   [Shadcdn](https://twitter.com/shadcn) for his Next 13 app dir project [Taxonomy](https://github.com/shadcn/taxonomy), which much of Pixelfys's code is based on. This project is a direct fork of his repository.
+-   [Steven Tey](https://twitter.com/steventey) for his work on [Dub](https://www.dub.sh) which provided some great insight into structuring a SaaS application using Next 13.
+-   [Scenario](https://www.scenario.com/) Scenario is a platform that provides some great public generators, as well as the ability to create new generators using AI for images. Pixelfys APIs interact directly with Scenario and this project would not be possible without them!
 
-## Roadmap
+## Contributing
 
-- [x] ~Add MDX support for basic pages~
-- [x] ~Build marketing pages~
-- [x] ~Subscriptions using Stripe~
-- [x] ~Responsive styles~
-- [x] ~Add OG image for blog using @vercel/og~
-- [x] Dark mode
+We love our contributors! Here's how you can contribute:
 
-## Known Issues
+-   [Open an issue](https://github.com/davidtparks/pixelfy/issues) if you believe you've encountered a bug.
+-   Make a [pull request](https://github.com/davidtparks/pixelfy/pull) to add new features/make quality-of-life improvements/fix bugs.
 
-A list of things not working right now:
+<a href="https://github.com/davidtparks/pixelfy/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=davidtparks/pixelfy" />
+</a>
 
-1. ~GitHub authentication (use email)~
-2. ~[Prisma: Error: ENOENT: no such file or directory, open '/var/task/.next/server/chunks/schema.prisma'](https://github.com/prisma/prisma/issues/16117)~
-3. ~[Next.js 13: Client side navigation does not update head](https://github.com/vercel/next.js/issues/42414)~
-4. [Cannot use opengraph-image.tsx inside catch-all routes](https://github.com/vercel/next.js/issues/48162)
+## Author
 
-## Why not tRPC, Turborepo or X?
-
-I might add this later. For now, I want to see how far we can get using Next.js only.
-
-If you have some suggestions, feel free to create an issue.
-
-## Running Locally
-
-1. Install dependencies using pnpm:
-
-```sh
-pnpm install
-```
-
-2. Copy `.env.example` to `.env.local` and update the variables.
-
-```sh
-cp .env.example .env.local
-```
-
-3. Start the development server:
-
-```sh
-pnpm dev
-```
+-   David Parks([@dparksdev](https://twitter.com/dparksdev))
 
 ## License
 
-Licensed under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).
+Inspired by [Plausible](https://plausible.io/), and [Dub](https://dub.sh/), Vamp is open-source under the GNU Affero General Public License Version 3 (AGPLv3) or any later version. You can [find it here](https://github.com/davidtparks/vamp/blob/main/LICENSE.md).

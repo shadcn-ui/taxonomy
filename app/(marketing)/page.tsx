@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge"
-import { buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import {
     Card,
     CardContent,
@@ -170,6 +170,12 @@ export default async function IndexPage() {
                             </CardFooter>
                         </Card>
                     ))}
+                </div>
+
+                <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center mt-8">
+                    <Link href="/examples/fantasy-rpg">
+                        <Button>View more examples</Button>
+                    </Link>
                 </div>
             </section>
 

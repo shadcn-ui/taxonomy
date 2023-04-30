@@ -168,6 +168,22 @@ export const examples: TScenarioExamples = {
                 url: "/examples/landscapePortrait/horde-4.png",
                 prompt: "A horde war camp, rough colors, cloudy, desolate",
             },
+            {
+                url: "/examples/landscapePortrait/bladerunner-1.png",
+                prompt: "Blade runner city, cyberpunk, aetherpunk, cloudy, dark colors, neon lights",
+            },
+            {
+                url: "/examples/landscapePortrait/bladerunner-2.png",
+                prompt: "Blade runner city, cyberpunk, aetherpunk, cloudy, dark colors, neon lights",
+            },
+            {
+                url: "/examples/landscapePortrait/bladerunner-3.png",
+                prompt: "Blade runner city, cyberpunk, aetherpunk, cloudy, dark colors, neon lights",
+            },
+            {
+                url: "/examples/landscapePortrait/bladerunner-4.png",
+                prompt: "Blade runner city, cyberpunk, aetherpunk, cloudy, dark colors, neon lights",
+            },
         ],
     },
 }
