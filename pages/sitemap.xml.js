@@ -4,11 +4,12 @@ function generateSiteMap() {
      <!--We manually set the two URLs we know already-->
      <url>
        <loc>https://pixelfy.ai</loc>
+       </url>
      <url>
        <loc>https://pixelfy.ai/tos</loc>
      </url>
-          <url>
-    <loc>https://pixelfy.ai/privacy-policy</loc>
+    <url>
+        <loc>https://pixelfy.ai/privacy-policy</loc>
      </url>
    </urlset>
  `
