@@ -7,11 +7,11 @@
 Generate high-quality pixel art with AI
 </p>
 
-<p align="center">
+<!-- <p align="center">
   <a href="https://github.com/davidtparks/vamp/blob/main/LICENSE.md">
     <img src="https://img.shields.io/github/license/davidtparks/vamp?label=license&logo=github&color=f80&logoColor=fff" alt="License" />
   </a>
-</p>
+</p> -->
 
 <p align="center">
   <a href="#introduction"><strong>Introduction</strong></a> ·
