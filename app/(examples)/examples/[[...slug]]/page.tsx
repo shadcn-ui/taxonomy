@@ -11,6 +11,11 @@ import { Separator } from "@/components/ui/separator"
 import { examples, TExample } from "@/lib/examples"
 import Image from "next/image"
 
+export const metadata = {
+    title: "Examples",
+    description: "View examples of popular generators on Pixelfy",
+}
+
 async function getStyleFromParams(params): Promise<TExample | null> {
     const slug = params.slug?.join("/") || ""
 
@@ -69,7 +74,7 @@ export default async function DocPage({ params }) {
             </div>
             <Alert className="mt-6">
                 <Icons.terminal className="h-4 w-4" />
-                <AlertTitle>Don&apos;'t see the style you want?</AlertTitle>
+                <AlertTitle>Do not see the style you want?</AlertTitle>
                 <AlertDescription>
                     We are always adding more models. If there is a style you
                     want to see on the site please reach out on Twitter

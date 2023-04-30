@@ -11,7 +11,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
             <aside className="fixed top-14 z-30 hidden h-[calc(100vh-3.5rem)] w-full shrink-0 overflow-y-auto border-r py-6 pr-2 md:sticky md:block lg:py-10">
                 <DocsSidebarNav items={docsConfig.sidebarNav} />
             </aside>
-            <main className="flex w-full flex-1 flex-col overflow-hidden mt-16 pb-24">
+            <main className="flex w-full flex-1 flex-col overflow-hidden mt-8 pb-24">
                 {children}
             </main>
         </div>
