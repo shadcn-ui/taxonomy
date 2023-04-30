@@ -1,7 +1,6 @@
 import { DownloadImageButton } from "@/components/download-image-button"
 import { EmptyPlaceholder } from "@/components/empty-placeholder"
 import { DashboardHeader } from "@/components/header"
-import { Icons } from "@/components/icons"
 import { DashboardShell } from "@/components/shell"
 import { Button } from "@/components/ui/button"
 import {

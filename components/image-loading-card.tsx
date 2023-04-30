@@ -1,3 +1,5 @@
+"use client"
+
 import { Progress } from "./ui/progress"
 import {
     Card,
@@ -231,7 +233,13 @@ const PixelLoadingAnimation = () => {
     )
 }
 
-export const ImageLoadingCard = () => {
+interface IImageLoadingCard {
+    showLoadingText?: boolean
+}
+
+export const ImageLoadingCard = ({
+    showLoadingText = true,
+}: IImageLoadingCard) => {
     return (
         <Card>
             <CardContent className="overflow-hidden flex flex-col w-full relative p-0 items-center">
@@ -244,18 +252,20 @@ export const ImageLoadingCard = () => {
                     <LinearGradient className="right-0 bottom-0 rotate-90" /> */}
                     <GridBackground />
                 </div>
-                <motion.span
-                    animate={{
-                        opacity: [0, 0.2, 1, 1, 0],
-                    }}
-                    transition={{
-                        duration: 5,
-                        repeat: Infinity,
-                    }}
-                    className="absolute top-2 left-4 m-auto flex text-muted-foreground z-10 "
-                >
-                    Generating...
-                </motion.span>
+                {showLoadingText && (
+                    <motion.span
+                        animate={{
+                            opacity: [0, 0.2, 1, 1, 0],
+                        }}
+                        transition={{
+                            duration: 5,
+                            repeat: Infinity,
+                        }}
+                        className="absolute top-2 left-4 m-auto flex text-muted-foreground z-10 "
+                    >
+                        Generating...
+                    </motion.span>
+                )}
             </CardContent>
         </Card>
     )

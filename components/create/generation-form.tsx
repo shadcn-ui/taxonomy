@@ -301,6 +301,10 @@ export function GenerationForm({
                                             Show advanced options
                                         </Button>
                                     </div>
+                                    <small className="mt-4 text-xs text-muted-foreground">
+                                        This generation will use 1 credit once
+                                        it succeeds
+                                    </small>
 
                                     <AnimatePresence initial={false}>
                                         {showAdvancedOptions && (
@@ -325,7 +329,7 @@ export function GenerationForm({
                                                     ease: [0.04, 0.62, 0.23, 1],
                                                 }}
                                             >
-                                                <div className="grid gap-8 grid-cols-2 w-full mt-8">
+                                                <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 w-full mt-8">
                                                     <SamplingStepSelector
                                                         value={samplingSteps}
                                                         onValueChange={
