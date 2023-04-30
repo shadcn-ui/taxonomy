@@ -1,4 +1,4 @@
-<a href="https://vamp.sh">
+<a href="https://pixelfy.ai">
   <img alt="Pixelfy, an open source platform for generating pixel art with AI." src="https://www.pixelfy.ai/pixelfy-og.png">
   <h1 align="center">Pixelfy</h1>
 </a>
