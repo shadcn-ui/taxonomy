@@ -1,7 +1,9 @@
+import { Button } from "./ui/button"
 import { Icons } from "@/components/icons"
 import { ModeToggle } from "@/components/mode-toggle"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import Link from "next/link"
 import * as React from "react"
 
 export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
@@ -41,7 +43,15 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
                         .
                     </p>
                 </div>
-                <ModeToggle />
+                <div className="flex items-center gap-2">
+                    <Link href="/privacy-policy">
+                        <Button variant="link">Privacy policy</Button>
+                    </Link>
+                    <Link href="/tos">
+                        <Button variant="link">Terms of Service</Button>
+                    </Link>
+                    <ModeToggle />
+                </div>
             </div>
         </footer>
     )

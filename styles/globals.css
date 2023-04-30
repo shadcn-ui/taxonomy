@@ -79,3 +79,10 @@
         font-feature-settings: "rlig" 1, "calt" 1;
     }
 }
+
+.prose {
+    --tw-prose-headings: var(--text-default);
+    --tw-prose-body: var(--text-default);
+    --tw-prose-links: var(--text-default-focus);
+    --tw-prose-bold: var(--text-default-focus);
+}
