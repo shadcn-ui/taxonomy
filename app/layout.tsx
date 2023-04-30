@@ -29,19 +29,19 @@ export const metadata = {
     },
     description: siteConfig.description,
     keywords: [
-        "Next.js",
-        "React",
-        "Tailwind CSS",
-        "Server Components",
-        "Radix UI",
+        "Pixel Art",
+        "AI",
+        "Pixel Art AI Generation",
+        "Pixels",
+        "AI generated",
     ],
     authors: [
         {
-            name: "shadcn",
-            url: "https://shadcn.com",
+            name: "David Parks",
+            url: "https://davidparks.dev",
         },
     ],
-    creator: "shadcn",
+    creator: "David Parks",
     themeColor: [
         { media: "(prefers-color-scheme: light)", color: "white" },
         { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -58,8 +58,8 @@ export const metadata = {
         card: "summary_large_image",
         title: siteConfig.name,
         description: siteConfig.description,
-        images: [`${siteConfig.url}/og.jpg`],
-        creator: "@shadcn",
+        images: [`${siteConfig.url}/pixelfy-og.png`],
+        creator: "@dparksdev",
     },
     icons: {
         icon: "/favicon.png",
