@@ -11,6 +11,12 @@ import { Separator } from "@/components/ui/separator"
 import { examples, TExample } from "@/lib/examples"
 import Image from "next/image"
 
+interface ExamplePageProps {
+    params: {
+        slug: string[]
+    }
+}
+
 export const metadata = {
     title: "Examples",
     description: "View examples of popular generators on Pixelfy",
@@ -33,6 +39,16 @@ async function getStyleFromParams(params): Promise<TExample | null> {
     })
 
     return images
+}
+
+export async function generateStaticParams(): Promise<
+    ExamplePageProps["params"][]
+> {
+    return Object.keys(examples).map((style) => {
+        return {
+            slug: examples[style].slug.split("/"),
+        }
+    })
 }
 
 export default async function DocPage({ params }) {
