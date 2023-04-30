@@ -69,7 +69,7 @@ export default async function DocPage({ params }) {
             </div>
             <Alert className="mt-6">
                 <Icons.terminal className="h-4 w-4" />
-                <AlertTitle>Don't see the style you want?</AlertTitle>
+                <AlertTitle>Don&apos;'t see the style you want?</AlertTitle>
                 <AlertDescription>
                     We are always adding more models. If there is a style you
                     want to see on the site please reach out on Twitter
