@@ -12,12 +12,16 @@ import * as React from "react"
 
 interface TemperatureSelectorProps {
     defaultValue: SliderProps["defaultValue"]
+    onValueChange: SliderProps["onValueChange"]
+    value: SliderProps["value"]
 }
 
 export function SamplingStepSelector({
     defaultValue,
+    onValueChange,
+    value,
 }: TemperatureSelectorProps) {
-    const [value, setValue] = React.useState(defaultValue)
+    // const [value, setValue] = React.useState(defaultValue)
 
     return (
         <div className="grid gap-2 ">
@@ -33,9 +37,10 @@ export function SamplingStepSelector({
                         <Slider
                             id="temperature"
                             max={150}
-                            defaultValue={value}
+                            defaultValue={defaultValue}
+                            value={value}
                             step={1}
-                            onValueChange={setValue}
+                            onValueChange={onValueChange}
                             className="[&_[role=slider]]:h-4 [&_[role=slider]]:w-4"
                             aria-label="Temperature"
                         />

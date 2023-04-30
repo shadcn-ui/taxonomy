@@ -12,8 +12,16 @@ const generateBody = z.object({
     parameters: z.object({
         modelId: z.string(),
         prompt: z.string().max(120),
+        samplingSteps: z.number().min(0).max(150).default(50),
+        guidance: z.number().min(0).max(20).default(7),
     }),
 })
+
+const generatorsToModality = {
+    [scenarioGenerators.fantasyRpg]: "",
+    [scenarioGenerators.animeStyle]: "",
+    [scenarioGenerators.landscapePortrait]: "landscape",
+}
 
 export async function POST(req: Request) {
     try {
@@ -58,6 +66,15 @@ export async function POST(req: Request) {
                         type: "txt2img",
                         prompt: parameters.prompt,
                         negativePrompt: "trading cards, cards",
+                        numInferenceSteps: parameters.samplingSteps,
+                        guidance: parameters.guidance,
+                        width: 512,
+                        height: 512,
+                        modality:
+                            parameters.modelId ===
+                            scenarioGenerators.landscapePortrait
+                                ? "landscape"
+                                : undefined,
                     },
                 }),
             }
@@ -84,6 +101,7 @@ export async function POST(req: Request) {
             status: 200,
         })
     } catch (error) {
+        console.log(error)
         if (error instanceof z.ZodError) {
             return new Response(JSON.stringify(error.issues), { status: 422 })
         }

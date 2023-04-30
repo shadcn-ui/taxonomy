@@ -1,5 +1,7 @@
 "use client"
 
+import { GuidanceSelector } from "../guidance-selector"
+import { SamplingStepSelector } from "../sampling-step-selector"
 import { Textarea } from "../ui/textarea"
 import { Icons } from "@/components/icons"
 import { ImageLoadingCard } from "@/components/image-loading-card"
@@ -69,11 +71,14 @@ export function GenerationForm({
     const [isSaving, setIsSaving] = React.useState<boolean>(false)
     const [isOpen, setIsOpen] = React.useState<boolean>(true)
     const [showAdvancedOptions, setShowAdvancedOptions] =
-        React.useState<boolean>(true)
+        React.useState<boolean>(false)
     const [progress, setProgress] = React.useState<number>(0)
     const [modelId, setModelId] = React.useState<string>(
         scenarioGenerators.fantasyRpg
     )
+
+    const [samplingSteps, setSamplingSteps] = React.useState<number[]>([50])
+    const [guidance, setGuidance] = React.useState<number[]>([7])
 
     async function onSubmit(data: FormData) {
         setIsSaving(true)
@@ -90,6 +95,8 @@ export function GenerationForm({
                     parameters: {
                         modelId,
                         prompt: data.prompt,
+                        samplingSteps: samplingSteps[0],
+                        guidance: guidance[0],
                     },
                 }),
             }
@@ -100,7 +107,8 @@ export function GenerationForm({
             setIsSaving(false)
             return toast({
                 title: "You are out of credits",
-                description: errorResponse.message,
+                description:
+                    "In order to continue generating images please purchase more credits. If there's been a mistake contact support.",
                 variant: "destructive",
             })
         } else if (!response.ok) {
@@ -252,7 +260,7 @@ export function GenerationForm({
                                                     placeholder="Ex. Ekko from league of legends, vivid colors, full body, portrait"
                                                     className="mt-1"
                                                     id="Prompt"
-                                                    maxLength={32}
+                                                    maxLength={500}
                                                     {...register("prompt")}
                                                 />
                                                 {errors?.prompt && (
@@ -293,6 +301,49 @@ export function GenerationForm({
                                             Show advanced options
                                         </Button>
                                     </div>
+
+                                    <AnimatePresence initial={false}>
+                                        {showAdvancedOptions && (
+                                            <motion.div
+                                                key="content"
+                                                initial="collapsed"
+                                                animate="open"
+                                                exit="collapsed"
+                                                className="w-full"
+                                                variants={{
+                                                    open: {
+                                                        opacity: 1,
+                                                        height: "auto",
+                                                    },
+                                                    collapsed: {
+                                                        opacity: 0,
+                                                        height: 0,
+                                                    },
+                                                }}
+                                                transition={{
+                                                    duration: 0.3,
+                                                    ease: [0.04, 0.62, 0.23, 1],
+                                                }}
+                                            >
+                                                <div className="grid gap-8 grid-cols-2 w-full mt-8">
+                                                    <SamplingStepSelector
+                                                        value={samplingSteps}
+                                                        onValueChange={
+                                                            setSamplingSteps
+                                                        }
+                                                        defaultValue={[50]}
+                                                    />
+                                                    <GuidanceSelector
+                                                        value={guidance}
+                                                        onValueChange={
+                                                            setGuidance
+                                                        }
+                                                        defaultValue={[7]}
+                                                    />
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
                                 </CardFooter>
                             </Card>
                         </form>

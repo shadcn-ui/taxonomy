@@ -3,7 +3,7 @@ import { SiteConfig } from "types"
 export const siteConfig: SiteConfig = {
     name: "Pixelfy",
     description:
-        "An open source application for generating pixel art using AI models.",
+        "Pixelfy is an open-source application that uses AI to generate stunning pixel art images for your creative projects. Your limit is your imagination.",
     url: "https://pixelfy.ai",
     ogImage: "https://pixelfy.ai/pixelfy-og.png",
     links: {

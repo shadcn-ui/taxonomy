@@ -12,11 +12,15 @@ import * as React from "react"
 
 interface TemperatureSelectorProps {
     defaultValue: SliderProps["defaultValue"]
+    onValueChange: SliderProps["onValueChange"]
+    value: SliderProps["value"]
 }
 
-export function GuidanceSelector({ defaultValue }: TemperatureSelectorProps) {
-    const [value, setValue] = React.useState(defaultValue)
-
+export function GuidanceSelector({
+    defaultValue,
+    onValueChange,
+    value,
+}: TemperatureSelectorProps) {
     return (
         <div className="grid gap-2">
             <HoverCard openDelay={200}>
@@ -31,9 +35,10 @@ export function GuidanceSelector({ defaultValue }: TemperatureSelectorProps) {
                         <Slider
                             id="temperature"
                             max={20}
-                            defaultValue={value}
+                            defaultValue={defaultValue}
                             step={0.1}
-                            onValueChange={setValue}
+                            value={value}
+                            onValueChange={onValueChange}
                             className="[&_[role=slider]]:h-4 [&_[role=slider]]:w-4"
                             aria-label="Temperature"
                         />

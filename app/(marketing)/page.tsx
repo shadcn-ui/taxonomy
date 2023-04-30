@@ -43,10 +43,15 @@ export default async function IndexPage() {
 
     const featuredCardData = [
         {
-            image: landscape,
+            image: "/landscape.png",
             title: "Landscape Portraits",
-            prompts: ["gorgeous waterfall landscape", "castle in the sky"],
-            imageAlt: "Image showing an 8 bit castle in the sky",
+            prompts: [
+                "A farmhouse in a grassy valley",
+                "warm colors",
+                "stardew valley",
+            ],
+            imageAlt:
+                "Image showing a cozy farmhouse in a grassy valley pixelated",
         },
         {
             image: character,
@@ -94,7 +99,7 @@ export default async function IndexPage() {
                             href="/login"
                             className={cn(buttonVariants({ size: "lg" }))}
                         >
-                            Create
+                            Start for free
                         </Link>
                         <Link
                             href={siteConfig.links.github}
