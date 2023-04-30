@@ -14,6 +14,8 @@ import { cn, pixelateImage } from "@/lib/utils"
 import Image from "next/image"
 import Link from "next/link"
 
+export const revalidate = 60
+
 async function getImageGenerations() {
     try {
         return (await db.outputImage.count()).toLocaleString()
