@@ -5,7 +5,7 @@ export const siteConfig: SiteConfig = {
     description:
         "An open source application for generating pixel art using AI models.",
     url: "https://pixelfy.ai",
-    ogImage: "https://tx.shadcn.com/og.jpg",
+    ogImage: "https://pixelfy.ai/pixelfy-og.png",
     links: {
         twitter: "https://twitter.com/dparksdev",
         github: "https://github.com/DavidTParks/pixelfy",
