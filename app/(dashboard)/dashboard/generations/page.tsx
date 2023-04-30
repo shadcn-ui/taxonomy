@@ -104,17 +104,14 @@ export default async function GenerationPage({
                         ))}
                     </div>
                     {generatedImageCount > 20 && (
-                        <div className="flex justify-end mt-4">
+                        <div className="flex justify-end mt-4 gap-4">
                             {page > 1 && (
                                 <Link
                                     href={`/dashboard/generations?page=${
                                         page - 1
                                     }`}
                                 >
-                                    <Button
-                                        disabled={page === 1}
-                                        className="mr-4"
-                                    >
+                                    <Button disabled={page === 1}>
                                         Previous
                                     </Button>
                                 </Link>

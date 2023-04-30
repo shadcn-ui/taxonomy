@@ -6,11 +6,10 @@ export const dashboardConfig: DashboardConfig = {
             title: "Create",
             href: "/dashboard",
         },
-        // {
-        //     title: "Support",
-        //     href: "/support",
-        //     disabled: true,
-        // },
+        {
+            title: "Examples",
+            href: "/examples/fantasy-rpg",
+        },
     ],
     sidebarNav: [
         {

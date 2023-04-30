@@ -39,6 +39,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { User } from "@prisma/client"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
+import Link from "next/link"
 import { useRouter } from "next/navigation"
 import * as React from "react"
 import { useForm } from "react-hook-form"
@@ -250,6 +251,21 @@ export function GenerationForm({
                                                     </SelectContent>
                                                 </Select>
                                             </div>
+                                            <span className="text-xs text-muted-foreground">
+                                                Not sure what to choose?{" "}
+                                                <Link
+                                                    className="inline-flex -ml-2"
+                                                    href="/examples/fantasy-rpg"
+                                                >
+                                                    <Button
+                                                        className="text-xs"
+                                                        size="sm"
+                                                        variant={"link"}
+                                                    >
+                                                        View some examples
+                                                    </Button>
+                                                </Link>
+                                            </span>
 
                                             <div className="grid gap-1 mt-6 ">
                                                 <Label htmlFor="name">
