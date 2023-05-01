@@ -4,7 +4,6 @@ import { GuidanceSelector } from "../guidance-selector"
 import { SamplingStepSelector } from "../sampling-step-selector"
 import { Textarea } from "../ui/textarea"
 import { Icons } from "@/components/icons"
-import { ImageAmountSelector } from "@/components/image-amount-selector"
 import { ImageLoadingCard } from "@/components/image-loading-card"
 import { Button, buttonVariants } from "@/components/ui/button"
 import {
@@ -15,13 +14,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import {
-    Popover,
-    PopoverContent,
-    PopoverTrigger,
-} from "@/components/ui/popover"
 import { Progress } from "@/components/ui/progress"
 import {
     Select,
@@ -32,6 +25,12 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select"
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+} from "@/components/ui/tooltip"
 import { toast } from "@/components/ui/use-toast"
 import { downloadImage } from "@/lib/client-helpers"
 import { scenarioGenerators } from "@/lib/generators"
@@ -46,7 +45,6 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { User } from "@prisma/client"
 import { AnimatePresence, motion } from "framer-motion"
 import Image from "next/image"
-import Link from "next/link"
 import { useRouter } from "next/navigation"
 import * as React from "react"
 import { useForm } from "react-hook-form"
@@ -102,11 +100,11 @@ export function GenerationForm({
         setPromptGenerating(true)
 
         const prompt = `
-        Generate an AI prompt that will be used to generate an image. 
+        Generate an AI prompt that will be used to create an image. 
         
         Make sure the prompt is less than 160 characters total, including spaces, newline characters punctuation. 
         
-        Do not include quotations in the prompt, the word "generate". 
+        Do not include quotations in the prompt or the word "generate". 
         
         Do not make it a sentence, and instead separate descriptors, themes, and framing with commas.
     
@@ -416,32 +414,50 @@ export function GenerationForm({
                                 <CardFooter className="flex-col items-start w-full">
                                     <div className="flex flex-col items-start mb-10">
                                         <div className="flex flex-col items-start">
-                                            <Button
-                                                disabled={
-                                                    getValues("prompt") ===
-                                                        "" || promptGenerating
-                                                }
-                                                onClick={(e) =>
-                                                    generatePrompt(e)
-                                                }
-                                                className={cn(
-                                                    "w-full lg:w-auto flex gap-2"
-                                                )}
-                                                variant="secondary"
-                                            >
-                                                {promptGenerating ? (
-                                                    <Icons.spinner className=" h-4 w-4 animate-spin" />
-                                                ) : (
-                                                    <Icons.terminal size={16} />
-                                                )}
-                                                <span>Run prompt builder</span>
-                                            </Button>
-                                            <small className="text-xs text-muted-foreground mt-2">
-                                                Takes a phrase or word from your
-                                                input and builds a prompt for
-                                                you. Powered by ChatGPT 3.5
-                                                Turbo
-                                            </small>
+                                            <TooltipProvider>
+                                                <Tooltip>
+                                                    <TooltipTrigger asChild>
+                                                        <Button
+                                                            disabled={
+                                                                getValues(
+                                                                    "prompt"
+                                                                ) === "" ||
+                                                                promptGenerating
+                                                            }
+                                                            onClick={(e) =>
+                                                                generatePrompt(
+                                                                    e
+                                                                )
+                                                            }
+                                                            className={cn(
+                                                                "w-full lg:w-auto flex gap-2"
+                                                            )}
+                                                            variant="secondary"
+                                                        >
+                                                            {promptGenerating ? (
+                                                                <Icons.spinner className=" h-4 w-4 animate-spin" />
+                                                            ) : (
+                                                                <Icons.terminal
+                                                                    size={16}
+                                                                />
+                                                            )}
+                                                            <span>
+                                                                Run prompt
+                                                                builder
+                                                            </span>
+                                                        </Button>
+                                                    </TooltipTrigger>
+                                                    <TooltipContent>
+                                                        <p>
+                                                            Takes a phrase or
+                                                            word from your input
+                                                            and builds a prompt
+                                                            for you. Powered by
+                                                            ChatGPT 3.5 Turbo.
+                                                        </p>
+                                                    </TooltipContent>
+                                                </Tooltip>
+                                            </TooltipProvider>
                                         </div>
                                     </div>
                                     <AnimatePresence initial={false}>
