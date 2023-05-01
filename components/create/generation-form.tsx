@@ -100,7 +100,7 @@ export function GenerationForm({
         setPromptGenerating(true)
 
         const prompt = `
-        Generate an AI prompt that will be used to create an image. 
+        Generate a detailed prompt that will be used to create an image. 
         
         Make sure the prompt is less than 160 characters total, including spaces, newline characters punctuation. 
         
