@@ -14,6 +14,7 @@ const generateBody = z.object({
         prompt: z.string().max(120),
         samplingSteps: z.number().min(0).max(150).default(50),
         guidance: z.number().min(0).max(20).default(7),
+        numImages: z.number().optional().default(4),
     }),
 })
 
@@ -42,11 +43,11 @@ export async function POST(req: Request) {
             },
         })
 
-        if (user.credits === 0) {
+        if (parameters.numImages / 4 > user.credits) {
             return new Response(
                 JSON.stringify({
                     message:
-                        "User is out of credits. Purchase more to continue generating images",
+                        "User is out of credits. Purchase more to continue generating images, or reduce the amount of images in your generation.",
                 }),
                 { status: 402 }
             )
@@ -70,6 +71,7 @@ export async function POST(req: Request) {
                         guidance: parameters.guidance,
                         width: 512,
                         height: 512,
+                        numSamples: parameters.numImages,
                         modality:
                             parameters.modelId ===
                             scenarioGenerators.landscapePortrait

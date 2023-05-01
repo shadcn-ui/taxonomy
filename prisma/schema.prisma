@@ -82,13 +82,12 @@ model Generation {
   image             String?
   mask              String?
   numInferenceSteps Int              @default(50)
-  numImages         Int              @default(4)
   modality          String?
   seed              String?
   strength          Float?
   negativePrompt    String?
   guidance          Float?           @default(7.5)
-  numSamples        Int?             @default(4)
+  numSamples        Int              @default(4)
   width             Int?             @default(512)
   height            Int?             @default(512)
   type              String?          @default("txt2img")

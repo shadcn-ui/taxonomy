@@ -83,7 +83,7 @@ export async function GET(
                     },
                     data: {
                         credits: {
-                            decrement: 1,
+                            decrement: generation.numSamples / 4,
                         },
                     },
                 }),

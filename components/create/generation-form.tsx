@@ -4,6 +4,7 @@ import { GuidanceSelector } from "../guidance-selector"
 import { SamplingStepSelector } from "../sampling-step-selector"
 import { Textarea } from "../ui/textarea"
 import { Icons } from "@/components/icons"
+import { ImageAmountSelector } from "@/components/image-amount-selector"
 import { ImageLoadingCard } from "@/components/image-loading-card"
 import { Button, buttonVariants } from "@/components/ui/button"
 import {
@@ -78,6 +79,8 @@ export function GenerationForm({
         scenarioGenerators.fantasyRpg
     )
 
+    const [numImages, setNumImages] = React.useState<string>("4")
+
     const [samplingSteps, setSamplingSteps] = React.useState<number[]>([50])
     const [guidance, setGuidance] = React.useState<number[]>([7])
 
@@ -98,6 +101,7 @@ export function GenerationForm({
                         prompt: data.prompt,
                         samplingSteps: samplingSteps[0],
                         guidance: guidance[0],
+                        numImages: parseInt(numImages),
                     },
                 }),
             }
@@ -207,65 +211,129 @@ export function GenerationForm({
                                 <CardContent>
                                     <div className="grid  gap-8">
                                         <div>
-                                            <Label htmlFor="name">Style</Label>
-                                            <div className="flex items-baseline gap-4 mt-1">
-                                                <Select
-                                                    value={modelId}
-                                                    onValueChange={setModelId}
-                                                    defaultValue={
-                                                        scenarioGenerators.fantasyRpg
-                                                    }
-                                                >
-                                                    <SelectTrigger className="w-[180px]">
-                                                        <SelectValue placeholder="Select a generator" />
-                                                    </SelectTrigger>
-                                                    <SelectContent>
-                                                        <SelectGroup>
-                                                            <SelectLabel>
-                                                                Style
-                                                            </SelectLabel>
+                                            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                                                <div>
+                                                    <Label htmlFor="name">
+                                                        Style
+                                                    </Label>
+                                                    <div className="flex items-baseline gap-4 mt-1">
+                                                        <Select
+                                                            value={modelId}
+                                                            onValueChange={
+                                                                setModelId
+                                                            }
+                                                            defaultValue={
+                                                                scenarioGenerators.fantasyRpg
+                                                            }
+                                                        >
+                                                            <SelectTrigger className="w-[180px]">
+                                                                <SelectValue placeholder="Select a generator" />
+                                                            </SelectTrigger>
+                                                            <SelectContent>
+                                                                <SelectGroup>
+                                                                    <SelectLabel>
+                                                                        Style
+                                                                    </SelectLabel>
 
-                                                            <SelectItem
-                                                                value={
-                                                                    scenarioGenerators.fantasyRpg
-                                                                }
+                                                                    <SelectItem
+                                                                        value={
+                                                                            scenarioGenerators.fantasyRpg
+                                                                        }
+                                                                    >
+                                                                        Fantasy
+                                                                        RPG
+                                                                    </SelectItem>
+                                                                    <SelectItem
+                                                                        value={
+                                                                            scenarioGenerators.landscapePortrait
+                                                                        }
+                                                                    >
+                                                                        Landscape
+                                                                        Portrait
+                                                                    </SelectItem>
+                                                                    <SelectItem
+                                                                        value={
+                                                                            scenarioGenerators.animeStyle
+                                                                        }
+                                                                    >
+                                                                        Anime
+                                                                        Style
+                                                                    </SelectItem>
+                                                                </SelectGroup>
+                                                            </SelectContent>
+                                                        </Select>
+                                                    </div>
+                                                    <span className="text-xs text-muted-foreground">
+                                                        Not sure what to choose?{" "}
+                                                        <Link
+                                                            className="inline-flex -ml-2"
+                                                            href="/examples/fantasy-rpg"
+                                                        >
+                                                            <Button
+                                                                className="text-xs"
+                                                                size="sm"
+                                                                variant={"link"}
                                                             >
-                                                                Fantasy RPG
-                                                            </SelectItem>
-                                                            <SelectItem
-                                                                value={
-                                                                    scenarioGenerators.landscapePortrait
-                                                                }
-                                                            >
-                                                                Landscape
-                                                                Portrait
-                                                            </SelectItem>
-                                                            <SelectItem
-                                                                value={
-                                                                    scenarioGenerators.animeStyle
-                                                                }
-                                                            >
-                                                                Anime Style
-                                                            </SelectItem>
-                                                        </SelectGroup>
-                                                    </SelectContent>
-                                                </Select>
+                                                                View some
+                                                                examples
+                                                            </Button>
+                                                        </Link>
+                                                    </span>
+                                                </div>
+                                                <div>
+                                                    <Label htmlFor="name">
+                                                        Number of images
+                                                    </Label>
+                                                    <div className="flex items-baseline gap-4 mt-1">
+                                                        <Select
+                                                            value={numImages}
+                                                            onValueChange={
+                                                                setNumImages
+                                                            }
+                                                            defaultValue={"4"}
+                                                        >
+                                                            <SelectTrigger className="w-[180px]">
+                                                                <SelectValue placeholder="Select a generator" />
+                                                            </SelectTrigger>
+                                                            <SelectContent>
+                                                                <SelectGroup>
+                                                                    <SelectItem
+                                                                        value={
+                                                                            "4"
+                                                                        }
+                                                                    >
+                                                                        4
+                                                                    </SelectItem>
+                                                                    <SelectItem
+                                                                        value={
+                                                                            "8"
+                                                                        }
+                                                                    >
+                                                                        8
+                                                                    </SelectItem>
+                                                                    <SelectItem
+                                                                        value={
+                                                                            "12"
+                                                                        }
+                                                                    >
+                                                                        12
+                                                                    </SelectItem>
+                                                                    <SelectItem
+                                                                        value={
+                                                                            "16"
+                                                                        }
+                                                                    >
+                                                                        16
+                                                                    </SelectItem>
+                                                                </SelectGroup>
+                                                            </SelectContent>
+                                                        </Select>
+                                                    </div>
+                                                    <span className="text-xs text-muted-foreground">
+                                                        1 credit = 4 images
+                                                    </span>
+                                                </div>
                                             </div>
-                                            <span className="text-xs text-muted-foreground">
-                                                Not sure what to choose?{" "}
-                                                <Link
-                                                    className="inline-flex -ml-2"
-                                                    href="/examples/fantasy-rpg"
-                                                >
-                                                    <Button
-                                                        className="text-xs"
-                                                        size="sm"
-                                                        variant={"link"}
-                                                    >
-                                                        View some examples
-                                                    </Button>
-                                                </Link>
-                                            </span>
 
                                             <div className="grid gap-1 mt-6 ">
                                                 <Label htmlFor="name">
@@ -318,8 +386,9 @@ export function GenerationForm({
                                         </Button>
                                     </div>
                                     <small className="mt-4 text-xs text-muted-foreground">
-                                        This generation will use 1 credit once
-                                        it succeeds
+                                        This generation will use{" "}
+                                        {parseInt(numImages) / 4} credit once it
+                                        succeeds
                                     </small>
 
                                     <AnimatePresence initial={false}>
@@ -384,10 +453,9 @@ export function GenerationForm({
                         <Progress value={progress * 100} />
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 mt-4">
-                        <ImageLoadingCard />
-                        <ImageLoadingCard />
-                        <ImageLoadingCard />
-                        <ImageLoadingCard />
+                        {Array.from(Array(parseInt(numImages)), (e, i) => {
+                            return <ImageLoadingCard key={i} />
+                        })}
                     </div>
                 </>
             )}
