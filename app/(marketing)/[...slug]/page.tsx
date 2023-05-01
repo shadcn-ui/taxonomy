@@ -1,10 +1,12 @@
 import { notFound } from "next/navigation"
 import { allPages } from "contentlayer/generated"
 
-import { Mdx } from "@/components/mdx"
+import { Mdx } from "@/components/mdx-components"
+
 import "@/styles/mdx.css"
 import { Metadata } from "next"
 
+import { env } from "@/env.mjs"
 import { siteConfig } from "@/config/site"
 import { absoluteUrl } from "@/lib/utils"
 
@@ -34,7 +36,7 @@ export async function generateMetadata({
     return {}
   }
 
-  const url = process.env.NEXT_PUBLIC_APP_URL
+  const url = env.NEXT_PUBLIC_APP_URL
 
   const ogUrl = new URL(`${url}/api/og`)
   ogUrl.searchParams.set("heading", page.title)
@@ -81,16 +83,16 @@ export default async function PagePage({ params }: PageProps) {
   }
 
   return (
-    <article className="container max-w-3xl py-6 lg:py-10">
+    <article className="container max-w-3xl py-6 lg:py-12">
       <div className="space-y-4">
-        <h1 className="inline-block text-4xl font-extrabold tracking-tight text-slate-900 lg:text-5xl">
+        <h1 className="inline-block font-heading text-4xl lg:text-5xl">
           {page.title}
         </h1>
         {page.description && (
-          <p className="text-xl text-slate-600">{page.description}</p>
+          <p className="text-xl text-muted-foreground">{page.description}</p>
         )}
       </div>
-      <hr className="my-4 border-slate-200" />
+      <hr className="my-4" />
       <Mdx code={page.body.code} />
     </article>
   )

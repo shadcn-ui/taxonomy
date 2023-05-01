@@ -2,9 +2,9 @@ import Link from "next/link"
 
 import { marketingConfig } from "@/config/marketing"
 import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
 import { MainNav } from "@/components/main-nav"
 import { SiteFooter } from "@/components/site-footer"
-import { buttonVariants } from "@/components/ui/button"
 
 interface MarketingLayoutProps {
   children: React.ReactNode
@@ -21,7 +21,10 @@ export default async function MarketingLayout({
           <nav>
             <Link
               href="/login"
-              className={cn(buttonVariants({ size: "sm" }), "px-4")}
+              className={cn(
+                buttonVariants({ variant: "secondary", size: "sm" }),
+                "px-4"
+              )}
             >
               Login
             </Link>
