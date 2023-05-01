@@ -132,7 +132,7 @@ export default async function IndexPage() {
                         more.
                     </p>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 pt-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-8">
                     {featuredCardData.map((card) => (
                         <Card key={card.title}>
                             <CardHeader>
