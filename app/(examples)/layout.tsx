@@ -1,17 +1,16 @@
-import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
-import { DocsSearch } from "@/components/search"
 import { DocsSidebarNav } from "@/components/sidebar-nav"
 import { SiteFooter } from "@/components/site-footer"
+import { buttonVariants } from "@/components/ui/button"
 import { docsConfig } from "@/config/docs"
-import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
 import Link from "next/link"
 
 interface DocsLayoutProps {
     children: React.ReactNode
 }
 
-export default function DocsLayout({ children }: DocsLayoutProps) {
+export default async function DocsLayout({ children }: DocsLayoutProps) {
     return (
         <div className="flex min-h-screen flex-col">
             <header className="sticky top-0 z-40 w-full border-b bg-background">
@@ -22,12 +21,16 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
                     <div className="flex flex-1 items-center space-x-4 sm:justify-end">
                         <nav className="flex space-x-4">
                             <Link
-                                href={siteConfig.links.github}
-                                target="_blank"
-                                rel="noreferrer"
+                                href="/login"
+                                className={cn(
+                                    buttonVariants({
+                                        variant: "secondary",
+                                        size: "sm",
+                                    }),
+                                    "px-4"
+                                )}
                             >
-                                <Icons.gitHub className="h-7 w-7" />
-                                <span className="sr-only">GitHub</span>
+                                Login
                             </Link>
                         </nav>
                     </div>
