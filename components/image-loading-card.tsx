@@ -243,7 +243,7 @@ export const ImageLoadingCard = ({
 }: IImageLoadingCard) => {
     return (
         <AspectRatio ratio={1 / 1}>
-            <Card className="h-full w-full rounded-lg overflow-hidden">
+            <Card className="h-full w-full flex items-center justify-center rounded-lg overflow-hidden relative">
                 <CardContent className="overflow-hidden flex flex-col w-full relative p-0 items-center">
                     <PixelLoadingAnimation />
                     <div className="w-[392px] h-[258px] flex-shrink-0 relative mb-0 mt-[2px]">
@@ -254,21 +254,21 @@ export const ImageLoadingCard = ({
                     <LinearGradient className="right-0 bottom-0 rotate-90" /> */}
                         <GridBackground />
                     </div>
-                    {showLoadingText && (
-                        <motion.span
-                            animate={{
-                                opacity: [0, 0.2, 1, 1, 0],
-                            }}
-                            transition={{
-                                duration: 5,
-                                repeat: Infinity,
-                            }}
-                            className="absolute top-2 left-4 m-auto flex text-muted-foreground z-10 "
-                        >
-                            Generating...
-                        </motion.span>
-                    )}
                 </CardContent>
+                {showLoadingText && (
+                    <motion.span
+                        animate={{
+                            opacity: [0, 0.2, 1, 1, 0],
+                        }}
+                        transition={{
+                            duration: 5,
+                            repeat: Infinity,
+                        }}
+                        className="absolute top-2 left-4 m-auto flex text-muted-foreground z-10 "
+                    >
+                        Generating...
+                    </motion.span>
+                )}
             </Card>
         </AspectRatio>
     )
