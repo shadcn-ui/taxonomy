@@ -16,7 +16,7 @@ export const SearchGenerationsInput = () => {
     const router = useRouter()
 
     const searchParams = useSearchParams()
-    const search = decodeURIComponent(searchParams?.get("search"))
+    const search = decodeURIComponent(searchParams?.get("search") ?? "")
 
     const {
         handleSubmit,
