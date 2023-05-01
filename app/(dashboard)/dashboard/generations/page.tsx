@@ -48,7 +48,7 @@ export default async function GenerationPage({
                         id: user.id,
                     },
                     prompt: {
-                        search: search,
+                        contains: search,
                     },
                 },
             },
@@ -61,7 +61,7 @@ export default async function GenerationPage({
                         id: user.id,
                     },
                     prompt: {
-                        search: search,
+                        contains: search,
                     },
                 },
             },
