@@ -1,6 +1,8 @@
 import { GenerationForm } from "@/components/create/generation-form"
 import { DashboardHeader } from "@/components/header"
+import { Icons } from "@/components/icons"
 import { DashboardShell } from "@/components/shell"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { authOptions } from "@/lib/auth"
 import { getCurrentUser } from "@/lib/session"
 import { redirect } from "next/navigation"
@@ -24,6 +26,7 @@ export default async function DashboardPage() {
             >
                 {/* <ModelSelectButton /> */}
             </DashboardHeader>
+
             <div>
                 <GenerationForm user={{ id: user.id, name: user.name || "" }} />
             </div>

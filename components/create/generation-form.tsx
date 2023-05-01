@@ -263,7 +263,7 @@ export function GenerationForm({
                                                             </SelectContent>
                                                         </Select>
                                                     </div>
-                                                    <span className="text-xs text-muted-foreground">
+                                                    {/* <span className="text-xs text-muted-foreground">
                                                         Not sure what to choose?{" "}
                                                         <Link
                                                             className="inline-flex -ml-2"
@@ -278,7 +278,7 @@ export function GenerationForm({
                                                                 examples
                                                             </Button>
                                                         </Link>
-                                                    </span>
+                                                    </span> */}
                                                 </div>
                                                 <div>
                                                     <Label htmlFor="name">
@@ -329,9 +329,6 @@ export function GenerationForm({
                                                             </SelectContent>
                                                         </Select>
                                                     </div>
-                                                    <span className="text-xs text-muted-foreground">
-                                                        1 credit = 4 images
-                                                    </span>
                                                 </div>
                                             </div>
 
@@ -391,7 +388,7 @@ export function GenerationForm({
                                         {parseInt(numImages) / 4 !== 1
                                             ? "credits"
                                             : "credit"}{" "}
-                                        once it succeeds
+                                        once it succeeds. 1 credit = 4 images.
                                     </small>
 
                                     <AnimatePresence initial={false}>
