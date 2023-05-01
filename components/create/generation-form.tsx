@@ -387,8 +387,11 @@ export function GenerationForm({
                                     </div>
                                     <small className="mt-4 text-xs text-muted-foreground">
                                         This generation will use{" "}
-                                        {parseInt(numImages) / 4} credit once it
-                                        succeeds
+                                        {parseInt(numImages) / 4}{" "}
+                                        {parseInt(numImages) / 4 !== 1
+                                            ? "credits"
+                                            : "credit"}{" "}
+                                        once it succeeds
                                     </small>
 
                                     <AnimatePresence initial={false}>
