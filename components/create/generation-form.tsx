@@ -15,7 +15,13 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from "@/components/ui/popover"
 import { Progress } from "@/components/ui/progress"
 import {
     Select,
@@ -59,8 +65,11 @@ export function GenerationForm({
 }: UserNameFormProps) {
     const router = useRouter()
     const {
+        setValue,
+        getValues,
         handleSubmit,
         register,
+        watch,
         formState: { errors },
     } = useForm<FormData>({
         resolver: zodResolver(generateSchema),
@@ -69,8 +78,12 @@ export function GenerationForm({
         },
     })
 
+    const reactivePrompt = watch("prompt")
+
     const [images, setImages] = React.useState<ScenarioImage[]>([])
     const [isSaving, setIsSaving] = React.useState<boolean>(false)
+    const [promptGenerating, setPromptGenerating] =
+        React.useState<boolean>(false)
     const [isOpen, setIsOpen] = React.useState<boolean>(true)
     const [showAdvancedOptions, setShowAdvancedOptions] =
         React.useState<boolean>(false)
@@ -83,6 +96,58 @@ export function GenerationForm({
 
     const [samplingSteps, setSamplingSteps] = React.useState<number[]>([50])
     const [guidance, setGuidance] = React.useState<number[]>([7])
+
+    const generatePrompt = async (e: any) => {
+        e.preventDefault()
+        setPromptGenerating(true)
+
+        const prompt = `Generate an AI prompt that will be used to generate an image. Make sure the prompt is less than 160 characters total, including spaces, newline characters punctuation. Do not include quotations in the prompt, the word "generate". Do not make it a sentence, and instead separate descriptors, themes, and framing with commas.
+    
+
+        Base the entire prompt on this context: ${getValues("prompt")}`
+        setValue("prompt", "")
+
+        const response = await fetch("/api/generate/prompt-generate", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                prompt,
+            }),
+        })
+
+        if (!response.ok) {
+            if (response.status === 429) {
+                return toast({
+                    title: "Too many requests",
+                    description:
+                        "You have gone over your limit for requests to generate prompts. Try again in a second.",
+                    variant: "destructive",
+                })
+            } else {
+                throw new Error(response.statusText)
+            }
+        }
+
+        // This data is a ReadableStream
+        const data = response.body
+        if (!data) {
+            return
+        }
+
+        const reader = data.getReader()
+        const decoder = new TextDecoder()
+        let done = false
+
+        while (!done) {
+            const { value, done: doneReading } = await reader.read()
+            done = doneReading
+            const chunkValue = decoder.decode(value)
+            setValue("prompt", getValues("prompt") + chunkValue)
+        }
+        setPromptGenerating(false)
+    }
 
     async function onSubmit(data: FormData) {
         setIsSaving(true)
@@ -172,7 +237,6 @@ export function GenerationForm({
             }
         }
         setIsSaving(false)
-        console.log(generatedImages)
         router.refresh()
     }
 
@@ -201,7 +265,9 @@ export function GenerationForm({
                         >
                             <Card>
                                 <CardHeader>
-                                    <CardTitle>Create Images</CardTitle>
+                                    <CardTitle className="flex w-full justify-between items-center">
+                                        Create Images
+                                    </CardTitle>
 
                                     <CardDescription>
                                         Enter a prompt for a series of images
@@ -263,22 +329,6 @@ export function GenerationForm({
                                                             </SelectContent>
                                                         </Select>
                                                     </div>
-                                                    {/* <span className="text-xs text-muted-foreground">
-                                                        Not sure what to choose?{" "}
-                                                        <Link
-                                                            className="inline-flex -ml-2"
-                                                            href="/examples/fantasy-rpg"
-                                                        >
-                                                            <Button
-                                                                className="text-xs"
-                                                                size="sm"
-                                                                variant={"link"}
-                                                            >
-                                                                View some
-                                                                examples
-                                                            </Button>
-                                                        </Link>
-                                                    </span> */}
                                                 </div>
                                                 <div>
                                                     <Label htmlFor="name">
@@ -332,12 +382,45 @@ export function GenerationForm({
                                                 </div>
                                             </div>
 
-                                            <div className="grid gap-1 mt-6 ">
+                                            <div className="grid gap-1 mt-6 relative">
+                                                <div className="flex flex-col items-start mb-4">
+                                                    <div className="flex flex-col items-start">
+                                                        <Button
+                                                            disabled={
+                                                                getValues(
+                                                                    "prompt"
+                                                                ) === ""
+                                                            }
+                                                            onClick={(e) =>
+                                                                generatePrompt(
+                                                                    e
+                                                                )
+                                                            }
+                                                            className={cn(
+                                                                "w-full lg:w-auto"
+                                                            )}
+                                                            variant="secondary"
+                                                        >
+                                                            Run prompt builder
+                                                        </Button>
+                                                        <small className="text-xs text-muted-foreground mt-1">
+                                                            Takes a phrase or
+                                                            word from your input
+                                                            and builds a prompt
+                                                            for you
+                                                        </small>
+                                                    </div>
+                                                </div>
+
                                                 <Label htmlFor="name">
                                                     Prompt
                                                 </Label>
+
                                                 <Textarea
-                                                    disabled={isSaving}
+                                                    disabled={
+                                                        isSaving ||
+                                                        promptGenerating
+                                                    }
                                                     placeholder="Ex. Ekko from league of legends, vivid colors, full body, portrait"
                                                     className="mt-1"
                                                     id="Prompt"
@@ -354,15 +437,60 @@ export function GenerationForm({
                                     </div>
                                 </CardContent>
                                 <CardFooter className="flex-col items-start w-full">
+                                    <AnimatePresence initial={false}>
+                                        {showAdvancedOptions && (
+                                            <motion.div
+                                                key="content"
+                                                initial="collapsed"
+                                                animate="open"
+                                                exit="collapsed"
+                                                className="w-full"
+                                                variants={{
+                                                    open: {
+                                                        opacity: 1,
+                                                        height: "auto",
+                                                    },
+                                                    collapsed: {
+                                                        opacity: 0,
+                                                        height: 0,
+                                                    },
+                                                }}
+                                                transition={{
+                                                    duration: 0.3,
+                                                    ease: [0.04, 0.62, 0.23, 1],
+                                                }}
+                                            >
+                                                <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 w-full pb-8">
+                                                    <SamplingStepSelector
+                                                        value={samplingSteps}
+                                                        onValueChange={
+                                                            setSamplingSteps
+                                                        }
+                                                        defaultValue={[50]}
+                                                    />
+                                                    <GuidanceSelector
+                                                        value={guidance}
+                                                        onValueChange={
+                                                            setGuidance
+                                                        }
+                                                        defaultValue={[7]}
+                                                    />
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
                                     <div className="flex flex-col lg:flex-row items-center gap-4 w-full">
                                         <button
+                                            disabled={
+                                                reactivePrompt === "" ||
+                                                isSaving
+                                            }
                                             type="submit"
                                             className={cn(
                                                 buttonVariants(),
                                                 className,
                                                 "w-full lg:w-auto"
                                             )}
-                                            disabled={isSaving}
                                         >
                                             {isSaving && (
                                                 <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
@@ -390,49 +518,6 @@ export function GenerationForm({
                                             : "credit"}{" "}
                                         once it succeeds. 1 credit = 4 images.
                                     </small>
-
-                                    <AnimatePresence initial={false}>
-                                        {showAdvancedOptions && (
-                                            <motion.div
-                                                key="content"
-                                                initial="collapsed"
-                                                animate="open"
-                                                exit="collapsed"
-                                                className="w-full"
-                                                variants={{
-                                                    open: {
-                                                        opacity: 1,
-                                                        height: "auto",
-                                                    },
-                                                    collapsed: {
-                                                        opacity: 0,
-                                                        height: 0,
-                                                    },
-                                                }}
-                                                transition={{
-                                                    duration: 0.3,
-                                                    ease: [0.04, 0.62, 0.23, 1],
-                                                }}
-                                            >
-                                                <div className="grid gap-8 grid-cols-1 lg:grid-cols-2 w-full mt-8">
-                                                    <SamplingStepSelector
-                                                        value={samplingSteps}
-                                                        onValueChange={
-                                                            setSamplingSteps
-                                                        }
-                                                        defaultValue={[50]}
-                                                    />
-                                                    <GuidanceSelector
-                                                        value={guidance}
-                                                        onValueChange={
-                                                            setGuidance
-                                                        }
-                                                        defaultValue={[7]}
-                                                    />
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
                                 </CardFooter>
                             </Card>
                         </form>
