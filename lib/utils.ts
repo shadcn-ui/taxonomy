@@ -66,7 +66,7 @@ export function searchString(
     // @ts-ignore
     const searchParameters = new URLSearchParams({
         page,
-        search,
+        search: encodeURIComponent(search ?? ""),
         sort,
     })
 
