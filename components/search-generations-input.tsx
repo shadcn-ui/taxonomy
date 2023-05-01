@@ -31,6 +31,7 @@ export const SearchGenerationsInput = () => {
 
     async function onSubmit(data: FormData) {
         router.push(`/dashboard/generations?${searchString("1", data.input)}`)
+        router.refresh()
     }
 
     return (
