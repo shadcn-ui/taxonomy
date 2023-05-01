@@ -1,3 +1,4 @@
+import { LoginButton } from "@/components/login-button"
 import { MainNav } from "@/components/main-nav"
 import { SiteFooter } from "@/components/site-footer"
 import { buttonVariants } from "@/components/ui/button"
@@ -13,7 +14,6 @@ interface MarketingLayoutProps {
 export default async function MarketingLayout({
     children,
 }: MarketingLayoutProps) {
-    const user = await getCurrentUser()
     return (
         <>
             <div className="flex min-h-screen flex-col">
@@ -21,33 +21,7 @@ export default async function MarketingLayout({
                     <div className="flex h-20 items-center justify-between py-6">
                         <MainNav items={marketingConfig.mainNav} />
                         <nav>
-                            {user ? (
-                                <Link
-                                    href="/dashboard"
-                                    className={cn(
-                                        buttonVariants({
-                                            variant: "secondary",
-                                            size: "sm",
-                                        }),
-                                        "px-4"
-                                    )}
-                                >
-                                    Dashboard
-                                </Link>
-                            ) : (
-                                <Link
-                                    href="/login"
-                                    className={cn(
-                                        buttonVariants({
-                                            variant: "secondary",
-                                            size: "sm",
-                                        }),
-                                        "px-4"
-                                    )}
-                                >
-                                    Login
-                                </Link>
-                            )}
+                            <LoginButton />
                         </nav>
                     </div>
                 </header>
