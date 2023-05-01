@@ -16,7 +16,6 @@ export const SearchGenerationsInput = () => {
     const router = useRouter()
 
     const searchParams = useSearchParams()
-    const page = searchParams?.get("page")
     const search = searchParams?.get("search")
 
     const {
@@ -33,8 +32,6 @@ export const SearchGenerationsInput = () => {
     async function onSubmit(data: FormData) {
         router.push(`/dashboard/generations?${searchString("1", data.input)}`)
     }
-
-    console.log(errors)
 
     return (
         <form
