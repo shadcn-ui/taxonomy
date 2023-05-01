@@ -1,11 +1,7 @@
 import { LoginButton } from "@/components/login-button"
 import { MainNav } from "@/components/main-nav"
 import { SiteFooter } from "@/components/site-footer"
-import { buttonVariants } from "@/components/ui/button"
 import { marketingConfig } from "@/config/marketing"
-import { getCurrentUser } from "@/lib/session"
-import { cn } from "@/lib/utils"
-import Link from "next/link"
 
 interface MarketingLayoutProps {
     children: React.ReactNode
