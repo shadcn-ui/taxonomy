@@ -25,11 +25,7 @@ async function getImageGenerations() {
 export default async function IndexPage() {
     const imageGenerations = await getImageGenerations()
 
-    const [landscape, character, popCulture] = await Promise.all([
-        pixelateImage({
-            remoteUrl:
-                "https://cdn.cloud.scenario.com/assets/RaR-r0MsQoOsPEALd-hgXA?p=100&Expires=1683504000&Key-Pair-Id=K36FIAB9LE2OLR&Signature=aT2dU7eUREvpx~I5z5as5NxMvVYcIWheXYdnyNZNvM5yJmHsfrfMaC6GxXLIF8iVJ67JNtJGBJSts0jBldaCgYEd2UC7lvsZBCNmlCV7GmraXXEEFKovVgzBe~pFi-r7rWlRsBjGT7A1NWKfYlPx~9hYbrMvA-KxqppEvYlxAn2vD4tXqq0DBUaWA0OHEK2is9Qw3Bh1tyk~O0~-eEv1jnfVeHeDE5wwHBPp75qmCW9HtrKAN2GwtX9QkVEqNjOjcWCIMA0Js-KVvuE1Sy-j8QSEF7gcqNtJ1kEidoFmJ646Wmhzyxdz5V4Ou6rswPP1i0XVv93C5ltUHuoGb-v2Rg__",
-        }),
+    const [character, popCulture] = await Promise.all([
         pixelateImage({
             remoteUrl:
                 "https://cdn.cloud.scenario.com/assets/HJVjD8xkSEKhk1lSTMExuw?p=100&Expires=1683504000&Key-Pair-Id=K36FIAB9LE2OLR&Signature=tLrmhwNKlG~KKiR4p2Z3FVls2XO2I1-h7-2rmkZiFEwHZjOb6xdxWX2xcohbpjvY-hor2HbUeVqKKJ5fV4Qilbtt~JyDos8HUeF3yfaNTJO~29q6ff1wKiEs4kMrtmHfK4CnInAgCdUCfwFlKffRyvXoe92HE0bqURnbl3~0rtjxcZHqp2FTNqutz0P9k1H-KoHm-uFq4GD9Ywh1NQDhtb8LRD8THIEdukZnq2Kw5Y5oQ3QqYV1d~3ANRJSmvFkCl01g7-5v0P~ZPD~KCXHN80Xn9kLzqqS3aOrH6M5qz9jvTpgd0aEw~u93aP1-noDYUUfO-Comt4X-n32Qb5Fpyg__",
