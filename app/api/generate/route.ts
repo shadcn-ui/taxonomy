@@ -2,9 +2,7 @@ import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/db"
 import { scenarioGenerators } from "@/lib/generators"
 import { scenarioAuthToken } from "@/lib/utils"
-import { userNameSchema } from "@/lib/validations/user"
 import { ScenarioInferenceResponse } from "@/types/scenario"
-import { Inference } from "@/types/scenario"
 import { getServerSession } from "next-auth/next"
 import { z } from "zod"
 
@@ -17,12 +15,6 @@ const generateBody = z.object({
         numImages: z.number().optional().default(4),
     }),
 })
-
-const generatorsToModality = {
-    [scenarioGenerators.fantasyRpg]: "",
-    [scenarioGenerators.animeStyle]: "",
-    [scenarioGenerators.landscapePortrait]: "landscape",
-}
 
 export async function POST(req: Request) {
     try {

@@ -1,12 +1,7 @@
 import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/db"
-import { scenarioAuthToken } from "@/lib/utils"
-import { pixelateImage } from "@/lib/utils"
-import { userNameSchema } from "@/lib/validations/user"
-import {
-    ScenarioInferenceProgress,
-    ScenarioInferenceProgressResponse,
-} from "@/types/scenario"
+import { pixelateImage, scenarioAuthToken } from "@/lib/utils"
+import { ScenarioInferenceProgressResponse } from "@/types/scenario"
 import { getServerSession } from "next-auth/next"
 import { z } from "zod"
 
