@@ -1,5 +1,6 @@
 import { DownloadImageButton } from "@/components/download-image-button"
 import { EmptyPlaceholder } from "@/components/empty-placeholder"
+import { GenerationPagePagination } from "@/components/generations-pagination"
 import { DashboardHeader } from "@/components/header"
 import { SearchGenerationsInput } from "@/components/search-generations-input"
 import { DashboardShell } from "@/components/shell"
@@ -9,9 +10,8 @@ import {
     HoverCardContent,
     HoverCardTrigger,
 } from "@/components/ui/hover-card"
-import { Input } from "@/components/ui/input"
 import { authOptions } from "@/lib/auth"
-import { db } from "@/lib/db"
+import { getUserGenerations, preloadGenerations } from "@/lib/generations"
 import { getCurrentUser } from "@/lib/session"
 import Image from "next/image"
 import Link from "next/link"
@@ -21,8 +21,6 @@ export const metadata = {
     title: "Generations",
     description: "View all of your past generations",
 }
-
-const pageSize = 20
 
 export default async function GenerationPage({
     searchParams,
@@ -39,50 +37,11 @@ export default async function GenerationPage({
         redirect(authOptions?.pages?.signIn || "/login")
     }
 
-    const [generatedImageCount, generatedImages] = await Promise.all([
-        db.outputImage.count({
-            where: {
-                generation: {
-                    status: "COMPLETE",
-                    user: {
-                        id: user.id,
-                    },
-                    prompt: {
-                        contains: search,
-                    },
-                },
-            },
-        }),
-        db.outputImage.findMany({
-            where: {
-                generation: {
-                    status: "COMPLETE",
-                    user: {
-                        id: user.id,
-                    },
-                    prompt: {
-                        contains: search,
-                    },
-                },
-            },
-            take: pageSize,
-            skip: (page - 1) * pageSize,
-            include: {
-                generation: true,
-            },
-            orderBy: {
-                createdAt: "desc",
-            },
-        }),
-    ])
+    preloadGenerations({ search, page: page + 1 })
 
-    const nextPageWithOptionalSearchQueryString = search
-        ? `/dashboard/generations?page=${page + 1}&search=${search}`
-        : `/dashboard/generations?page=${page + 1}`
+    const generationQuery = getUserGenerations({ page, search })
 
-    const previousPageWithOptionalSearchQueryString = search
-        ? `/dashboard/generations?page=${page - 1}&search=${search}`
-        : `/dashboard/generations?page=${page - 1}`
+    const generatedImages = await generationQuery
 
     return (
         <DashboardShell>
@@ -127,36 +86,8 @@ export default async function GenerationPage({
                             </HoverCard>
                         ))}
                     </div>
-                    {generatedImageCount > 20 && (
-                        <div className="flex justify-end mt-4 gap-4">
-                            {page > 1 && (
-                                <Link
-                                    href={
-                                        previousPageWithOptionalSearchQueryString
-                                    }
-                                >
-                                    <Button disabled={page === 1}>
-                                        Previous
-                                    </Button>
-                                </Link>
-                            )}
-
-                            {page * pageSize < generatedImageCount && (
-                                <Link
-                                    href={nextPageWithOptionalSearchQueryString}
-                                >
-                                    <Button
-                                        disabled={
-                                            page * pageSize >=
-                                            generatedImageCount
-                                        }
-                                    >
-                                        Next
-                                    </Button>
-                                </Link>
-                            )}
-                        </div>
-                    )}
+                    {/* @ts-expect-error */}
+                    <GenerationPagePagination page={page} search={search} />
                 </>
             ) : (
                 <>
