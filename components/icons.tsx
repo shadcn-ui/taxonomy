@@ -22,16 +22,19 @@ import {
     SunMedium,
     Trash,
     Twitter,
+    FormInput,
     User,
     X,
     ImagePlus,
     Terminal,
     type Icon as LucideIcon,
+    MessageSquare,
 } from "lucide-react"
 
 export type Icon = LucideIcon
 
 export const Icons = {
+    formInput: FormInput,
     logo: ({ ...props }: LucideProps) => (
         <svg
             width="24"

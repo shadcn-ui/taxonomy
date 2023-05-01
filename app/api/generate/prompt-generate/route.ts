@@ -9,10 +9,6 @@ if (!process.env.OPENAI_API_KEY) {
     throw new Error("Missing env var from OpenAI")
 }
 
-export const config = {
-    runtime: "edge",
-}
-
 export async function POST(req: Request) {
     const session = await getServerSession(authOptions)
     if (!session?.user) {

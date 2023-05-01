@@ -101,9 +101,15 @@ export function GenerationForm({
         e.preventDefault()
         setPromptGenerating(true)
 
-        const prompt = `Generate an AI prompt that will be used to generate an image. Make sure the prompt is less than 160 characters total, including spaces, newline characters punctuation. Do not include quotations in the prompt, the word "generate". Do not make it a sentence, and instead separate descriptors, themes, and framing with commas.
+        const prompt = `
+        Generate an AI prompt that will be used to generate an image. 
+        
+        Make sure the prompt is less than 160 characters total, including spaces, newline characters punctuation. 
+        
+        Do not include quotations in the prompt, the word "generate". 
+        
+        Do not make it a sentence, and instead separate descriptors, themes, and framing with commas.
     
-
         Base the entire prompt on this context: ${getValues("prompt")}`
         setValue("prompt", "")
 
@@ -383,35 +389,6 @@ export function GenerationForm({
                                             </div>
 
                                             <div className="grid gap-1 mt-6 relative">
-                                                <div className="flex flex-col items-start mb-4">
-                                                    <div className="flex flex-col items-start">
-                                                        <Button
-                                                            disabled={
-                                                                getValues(
-                                                                    "prompt"
-                                                                ) === ""
-                                                            }
-                                                            onClick={(e) =>
-                                                                generatePrompt(
-                                                                    e
-                                                                )
-                                                            }
-                                                            className={cn(
-                                                                "w-full lg:w-auto"
-                                                            )}
-                                                            variant="secondary"
-                                                        >
-                                                            Run prompt builder
-                                                        </Button>
-                                                        <small className="text-xs text-muted-foreground mt-1">
-                                                            Takes a phrase or
-                                                            word from your input
-                                                            and builds a prompt
-                                                            for you
-                                                        </small>
-                                                    </div>
-                                                </div>
-
                                                 <Label htmlFor="name">
                                                     Prompt
                                                 </Label>
@@ -437,6 +414,36 @@ export function GenerationForm({
                                     </div>
                                 </CardContent>
                                 <CardFooter className="flex-col items-start w-full">
+                                    <div className="flex flex-col items-start mb-10">
+                                        <div className="flex flex-col items-start">
+                                            <Button
+                                                disabled={
+                                                    getValues("prompt") ===
+                                                        "" || promptGenerating
+                                                }
+                                                onClick={(e) =>
+                                                    generatePrompt(e)
+                                                }
+                                                className={cn(
+                                                    "w-full lg:w-auto flex gap-2"
+                                                )}
+                                                variant="secondary"
+                                            >
+                                                {promptGenerating ? (
+                                                    <Icons.spinner className=" h-4 w-4 animate-spin" />
+                                                ) : (
+                                                    <Icons.terminal size={16} />
+                                                )}
+                                                <span>Run prompt builder</span>
+                                            </Button>
+                                            <small className="text-xs text-muted-foreground mt-2">
+                                                Takes a phrase or word from your
+                                                input and builds a prompt for
+                                                you. Powered by ChatGPT 3.5
+                                                Turbo
+                                            </small>
+                                        </div>
+                                    </div>
                                     <AnimatePresence initial={false}>
                                         {showAdvancedOptions && (
                                             <motion.div
@@ -483,7 +490,8 @@ export function GenerationForm({
                                         <button
                                             disabled={
                                                 reactivePrompt === "" ||
-                                                isSaving
+                                                isSaving ||
+                                                promptGenerating
                                             }
                                             type="submit"
                                             className={cn(
