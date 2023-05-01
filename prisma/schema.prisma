@@ -3,7 +3,7 @@
 
 generator client {
   provider        = "prisma-client-js"
-  previewFeatures = ["jsonProtocol"]
+  previewFeatures = ["jsonProtocol", "fullTextSearch", "fullTextIndex"]
 }
 
 datasource db {
@@ -97,6 +97,7 @@ model Generation {
   @@unique([inferenceId, modelId], name: "uniqueGeneration")
   @@index([userId])
   @@index([modelId])
+  @@fulltext([prompt])
 }
 
 enum GENERATIONSTATUS {

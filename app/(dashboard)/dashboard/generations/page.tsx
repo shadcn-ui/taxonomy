@@ -1,6 +1,7 @@
 import { DownloadImageButton } from "@/components/download-image-button"
 import { EmptyPlaceholder } from "@/components/empty-placeholder"
 import { DashboardHeader } from "@/components/header"
+import { SearchGenerationsInput } from "@/components/search-generations-input"
 import { DashboardShell } from "@/components/shell"
 import { Button } from "@/components/ui/button"
 import {
@@ -8,6 +9,7 @@ import {
     HoverCardContent,
     HoverCardTrigger,
 } from "@/components/ui/hover-card"
+import { Input } from "@/components/ui/input"
 import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/db"
 import { getCurrentUser } from "@/lib/session"
@@ -28,6 +30,9 @@ export default async function GenerationPage({
     searchParams: { [key: string]: string | undefined }
 }) {
     const page = parseInt(searchParams?.page ?? "1") ?? 1
+
+    const search = searchParams?.search ?? undefined
+
     const user = await getCurrentUser()
 
     if (!user) {
@@ -42,6 +47,9 @@ export default async function GenerationPage({
                     user: {
                         id: user.id,
                     },
+                    prompt: {
+                        search: search,
+                    },
                 },
             },
         }),
@@ -51,6 +59,9 @@ export default async function GenerationPage({
                     status: "COMPLETE",
                     user: {
                         id: user.id,
+                    },
+                    prompt: {
+                        search: search,
                     },
                 },
             },
@@ -65,12 +76,25 @@ export default async function GenerationPage({
         }),
     ])
 
+    const nextPageWithOptionalSearchQueryString = search
+        ? `/dashboard/generations?page=${page + 1}&search=${search}`
+        : `/dashboard/generations?page=${page + 1}`
+
+    const previousPageWithOptionalSearchQueryString = search
+        ? `/dashboard/generations?page=${page - 1}&search=${search}`
+        : `/dashboard/generations?page=${page - 1}`
+
     return (
         <DashboardShell>
             <DashboardHeader
                 heading="Generations"
                 text="View all of your generations here"
-            />
+            >
+                <SearchGenerationsInput
+                // className="w-full lg:max-w-[24rem]"
+                // placeholder="Search generations..."
+                />
+            </DashboardHeader>
             {generatedImages?.length ? (
                 <>
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -107,9 +131,9 @@ export default async function GenerationPage({
                         <div className="flex justify-end mt-4 gap-4">
                             {page > 1 && (
                                 <Link
-                                    href={`/dashboard/generations?page=${
-                                        page - 1
-                                    }`}
+                                    href={
+                                        previousPageWithOptionalSearchQueryString
+                                    }
                                 >
                                     <Button disabled={page === 1}>
                                         Previous
@@ -119,9 +143,7 @@ export default async function GenerationPage({
 
                             {page * pageSize < generatedImageCount && (
                                 <Link
-                                    href={`/dashboard/generations?page=${
-                                        page + 1
-                                    }`}
+                                    href={nextPageWithOptionalSearchQueryString}
                                 >
                                     <Button
                                         disabled={
@@ -137,19 +159,33 @@ export default async function GenerationPage({
                     )}
                 </>
             ) : (
-                <EmptyPlaceholder>
-                    <EmptyPlaceholder.Icon name="terminal" />
-                    <EmptyPlaceholder.Title>
-                        No generations created
-                    </EmptyPlaceholder.Title>
-                    <EmptyPlaceholder.Description>
-                        You don&apos;t have any generations yet. Start creating
-                        images!
-                    </EmptyPlaceholder.Description>
-                    <Link href="/dashboard">
-                        <Button>Start creating</Button>
-                    </Link>
-                </EmptyPlaceholder>
+                <>
+                    {search ? (
+                        <EmptyPlaceholder>
+                            <EmptyPlaceholder.Icon name="terminal" />
+                            <EmptyPlaceholder.Title>
+                                No generations match your search term
+                            </EmptyPlaceholder.Title>
+                            <EmptyPlaceholder.Description className="mb-0 pb-0">
+                                Try refining your search term
+                            </EmptyPlaceholder.Description>
+                        </EmptyPlaceholder>
+                    ) : (
+                        <EmptyPlaceholder>
+                            <EmptyPlaceholder.Icon name="terminal" />
+                            <EmptyPlaceholder.Title>
+                                No generations created
+                            </EmptyPlaceholder.Title>
+                            <EmptyPlaceholder.Description>
+                                You don&apos;t have any generations yet. Start
+                                creating images!
+                            </EmptyPlaceholder.Description>
+                            <Link href="/dashboard">
+                                <Button>Start creating</Button>
+                            </Link>
+                        </EmptyPlaceholder>
+                    )}
+                </>
             )}
         </DashboardShell>
     )
