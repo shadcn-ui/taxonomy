@@ -2,8 +2,10 @@ import { DownloadImageButton } from "@/components/download-image-button"
 import { EmptyPlaceholder } from "@/components/empty-placeholder"
 import { GenerationPagePagination } from "@/components/generations-pagination"
 import { DashboardHeader } from "@/components/header"
+import { ImageLoadingCard } from "@/components/image-loading-card"
 import { SearchGenerationsInput } from "@/components/search-generations-input"
 import { DashboardShell } from "@/components/shell"
+import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Button } from "@/components/ui/button"
 import {
     HoverCard,

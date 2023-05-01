@@ -1,5 +1,6 @@
 "use client"
 
+import { AspectRatio } from "./ui/aspect-ratio"
 import { Progress } from "./ui/progress"
 import {
     Card,
@@ -241,32 +242,34 @@ export const ImageLoadingCard = ({
     showLoadingText = true,
 }: IImageLoadingCard) => {
     return (
-        <Card>
-            <CardContent className="overflow-hidden flex flex-col w-full relative p-0 items-center">
-                <PixelLoadingAnimation />
-                <div className="w-[392px] h-[258px] flex-shrink-0 relative mb-0 mt-[2px]">
-                    {/* <LinearGradient className="left-0 bottom-0" />
+        <AspectRatio ratio={1 / 1}>
+            <Card className="h-full w-full rounded-lg overflow-hidden">
+                <CardContent className="overflow-hidden flex flex-col w-full relative p-0 items-center">
+                    <PixelLoadingAnimation />
+                    <div className="w-[392px] h-[258px] flex-shrink-0 relative mb-0 mt-[2px]">
+                        {/* <LinearGradient className="left-0 bottom-0" />
                     <LinearGradient className="right-0 top-0 rotate-180" /> */}
 
-                    {/* <LinearGradient className="left-0 top-0 -rotate-90" />
+                        {/* <LinearGradient className="left-0 top-0 -rotate-90" />
                     <LinearGradient className="right-0 bottom-0 rotate-90" /> */}
-                    <GridBackground />
-                </div>
-                {showLoadingText && (
-                    <motion.span
-                        animate={{
-                            opacity: [0, 0.2, 1, 1, 0],
-                        }}
-                        transition={{
-                            duration: 5,
-                            repeat: Infinity,
-                        }}
-                        className="absolute top-2 left-4 m-auto flex text-muted-foreground z-10 "
-                    >
-                        Generating...
-                    </motion.span>
-                )}
-            </CardContent>
-        </Card>
+                        <GridBackground />
+                    </div>
+                    {showLoadingText && (
+                        <motion.span
+                            animate={{
+                                opacity: [0, 0.2, 1, 1, 0],
+                            }}
+                            transition={{
+                                duration: 5,
+                                repeat: Infinity,
+                            }}
+                            className="absolute top-2 left-4 m-auto flex text-muted-foreground z-10 "
+                        >
+                            Generating...
+                        </motion.span>
+                    )}
+                </CardContent>
+            </Card>
+        </AspectRatio>
     )
 }
