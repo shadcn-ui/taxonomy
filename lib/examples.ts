@@ -87,8 +87,8 @@ export const examples: TScenarioExamples = {
                 prompt: "Levi Ackerman from Attack on Titan, anime style",
             },
             {
-                url: "/examples/animeStyle/anime-boy-1.png",
-                prompt: "Anime boy wearing armor, vivid colors",
+                url: "/examples/animeStyle/dbz.png",
+                prompt: "Legendary Saiyan Broly in a fierce battle with Goku on a fiery planet.",
             },
             {
                 url: "/examples/animeStyle/anime-boy-2.png",
