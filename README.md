@@ -37,6 +37,7 @@ Pixelfy is an open-source application that uses AI to generate stunning pixel ar
 -   [Stripe](https://stripe.com/) – payments
 -   [Postmark](https://postmarkapp.com/) - email delivery
 -   [Upstash](https://upstash.com/) - rate limiting
+-   [Supabase](https://supabase.com/) - Image storage
 
 ## Acknowledgments
 
