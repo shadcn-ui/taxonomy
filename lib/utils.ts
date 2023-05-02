@@ -27,7 +27,7 @@ export type TPixelateImage = {
 export async function pixelateImage({
     remoteUrl,
     pixelSize = 8,
-}: TPixelateImage): Promise<string> {
+}: TPixelateImage) {
     const image = await Jimp.read(remoteUrl).then((image) =>
         image.pixelate(pixelSize, 0, 0, image.getWidth(), image.getHeight())
     )

@@ -15,7 +15,7 @@ export function LoginButton() {
                 "px-4"
             )}
         >
-            {status === "authenticated" ? "Account" : "Login"}
+            {status === "authenticated" ? "Dashboard" : "Login"}
         </Link>
     )
 }

@@ -1,8 +1,11 @@
 import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/db"
+import { supabase } from "@/lib/supabase"
 import { pixelateImage, scenarioAuthToken } from "@/lib/utils"
 import { ScenarioInferenceProgressResponse } from "@/types/scenario"
+import { decode } from "base64-arraybuffer"
 import { getServerSession } from "next-auth/next"
+import { v4 as uuidv4 } from "uuid"
 import { z } from "zod"
 
 const routeContextSchema = z.object({
@@ -10,6 +13,29 @@ const routeContextSchema = z.object({
         inferenceId: z.string(),
     }),
 })
+
+const uploadImage = async (base64String: string) => {
+    const base64FileData = base64String.split("base64,")?.[1]
+
+    const uuid = uuidv4()
+    const { data: upload, error } = await supabase.storage
+        .from("pixelated")
+        .upload(`${uuid}.png`, decode(base64FileData), {
+            contentType: "image/png",
+            cacheControl: "3600",
+            upsert: false,
+        })
+
+    const { data } = await supabase.storage
+        .from("pixelated")
+        .getPublicUrl(`${uuid}.png`)
+
+    if (error) {
+        throw new Error(error.message)
+    }
+
+    return data
+}
 
 export async function GET(
     req: Request,
@@ -55,10 +81,11 @@ export async function GET(
             })
 
             const pixelatedImages = await Promise.all(
-                inferenceProgress.inference.images.map((image) => {
-                    return pixelateImage({
+                inferenceProgress.inference.images.map(async (image) => {
+                    const pixelatedImage = await pixelateImage({
                         remoteUrl: image.url,
                     })
+                    return uploadImage(pixelatedImage)
                 })
             )
 
@@ -66,7 +93,7 @@ export async function GET(
                 (image, index) => {
                     return {
                         ...image,
-                        pixelated: pixelatedImages[index],
+                        pixelated: pixelatedImages[index].publicUrl,
                     }
                 }
             )
