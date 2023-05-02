@@ -1,3 +1,4 @@
+import { Icons } from "@/components/icons"
 import { Badge } from "@/components/ui/badge"
 import { Button, buttonVariants } from "@/components/ui/button"
 import {
@@ -10,6 +11,13 @@ import {
 import { siteConfig } from "@/config/site"
 import { db } from "@/lib/db"
 import { cn, pixelateImage } from "@/lib/utils"
+import {
+    Code,
+    FileImage,
+    PartyPopper,
+    Save,
+    SlidersHorizontal,
+} from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -172,6 +180,98 @@ export default async function IndexPage() {
                     <Link href="/examples/fantasy-rpg">
                         <Button>View more examples</Button>
                     </Link>
+                </div>
+            </section>
+
+            <section
+                id="features"
+                className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
+            >
+                <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+                    <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+                        Features
+                    </h2>
+                    <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+                        Pixelfy is packed with features to help you create the
+                        pixel art you want with ease.
+                    </p>
+                </div>
+                <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
+                    <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+                        <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
+                            <Icons.terminal size={48} />
+                            <div className="space-y-2">
+                                <h3 className="font-bold">Prompt Builder</h3>
+                                <p className="text-sm text-muted-foreground">
+                                    An AI powered prompt builder to help you
+                                    create stunning images.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+                        <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
+                            <Save size={48} />
+                            <div className="space-y-2">
+                                <h3 className="font-bold">Save Generations</h3>
+                                <p className="text-sm text-muted-foreground">
+                                    Save all of your pixel art generations for
+                                    download later.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+                        <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
+                            <SlidersHorizontal size={48} />
+                            <div className="space-y-2">
+                                <h3 className="font-bold">Advanced Tuning</h3>
+                                <p className="text-sm text-muted-foreground">
+                                    Advanced options for adjusting sampling
+                                    steps and prompt guidance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+                        <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
+                            <FileImage size={48} />
+                            <div className="space-y-2">
+                                <h3 className="font-bold">
+                                    Battle Tested Generators
+                                </h3>
+                                <p className="text-sm text-muted-foreground">
+                                    Pixelfy utilizes a suite of battle tested AI
+                                    image generators from Scenario.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+                        <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
+                            <Code size={48} />
+                            <div className="space-y-2">
+                                <h3 className="font-bold">Open-source</h3>
+                                <p className="text-sm text-muted-foreground">
+                                    Pixelfy is open-source and built with React
+                                    and Next.js.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="relative overflow-hidden rounded-lg border bg-background p-2">
+                        <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
+                            <PartyPopper size={48} />
+                            <div className="space-y-2">
+                                <h3 className="font-bold">Free to start</h3>
+                                <p className="text-sm text-muted-foreground">
+                                    12 free generations when you sign up, no
+                                    strings attached. Pay as you go.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 

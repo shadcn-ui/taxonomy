@@ -8,7 +8,7 @@ export const marketingConfig: MarketingConfig = {
         },
         {
             title: "Examples",
-            href: "/examples/fantasy-rpg",
+            href: "/#examples",
         },
     ],
 }
