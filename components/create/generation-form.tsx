@@ -103,7 +103,6 @@ export function GenerationForm({
         Generate a comma-separated single sentence prompt that will be used to create an image. Include interesting visual descriptors and art styles. Make sure the prompt is less than 500 characters total, including spaces, newline characters punctuation. Do not include quotations in the prompt or the word "generate" or the word "ai". Do not use complete sentences. Please separate all descriptors with commas.
     
         Base the entire prompt on this context: ${getValues("prompt")}`
-        setValue("prompt", "")
 
         const response = await fetch("/api/generate/prompt-generate", {
             method: "POST",
@@ -137,6 +136,7 @@ export function GenerationForm({
         const reader = data.getReader()
         const decoder = new TextDecoder()
         let done = false
+        setValue("prompt", "")
 
         while (!done) {
             const { value, done: doneReading } = await reader.read()

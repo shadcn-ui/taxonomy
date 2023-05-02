@@ -27,10 +27,10 @@ export const dashboardConfig: DashboardConfig = {
             href: "/credits",
             icon: "billing",
         },
-        {
-            title: "Settings",
-            href: "/dashboard/settings",
-            icon: "settings",
-        },
+        // {
+        //     title: "Settings",
+        //     href: "/dashboard/settings",
+        //     icon: "settings",
+        // },
     ],
 }
