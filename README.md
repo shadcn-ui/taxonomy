@@ -36,6 +36,7 @@ Pixelfy is an open-source application that uses AI to generate stunning pixel ar
 -   [Vercel](https://vercel.com/) – hosting
 -   [Stripe](https://stripe.com/) – payments
 -   [Postmark](https://postmarkapp.com/) - email delivery
+-   [Upstash](https://upstash.com/) - rate limiting
 
 ## Acknowledgments
 
@@ -43,6 +44,7 @@ This project would not have been possible without the amazing work from:
 
 -   [Shadcdn](https://twitter.com/shadcn) for his Next 13 app dir project [Taxonomy](https://github.com/shadcn/taxonomy), which much of Pixelfys's code is based on. This project is a direct fork of his repository.
 -   [Steven Tey](https://twitter.com/steventey) for his work on [Dub](https://www.dub.sh) which provided some great insight into structuring a SaaS application using Next 13.
+-   [Hassan El Mghari](https://twitter.com/nutlope) for his work on [RoomGPT](https://www.roomgpt.io/) which was really helpful in learning how to query ChatGPT + AI models in Next 13!
 -   [Scenario](https://www.scenario.com/) Scenario is a platform that provides some great public generators, as well as the ability to create new generators using AI for images. Pixelfys APIs interact directly with Scenario and this project would not be possible without them!
 
 ## Contributing
