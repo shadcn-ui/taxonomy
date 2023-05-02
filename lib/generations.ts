@@ -27,7 +27,7 @@ export const getGenerationCount = cache(
                         id: user.id,
                     },
                     prompt: {
-                        contains: search,
+                        search: search,
                     },
                 },
             },
@@ -58,7 +58,7 @@ export const getUserGenerations = cache(
                         id: user.id,
                     },
                     prompt: {
-                        contains: search,
+                        search: search,
                     },
                 },
             },
