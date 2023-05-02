@@ -9,7 +9,7 @@ import { z } from "zod"
 const generateBody = z.object({
     parameters: z.object({
         modelId: z.string(),
-        prompt: z.string().max(120),
+        prompt: z.string().max(500),
         samplingSteps: z.number().min(0).max(150).default(50),
         guidance: z.number().min(0).max(20).default(7),
         numImages: z.number().optional().default(4),

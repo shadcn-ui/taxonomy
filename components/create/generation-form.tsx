@@ -100,13 +100,7 @@ export function GenerationForm({
         setPromptGenerating(true)
 
         const prompt = `
-        Generate a detailed prompt that will be used to create an image. 
-        
-        Make sure the prompt is less than 160 characters total, including spaces, newline characters punctuation. 
-        
-        Do not include quotations in the prompt or the word "generate". 
-        
-        Do not make it a sentence, and instead separate descriptors, themes, and framing with commas.
+        Generate a comma-separated single sentence prompt that will be used to create an image. Include interesting visual descriptors and art styles. Make sure the prompt is less than 500 characters total, including spaces, newline characters punctuation. Do not include quotations in the prompt or the word "generate" or the word "ai". Do not use complete sentences. Please separate all descriptors with commas.
     
         Base the entire prompt on this context: ${getValues("prompt")}`
         setValue("prompt", "")
@@ -412,8 +406,8 @@ export function GenerationForm({
                                     </div>
                                 </CardContent>
                                 <CardFooter className="flex-col items-start w-full">
-                                    <div className="flex flex-col items-start mb-10">
-                                        <div className="flex flex-col items-start">
+                                    <div className="flex flex-col items-start mb-10 w-full">
+                                        <div className="flex flex-col items-start w-full">
                                             <TooltipProvider>
                                                 <Tooltip>
                                                     <TooltipTrigger asChild>
@@ -548,14 +542,6 @@ export function GenerationForm({
                     </motion.div>
                 )}
             </AnimatePresence>
-
-            {/* <button
-                onClick={() => setIsOpen(!isOpen)}
-                className={cn(buttonVariants(), className)}
-            >
-                collapse form
-            </button> */}
-
             {isSaving && (
                 <>
                     <div className="mt-4">

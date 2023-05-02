@@ -77,7 +77,7 @@ model Generation {
   user              User             @relation(fields: [userId], references: [id], onDelete: Cascade)
   modelId           String
   inferenceId       String
-  prompt            String
+  prompt            String           @db.LongText
   outputImages      OutputImage[]
   image             String?
   mask              String?
