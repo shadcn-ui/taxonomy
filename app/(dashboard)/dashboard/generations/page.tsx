@@ -56,13 +56,17 @@ export default async function GenerationPage({
                 // placeholder="Search generations..."
                 />
             </DashboardHeader>
+            <Link href="/i/clh2t13jk0002ughqf4trf8jy">
+                TEst intercepted route
+            </Link>
             {generatedImages?.length ? (
                 <>
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                         {generatedImages.map((generatedImage) => (
                             <HoverCard>
                                 <HoverCardTrigger asChild>
-                                    <div
+                                    <Link
+                                        href={`/i/${generatedImage.id}`}
                                         className={` rounded-lg  overflow-hidden relative`}
                                         key={generatedImage.id}
                                     >
@@ -78,7 +82,7 @@ export default async function GenerationPage({
                                             src={generatedImage.pixelatedImage}
                                             name={generatedImage.seed}
                                         />
-                                    </div>
+                                    </Link>
                                 </HoverCardTrigger>
                                 <HoverCardContent className="w-80">
                                     <p className="text-sm text-primary">

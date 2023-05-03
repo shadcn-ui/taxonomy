@@ -11,7 +11,12 @@ interface IDownloadImageButton {
 export const DownloadImageButton = ({ src, name }: IDownloadImageButton) => {
     return (
         <Button
-            onClick={() => downloadImage(src, name)}
+            onClick={(e) => {
+                e.preventDefault()
+                e.stopPropagation()
+
+                downloadImage(src, name)
+            }}
             className="absolute top-4 right-4"
             variant="secondary"
         >
