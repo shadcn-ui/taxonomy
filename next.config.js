@@ -13,9 +13,7 @@ module.exports = {
 
   // Uncoment to add domain whitelist
   images: {
-    domains: [
-      'cdn.sona.stream',
-    ],
+    domains: ['cdn.sona.stream'],
   },
 
   publicRuntimeConfig: {

@@ -1,5 +1,4 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
 
 import { Text as TextComponent } from '@/design-system';
 
@@ -39,7 +38,7 @@ export default {
   },
 } as ComponentMeta<typeof TextComponent>;
 
-const Template: ComponentStory<typeof TextComponent> = (args) => (
+const Template: ComponentStory<typeof TextComponent> = (args: any) => (
   <TextComponent {...args} />
 );
 

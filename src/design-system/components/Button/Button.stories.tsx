@@ -1,5 +1,4 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import React from 'react';
 
 import { Button as ButtonComponent } from '@/design-system';
 import { PlusIcon } from '@/design-system/icons';
