@@ -1,10 +1,9 @@
 'use client';
-
+import { sona } from '@/lib/utils';
 import * as AlertDialogPrimitive from '@radix-ui/react-alert-dialog';
 import * as React from 'react';
 
 import { buttonVariants } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
 
 const AlertDialog = AlertDialogPrimitive.Root;
 
@@ -15,7 +14,7 @@ const AlertDialogPortal = ({
   children,
   ...props
 }: AlertDialogPrimitive.AlertDialogPortalProps) => (
-  <AlertDialogPrimitive.Portal className={cn(className)} {...props}>
+  <AlertDialogPrimitive.Portal className={sona(className)} {...props}>
     <div className='fixed inset-0 z-50 flex items-end justify-center sm:items-center'>
       {children}
     </div>
@@ -28,7 +27,7 @@ const AlertDialogOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof AlertDialogPrimitive.Overlay>
 >(({ className, children, ...props }, ref) => (
   <AlertDialogPrimitive.Overlay
-    className={cn(
+    className={sona(
       'fixed inset-0 z-50 bg-background/80 backdrop-blur-sm transition-opacity animate-in fade-in',
       className
     )}
@@ -46,7 +45,7 @@ const AlertDialogContent = React.forwardRef<
     <AlertDialogOverlay />
     <AlertDialogPrimitive.Content
       ref={ref}
-      className={cn(
+      className={sona(
         'fixed z-50 grid w-full max-w-lg scale-100 gap-4 border bg-background p-6 opacity-100 shadow-lg animate-in fade-in-90 slide-in-from-bottom-10 sm:rounded-lg sm:zoom-in-90 sm:slide-in-from-bottom-0 md:w-full',
         className
       )}
@@ -61,7 +60,7 @@ const AlertDialogHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn(
+    className={sona(
       'flex flex-col space-y-2 text-center sm:text-left',
       className
     )}
@@ -75,7 +74,7 @@ const AlertDialogFooter = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn(
+    className={sona(
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
       className
     )}
@@ -90,7 +89,7 @@ const AlertDialogTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Title
     ref={ref}
-    className={cn('text-lg font-semibold', className)}
+    className={sona('text-lg font-semibold', className)}
     {...props}
   />
 ));
@@ -102,7 +101,7 @@ const AlertDialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Description
     ref={ref}
-    className={cn('text-sm text-muted-foreground', className)}
+    className={sona('text-sm text-muted-foreground', className)}
     {...props}
   />
 ));
@@ -115,7 +114,7 @@ const AlertDialogAction = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Action
     ref={ref}
-    className={cn(buttonVariants(), className)}
+    className={sona(buttonVariants(), className)}
     {...props}
   />
 ));
@@ -127,7 +126,7 @@ const AlertDialogCancel = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AlertDialogPrimitive.Cancel
     ref={ref}
-    className={cn(
+    className={sona(
       buttonVariants({ variant: 'outline' }),
       'mt-2 sm:mt-0',
       className

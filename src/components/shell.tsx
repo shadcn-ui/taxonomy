@@ -1,6 +1,5 @@
+import { sona } from '@/lib/utils';
 import * as React from 'react';
-
-import { cn } from '@/lib/utils';
 
 type DashboardShellProps = React.HTMLAttributes<HTMLDivElement>;
 
@@ -10,7 +9,7 @@ export function DashboardShell({
   ...props
 }: DashboardShellProps) {
   return (
-    <div className={cn('grid items-start gap-8', className)} {...props}>
+    <div className={sona('grid items-start gap-8', className)} {...props}>
       {children}
     </div>
   );

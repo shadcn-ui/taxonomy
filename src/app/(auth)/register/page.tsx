@@ -1,9 +1,8 @@
-import Link from 'next/link';
-
 import { Icons } from '@/components/icons';
 import { buttonVariants } from '@/components/ui/button';
 import { UserAuthForm } from '@/components/user-auth-form';
-import { cn } from '@/lib/utils';
+import { sona } from '@/lib/utils';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Create an account',
@@ -15,7 +14,7 @@ export default function RegisterPage() {
     <div className='container grid h-screen w-screen flex-col items-center justify-center lg:max-w-none lg:grid-cols-2 lg:px-0'>
       <Link
         href='/login'
-        className={cn(
+        className={sona(
           buttonVariants({ variant: 'ghost' }),
           'absolute right-4 top-4 md:right-8 md:top-8'
         )}

@@ -1,9 +1,7 @@
 'use client';
-
+import { sona } from '@/lib/utils';
 import * as HoverCardPrimitive from '@radix-ui/react-hover-card';
 import * as React from 'react';
-
-import { cn } from '@/lib/utils';
 
 const HoverCard = HoverCardPrimitive.Root;
 
@@ -17,7 +15,7 @@ const HoverCardContent = React.forwardRef<
     ref={ref}
     align={align}
     sideOffset={sideOffset}
-    className={cn(
+    className={sona(
       'z-50 w-64 rounded-md border bg-popover p-4 text-popover-foreground shadow-md outline-none animate-in zoom-in-90',
       className
     )}

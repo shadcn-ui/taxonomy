@@ -1,10 +1,8 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-
 import { Icons } from '@/components/icons';
 import { buttonVariants } from '@/components/ui/button';
-import { UserAuthForm } from '@/components/user-auth-form';
-import { cn } from '@/lib/utils';
+import { sona } from '@/lib/utils';
+import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Login',
@@ -16,7 +14,7 @@ export default function LoginPage() {
     <div className='container flex h-screen w-screen flex-col items-center justify-center'>
       <Link
         href='/'
-        className={cn(
+        className={sona(
           buttonVariants({ variant: 'ghost' }),
           'absolute left-4 top-4 md:left-8 md:top-8'
         )}
@@ -36,7 +34,7 @@ export default function LoginPage() {
             Enter your email to sign in to your account
           </p>
         </div>
-        <UserAuthForm />
+
         <p className='px-8 text-center text-sm text-muted-foreground'>
           <Link
             href='/register'

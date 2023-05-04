@@ -1,7 +1,7 @@
+import { sona } from '@/lib/utils';
 import * as React from 'react';
 
 import { Icons } from '@/components/icons';
-import { cn } from '@/lib/utils';
 
 type EmptyPlaceholderProps = React.HTMLAttributes<HTMLDivElement>;
 
@@ -12,7 +12,7 @@ export function EmptyPlaceholder({
 }: EmptyPlaceholderProps) {
   return (
     <div
-      className={cn(
+      className={sona(
         'flex min-h-[400px] flex-col items-center justify-center rounded-md border border-dashed p-8 text-center animate-in fade-in-50',
         className
       )}
@@ -43,7 +43,7 @@ EmptyPlaceholder.Icon = function EmptyPlaceHolderIcon({
 
   return (
     <div className='flex h-20 w-20 items-center justify-center rounded-full bg-muted'>
-      <Icon className={cn('h-10 w-10', className)} {...props} />
+      <Icon className={sona('h-10 w-10', className)} {...props} />
     </div>
   );
 };
@@ -55,7 +55,7 @@ EmptyPlaceholder.Title = function EmptyPlaceholderTitle({
   ...props
 }: EmptyPlacholderTitleProps) {
   return (
-    <h2 className={cn('mt-6 text-xl font-semibold', className)} {...props} />
+    <h2 className={sona('mt-6 text-xl font-semibold', className)} {...props} />
   );
 };
 
@@ -68,7 +68,7 @@ EmptyPlaceholder.Description = function EmptyPlaceholderDescription({
 }: EmptyPlacholderDescriptionProps) {
   return (
     <p
-      className={cn(
+      className={sona(
         'mb-8 mt-2 text-center text-sm font-normal leading-6 text-muted-foreground',
         className
       )}

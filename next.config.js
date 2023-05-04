@@ -6,6 +6,7 @@ module.exports = {
 
   experimental: {
     appDir: true,
+    serverComponentsExternalPackages: ['@prisma/client'],
   },
 
   reactStrictMode: true,

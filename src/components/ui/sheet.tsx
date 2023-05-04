@@ -5,8 +5,6 @@ import { cva, VariantProps } from 'class-variance-authority';
 import { X } from 'lucide-react';
 import * as React from 'react';
 
-import { cn } from '@/lib/utils';
-
 const Sheet = SheetPrimitive.Root;
 
 const SheetTrigger = SheetPrimitive.Trigger;
@@ -33,7 +31,7 @@ const SheetPortal = ({
   children,
   ...props
 }: SheetPortalProps) => (
-  <SheetPrimitive.Portal className={cn(className)} {...props}>
+  <SheetPrimitive.Portal className={sona(className)} {...props}>
     <div className={portalVariants({ position })}>{children}</div>
   </SheetPrimitive.Portal>
 );
@@ -44,7 +42,7 @@ const SheetOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, children, ...props }, ref) => (
   <SheetPrimitive.Overlay
-    className={cn(
+    className={sona(
       'fixed inset-0 z-50 bg-background/80 backdrop-blur-sm transition-all duration-100 data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:fade-in',
       className
     )}
@@ -154,7 +152,7 @@ const SheetContent = React.forwardRef<
     <SheetOverlay />
     <SheetPrimitive.Content
       ref={ref}
-      className={cn(sheetVariants({ position, size }), className)}
+      className={sona(sheetVariants({ position, size }), className)}
       {...props}
     >
       {children}
@@ -172,7 +170,7 @@ const SheetHeader = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn(
+    className={sona(
       'flex flex-col space-y-2 text-center sm:text-left',
       className
     )}
@@ -186,7 +184,7 @@ const SheetFooter = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <div
-    className={cn(
+    className={sona(
       'flex flex-col-reverse sm:flex-row sm:justify-end sm:space-x-2',
       className
     )}
@@ -201,7 +199,7 @@ const SheetTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Title
     ref={ref}
-    className={cn('text-lg font-semibold text-foreground', className)}
+    className={sona('text-lg font-semibold text-foreground', className)}
     {...props}
   />
 ));
@@ -213,7 +211,7 @@ const SheetDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Description
     ref={ref}
-    className={cn('text-sm text-muted-foreground', className)}
+    className={sona('text-sm text-muted-foreground', className)}
     {...props}
   />
 ));

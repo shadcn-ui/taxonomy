@@ -1,12 +1,5 @@
 'use client';
 
-import { zodResolver } from '@hookform/resolvers/zod';
-import { User } from '@prisma/client';
-import { useRouter } from 'next/navigation';
-import * as React from 'react';
-import { useForm } from 'react-hook-form';
-import * as z from 'zod';
-
 import { Icons } from '@/components/icons';
 import { buttonVariants } from '@/components/ui/button';
 import {
@@ -20,8 +13,14 @@ import {
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { toast } from '@/components/ui/use-toast';
-import { cn } from '@/lib/utils';
+import { sona } from '@/lib/utils';
 import { userNameSchema } from '@/lib/validations/user';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { User } from '@prisma/client';
+import { useRouter } from 'next/navigation';
+import * as React from 'react';
+import { useForm } from 'react-hook-form';
+import * as z from 'zod';
 
 interface UserNameFormProps extends React.HTMLAttributes<HTMLFormElement> {
   user: Pick<User, 'id' | 'name'>;
@@ -75,7 +74,7 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
 
   return (
     <form
-      className={cn(className)}
+      className={sona(className)}
       onSubmit={handleSubmit(onSubmit)}
       {...props}
     >
@@ -106,7 +105,7 @@ export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
         <CardFooter>
           <button
             type='submit'
-            className={cn(buttonVariants(), className)}
+            className={sona(buttonVariants(), className)}
             disabled={isSaving}
           >
             {isSaving && (

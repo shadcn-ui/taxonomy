@@ -1,10 +1,9 @@
 'use client';
 
+import { sona } from '@/lib/utils';
+import { SidebarNavItem } from '@/types';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-
-import { cn } from '@/lib/utils';
-import { SidebarNavItem } from '@/types';
 
 export interface DocsSidebarNavProps {
   items: SidebarNavItem[];
@@ -16,7 +15,7 @@ export function DocsSidebarNav({ items }: DocsSidebarNavProps) {
   return items.length ? (
     <div className='w-full'>
       {items.map((item, index) => (
-        <div key={index} className={cn('pb-8')}>
+        <div key={index} className={sona('pb-8')}>
           <h4 className='mb-1 rounded-md px-2 py-1 text-sm font-medium'>
             {item.title}
           </h4>
@@ -45,7 +44,7 @@ export function DocsSidebarNavItems({
           <Link
             key={index}
             href={item.href}
-            className={cn(
+            className={sona(
               'flex w-full items-center rounded-md p-2 hover:underline',
               {
                 'bg-muted': pathname === item.href,

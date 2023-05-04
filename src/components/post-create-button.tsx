@@ -1,12 +1,11 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import * as React from 'react';
-
 import { Icons } from '@/components/icons';
 import { ButtonProps, buttonVariants } from '@/components/ui/button';
 import { toast } from '@/components/ui/use-toast';
-import { cn } from '@/lib/utils';
+import { sona } from '@/lib/utils';
+import { useRouter } from 'next/navigation';
+import * as React from 'react';
 
 type PostCreateButtonProps = ButtonProps;
 
@@ -60,7 +59,7 @@ export function PostCreateButton({
   return (
     <button
       onClick={onClick}
-      className={cn(
+      className={sona(
         buttonVariants({ variant }),
         {
           'cursor-not-allowed opacity-60': isLoading,

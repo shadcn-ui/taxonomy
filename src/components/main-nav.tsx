@@ -1,14 +1,12 @@
 'use client';
 
+import { Icons } from '@/components/icons';
+import { siteConfig } from '@/config/site';
+import { sona } from '@/lib/utils';
+import { MainNavItem } from '@/types';
 import Link from 'next/link';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import * as React from 'react';
-
-import { Icons } from '@/components/icons';
-import { MobileNav } from '@/components/mobile-nav';
-import { siteConfig } from '@/config/site';
-import { cn } from '@/lib/utils';
-import { MainNavItem } from '@/types';
 
 interface MainNavProps {
   items?: MainNavItem[];
@@ -33,7 +31,7 @@ export function MainNav({ items, children }: MainNavProps) {
             <Link
               key={index}
               href={item.disabled ? '#' : item.href}
-              className={cn(
+              className={sona(
                 'flex items-center text-lg font-medium transition-colors hover:text-foreground/80 sm:text-sm',
                 item.href.startsWith(`/${segment}`)
                   ? 'text-foreground'
@@ -53,9 +51,6 @@ export function MainNav({ items, children }: MainNavProps) {
         {showMobileMenu ? <Icons.close /> : <Icons.logo />}
         <span className='font-bold'>Menu</span>
       </button>
-      {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
-      )}
     </div>
   );
 }

@@ -1,10 +1,9 @@
 'use client';
 
-import * as React from 'react';
-
 import { Input } from '@/components/ui/input';
 import { toast } from '@/components/ui/use-toast';
-import { cn } from '@/lib/utils';
+import { sona } from '@/lib/utils';
+import * as React from 'react';
 
 type DocsSearchProps = React.HTMLAttributes<HTMLFormElement>;
 
@@ -21,7 +20,7 @@ export function DocsSearch({ className, ...props }: DocsSearchProps) {
   return (
     <form
       onSubmit={onSubmit}
-      className={cn('relative w-full', className)}
+      className={sona('relative w-full', className)}
       {...props}
     >
       <Input

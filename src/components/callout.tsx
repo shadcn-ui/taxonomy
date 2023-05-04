@@ -1,4 +1,4 @@
-import { cn } from '@/lib/utils';
+import { sona } from '@/lib/utils';
 
 interface CalloutProps {
   icon?: string;
@@ -14,10 +14,13 @@ export function Callout({
 }: CalloutProps) {
   return (
     <div
-      className={cn('my-6 flex items-start rounded-md border border-l-4 p-4', {
-        'border-red-900 bg-red-50': type === 'danger',
-        'border-yellow-900 bg-yellow-50': type === 'warning',
-      })}
+      className={sona(
+        'my-6 flex items-start rounded-md border border-l-4 p-4',
+        {
+          'border-red-900 bg-red-50': type === 'danger',
+          'border-yellow-900 bg-yellow-50': type === 'warning',
+        }
+      )}
       {...props}
     >
       {icon && <span className='mr-4 text-2xl'>{icon}</span>}
