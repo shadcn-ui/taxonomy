@@ -7,8 +7,8 @@
     "url": "https://twitter.com/shadcn"
   },
   "scripts": {
-    "dev": "concurrently \"contentlayer dev\" \"next dev\"",
-    "build": "contentlayer build && next build",
+    "dev": "next dev",
+    "build": "next build",
     "turbo": "next dev --turbo",
     "start": "next start",
     "lint": "next lint",
@@ -66,9 +66,10 @@
     "concurrently": "^8.0.1",
     "contentlayer": "^0.3.1",
     "date-fns": "^2.29.3",
+    "ethers": "^6.3.0",
     "lucide-react": "^0.92.0",
+    "magic-sdk": "^17.1.3",
     "next": "13.3.2-canary.13",
-    "next-auth": "4.22.1",
     "next-contentlayer": "^0.3.1",
     "next-themes": "^0.2.1",
     "nodemailer": "^6.9.1",
@@ -80,9 +81,9 @@
     "react-editor-js": "^2.1.0",
     "react-hook-form": "^7.43.9",
     "react-textarea-autosize": "^8.4.1",
+    "recoil": "^0.7.7",
     "sharp": "^0.31.3",
     "shiki": "^0.11.1",
-    "stripe": "^11.18.0",
     "tailwind-merge": "^1.12.0",
     "tailwindcss-animate": "^1.0.5",
     "zod": "^3.21.4"

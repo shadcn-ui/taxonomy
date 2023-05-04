@@ -1,0 +1,234 @@
+.sona-text svg {
+  display: inline;
+  vertical-align: middle;
+}
+
+/*
+  Display Text Variant
+ */
+.sona-text-display {
+  font-family: var(--sona-text-display-font-family);
+  font-weight: var(--sona-text-display-font-weight);
+}
+
+.sona-text-display.sona-text-large {
+  font-size: var(--sona-text-display-large-font-size);
+  line-height: var(--sona-text-display-large-line-height);
+  letter-spacing: var(--sona-text-display-large-letter-spacing);
+}
+
+.sona-text-display.sona-text-medium {
+  font-size: var(--sona-text-display-medium-font-size);
+  line-height: var(--sona-text-display-medium-line-height);
+  letter-spacing: var(--sona-text-display-medium-letter-spacing);
+}
+
+.sona-text-display.sona-text-small {
+  font-size: var(--sona-text-display-small-font-size);
+  line-height: var(--sona-text-display-small-line-height);
+  letter-spacing: var(--sona-text-display-small-letter-spacing);
+}
+
+/*
+  Headline Text Variant
+ */
+.sona-text-headline {
+  font-family: var(--sona-text-headline-font-family);
+  font-weight: var(--sona-text-headline-font-weight);
+}
+
+.sona-text-headline.sona-text-large {
+  font-size: var(--sona-text-headline-large-font-size);
+  line-height: var(--sona-text-headline-large-line-height);
+  letter-spacing: var(--sona-text-headline-large-letter-spacing);
+}
+
+.sona-text-headline.sona-text-medium {
+  font-size: var(--sona-text-headline-medium-font-size);
+  line-height: var(--sona-text-headline-medium-line-height);
+  letter-spacing: var(--sona-text-headline-medium-letter-spacing);
+}
+
+.sona-text-headline.sona-text-small {
+  font-size: var(--sona-text-headline-small-font-size);
+  line-height: var(--sona-text-headline-small-line-height);
+  letter-spacing: var(--sona-text-headline-small-letter-spacing);
+}
+
+/*
+  Title Text Variant
+ */
+.sona-text-title {
+  font-family: var(--sona-text-title-font-family);
+  font-weight: var(--sona-text-title-font-weight);
+}
+
+.sona-text-title.sona-text-large {
+  font-size: var(--sona-text-title-large-font-size);
+  line-height: var(--sona-text-title-large-line-height);
+  letter-spacing: var(--sona-text-title-large-letter-spacing);
+}
+
+.sona-text-title.sona-text-medium {
+  font-size: var(--sona-text-title-medium-font-size);
+  line-height: var(--sona-text-title-medium-line-height);
+  letter-spacing: var(--sona-text-title-medium-letter-spacing);
+}
+
+.sona-text-title.sona-text-small {
+  font-size: var(--sona-text-title-small-font-size);
+  line-height: var(--sona-text-title-small-line-height);
+  letter-spacing: var(--sona-text-title-small-letter-spacing);
+}
+
+/*
+  Title Expanded Text Variant
+ */
+.sona-text-title-expanded {
+  font-family: var(--sona-text-title-expanded-font-family);
+  font-weight: var(--sona-text-title-expanded-font-weight);
+}
+
+.sona-text-title-expanded.sona-text-large {
+  font-size: var(--sona-text-title-expanded-large-font-size);
+  line-height: var(--sona-text-title-expanded-large-line-height);
+  letter-spacing: var(--sona-text-title-expanded-large-letter-spacing);
+}
+
+.sona-text-title-expanded.sona-text-medium {
+  font-size: var(--sona-text-title-expanded-medium-font-size);
+  line-height: var(--sona-text-title-expanded-medium-line-height);
+  letter-spacing: var(--sona-text-title-expanded-medium-letter-spacing);
+}
+
+.sona-text-title-expanded.sona-text-small {
+  font-size: var(--sona-text-title-expanded-small-font-size);
+  line-height: var(--sona-text-title-expanded-small-line-height);
+  letter-spacing: var(--sona-text-title-expanded-small-letter-spacing);
+}
+
+/*
+  Label Text Variant
+ */
+.sona-text-label {
+  font-family: var(--sona-text-label-font-family);
+  font-weight: var(--sona-text-label-font-weight);
+}
+
+.sona-text-label.sona-text-large,
+.sona-text-label.sona-text-medium {
+  font-size: var(--sona-text-label-large-font-size);
+  line-height: var(--sona-text-label-large-line-height);
+  letter-spacing: var(--sona-text-label-large-letter-spacing);
+}
+
+.sona-text-label.sona-text-small {
+  font-size: var(--sona-text-label-small-font-size);
+  line-height: var(--sona-text-label-small-line-height);
+  letter-spacing: var(--sona-text-label-small-letter-spacing);
+  text-transform: uppercase;
+}
+
+/*
+  Label Mono Text Variant
+ */
+.sona-text-label-mono {
+  font-family: var(--sona-text-label-mono-font-family);
+  font-weight: var(--sona-text-label-mono-font-weight);
+  text-transform: uppercase;
+}
+
+.sona-text-label-mono.sona-text-large,
+.sona-text-label-mono.sona-text-medium {
+  font-size: var(--sona-text-label-mono-large-font-size);
+  line-height: var(--sona-text-label-mono-large-line-height);
+  letter-spacing: var(--sona-text-label-mono-large-letter-spacing);
+}
+
+.sona-text-label-mono.sona-text-small {
+  font-size: var(--sona-text-label-mono-small-font-size);
+  line-height: var(--sona-text-label-mono-small-line-height);
+  letter-spacing: var(--sona-text-label-mono-small-letter-spacing);
+}
+
+/*
+  Body Text Variant
+ */
+.sona-text-body {
+  font-family: var(--sona-text-body-font-family);
+  font-weight: var(--sona-text-body-font-weight);
+}
+
+.sona-text-body.sona-text-large {
+  font-size: var(--sona-text-body-large-font-size);
+  line-height: var(--sona-text-body-large-line-height);
+  letter-spacing: var(--sona-text-body-large-letter-spacing);
+}
+
+.sona-text-body.sona-text-medium {
+  font-size: var(--sona-text-body-medium-font-size);
+  line-height: var(--sona-text-body-medium-line-height);
+  letter-spacing: var(--sona-text-body-medium-letter-spacing);
+}
+
+.sona-text-body.sona-text-small {
+  font-size: var(--sona-text-body-small-font-size);
+  line-height: var(--sona-text-body-small-line-height);
+  letter-spacing: var(--sona-text-body-small-letter-spacing);
+}
+
+/*
+  Text Button Text Variant
+ */
+.sona-text-text-button {
+  font-family: var(--sona-text-text-button-font-family);
+  font-weight: var(--sona-text-text-button-font-weight);
+  text-transform: uppercase;
+}
+
+.sona-text-text-button.sona-text-medium,
+.sona-text-text-button.sona-text-large,
+.sona-text-text-button.sona-text-small {
+  font-size: var(--sona-text-text-button-medium-font-size);
+  line-height: var(--sona-text-text-button-medium-line-height);
+  letter-spacing: var(--sona-text-text-button-medium-letter-spacing);
+}
+
+/*
+  Text Colors
+ */
+.sona-text-color-primary {
+  color: var(--sona-color-text-primary);
+}
+
+.sona-text-color-secondary {
+  color: var(--sona-color-text-secondary);
+}
+
+.sona-text-color-tertiary {
+  color: var(--sona-color-text-tertiary);
+}
+
+.sona-text-color-disabled {
+  color: var(--sona-color-text-disabled);
+}
+
+.sona-text-color-protocol {
+  color: var(--sona-color-text-protocol);
+}
+
+.sona-text-color-positive {
+  color: var(--sona-color-text-positive);
+}
+
+.sona-text-color-negative {
+  color: var(--sona-color-text-negative);
+}
+
+.sona-text-color-warning {
+  color: var(--sona-color-text-warning);
+}
+
+.sona-text-color-link {
+  color: var(--sona-color-text-link);
+}

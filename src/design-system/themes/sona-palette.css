@@ -1,0 +1,109 @@
+:root {
+  --sona-palette-white: #ffffff;
+  --sona-palette-black: #000000;
+
+  /* Dark Mode */
+  --sona-palette-dark-neutral-00: #161616;
+  --sona-palette-dark-neutral-01: #1d1d1d;
+  --sona-palette-dark-neutral-02: #242424;
+  --sona-palette-dark-neutral-03: #303030;
+  --sona-palette-dark-neutral-04: #424242;
+  --sona-palette-dark-neutral-05: #5a5a5a;
+  --sona-palette-dark-neutral-06: #737373;
+  --sona-palette-dark-neutral-07: #8f8f8f;
+  --sona-palette-dark-neutral-08: #b2b2b2;
+  --sona-palette-dark-neutral-09: #d5d5d5;
+  --sona-palette-dark-neutral-10: #ffffff;
+
+  --sona-palette-dark-transparent-neutral-00: rgba(255, 255, 255, 0);
+  --sona-palette-dark-transparent-neutral-01: rgba(255, 255, 255, 0.03);
+  --sona-palette-dark-transparent-neutral-02: rgba(255, 255, 255, 0.06);
+  --sona-palette-dark-transparent-neutral-03: rgba(255, 255, 255, 0.11);
+  --sona-palette-dark-transparent-neutral-04: rgba(255, 255, 255, 0.19);
+  --sona-palette-dark-transparent-neutral-05: rgba(255, 255, 255, 0.29);
+  --sona-palette-dark-transparent-neutral-06: rgba(255, 255, 255, 0.4);
+  --sona-palette-dark-transparent-neutral-07: rgba(255, 255, 255, 0.52);
+  --sona-palette-dark-transparent-neutral-08: rgba(255, 255, 255, 0.67);
+  --sona-palette-dark-transparent-neutral-09: rgba(255, 255, 255, 0.82);
+  --sona-palette-dark-transparent-neutral-10: rgba(255, 255, 255, 1);
+
+  --sona-palette-dark-lime-01: #1c1d18;
+  --sona-palette-dark-lime-02: #22241a;
+  --sona-palette-dark-lime-03: #2c301d;
+  --sona-palette-dark-lime-04: #3b4223;
+  --sona-palette-dark-lime-05: #4f5929;
+  --sona-palette-dark-lime-06: #647330;
+  --sona-palette-dark-lime-07: #7c8f38;
+  --sona-palette-dark-lime-08: #99b142;
+  --sona-palette-dark-lime-09: #b7d44c;
+  --sona-palette-dark-lime-10: #dafe58;
+
+  --sona-palette-dark-green-01: #181c17;
+  --sona-palette-dark-green-02: #1a2119;
+  --sona-palette-dark-green-03: #1d2b1b;
+  --sona-palette-dark-green-04: #233a1f;
+  --sona-palette-dark-green-05: #2a4d24;
+  --sona-palette-dark-green-06: #316229;
+  --sona-palette-dark-green-07: #39782f;
+  --sona-palette-dark-green-08: #449536;
+  --sona-palette-dark-green-09: #4eb13d;
+  --sona-palette-dark-green-10: #5ad346;
+
+  --sona-palette-dark-tomato-01: #1c1817;
+  --sona-palette-dark-tomato-02: #221917;
+  --sona-palette-dark-tomato-03: #2d1c19;
+  --sona-palette-dark-tomato-04: #3d201b;
+  --sona-palette-dark-tomato-05: #52261d;
+  --sona-palette-dark-tomato-06: #692c20;
+  --sona-palette-dark-tomato-07: #823322;
+  --sona-palette-dark-tomato-08: #a13b26;
+  --sona-palette-dark-tomato-09: #c0432a;
+  --sona-palette-dark-tomato-10: #e54d2e;
+
+  --sona-palette-dark-yellow-01: #1d1c16;
+  --sona-palette-dark-yellow-02: #232215;
+  --sona-palette-dark-yellow-03: #2f2b15;
+  --sona-palette-dark-yellow-04: #403b14;
+  --sona-palette-dark-yellow-05: #574f13;
+  --sona-palette-dark-yellow-06: #6f6411;
+  --sona-palette-dark-yellow-07: #8a7b10;
+  --sona-palette-dark-yellow-08: #ab990e;
+  --sona-palette-dark-yellow-09: #cdb60c;
+  --sona-palette-dark-yellow-10: #f5d90a;
+
+  --sona-palette-dark-pink-01: #1c1b1c;
+  --sona-palette-dark-pink-02: #231f21;
+  --sona-palette-dark-pink-03: #2e272b;
+  --sona-palette-dark-pink-04: #3f333a;
+  --sona-palette-dark-pink-05: #54424d;
+  --sona-palette-dark-pink-06: #6c5262;
+  --sona-palette-dark-pink-07: #856579;
+  --sona-palette-dark-pink-08: #a57b95;
+  --sona-palette-dark-pink-09: #c592b1;
+  --sona-palette-dark-pink-10: #e5a8cd;
+
+  --sona-palette-dark-transparent-neutral-inverted-00: rgba(22, 22, 22, 0);
+  --sona-palette-dark-transparent-neutral-inverted-01: rgba(22, 22, 22, 0.03);
+  --sona-palette-dark-transparent-neutral-inverted-02: rgba(22, 22, 22, 0.06);
+  --sona-palette-dark-transparent-neutral-inverted-03: rgba(22, 22, 22, 0.11);
+  --sona-palette-dark-transparent-neutral-inverted-04: rgba(22, 22, 22, 0.19);
+  --sona-palette-dark-transparent-neutral-inverted-05: rgba(22, 22, 22, 0.29);
+  --sona-palette-dark-transparent-neutral-inverted-06: rgba(22, 22, 22, 0.4);
+  --sona-palette-dark-transparent-neutral-inverted-07: rgba(22, 22, 22, 0.52);
+  --sona-palette-dark-transparent-neutral-inverted-08: rgba(22, 22, 22, 0.67);
+  --sona-palette-dark-transparent-neutral-inverted-09: rgba(22, 22, 22, 0.82);
+  --sona-palette-dark-transparent-neutral-inverted-10: rgba(22, 22, 22, 1);
+
+  /* Protocol Mode */
+  --sona-palette-protocol-neutral-00: #c4f042;
+  --sona-palette-protocol-neutral-01: #dbf28d;
+  --sona-palette-protocol-neutral-02: #d3e988;
+  --sona-palette-protocol-neutral-03: #c9dd82;
+  --sona-palette-protocol-neutral-04: #b9cb78;
+  --sona-palette-protocol-neutral-05: #a5b56c;
+  --sona-palette-protocol-neutral-06: #8f9c5f;
+  --sona-palette-protocol-neutral-07: #768250;
+  --sona-palette-protocol-neutral-08: #58603e;
+  --sona-palette-protocol-neutral-09: #3a3e2c;
+  --sona-palette-protocol-neutral-10: #161616;
+}

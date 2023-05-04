@@ -1,0 +1,15 @@
+.sona-protocol-mode {
+  /* todo: we don't actually have these, just guessing? */
+  --sona-color-bg-primary: var(--sona-palette-protocol-neutral-00);
+  --sona-color-bg-secondary: var(--sona-palette-protocol-neutral-01);
+  --sona-color-bg-tertiary: var(--sona-palette-protocol-neutral-02);
+
+  /* todo: are these supposed to be transparent */
+  --sona-color-border-primary: var(--sona-palette-protocol-neutral-09);
+  --sona-color-border-secondary: var(--sona-palette-protocol-neutral-07);
+  --sona-color-border-tertiary: var(--sona-palette-protocol-neutral-04);
+
+  --sona-color-text-primary: var(--sona-palette-protocol-neutral-10);
+  --sona-color-text-secondary: var(--sona-palette-protocol-neutral-08);
+  --sona-color-text-tertiary: var(--sona-palette-protocol-neutral-06);
+}

@@ -1,0 +1,209 @@
+@import './sona-palette.css';
+
+.sona-dark-mode {
+  /* ************************************************************
+  
+    Foundation
+    
+  */
+  --sona-color-foundation-white: var(--sona-palette-dark-neutral-10); /* */
+  --sona-color-foundation-black: var(--sona-palette-dark-neutral-00); /* */
+  --sona-color-foundation-accent1: var(--sona-palette-dark-lime-10); /* */
+  --sona-color-foundation-accent2: var(--sona-palette-dark-pink-07); /* */
+  --sona-color-foundation-negative: var(--sona-palette-dark-tomato-10); /* */
+  --sona-color-foundation-warning: var(--sona-palette-dark-yellow-10); /* */
+  --sona-color-foundation-positive: var(--sona-palette-dark-green-10); /* */
+  /* todo: not defined in the design system but used in the figma */
+  --sona-color-foundation-protocol: var(--sona-palette-dark-lime-10); /* */
+
+  /* ************************************************************
+  
+    Background
+    
+  */
+  /* todo: no other primary background colors? */
+  --sona-color-bg-primary: var(--sona-palette-dark-neutral-00); /* */
+  --sona-color-bg-primary-hover: var(--sona-palette-dark-neutral-01); /* */
+
+  --sona-color-bg-secondary: var(--sona-palette-dark-neutral-01); /* */
+  --sona-color-bg-secondary-hover: var(--sona-palette-dark-neutral-02); /* */
+  --sona-color-bg-secondary-protocol: var(--sona-palette-dark-lime-03); /* */
+  --sona-color-bg-secondary-positive: var(--sona-palette-dark-green-03); /* */
+  --sona-color-bg-secondary-negative: var(--sona-palette-dark-tomato-03); /* */
+  --sona-color-bg-secondary-warning: var(--sona-palette-dark-yellow-03); /* */
+  --sona-color-bg-secondary-link: var(--sona-palette-dark-pink-03); /* */
+
+  /* todo: no other tertiary background colors? */
+  --sona-color-bg-tertiary: var(--sona-palette-dark-neutral-02); /* */
+  --sona-color-bg-tertiary-hover: var(--sona-palette-dark-neutral-03); /* */
+
+  /* ************************************************************
+  
+    Button Text
+    
+  */
+  /* todo: These aren't actually defined in the design system */
+  --sona-color-btn-text-primary: var(--sona-palette-dark-neutral-10);
+  --sona-color-btn-text-secondary: var(--sona-palette-dark-neutral-09);
+  --sona-color-btn-text-tertiary: var(--sona-palette-dark-neutral-09);
+  --sona-color-btn-text-disabled: var(--sona-palette-dark-neutral-07);
+  --sona-color-btn-text-protocol: var(--sona-palette-dark-lime-10);
+  --sona-color-btn-text-positive: var(--sona-palette-dark-green-10);
+  --sona-color-btn-text-negative: var(--sona-palette-dark-tomato-10);
+  --sona-color-btn-text-warning: var(--sona-palette-dark-yellow-10);
+  --sona-color-btn-text-link: var(--sona-palette-dark-neutral-10);
+
+  /* ************************************************************
+
+    Button Background
+  
+  */
+  /* todo: these are named 'btn-primary' instead of 'btn-bg-primary' in figma, do we care about consistency */
+  /* todo: we only have hover colors for primary, is that correct? */
+  --sona-color-btn-bg-primary: var(--sona-palette-dark-neutral-10); /* */
+  --sona-color-btn-bg-primary-hover: var(--sona-palette-dark-neutral-09); /* */
+  --sona-color-btn-bg-primary-protocol: var(--sona-palette-dark-lime-10); /* */
+  --sona-color-btn-bg-primary-positive: var(--sona-palette-dark-green-09); /* */
+  --sona-color-btn-bg-primary-negative: var(
+    --sona-palette-dark-tomato-09
+  ); /* */
+  --sona-color-btn-bg-primary-warning: var(--sona-palette-dark-yellow-10); /* */
+  --sona-color-btn-bg-primary-link: var(--sona-palette-dark-pink-10); /* */
+
+  --sona-color-btn-bg-secondary: var(--sona-palette-dark-neutral-02); /* */
+  --sona-color-btn-bg-secondary-hover: var(
+    --sona-palette-dark-neutral-03
+  ); /* */
+  --sona-color-btn-bg-secondary-protocol: var(
+    --sona-palette-dark-lime-03
+  ); /* */
+  --sona-color-btn-bg-secondary-positive: var(
+    --sona-palette-dark-green-03
+  ); /* */
+  --sona-color-btn-bg-secondary-negative: var(
+    --sona-palette-dark-tomato-03
+  ); /* */
+  --sona-color-btn-bg-secondary-warning: var(
+    --sona-palette-dark-yellow-03
+  ); /* */
+  --sona-color-btn-bg-secondary-link: var(--sona-palette-dark-pink-03); /* */
+
+  --sona-color-btn-bg-tertiary: transparent;
+  /* todo: is this accurate?  I'm not using this in the buttons */
+  --sona-color-btn-bg-tertiary-hover: var(--sona-palette-dark-neutral-02); /* */
+
+  --sona-color-btn-bg-disabled: var(
+    --sona-palette-dark-transparent-neutral-01
+  ); /* */
+
+  /* ************************************************************
+  
+    Border
+    
+  */
+  /* todo: no hover for anything but primary? */
+  --sona-color-border-primary: var(--sona-palette-dark-transparent-neutral-09);
+  --sona-color-border-primary-hover: var(
+    --sona-palette-dark-transparent-neutral-10
+  ); /* */
+  --sona-color-border-primary-protocol: var(--sona-palette-dark-lime-10); /* */
+  --sona-color-border-primary-positive: var(--sona-palette-dark-green-09); /* */
+  --sona-color-border-primary-negative: var(
+    --sona-palette-dark-tomato-09
+  ); /* */
+  --sona-color-border-primary-warning: var(--sona-palette-dark-yellow-10); /* */
+  --sona-color-border-primary-link: var(--sona-palette-dark-pink-10); /* */
+
+  --sona-color-border-secondary: var(
+    --sona-palette-dark-transparent-neutral-05
+  ); /* */
+  --sona-color-border-secondary-hover: var(
+    --sona-palette-dark-transparent-neutral-07
+  ); /* */
+  /* todo: no hover for secondary protocol? */
+  --sona-color-border-secondary-protocol: var(
+    --sona-palette-dark-lime-06
+  ); /* */
+  --sona-color-border-secondary-positive: var(
+    --sona-palette-dark-green-06
+  ); /* */
+  --sona-color-border-secondary-positive-hover: var(
+    --sona-palette-dark-green-08
+  ); /* */
+  --sona-color-border-secondary-negative: var(
+    --sona-palette-dark-tomato-07
+  ); /* */
+  --sona-color-border-secondary-negative-hover: var(
+    --sona-palette-dark-tomato-08
+  ); /* */
+  --sona-color-border-secondary-warning: var(
+    --sona-palette-dark-yellow-06
+  ); /* */
+  --sona-color-border-secondary-warning-hover: var(
+    --sona-palette-dark-yellow-08
+  ); /* */
+  /* todo: no hover for secondary link? */
+  --sona-color-border-secondary-link: var(--sona-palette-dark-pink-07); /* */
+
+  /* todo: dup in figma as 03 and 04  */
+  /* todo: no hover for anything but regulary tertiary? */
+  --sona-color-border-tertiary: var(
+    --sona-palette-dark-transparent-neutral-03
+  ); /* */
+  /* todo: not defined but might be the dup of the regular tertiary? */
+  --sona-color-border-tertiary-hover: var(
+    --sona-palette-dark-transparent-neutral-04
+  ); /* */
+  --sona-color-border-tertiary-protocol: var(--sona-palette-dark-lime-04); /* */
+  --sona-color-border-tertiary-positive: var(
+    --sona-palette-dark-green-04
+  ); /* */
+  --sona-color-border-tertiary-negative: var(
+    --sona-palette-dark-tomato-04
+  ); /* */
+  --sona-color-border-tertiary-warning: var(
+    --sona-palette-dark-yellow-04
+  ); /* */
+  --sona-color-border-tertiary-link: var(--sona-palette-dark-pink-04); /* */
+
+  --sona-color-border-disabled: var(
+    --sona-palette-dark-transparent-neutral-03
+  ); /* */
+
+  /* ************************************************************
+  
+    Text
+    
+  */
+  --sona-color-text-primary: var(
+    --sona-palette-dark-transparent-neutral-10
+  ); /* */
+  --sona-color-text-secondary: var(
+    --sona-palette-dark-transparent-neutral-08
+  ); /* */
+  --sona-color-text-tertiary: var(
+    --sona-palette-dark-transparent-neutral-06
+  ); /* */
+  --sona-color-text-protocol: var(--sona-palette-dark-lime-10); /* */
+  --sona-color-text-positive: var(--sona-palette-dark-green-10); /* */
+  --sona-color-text-negative: var(--sona-palette-dark-tomato-10); /* */
+  --sona-color-text-warning: var(--sona-palette-dark-yellow-10); /* */
+  --sona-color-text-link: var(--sona-palette-dark-pink-10); /* */
+
+  /* todo: what about protocol and link?  what else are these used for? */
+  /*--sona-color-text-secondary-protocol: var(--sona-palette-dark-lime-09);*/
+  --sona-color-text-secondary-positive: var(--sona-palette-dark-green-09); /* */
+  --sona-color-text-secondary-warning: var(--sona-palette-dark-yellow-10); /* */
+  --sona-color-text-secondary-negative: var(
+    --sona-palette-dark-tomato-09
+  ); /* */
+  /*--sona-color-text-secondary-link: var(--sona-palette-dark-pink-09);*/
+
+  --sona-color-text-inverted: var(
+    --sona-palette-dark-transparent-neutral-inverted-10
+  ); /* */
+
+  --sona-color-text-disabled: var(
+    --sona-palette-dark-transparent-neutral-04
+  ); /* */
+}

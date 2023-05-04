@@ -1,87 +1,433 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["extendedWhereUnique", "fullTextIndex", "fullTextSearch", "referentialIntegrity"]
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
+  provider          = "mysql"
+  url               = env("DATABASE_URL")
+  relationMode      = "prisma"
+  shadowDatabaseUrl = env("SHADOW_DATABASE_URL")
+}
+
+model Album {
+  id          String    @id @default(cuid())
+  createdAt   DateTime? @default(now())
+  updatedAt   DateTime? @updatedAt
+  releasedAt  DateTime?
+  artist      Artist    @relation(fields: [artistId], references: [id], onDelete: NoAction)
+  artistId    String
+  coverArtUrl String
+  description String?   @db.Text
+  name        String
+  slug        String?
+
+  catalogType   CatalogType   @default(INTERNAL)
+  catalogSource CatalogSource @default(SONA)
+  catalogMetaId String
+
+  songs  Song[]
+  genres AlbumGenres[]
+
+  @@unique([artistId, name])
+  @@fulltext([name])
+  @@fulltext([name, description])
+}
+
+model AlbumGenres {
+  albumId String
+  genreId String
+  album   Album  @relation(fields: [albumId], references: [id])
+  genre   Genre  @relation(fields: [genreId], references: [id])
+
+  @@id([albumId, genreId])
+}
+
+model Artist {
+  id             String    @id @default(cuid())
+  createdAt      DateTime? @default(now())
+  updatedAt      DateTime? @updatedAt
+  avatar         String?
+  coverArtUrl    String
+  featuredArtUrl String?
+  bio            String?   @db.Text
+  name           String
+  slug           String?
+  followerCount  Int?      @default(0)
+
+  albums    Album[]
+  genres    ArtistGenres[]
+  owners    ArtistOwner[]
+  songs     Song[]
+  followers ArtistFollowers[]
+
+  catalogType   CatalogType   @default(INTERNAL)
+  catalogSource CatalogSource @default(SONA)
+  catalogMetaId String
+
+  likedSongsCount Int? @default(0)
+
+  @@unique([name])
+  @@fulltext([name])
+  @@fulltext([name, bio])
+}
+
+model ArtistGenres {
+  artistId String
+  genreId  String
+  artist   Artist @relation(fields: [artistId], references: [id])
+  Genre    Genre  @relation(fields: [genreId], references: [id])
+
+  @@id([artistId, genreId])
+}
+
+enum ArtistOwnerRole {
+  READ_ONLY
+  ADMIN
+}
+
+model ArtistOwner {
+  createdAt DateTime?       @default(now())
+  updatedAt DateTime?       @updatedAt
+  artistId  String
+  artist    Artist          @relation(fields: [artistId], references: [id])
+  userId    String
+  user      User            @relation(fields: [userId], references: [id])
+  role      ArtistOwnerRole @default(READ_ONLY)
+
+  @@id([artistId, userId])
+}
+
+model ArtistFollowers {
+  artistId String
+  artist   Artist? @relation(fields: [artistId], references: [id], onDelete: Cascade)
+  userId   String
+  user     User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([artistId, userId])
+}
+
+model Genre {
+  id        String    @id @default(cuid())
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
+  imageUrl  String?
+  name      String    @unique
+  slug      String?
+
+  albums  AlbumGenres[]
+  songs   SongGenres[]
+  artists ArtistGenres[]
+}
+
+enum InteractionSource {
+  ALBUM
+  PLAYLIST
+  SONG
+  USER
+  ARTIST
+}
+
+enum InteractionAction {
+  VIEW
+  PLAY
+}
+
+model Interaction {
+  id        String    @id @default(cuid())
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
+
+  action     InteractionAction
+  sourceId   String
+  sourceType InteractionSource
+  userId     String
+  user       User              @relation(fields: [userId], references: [id])
+  value      Int               @default(1) // NOTE: this is a count of the action which is generally going to be 1
+}
+
+model Playlist {
+  id          String    @id @default(cuid())
+  createdAt   DateTime? @default(now())
+  updatedAt   DateTime? @updatedAt
+  coverArtUrl String?
+  description String?   @db.Text
+  name        String
+  owner       User?     @relation(fields: [ownerId], references: [id], onDelete: NoAction)
+  ownerId     String
+  slug        String?
+  likeCount   Int       @default(0)
+
+  songs  PlaylistSong[]
+  likers PlaylistLikers[]
+
+  @@fulltext([name])
+}
+
+model PlaylistSong {
+  playlistId String
+  playlist   Playlist? @relation(fields: [playlistId], references: [id], onDelete: Cascade)
+  songId     String
+  song       Song?     @relation(fields: [songId], references: [id], onDelete: Cascade)
+  position   Int
+
+  @@id([playlistId, songId])
+}
+
+model PlaylistLikers {
+  playlistId String
+  playlist   Playlist? @relation(fields: [playlistId], references: [id], onDelete: Cascade)
+  userId     String
+  user       User?     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([playlistId, userId])
+}
+
+enum SongStatus {
+  ACTIVE
+  DRAFT
+  INACTIVE
+}
+
+enum SongVisibility {
+  PRIVATE
+  PUBLIC
+}
+
+enum CatalogType {
+  INTERNAL
+  EXTERNAL
+  ONCHAIN
+}
+
+enum CatalogSource {
+  SONA
+  TUNED_GLOBAL
+  ETHEREUM
+  POLYGON
+}
+
+model Song {
+  id        String    @id @default(cuid())
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
+
+  album         Album?          @relation(fields: [albumId], references: [id], onDelete: NoAction)
+  albumId       String?
+  artist        Artist          @relation(fields: [artistId], references: [id], onDelete: NoAction)
+  artistId      String
+  coverArtUrl   String
+  fileUrl       String
+  isExplicit    Boolean?        @default(false)
+  duration      Float           @default(0.0)
+  lyrics        String?         @db.Text
+  name          String
+  owner         User?           @relation(fields: [userId], references: [id])
+  ownerId       String? // NOTE: this is the NFT owner
+  playlistCount Int?            @default(0)
+  slug          String?
+  status        SongStatus?     @default(ACTIVE)
+  track         Int?            @default(1)
+  userId        String?
+  visibility    SongVisibility? @default(PUBLIC)
+
+  catalogType   CatalogType   @default(INTERNAL)
+  catalogSource CatalogSource @default(SONA)
+  catalogMetaId String
+
+  genres        SongGenres[]
+  playlistSongs PlaylistSong[]
+  meta          SongMeta[]
+
+  // featuredArtists Artists[] // TODO: self-referential artists to relate one to another
+  genreId String?
+
+  @@unique([catalogType, catalogSource, catalogMetaId])
+  @@fulltext([name])
+}
+
+model SongGenres {
+  songId  String
+  genreId String
+  song    Song   @relation(fields: [songId], references: [id])
+  Genre   Genre  @relation(fields: [genreId], references: [id])
+
+  @@id([songId, genreId])
+}
+
+model SongMeta {
+  songId      String    @id
+  song        Song      @relation(fields: [songId], references: [id])
+  bpm         Int?
+  copyright   String?
+  featuring   String?
+  key         String?
+  performedBy String?
+  producedBy  String?
+  publishedBy String?
+  releasedAt  DateTime?
+  remixer     String?
+  trackISRC   String?
+  upc         String?
+  writtenBy   String?
+}
+
+model User {
+  id                  String    @id @default(cuid())
+  createdAt           DateTime? @default(now())
+  updatedAt           DateTime? @updatedAt
+  name                String?
+  walletAddress       String    @unique
+  email               String?   @unique
+  username            String    @unique
+  hasOnboarded        Boolean   @default(false)
+  collectedSongsCount Int?      @default(0)
+  playlistLikeCount   Int?      @default(0)
+  followersCount      Int?      @default(0)
+  followingCount      Int?      @default(0)
+  likesCount          Int?      @default(0)
+  notificationsCount  Int?      @default(0)
+
+  accounts              Account[]
+  collectedSongs        Song[]
+  managedArtists        ArtistOwner[]
+  playlists             Playlist[]
+  playlistLikers        PlaylistLikers[]
+  sessions              Session[]
+  followers             UserFollows[]     @relation("user_follows_followingUser_ref")
+  following             UserFollows[]     @relation("user_follows_followerUser_ref")
+  likes                 UserLikes[]
+  interactions          Interaction[]
+  sharedWith            Shares[]          @relation("sharing")
+  sharing               Shares[]          @relation("sharer")
+  notificationsReceived Notification[]    @relation("sender")
+  notificationsSent     Notification[]    @relation("receiver")
+  artistFollowers       ArtistFollowers[]
+  imageUrl              String?
+  socials               UserSocials?
+  searchHistory         UserSearches[]    @relation("user_searches_user_ref")
+  bio                   String?
+
+  @@fulltext([username])
+}
+
+model UserSocials {
+  id        String    @id @default(cuid())
+  createdAt DateTime? @default(now())
+  updatedAt DateTime? @updatedAt
+  twitter   String?
+  instagram String?
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId])
+}
+
+model UserSearches {
+  id         String           @id @default(cuid())
+  createdAt  DateTime?        @default(now())
+  updatedAt  DateTime?        @updatedAt
+  userId     String
+  sourceId   String
+  sourceType UserSearchSource
+  user       User             @relation("user_searches_user_ref", fields: [userId], references: [id])
+
+  @@unique([userId, sourceId, sourceType])
+}
+
+enum UserSearchSource {
+  ALBUM
+  PLAYLIST
+  SONG
+  ARTIST
+  USER
+}
+
+model Shares {
+  id        String    @id @default(cuid())
+  createdAt DateTime? @default(now())
+  sharer    User      @relation("sharer", fields: [sharerId], references: [id])
+  sharerId  String
+  sharing   User      @relation("sharing", fields: [sharingId], references: [id])
+  sharingId String
+  name      String
+  itemId    String
+  itemType  String
+  itemData  Json
+}
+
+model Notification {
+  id              String    @id @default(cuid())
+  createdAt       DateTime? @default(now())
+  type            String
+  hasBeenRead     Boolean   @default(false)
+  itemData        Json
+  receivingUserId String
+  sendingUserId   String
+  sender          User      @relation("sender", fields: [sendingUserId], references: [id])
+  receiver        User      @relation("receiver", fields: [receivingUserId], references: [id])
+}
+
+model UserFollows {
+  createdAt       DateTime? @default(now())
+  updatedAt       DateTime? @updatedAt
+  followerUserId  String
+  followerUser    User      @relation("user_follows_followerUser_ref", fields: [followerUserId], references: [id])
+  followingUserId String
+  followingUser   User      @relation("user_follows_followingUser_ref", fields: [followingUserId], references: [id])
+
+  @@id([followerUserId, followingUserId])
+  @@unique([followerUserId, followingUserId])
+}
+
+enum UserLikeSource {
+  ALBUM
+  PLAYLIST
+  SONG
+  ARTIST
+}
+
+model UserLikes {
+  createdAt  DateTime?      @default(now())
+  updatedAt  DateTime?      @updatedAt
+  sourceId   String
+  sourceType UserLikeSource
+  userId     String
+  user       User           @relation(fields: [userId], references: [id])
+
+  @@id([sourceId, userId])
 }
 
 model Account {
-  id                String   @id @default(cuid())
+  id                String    @id @default(cuid())
   userId            String
   type              String
   provider          String
   providerAccountId String
-  refresh_token     String?  @db.Text
-  access_token      String?  @db.Text
-  expires_at        Int?
+  refresh_token     String?   @db.Text
+  access_token      String?   @db.Text
+  expiresAt         DateTime?
   token_type        String?
   scope             String?
-  id_token          String?  @db.Text
+  id_token          String?   @db.Text
   session_state     String?
-  createdAt         DateTime @default(now()) @map(name: "created_at")
-  updatedAt         DateTime @default(now()) @map(name: "updated_at")
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user              User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
-  @@map(name: "accounts")
 }
 
 model Session {
   id           String   @id @default(cuid())
   sessionToken String   @unique
   userId       String
-  expires      DateTime
+  expiresAt    DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@map(name: "sessions")
-}
-
-model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String?   @unique
-  emailVerified DateTime?
-  image         String?
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @default(now()) @map(name: "updated_at")
-
-  accounts Account[]
-  sessions Session[]
-  Post     Post[]
-
-  stripeCustomerId       String?   @unique @map(name: "stripe_customer_id")
-  stripeSubscriptionId   String?   @unique @map(name: "stripe_subscription_id")
-  stripePriceId          String?   @map(name: "stripe_price_id")
-  stripeCurrentPeriodEnd DateTime? @map(name: "stripe_current_period_end")
-
-  @@map(name: "users")
 }
 
 model VerificationToken {
   identifier String
   token      String   @unique
-  expires    DateTime
+  expiresAt  DateTime
 
   @@unique([identifier, token])
-  @@map(name: "verification_tokens")
-}
-
-model Post {
-  id        String   @id @default(cuid())
-  title     String
-  content   Json?
-  published Boolean  @default(false)
-  createdAt DateTime @default(now()) @map(name: "created_at")
-  updatedAt DateTime @default(now()) @map(name: "updated_at")
-  authorId  String
-
-  author User @relation(fields: [authorId], references: [id])
-
-  @@map(name: "posts")
 }

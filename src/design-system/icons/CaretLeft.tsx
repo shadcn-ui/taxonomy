@@ -1,0 +1,26 @@
+import { forwardRef, Ref, SVGProps } from 'react';
+function CaretLeftIcon(
+  props: SVGProps<SVGSVGElement>,
+  ref: Ref<SVGSVGElement>
+) {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='1em'
+      height='1em'
+      fill='currentColor'
+      viewBox='0 0 24 24'
+      ref={ref}
+      {...props}
+    >
+      <path
+        fill='currentColor'
+        fillRule='evenodd'
+        d='m8.414 12 7.293 7.293-1.414 1.414L5.586 12l8.707-8.707 1.414 1.414L8.414 12Z'
+        clipRule='evenodd'
+      />
+    </svg>
+  );
+}
+const Icon = forwardRef(CaretLeftIcon);
+export { Icon as CaretLeftIcon };
