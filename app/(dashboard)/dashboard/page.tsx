@@ -9,6 +9,7 @@ import { PostCreateButton } from "@/components/post-create-button"
 import { PostItem } from "@/components/post-item"
 import { DashboardShell } from "@/components/shell"
 import axios from 'axios'
+import { env } from "@/env.mjs"
 
 export const metadata = {
   title: "Dashboard",
@@ -36,7 +37,7 @@ export default async function DashboardPage() {
   //   },
   // })
 
-  const tableData = await axios.get("http://localhost:3000/data.json").then((res) => { return res.data });
+  const tableData = await axios.get(`${env.NEXTAUTH_URL}/data.json`).then((res) => { return res.data });
 
   return (
     <DashboardShell>
