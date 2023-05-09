@@ -20,27 +20,162 @@ export default async function DashboardPage() {
     redirect(authOptions?.pages?.signIn || "/login")
   }
 
-  const posts = await db.post.findMany({
-    where: {
-      authorId: user.id,
-    },
-    select: {
-      id: true,
-      title: true,
-      published: true,
-      createdAt: true,
-    },
-    orderBy: {
-      updatedAt: "desc",
-    },
-  })
+  // const posts = await db.post.findMany({
+  //   where: {
+  //     authorId: user.id,
+  //   },
+  //   select: {
+  //     id: true,
+  //     title: true,
+  //     published: true,
+  //     createdAt: true,
+  //   },
+  //   orderBy: {
+  //     updatedAt: "desc",
+  //   },
+  // })
+
+  const tableData = await fetch("http://localhost:3000/data.json").then(res => res.json())
 
   return (
     <DashboardShell>
-      <DashboardHeader heading="Posts" text="Create and manage posts.">
-        <PostCreateButton />
+      <DashboardHeader heading="Table" text="See all data">
+        {/* <PostCreateButton /> */}
       </DashboardHeader>
-      <div>
+      {/* {JSON.stringify(tableData)} */}
+      {/* <div> */}
+      <div className="flex flex-col overflow-x-scroll w-full">
+        <div className="overflow-x-auto w-fit">
+          <div className="p-1.5 w-full inline-block align-middle overflow-x-scroll">
+            <div className="overflow-hidden border rounded-lg">
+              <table className="min-w-full divide-y divide-gray-200 text-start">
+                <thead className="bg-gray-50 text-start">
+                  <tr>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
+                    >
+                      Name
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
+                    >
+                      Price
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
+                    >
+                      Area
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
+                    >
+                      Price Per Meter
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
+                    >
+                      Last Update
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
+                    >
+                      General Condition
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
+                    >
+                      Avarage Price Rent
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
+                    >
+                      Posibility of Monthly Rent
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
+                    >
+                      ROI Per Year
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
+                    >
+                      Link to Madlan
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
+                    >
+                      
+                    </th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y overflow-x-scroll divide-gray-200">
+                  {tableData && tableData.map((data) => (
+                    <tr>
+                      <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
+                        {data.name}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+                        {data.Price}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+                        {data.Area}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+                        {data.Price_per_meter}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+                        {data.Last_update}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+                        {data.general_condition}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+                        {data.average_parice_rent}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+                        {data.Possibility_of_monthly_rent}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+                        {data.ROI_P_year}
+                      </td>
+                      <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
+                        <a
+                          className="text-green-500 hover:text-green-700"
+                          href={data.madlan_url}
+                        >
+                          View
+                        </a>
+                      </td>
+                      <td className="px-6 py-4 text-sm font-medium text-right whitespace-nowrap">
+                        <a
+                          className="text-red-500 hover:text-red-700"
+                          href="#"
+                        >
+                          Delete
+                        </a>
+                      </td>
+                    </tr>
+                  ))}
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* </div> */}
+      {/* <div>
         {posts?.length ? (
           <div className="divide-y divide-border rounded-md border">
             {posts.map((post) => (
@@ -57,7 +192,7 @@ export default async function DashboardPage() {
             <PostCreateButton variant="outline" />
           </EmptyPlaceholder>
         )}
-      </div>
+      </div> */}
     </DashboardShell>
   )
 }
