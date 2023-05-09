@@ -24,7 +24,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
             <div className="flex-1 sm:grow-0">
               <DocsSearch />
             </div>
-            <nav className="flex space-x-4">
+            {/* <nav className="flex space-x-4">
               <Link
                 href={siteConfig.links.github}
                 target="_blank"
@@ -33,7 +33,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
                 <Icons.gitHub className="h-7 w-7" />
                 <span className="sr-only">GitHub</span>
               </Link>
-            </nav>
+            </nav> */}
           </div>
         </div>
       </header>

@@ -1,0 +1,3870 @@
+{
+  "קדושי בבל 17, ירושלים": {
+    "validate_down_price_percentage": 1.1,
+    "Price": "1800000",
+    "Agent": true,
+    "Area": "60",
+    "Price_per_meter": 30000.0,
+    "Last_update": "Fri Apr 07 11:34:13 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,750,000 and now is 1,800,000 (50,000). The seller updated the price within 11 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 3900,
+    "Possibility_of_monthly_rent": 3254.0,
+    "ROI_P_year": 1.99,
+    "madlan_url": "https://www.madlan.co.il/listings/hvVPiRyqRIf?dealType=sale&term=קדושי-בבל-17-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הלוי אליעזר 23, ירושלים": {
+    "validate_down_price_percentage": 0.03,
+    "Price": "3364000",
+    "Agent": true,
+    "Area": "102",
+    "Price_per_meter": 32980.39,
+    "Last_update": "Fri Apr 07 17:38:50 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,365,000 and now is 3,364,000 (-1,000). The seller updated the price within 122 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 7229.23,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/jI8Oi59Ejso?dealType=sale&term=הלוי-אליעזר-23-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "כרמון 17, ירושלים": {
+    "validate_down_price_percentage": 8.89,
+    "Price": "8200000",
+    "Agent": true,
+    "Area": "200",
+    "Price_per_meter": 41000.0,
+    "Last_update": "Fri Apr 14 05:13:47 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 9,000,000 and now is 8,200,000 (-800,000). The seller updated the price within 58 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 25,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 17621.78,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/fYslK7IHuNF?dealType=sale&term=כרמון-17-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "קול משה 35, ירושלים": {
+    "validate_down_price_percentage": 3.23,
+    "Price": "6000000",
+    "Agent": true,
+    "Area": "165",
+    "Price_per_meter": 36363.64,
+    "Last_update": "Fri Apr 14 05:14:17 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 6,200,000 and now is 6,000,000 (-200,000). The seller updated the price within 170 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 8401.0,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/hz6GVqaHias?dealType=sale&term=קול-משה-35-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "ברוריה 20, ירושלים": {
+    "validate_down_price_percentage": 1.41,
+    "Price": "3500000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 31818.18,
+    "Last_update": "Fri Apr 21 07:21:29 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,550,000 and now is 3,500,000 (-50,000). The seller updated the price within 51 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 6031.2,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/0RcJrJZdHY?dealType=sale&term=ברוריה-20-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "תירוש 149, ירושלים": {
+    "validate_down_price_percentage": 4.03,
+    "Price": "1190000",
+    "Agent": true,
+    "Area": "18",
+    "Price_per_meter": 66111.11,
+    "Last_update": "Fri Apr 28 14:23:11 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,240,000 and now is 1,190,000 (-50,000). The seller updated the price within 4 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 45,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 2412.97,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/dIeNzsMqVPC?dealType=sale&term=תירוש-149-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "גואטמאלה 2, ירושלים": {
+    "validate_down_price_percentage": 0.56,
+    "Price": "1790000",
+    "Agent": true,
+    "Area": "56",
+    "Price_per_meter": 31964.29,
+    "Last_update": "Fri Feb 10 11:06:35 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,800,000 and now is 1,790,000 (-10,000). The seller updated the price within 12 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 2764.88,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/kZf7RXvaekw?dealType=sale&term=גואטמאלה-2-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "תרשיש 19, ירושלים": {
+    "validate_down_price_percentage": 4.28,
+    "Price": "1790000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 25571.43,
+    "Last_update": "Fri Mar 03 07:55:00 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,870,000 and now is 1,790,000 (-80,000). The seller updated the price within 22 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 35,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 3629.59,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/d8SghTBTHUH?dealType=sale&term=תרשיש-19-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רמת בית הכרם 9, ירושלים": {
+    "validate_down_price_percentage": 3.45,
+    "Price": "2800000",
+    "Agent": true,
+    "Area": "67",
+    "Price_per_meter": 41791.04,
+    "Last_update": "Mon Apr 03 04:54:17 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,900,000 and now is 2,800,000 (-100,000). The seller updated the price within 37 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 30,
+    "average_parice_rent": 6000,
+    "Possibility_of_monthly_rent": 5002.63,
+    "ROI_P_year": 1.97,
+    "madlan_url": "https://www.madlan.co.il/listings/bJCqKA4KJIS?dealType=sale&term=רמת-בית-הכרם-9-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "כט' בנובמבר 23, ירושלים": {
+    "validate_down_price_percentage": 3.57,
+    "Price": "4050000",
+    "Agent": true,
+    "Area": "85",
+    "Price_per_meter": 47647.06,
+    "Last_update": "Mon Apr 03 09:57:50 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,200,000 and now is 4,050,000 (-150,000). The seller updated the price within 45 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 30,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 8912.62,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/e1AF9OjRDzY?dealType=sale&term=כט-בנובמבר-23-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "מאפו 9, ירושלים": {
+    "validate_down_price_percentage": 1.11,
+    "Price": "4450000",
+    "Agent": true,
+    "Area": "95",
+    "Price_per_meter": 46842.11,
+    "Last_update": "Mon Apr 10 08:46:34 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,500,000 and now is 4,500,000 (0). The seller updated the price within 15 day(s).",
+      "The price was 4,500,000 and now is 4,450,000 (-50,000). The seller updated the price within 6 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 8100,
+    "Possibility_of_monthly_rent": 11442.86,
+    "ROI_P_year": 2.83,
+    "madlan_url": "https://www.madlan.co.il/listings/cDU89Zb9Elh?dealType=sale&term=מאפו-9-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "החלוץ 37, ירושלים": {
+    "validate_down_price_percentage": 2.94,
+    "Price": "3300000",
+    "Agent": true,
+    "Area": "80",
+    "Price_per_meter": 41250.0,
+    "Last_update": "Mon Apr 17 08:26:21 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,200,000 and now is 3,300,000 (100,000). The seller updated the price within 102 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6000,
+    "Possibility_of_monthly_rent": 5895.96,
+    "ROI_P_year": 1.97,
+    "madlan_url": null
+  },
+  "השיש 9, ירושלים": {
+    "validate_down_price_percentage": 0.34,
+    "Price": "2890000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 26272.73,
+    "Last_update": "Mon Apr 17 13:31:14 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,980,000 and now is 2,900,000 (-80,000). The seller updated the price within 17 day(s).",
+      "The price was 2,900,000 and now is 2,890,000 (-10,000). The seller updated the price within 0.041666666666666664 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 5860.06,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/iPV9YYw6jTt?dealType=sale&term=השיש-9-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "עולי הגרדום 5, ירושלים": {
+    "validate_down_price_percentage": 2.75,
+    "Price": "1770000",
+    "Agent": true,
+    "Area": "51",
+    "Price_per_meter": 34705.88,
+    "Last_update": "Mon Apr 17 14:23:21 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,900,000 and now is 1,850,000 (-50,000). The seller updated the price within 1 day(s).",
+      "The price was 1,850,000 and now is 1,820,000 (-30,000). The seller updated the price within 1 day(s).",
+      "The price was 1,820,000 and now is 1,770,000 (-50,000). The seller updated the price within 61 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 3900,
+    "Possibility_of_monthly_rent": 3199.77,
+    "ROI_P_year": 1.99,
+    "madlan_url": "https://www.madlan.co.il/listings/euMvKG4szS5?dealType=sale&term=עולי-הגרדום-5-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בר יוחאי 15, ירושלים": {
+    "validate_down_price_percentage": 3.39,
+    "Price": "1710000",
+    "Agent": true,
+    "Area": "40",
+    "Price_per_meter": 42750.0,
+    "Last_update": "Mon Apr 17 20:56:29 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,770,000 and now is 1,710,000 (-60,000). The seller updated the price within 35 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 30,
+    "average_parice_rent": 3500,
+    "Possibility_of_monthly_rent": 2666.63,
+    "ROI_P_year": 1.71,
+    "madlan_url": "https://www.madlan.co.il/listings/ghSoRFXsqyp?dealType=sale&term=בר-יוחאי-15-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רוזן פנחס 14, ירושלים": {
+    "validate_down_price_percentage": 2.82,
+    "Price": "3100000",
+    "Agent": true,
+    "Area": "88",
+    "Price_per_meter": 35227.27,
+    "Last_update": "Mon Apr 24 07:07:53 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,190,000 and now is 3,100,000 (-90,000). The seller updated the price within 102 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": 5650,
+    "Possibility_of_monthly_rent": 5587.42,
+    "ROI_P_year": 1.98,
+    "madlan_url": "https://www.madlan.co.il/listings/dq1rI9Bhl5D?dealType=sale&term=רוזן-פנחס-14-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "גלבר 18, ירושלים": {
+    "validate_down_price_percentage": 1.54,
+    "Price": "2550000",
+    "Agent": true,
+    "Area": "83",
+    "Price_per_meter": 30722.89,
+    "Last_update": "Mon Apr 24 08:18:51 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,590,000 and now is 2,550,000 (-40,000). The seller updated the price within 42 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 15,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 3570.43,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/TDSIj59Tk7?dealType=sale&term=גלבר-18-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בן יהודה 23, ירושלים": {
+    "validate_down_price_percentage": 4.24,
+    "Price": "1580000",
+    "Agent": true,
+    "Area": "34",
+    "Price_per_meter": 46470.59,
+    "Last_update": "Mon Apr 24 08:55:20 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,700,000 and now is 1,650,000 (-50,000). The seller updated the price within 8 day(s).",
+      "The price was 1,650,000 and now is 1,650,000 (0). The seller updated the price within 0.0 day(s).",
+      "The price was 1,650,000 and now is 1,580,000 (-70,000). The seller updated the price within 28 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 5175,
+    "Possibility_of_monthly_rent": 3268.16,
+    "ROI_P_year": 2.28,
+    "madlan_url": "https://www.madlan.co.il/listings/ciR8RzRazek?dealType=sale&term=בן-יהודה-23-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הרב קוסובסקי 16, ירושלים": {
+    "validate_down_price_percentage": 1.85,
+    "Price": "3190000",
+    "Agent": true,
+    "Area": "95",
+    "Price_per_meter": 33578.95,
+    "Last_update": "Mon Apr 24 09:43:45 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,290,000 and now is 3,250,000 (-40,000). The seller updated the price within 16 day(s).",
+      "The price was 3,250,000 and now is 3,190,000 (-60,000). The seller updated the price within 35 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 6855.3,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/fhxNyljpz6E?dealType=sale&term=הרב-קוסובסקי-16-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הרב ברלין 18, ירושלים": {
+    "validate_down_price_percentage": 1.22,
+    "Price": "3250000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 36111.11,
+    "Last_update": "Mon Apr 24 10:01:14 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,300,000 and now is 3,290,000 (-10,000). The seller updated the price within 29 day(s).",
+      "The price was 3,290,000 and now is 3,250,000 (-40,000). The seller updated the price within 41 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 8262.71,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/bAT2Rs7IiQq?dealType=sale&term=הרב-ברלין-18-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הרב ברלין 20, ירושלים": {
+    "validate_down_price_percentage": 1.22,
+    "Price": "3250000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 36111.11,
+    "Last_update": "Mon Apr 24 10:02:00 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,300,000 and now is 3,290,000 (-10,000). The seller updated the price within 33 day(s).",
+      "The price was 3,290,000 and now is 3,250,000 (-40,000). The seller updated the price within 41 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 7152.1,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/hvBxu9aK1dH?dealType=sale&term=הרב-ברלין-20-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רשב\\": {
+    "validate_down_price_percentage": 6.69,
+    "Price": "3350000",
+    "Agent": true,
+    "Area": "119",
+    "Price_per_meter": 28151.26,
+    "Last_update": "Mon Apr 24 10:40:01 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,780,000 and now is 3,750,000 (-30,000). The seller updated the price within 41 day(s).",
+      "The price was 3,750,000 and now is 3,590,000 (-160,000). The seller updated the price within 13 day(s).",
+      "The price was 3,590,000 and now is 3,350,000 (-240,000). The seller updated the price within 76 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 30,
+    "average_parice_rent": 6050,
+    "Possibility_of_monthly_rent": 6655.99,
+    "ROI_P_year": 2.19,
+    "madlan_url": "https://www.madlan.co.il/listings/7VejyKbOPd?dealType=sale&term=רשבג-17-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "חברון 76, ירושלים": {
+    "validate_down_price_percentage": 0.29,
+    "Price": "3490000",
+    "Agent": true,
+    "Area": "85",
+    "Price_per_meter": 41058.82,
+    "Last_update": "Mon Apr 24 10:42:04 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,600,000 and now is 3,500,000 (-100,000). The seller updated the price within 48 day(s).",
+      "The price was 3,500,000 and now is 3,490,000 (-10,000). The seller updated the price within 53 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": 8600,
+    "Possibility_of_monthly_rent": 7320.49,
+    "ROI_P_year": 2.31,
+    "madlan_url": "https://www.madlan.co.il/listings/knlCkL6kc1I?dealType=sale&term=דרך-חברון-76-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "האר\\": {
+    "validate_down_price_percentage": 1.1,
+    "Price": "4500000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 40909.09,
+    "Last_update": "Mon Apr 24 10:48:39 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,500,000 and now is 4,490,000 (-10,000). The seller updated the price within 15 day(s).",
+      "The price was 4,490,000 and now is 4,450,000 (-40,000). The seller updated the price within 3 day(s).",
+      "The price was 4,450,000 and now is 4,400,000 (-50,000). The seller updated the price within 15 day(s).",
+      "The price was 4,400,000 and now is 4,500,000 (100,000). The seller updated the price within 55 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 11440.68,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/MEQh9fVtNo?dealType=sale&term=הארי-16-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "עמק רפאים 48, ירושלים": {
+    "validate_down_price_percentage": 0.26,
+    "Price": "3790000",
+    "Agent": true,
+    "Area": "120",
+    "Price_per_meter": 31583.33,
+    "Last_update": "Mon Apr 24 10:49:06 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,750,000 and now is 3,790,000 (40,000). The seller updated the price within 110 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 5700,
+    "Possibility_of_monthly_rent": 5376.68,
+    "ROI_P_year": 1.56,
+    "madlan_url": "https://www.madlan.co.il/listings/dCXV9FPB9HU?dealType=sale&term=עמק-רפאים-48-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "יהושע בן נון 13, ירושלים": {
+    "validate_down_price_percentage": 0.27,
+    "Price": "3690000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 41000.0,
+    "Last_update": "Mon Apr 24 10:50:01 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,300,000 and now is 3,690,000 (390,000). The seller updated the price within 260 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 5700,
+    "Possibility_of_monthly_rent": 5234.81,
+    "ROI_P_year": 1.56,
+    "madlan_url": "https://www.madlan.co.il/listings/h1v3en1K3SL?dealType=sale&term=יהושע-בן-נון-13-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "ביל\\": {
+    "validate_down_price_percentage": 1.16,
+    "Price": "4250000",
+    "Agent": true,
+    "Area": "120",
+    "Price_per_meter": 35416.67,
+    "Last_update": "Mon Apr 24 10:50:50 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,100,000 and now is 3,950,000 (-150,000). The seller updated the price within 14 day(s).",
+      "The price was 3,950,000 and now is 3,900,000 (-50,000). The seller updated the price within 18 day(s).",
+      "The price was 3,900,000 and now is 3,850,000 (-50,000). The seller updated the price within 5 day(s).",
+      "The price was 3,850,000 and now is 3,850,000 (0). The seller updated the price within 20 day(s).",
+      "The price was 3,850,000 and now is 3,800,000 (-50,000). The seller updated the price within 39 day(s).",
+      "The price was 3,800,000 and now is 3,850,000 (50,000). The seller updated the price within 34 day(s).",
+      "The price was 3,850,000 and now is 4,050,000 (200,000). The seller updated the price within 272 day(s).",
+      "The price was 4,050,000 and now is 3,950,000 (-100,000). The seller updated the price within 33 day(s).",
+      "The price was 3,950,000 and now is 3,950,000 (0). The seller updated the price within 85 day(s).",
+      "The price was 3,950,000 and now is 4,250,000 (300,000). The seller updated the price within 278 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 9352.75,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/kr3ki8OynaP?dealType=sale&term=בילו-16-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "יהושע בן נון 1, ירושלים": {
+    "validate_down_price_percentage": 0.27,
+    "Price": "3690000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 41000.0,
+    "Last_update": "Mon Apr 24 10:57:49 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,300,000 and now is 3,690,000 (390,000). The seller updated the price within 260 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 7000,
+    "Possibility_of_monthly_rent": 7768.42,
+    "ROI_P_year": 2.32,
+    "madlan_url": "https://www.madlan.co.il/listings/hUvba4RWXLp?dealType=sale&term=יהושע-בן-נון-1-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אדם 617, ירושלים": {
+    "validate_down_price_percentage": 4.36,
+    "Price": "2630000",
+    "Agent": true,
+    "Area": "100",
+    "Price_per_meter": 26300.0,
+    "Last_update": "Mon Apr 24 11:00:07 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,300,000 and now is 2,840,000 (-460,000). The seller updated the price within 16 day(s).",
+      "The price was 2,840,000 and now is 2,800,000 (-40,000). The seller updated the price within 19 day(s).",
+      "The price was 2,800,000 and now is 2,750,000 (-50,000). The seller updated the price within 12 day(s).",
+      "The price was 2,750,000 and now is 2,630,000 (-120,000). The seller updated the price within 71 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 35,
+    "average_parice_rent": 3900,
+    "Possibility_of_monthly_rent": 4754.46,
+    "ROI_P_year": 1.99,
+    "madlan_url": null
+  },
+  "בן יאיר אלעזר 31, ירושלים": {
+    "validate_down_price_percentage": 13.48,
+    "Price": "3850000",
+    "Agent": true,
+    "Area": "130",
+    "Price_per_meter": 29615.38,
+    "Last_update": "Mon Apr 24 11:00:54 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,600,000 and now is 4,450,000 (-150,000). The seller updated the price within 88 day(s).",
+      "The price was 4,450,000 and now is 3,850,000 (-600,000). The seller updated the price within 87 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": null,
+    "Possibility_of_monthly_rent": null,
+    "ROI_P_year": null,
+    "madlan_url": "https://www.madlan.co.il/listings/kuzZzuGE66n?dealType=sale&term=בן-יאיר-אלעזר-31-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "קשאני אליעזר 54, ירושלים": {
+    "validate_down_price_percentage": 4.21,
+    "Price": "2730000",
+    "Agent": true,
+    "Area": "120",
+    "Price_per_meter": 22750.0,
+    "Last_update": "Mon Apr 24 11:01:31 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,000,000 and now is 2,900,000 (-100,000). The seller updated the price within 126 day(s).",
+      "The price was 2,900,000 and now is 2,850,000 (-50,000). The seller updated the price within 31 day(s).",
+      "The price was 2,850,000 and now is 2,730,000 (-120,000). The seller updated the price within 71 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 20,
+    "average_parice_rent": 3900,
+    "Possibility_of_monthly_rent": 4935.24,
+    "ROI_P_year": 1.99,
+    "madlan_url": "https://www.madlan.co.il/listings/1cizaqGY6q?dealType=sale&term=קשאני-אליעזר-54-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רחל אמנו 43, ירושלים": {
+    "validate_down_price_percentage": 7.69,
+    "Price": "3000000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 42857.14,
+    "Last_update": "Mon Apr 24 11:02:06 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,450,000 and now is 3,250,000 (-200,000). The seller updated the price within 59 day(s).",
+      "The price was 3,250,000 and now is 3,000,000 (-250,000). The seller updated the price within 83 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 6601.94,
+    "ROI_P_year": 2.42,
+    "madlan_url": null
+  },
+  "אוסישקין 58, ירושלים": {
+    "validate_down_price_percentage": 2.35,
+    "Price": "2490000",
+    "Agent": true,
+    "Area": "50",
+    "Price_per_meter": 49800.0,
+    "Last_update": "Mon Apr 24 11:05:11 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,550,000 and now is 2,490,000 (-60,000). The seller updated the price within 8 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 6330.51,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/iDVkmoZ8EKE?dealType=sale&term=אוסישקין-58-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רד\\": {
+    "validate_down_price_percentage": 1.72,
+    "Price": "2850000",
+    "Agent": true,
+    "Area": "68",
+    "Price_per_meter": 41911.76,
+    "Last_update": "Mon Apr 24 11:07:14 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,900,000 and now is 2,850,000 (-50,000). The seller updated the price within 39 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 15,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 7245.76,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/ebaa4XISEBS?dealType=sale&term=רדק-3-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "ברוריה 22, ירושלים": {
+    "validate_down_price_percentage": 2.08,
+    "Price": "5190000",
+    "Agent": true,
+    "Area": "147",
+    "Price_per_meter": 35306.12,
+    "Last_update": "Mon Apr 24 11:31:29 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,300,000 and now is 5,190,000 (-110,000). The seller updated the price within 58 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 8943.41,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/dsgdA7u2m9m?dealType=sale&term=ברוריה-22-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "דהומיי 10, ירושלים": {
+    "validate_down_price_percentage": 1.29,
+    "Price": "2290000",
+    "Agent": true,
+    "Area": "88",
+    "Price_per_meter": 26022.73,
+    "Last_update": "Mon Apr 24 11:32:30 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,680,000 and now is 2,580,000 (-100,000). The seller updated the price within 23 day(s).",
+      "The price was 2,580,000 and now is 2,490,000 (-90,000). The seller updated the price within 27 day(s).",
+      "The price was 2,490,000 and now is 2,390,000 (-100,000). The seller updated the price within 10 day(s).",
+      "The price was 2,390,000 and now is 2,320,000 (-70,000). The seller updated the price within 37 day(s).",
+      "The price was 2,320,000 and now is 2,290,000 (-30,000). The seller updated the price within 14 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 35,
+    "average_parice_rent": 3800,
+    "Possibility_of_monthly_rent": 4678.49,
+    "ROI_P_year": 2.25,
+    "madlan_url": "https://www.madlan.co.il/listings/42umNXr9d9?dealType=sale&term=דהומיי-10-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "דרך חברון 75, ירושלים": {
+    "validate_down_price_percentage": 1.49,
+    "Price": "3300000",
+    "Agent": true,
+    "Area": "87",
+    "Price_per_meter": 37931.03,
+    "Last_update": "Mon Apr 24 11:32:38 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,980,000 and now is 3,480,000 (-500,000). The seller updated the price within 0.0 day(s).",
+      "The price was 3,480,000 and now is 3,350,000 (-130,000). The seller updated the price within 72 day(s).",
+      "The price was 3,350,000 and now is 3,300,000 (-50,000). The seller updated the price within 30 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 30,
+    "average_parice_rent": 8600,
+    "Possibility_of_monthly_rent": 6921.95,
+    "ROI_P_year": 2.31,
+    "madlan_url": "https://www.madlan.co.il/listings/f6HMVit1Se8?dealType=sale&term=דרך-חברון-75-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הפלמ\\": {
+    "validate_down_price_percentage": 6.0,
+    "Price": "3290000",
+    "Agent": true,
+    "Area": "80",
+    "Price_per_meter": 41125.0,
+    "Last_update": "Mon Apr 24 11:34:32 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,500,000 and now is 3,290,000 (-210,000). The seller updated the price within 60 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 7240.13,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/0HPMtsHV2r?dealType=sale&term=הפלמח-18-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "עמק רפאים 60, ירושלים": {
+    "validate_down_price_percentage": 4.84,
+    "Price": "2950000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 42142.86,
+    "Last_update": "Mon Apr 24 11:37:18 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,100,000 and now is 2,950,000 (-150,000). The seller updated the price within 63 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 6491.91,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/ebOIY6yhBXr?dealType=sale&term=עמק-רפאים-60-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "יגאל 10, ירושלים": {
+    "validate_down_price_percentage": 2.53,
+    "Price": "3850000",
+    "Agent": true,
+    "Area": "150",
+    "Price_per_meter": 25666.67,
+    "Last_update": "Mon Apr 24 11:38:10 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,950,000 and now is 3,850,000 (-100,000). The seller updated the price within 70 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 5200,
+    "Possibility_of_monthly_rent": 7140.56,
+    "ROI_P_year": 2.04,
+    "madlan_url": "https://www.madlan.co.il/listings/fmkHQ64hOtX?dealType=sale&term=יגאל-10-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אבנר גרשון 5, ירושלים": {
+    "validate_down_price_percentage": 5.49,
+    "Price": "3100000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 28181.82,
+    "Last_update": "Mon Apr 24 12:25:36 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,280,000 and now is 3,100,000 (-180,000). The seller updated the price within 13 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 45,
+    "average_parice_rent": 3900,
+    "Possibility_of_monthly_rent": 5604.12,
+    "ROI_P_year": 1.99,
+    "madlan_url": "https://www.madlan.co.il/listings/fv27DRxewAO?dealType=sale&term=אבנר-גרשון-5-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "מעוז 3, ירושלים": {
+    "validate_down_price_percentage": 2.87,
+    "Price": "3390000",
+    "Agent": true,
+    "Area": "115",
+    "Price_per_meter": 29478.26,
+    "Last_update": "Mon Apr 24 13:28:20 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,450,000 and now is 3,390,000 (-60,000). The seller updated the price within 20 day(s).",
+      "The price was 3,390,000 and now is 3,390,000 (0). The seller updated the price within 65 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 5,
+    "average_parice_rent": 5200,
+    "Possibility_of_monthly_rent": 6287.4,
+    "ROI_P_year": 2.04,
+    "madlan_url": "https://www.madlan.co.il/listings/dtQfM8g0m62?dealType=sale&term=מעוז-3-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אהרון כהן 7, ירושלים": {
+    "validate_down_price_percentage": 5.08,
+    "Price": "2990000",
+    "Agent": true,
+    "Area": "145",
+    "Price_per_meter": 20620.69,
+    "Last_update": "Mon Feb 06 13:00:34 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,150,000 and now is 2,990,000 (-160,000). The seller updated the price within 42 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 30,
+    "average_parice_rent": 6200,
+    "Possibility_of_monthly_rent": 6861.27,
+    "ROI_P_year": 2.52,
+    "madlan_url": "https://www.madlan.co.il/listings/hUcL42Mi4vd?dealType=sale&term=אהרון-כהן-7-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "המעלות 18, ירושלים": {
+    "validate_down_price_percentage": 1.85,
+    "Price": "2650000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 37857.14,
+    "Last_update": "Mon Feb 13 11:07:53 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,700,000 and now is 2,650,000 (-50,000). The seller updated the price within 237 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 6737.29,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/dhXlcUMApcn?dealType=sale&term=המעלות-18-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "יורדי הסירה 10, ירושלים": {
+    "validate_down_price_percentage": 13.33,
+    "Price": "6500000",
+    "Agent": true,
+    "Area": "170",
+    "Price_per_meter": 38235.29,
+    "Last_update": "Mon Feb 20 08:42:02 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 7,700,000 and now is 7,500,000 (-200,000). The seller updated the price within 92 day(s).",
+      "The price was 7,500,000 and now is 6,500,000 (-1,000,000). The seller updated the price within 26 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 25,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 14304.21,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/hC7SAWeqt6k?dealType=sale&term=יורדי-הסירה-10-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בר לביא רפאל 6, ירושלים": {
+    "validate_down_price_percentage": 3.56,
+    "Price": "2980000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 27090.91,
+    "Last_update": "Mon Feb 27 10:38:24 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,090,000 and now is 2,980,000 (-110,000). The seller updated the price within 80 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 6200,
+    "Possibility_of_monthly_rent": 6838.32,
+    "ROI_P_year": 2.52,
+    "madlan_url": "https://www.madlan.co.il/listings/hSTdYLJC6Ew?dealType=sale&term=בר-לביא-רפאל-6-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "עמנואל זיסמן 15, ירושלים": {
+    "validate_down_price_percentage": 1.15,
+    "Price": "2590000",
+    "Agent": true,
+    "Area": "116",
+    "Price_per_meter": 22327.59,
+    "Last_update": "Mon Feb 27 16:57:37 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,620,000 and now is 2,590,000 (-30,000). The seller updated the price within 14 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 10,
+    "average_parice_rent": 6200,
+    "Possibility_of_monthly_rent": 5943.37,
+    "ROI_P_year": 2.52,
+    "madlan_url": "https://www.madlan.co.il/listings/wcILZoImsa?dealType=sale&term=עמנואל-זיסמן-15-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בית הערבה 34, ירושלים": {
+    "validate_down_price_percentage": 2.26,
+    "Price": "2590000",
+    "Agent": true,
+    "Area": "72",
+    "Price_per_meter": 35972.22,
+    "Last_update": "Mon Feb 27 16:58:49 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,650,000 and now is 2,590,000 (-60,000). The seller updated the price within 60 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4250,
+    "Possibility_of_monthly_rent": 6272.08,
+    "ROI_P_year": 2.66,
+    "madlan_url": "https://www.madlan.co.il/listings/iyu07FJnuPz?dealType=sale&term=בית-הערבה-34-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "גבירצמן משה 1, ירושלים": {
+    "validate_down_price_percentage": 3.41,
+    "Price": "1980000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 28285.71,
+    "Last_update": "Mon Jan 23 09:44:08 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,050,000 and now is 1,980,000 (-70,000). The seller updated the price within 24 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 35,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4243.8,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/g31Twpmwfy3?dealType=sale&term=גבירצמן-משה-1-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "יוחנן בן זכאי 51, ירושלים": {
+    "validate_down_price_percentage": 1.37,
+    "Price": "2880000",
+    "Agent": true,
+    "Area": "80",
+    "Price_per_meter": 36000.0,
+    "Last_update": "Mon Mar 06 10:20:40 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,150,000 and now is 2,970,000 (-180,000). The seller updated the price within 52 day(s).",
+      "The price was 2,970,000 and now is 2,920,000 (-50,000). The seller updated the price within 57 day(s).",
+      "The price was 2,920,000 and now is 2,880,000 (-40,000). The seller updated the price within 27 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 4962.82,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/gjVRUZULUzG?dealType=sale&term=יוחנן-בן-זכאי-51-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "איסלנד 12, ירושלים": {
+    "validate_down_price_percentage": 0.36,
+    "Price": "2790000",
+    "Agent": true,
+    "Area": "130",
+    "Price_per_meter": 21461.54,
+    "Last_update": "Mon Mar 06 11:29:35 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,800,000 and now is 2,790,000 (-10,000). The seller updated the price within 21 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 4309.5,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/b7x6tWewsyS?dealType=sale&term=איסלנד-12-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "יורדי הסירה 21, ירושלים": {
+    "validate_down_price_percentage": 12.7,
+    "Price": "5500000",
+    "Agent": true,
+    "Area": "128",
+    "Price_per_meter": 42968.75,
+    "Last_update": "Mon Mar 06 11:42:09 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 6,300,000 and now is 5,500,000 (-800,000). The seller updated the price within 0.08333333333333333 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 12103.56,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/eAKSKTZbjlJ?dealType=sale&term=יורדי-הסירה-21-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אגריפס 79, ירושלים": {
+    "validate_down_price_percentage": 7.04,
+    "Price": "1850000",
+    "Agent": true,
+    "Area": "59",
+    "Price_per_meter": 31355.93,
+    "Last_update": "Mon Mar 13 06:50:10 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,990,000 and now is 1,850,000 (-140,000). The seller updated the price within 42 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 30,
+    "average_parice_rent": 5175,
+    "Possibility_of_monthly_rent": 3826.64,
+    "ROI_P_year": 2.27,
+    "madlan_url": "https://www.madlan.co.il/listings/UqWYO0uDr1?dealType=sale&term=אגריפס-79-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אוסישקין 28, ירושלים": {
+    "validate_down_price_percentage": 2.35,
+    "Price": "2490000",
+    "Agent": true,
+    "Area": "50",
+    "Price_per_meter": 49800.0,
+    "Last_update": "Mon Mar 13 11:20:46 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,450,000 and now is 2,350,000 (-100,000). The seller updated the price within 23 day(s).",
+      "The price was 2,350,000 and now is 2,490,000 (140,000). The seller updated the price within 226 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 6330.51,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/gvMtvmirIQE?dealType=sale&term=אוסישקין-28-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הרב הרצוג 92, ירושלים": {
+    "validate_down_price_percentage": 6.69,
+    "Price": "2790000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 31000.0,
+    "Last_update": "Mon Mar 13 11:25:58 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,990,000 and now is 2,790,000 (-200,000). The seller updated the price within 52 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 25,
+    "average_parice_rent": null,
+    "Possibility_of_monthly_rent": null,
+    "ROI_P_year": null,
+    "madlan_url": "https://www.madlan.co.il/listings/fzM8IlXfGsk?dealType=sale&term=הרב-הרצוג-92-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "נרקיס 3, ירושלים": {
+    "validate_down_price_percentage": 0.28,
+    "Price": "3590000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 39888.89,
+    "Last_update": "Mon Mar 13 11:26:44 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,600,000 and now is 3,590,000 (-10,000). The seller updated the price within 13 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 9127.12,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/drg7NIfDdns?dealType=sale&term=נרקיס-3-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הדישון 23, ירושלים": {
+    "validate_down_price_percentage": 2.5,
+    "Price": "4290000",
+    "Agent": true,
+    "Area": "130",
+    "Price_per_meter": 33000.0,
+    "Last_update": "Mon Mar 13 12:31:11 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,400,000 and now is 4,290,000 (-110,000). The seller updated the price within 0.875 day(s).",
+      "The price was 4,290,000 and now is 4,290,000 (0). The seller updated the price within 0.0 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 8500,
+    "Possibility_of_monthly_rent": 5593.5,
+    "ROI_P_year": 1.43,
+    "madlan_url": "https://www.madlan.co.il/listings/kkxN0vuJiUY?dealType=sale&term=הדישון-23-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "גואטמאלה 21, ירושלים": {
+    "validate_down_price_percentage": 3.77,
+    "Price": "2300000",
+    "Agent": true,
+    "Area": "87",
+    "Price_per_meter": 26436.78,
+    "Last_update": "Mon Mar 13 12:38:21 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,400,000 and now is 2,390,000 (-10,000). The seller updated the price within 12 day(s).",
+      "The price was 2,390,000 and now is 2,300,000 (-90,000). The seller updated the price within 25 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 3552.64,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/jbODxX0pBmd?dealType=sale&term=גואטמאלה-21-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הכפיר 12, ירושלים": {
+    "validate_down_price_percentage": 1.37,
+    "Price": "7200000",
+    "Agent": true,
+    "Area": "280",
+    "Price_per_meter": 25714.29,
+    "Last_update": "Mon Mar 13 20:57:47 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,500,000 and now is 7,200,000 (1,700,000). The seller updated the price within 764 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 8500,
+    "Possibility_of_monthly_rent": 9387.69,
+    "ROI_P_year": 1.43,
+    "madlan_url": "https://www.madlan.co.il/listings/fuXDcDP0Y1v?dealType=sale&term=הכפיר-12-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "לוד 5, ירושלים": {
+    "validate_down_price_percentage": 9.52,
+    "Price": "3800000",
+    "Agent": true,
+    "Area": "85",
+    "Price_per_meter": 44705.88,
+    "Last_update": "Mon Mar 20 14:00:21 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,200,000 and now is 3,800,000 (-400,000). The seller updated the price within 55 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 25,
+    "average_parice_rent": 5175,
+    "Possibility_of_monthly_rent": 7860.13,
+    "ROI_P_year": 2.28,
+    "madlan_url": "https://www.madlan.co.il/listings/b4UNDpwJorj?dealType=sale&term=הרב-יוסף-קאפח-5-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "ימין אבות 2, ירושלים": {
+    "validate_down_price_percentage": 6.0,
+    "Price": "3290000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 29909.09,
+    "Last_update": "Mon Mar 27 08:16:52 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,500,000 and now is 3,290,000 (-210,000). The seller updated the price within 158 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 6000,
+    "Possibility_of_monthly_rent": 7734.91,
+    "ROI_P_year": 2.59,
+    "madlan_url": "https://www.madlan.co.il/listings/hxNQUJfS2ub?dealType=sale&term=ימין-אבות-2-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "חלץ 15, ירושלים": {
+    "validate_down_price_percentage": 1.0,
+    "Price": "4950000",
+    "Agent": true,
+    "Area": "140",
+    "Price_per_meter": 35357.14,
+    "Last_update": "Mon Mar 27 10:06:47 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,490,000 and now is 5,390,000 (-100,000). The seller updated the price within 73 day(s).",
+      "The price was 5,390,000 and now is 5,150,000 (-240,000). The seller updated the price within 127 day(s).",
+      "The price was 5,150,000 and now is 5,000,000 (-150,000). The seller updated the price within 27 day(s).",
+      "The price was 5,000,000 and now is 4,950,000 (-50,000). The seller updated the price within 20 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 5700,
+    "Possibility_of_monthly_rent": 7022.31,
+    "ROI_P_year": 1.56,
+    "madlan_url": "https://www.madlan.co.il/listings/LPlqFFKGiD?dealType=sale&term=חלץ-15-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רמון יוסף צבי 61, ירושלים": {
+    "validate_down_price_percentage": 6.15,
+    "Price": "6100000",
+    "Agent": true,
+    "Area": "184",
+    "Price_per_meter": 33152.17,
+    "Last_update": "Mon May 01 08:49:42 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 6,500,000 and now is 6,100,000 (-400,000). The seller updated the price within 446 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 8541.02,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/co7TxRIAHBs?dealType=sale&term=רמון-יוסף-צבי-61-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אגריפס 16, ירושלים": {
+    "validate_down_price_percentage": 2.59,
+    "Price": "4700000",
+    "Agent": true,
+    "Area": "133",
+    "Price_per_meter": 35338.35,
+    "Last_update": "Mon May 01 10:55:17 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,750,000 and now is 4,700,000 (-50,000). The seller updated the price within 7 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 10,
+    "average_parice_rent": 5175,
+    "Possibility_of_monthly_rent": 9721.74,
+    "ROI_P_year": 2.28,
+    "madlan_url": "https://www.madlan.co.il/listings/gkxKNGgyTBm?dealType=sale&term=אגריפס-16-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הרב כדורי יצחק 13, ירושלים": {
+    "validate_down_price_percentage": 0.95,
+    "Price": "3120000",
+    "Agent": true,
+    "Area": "113",
+    "Price_per_meter": 27610.62,
+    "Last_update": "Mon May 01 15:54:21 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,150,000 and now is 3,120,000 (-30,000). The seller updated the price within 47 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6200,
+    "Possibility_of_monthly_rent": 7159.58,
+    "ROI_P_year": 2.52,
+    "madlan_url": "https://www.madlan.co.il/listings/ip2jSwUz4h2?dealType=sale&term=הרב-כדורי-יצחק-13-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אמציה 1, ירושלים": {
+    "validate_down_price_percentage": 7.19,
+    "Price": "2970000",
+    "Agent": true,
+    "Area": "88",
+    "Price_per_meter": 33750.0,
+    "Last_update": "Mon May 08 06:12:56 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,200,000 and now is 2,970,000 (-230,000). The seller updated the price within 117 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 15,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 6535.92,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/jreo3tv1cle?dealType=sale&term=אמציה-1-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "נהר פרת 6, ירושלים": {
+    "validate_down_price_percentage": 0.4,
+    "Price": "2490000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 35571.43,
+    "Last_update": "Mon May 08 06:13:15 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,500,000 and now is 2,490,000 (-10,000). The seller updated the price within 19 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 5351.0,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/fdL3A81hGDq?dealType=sale&term=נהר-פרת-6-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "ההרדוף 10, ירושלים": {
+    "validate_down_price_percentage": 2.08,
+    "Price": "1880000",
+    "Agent": true,
+    "Area": "62",
+    "Price_per_meter": 30322.58,
+    "Last_update": "Mon May 08 07:23:51 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,090,000 and now is 1,990,000 (-100,000). The seller updated the price within 6 day(s).",
+      "The price was 1,990,000 and now is 1,960,000 (-30,000). The seller updated the price within 33 day(s).",
+      "The price was 1,960,000 and now is 1,920,000 (-40,000). The seller updated the price within 27 day(s).",
+      "The price was 1,920,000 and now is 1,880,000 (-40,000). The seller updated the price within 29 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 25,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 3812.08,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/0w7qmwLPl6?dealType=sale&term=ההרדוף-10-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "תרשיש 15, ירושלים": {
+    "validate_down_price_percentage": 5.29,
+    "Price": "2150000",
+    "Agent": true,
+    "Area": "95",
+    "Price_per_meter": 22631.58,
+    "Last_update": "Mon May 08 07:24:33 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,270,000 and now is 2,150,000 (-120,000). The seller updated the price within 111 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 4359.56,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/eR1WUCk4XnL?dealType=sale&term=תרשיש-15-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אלפסי 31, ירושלים": {
+    "validate_down_price_percentage": 10.55,
+    "Price": "11450000",
+    "Agent": true,
+    "Area": "200",
+    "Price_per_meter": 57250.0,
+    "Last_update": "Mon May 08 07:28:53 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 12,800 and now is 11,450,000 (11,437,200). The seller updated the price within 20 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 29110.17,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/jluu5KI2H2o?dealType=sale&term=אלפסי-31-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "שמעוני 44, ירושלים": {
+    "validate_down_price_percentage": 2.18,
+    "Price": "4490000",
+    "Agent": true,
+    "Area": "117",
+    "Price_per_meter": 38376.07,
+    "Last_update": "Mon May 08 07:29:02 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,590,000 and now is 4,490,000 (-100,000). The seller updated the price within 69 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 7737.17,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/eAXmeZs5TxG?dealType=sale&term=שמעוני-44-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בית לחם 73, ירושלים": {
+    "validate_down_price_percentage": 3.06,
+    "Price": "3490000",
+    "Agent": true,
+    "Area": "94",
+    "Price_per_meter": 37127.66,
+    "Last_update": "Mon May 08 07:31:02 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,600,000 and now is 3,490,000 (-110,000). The seller updated the price within 44 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 30,
+    "average_parice_rent": 4250,
+    "Possibility_of_monthly_rent": 8451.57,
+    "ROI_P_year": 2.66,
+    "madlan_url": "https://www.madlan.co.il/listings/8KYrdWNrvl?dealType=sale&term=דרך-בית-לחם-73-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "נתיב המזלות 27, ירושלים": {
+    "validate_down_price_percentage": 3.79,
+    "Price": "2790000",
+    "Agent": false,
+    "Area": "150",
+    "Price_per_meter": 18600.0,
+    "Last_update": "Mon May 08 08:04:33 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,900,000 and now is 2,790,000 (-110,000). The seller updated the price within 2 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 35,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 5979.9,
+    "ROI_P_year": 2.36,
+    "madlan_url": null
+  },
+  "אמציה 4, ירושלים": {
+    "validate_down_price_percentage": 6.9,
+    "Price": "2970000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 33000.0,
+    "Last_update": "Mon May 08 09:44:00 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,190,000 and now is 2,970,000 (-220,000). The seller updated the price within 318 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 6535.92,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/fdWrXXJ4SmO?dealType=sale&term=אמציה-4-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בלומנפלד 7, ירושלים": {
+    "validate_down_price_percentage": 16.81,
+    "Price": "9900000",
+    "Agent": true,
+    "Area": "530",
+    "Price_per_meter": 18679.25,
+    "Last_update": "Mon May 08 09:55:31 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 11,900,000 and now is 9,900,000 (-2,000,000). The seller updated the price within 82 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 15291.79,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/dHA1GZrlZ5S?dealType=sale&term=בלומנפלד-7-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אבנר חי שאקי 27, ירושלים": {
+    "validate_down_price_percentage": 3.51,
+    "Price": "2750000",
+    "Agent": true,
+    "Area": "95",
+    "Price_per_meter": 28947.37,
+    "Last_update": "Sat Feb 11 22:15:38 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,850,000 and now is 2,750,000 (-100,000). The seller updated the price within 41 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 30,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 5576.18,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/kKczzexu3q6?dealType=sale&term=אבנר-חי-שאקי-27-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "מרוה 2, ירושלים": {
+    "validate_down_price_percentage": 2.33,
+    "Price": "2100000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 30000.0,
+    "Last_update": "Sat Feb 25 17:28:30 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,300,000 and now is 2,300,000 (-1,000,000). The seller updated the price within 0.0 day(s).",
+      "The price was 2,300,000 and now is 2,250,000 (-50,000). The seller updated the price within 32 day(s).",
+      "The price was 2,250,000 and now is 2,200,000 (-50,000). The seller updated the price within 24 day(s).",
+      "The price was 2,200,000 and now is 2,150,000 (-50,000). The seller updated the price within 21 day(s).",
+      "The price was 2,150,000 and now is 2,100,000 (-50,000). The seller updated the price within 1 day(s).",
+      "The price was 2,100,000 and now is 2,100,000 (0). The seller updated the price within 0.0 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 45,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 4258.17,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/d2Im1FsP3kX?dealType=sale&term=מרוה-2-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "קנאי הגליל 17, ירושלים": {
+    "validate_down_price_percentage": 4.23,
+    "Price": "3400000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 37777.78,
+    "Last_update": "Sat Mar 18 08:53:28 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,550,000 and now is 3,400,000 (-150,000). The seller updated the price within 30 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 35,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 5858.88,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/euN0C7dT3uK?dealType=sale&term=קנאי-הגליל-17-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הציונות 13, ירושלים": {
+    "validate_down_price_percentage": 2.51,
+    "Price": "2335000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 33357.14,
+    "Last_update": "Sun Apr 02 06:59:58 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,450,000 and now is 2,395,000 (-55,000). The seller updated the price within 31 day(s).",
+      "The price was 2,395,000 and now is 2,335,000 (-60,000). The seller updated the price within 69 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 20,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 3606.7,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/kQECdZ2RbOJ?dealType=sale&term=הציונות-13-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אבא אבן 21, ירושלים": {
+    "validate_down_price_percentage": 2.27,
+    "Price": "4300000",
+    "Agent": true,
+    "Area": "100",
+    "Price_per_meter": 43000.0,
+    "Last_update": "Sun Apr 02 07:56:53 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,400,000 and now is 4,300,000 (-100,000). The seller updated the price within 27 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 20,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 9240.69,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/dUK2g5QcMpp?dealType=sale&term=אבא-אבן-21-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "שדרות דיין משה 67, ירושלים": {
+    "validate_down_price_percentage": 2.55,
+    "Price": "2290000",
+    "Agent": true,
+    "Area": "101",
+    "Price_per_meter": 22673.27,
+    "Last_update": "Sun Apr 16 07:33:03 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,350,000 and now is 2,290,000 (-60,000). The seller updated the price within 37 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4908.23,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/hR9j4fGbgn7?dealType=sale&term=שדרות-דיין-משה-67-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "יחיל חיים 8, ירושלים": {
+    "validate_down_price_percentage": 3.39,
+    "Price": "2850000",
+    "Agent": true,
+    "Area": "82",
+    "Price_per_meter": 34756.1,
+    "Last_update": "Sun Apr 16 07:34:38 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,100,000 and now is 2,950,000 (-150,000). The seller updated the price within 45 day(s).",
+      "The price was 2,950,000 and now is 2,850,000 (-100,000). The seller updated the price within 49 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 25,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 4911.12,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/hAnPjRShaD3?dealType=sale&term=יחיל-חיים-8-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "עזה 47, ירושלים": {
+    "validate_down_price_percentage": 5.71,
+    "Price": "3300000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 47142.86,
+    "Last_update": "Sun Apr 16 08:18:41 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,500,000 and now is 3,300,000 (-200,000). The seller updated the price within 175 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 10,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 8389.83,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/dQ0Vjjs1Zp7?dealType=sale&term=עזה-47-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רבקה 22, ירושלים": {
+    "validate_down_price_percentage": 2.26,
+    "Price": "2590000",
+    "Agent": true,
+    "Area": "71",
+    "Price_per_meter": 36478.87,
+    "Last_update": "Sun Apr 16 08:43:41 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,750,000 and now is 2,650,000 (-100,000). The seller updated the price within 134 day(s).",
+      "The price was 2,650,000 and now is 2,590,000 (-60,000). The seller updated the price within 55 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": 4250,
+    "Possibility_of_monthly_rent": 6272.08,
+    "ROI_P_year": 2.66,
+    "madlan_url": "https://www.madlan.co.il/listings/huuMf21xISX?dealType=sale&term=רבקה-2-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הנוטרים 8, ירושלים": {
+    "validate_down_price_percentage": 6.17,
+    "Price": "3650000",
+    "Agent": true,
+    "Area": "115",
+    "Price_per_meter": 31739.13,
+    "Last_update": "Sun Apr 16 10:03:59 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,890,000 and now is 3,650,000 (-240,000). The seller updated the price within 24 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 35,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 6289.68,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/fiwkp57pPX9?dealType=sale&term=הנוטרים-8-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "דינור בן ציון 11, ירושלים": {
+    "validate_down_price_percentage": 3.23,
+    "Price": "6000000",
+    "Agent": true,
+    "Area": "165",
+    "Price_per_meter": 36363.64,
+    "Last_update": "Sun Apr 16 10:13:53 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 6,200,000 and now is 6,000,000 (-200,000). The seller updated the price within 179 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 8401.0,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/bdLg5WuXAjj?dealType=sale&term=דינור-בן-ציון-11-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "תשב\\": {
+    "validate_down_price_percentage": 4.84,
+    "Price": "2950000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 42142.86,
+    "Last_update": "Sun Apr 16 14:48:30 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,100,000 and now is 2,950,000 (-150,000). The seller updated the price within 88 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 6339.54,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/dSjQxscm2to?dealType=sale&term=תשבץ-18-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בן צבי יצחק 35, ירושלים": {
+    "validate_down_price_percentage": 5.13,
+    "Price": "3700000",
+    "Agent": true,
+    "Area": "93",
+    "Price_per_meter": 39784.95,
+    "Last_update": "Sun Apr 23 06:02:55 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,900,000 and now is 3,700,000 (-200,000). The seller updated the price within 8 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 45,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 9406.78,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/jnhkcHgObV?dealType=sale&term=שדרות-בן-צבי-יצחק-35-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "שדרות בן צבי יצחק 27, ירושלים": {
+    "validate_down_price_percentage": 6.06,
+    "Price": "3100000",
+    "Agent": true,
+    "Area": "77",
+    "Price_per_meter": 40259.74,
+    "Last_update": "Sun Apr 23 06:32:40 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,300,000 and now is 3,100,000 (-200,000). The seller updated the price within 68 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 20,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 6661.89,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/jNjqEZE2YNp?dealType=sale&term=שדרות-בן-צבי-יצחק-27-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "תבין אלי 17, ירושלים": {
+    "validate_down_price_percentage": 1.69,
+    "Price": "2900000",
+    "Agent": true,
+    "Area": "150",
+    "Price_per_meter": 19333.33,
+    "Last_update": "Sun Apr 30 09:05:39 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,070,000 and now is 2,997,000 (-73,000). The seller updated the price within 14 day(s).",
+      "The price was 2,997,000 and now is 2,950,000 (-47,000). The seller updated the price within 80 day(s).",
+      "The price was 2,950,000 and now is 2,900,000 (-50,000). The seller updated the price within 35 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 6215.66,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/duY8mRvZ262?dealType=sale&term=תבין-אלי-17-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "תורן חיים 31, ירושלים": {
+    "validate_down_price_percentage": 0.68,
+    "Price": "2930000",
+    "Agent": true,
+    "Area": "150",
+    "Price_per_meter": 19533.33,
+    "Last_update": "Sun Apr 30 09:06:07 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,950,000 and now is 2,930,000 (-20,000). The seller updated the price within 67 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 6279.96,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/e0tz88Wi8gQ?dealType=sale&term=תורן-חיים-31-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "המ\\": {
+    "validate_down_price_percentage": 4.08,
+    "Price": "2350000",
+    "Agent": true,
+    "Area": "60",
+    "Price_per_meter": 39166.67,
+    "Last_update": "Sun Apr 30 09:39:02 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,750,000 and now is 2,450,000 (-300,000). The seller updated the price within 40 day(s).",
+      "The price was 2,450,000 and now is 2,350,000 (-100,000). The seller updated the price within 27 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 30,
+    "average_parice_rent": 3900,
+    "Possibility_of_monthly_rent": 3654.74,
+    "ROI_P_year": 1.71,
+    "madlan_url": "https://www.madlan.co.il/listings/dPNYqEc5QzN?dealType=sale&term=המג-29-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "ניסן אברהם 11, ירושלים": {
+    "validate_down_price_percentage": 0.57,
+    "Price": "3480000",
+    "Agent": true,
+    "Area": "104",
+    "Price_per_meter": 33461.54,
+    "Last_update": "Sun Apr 30 09:48:16 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 7,200 and now is 3,480,000 (3,472,800). The seller updated the price within 249 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 5,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 5375.3,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/kw2Uryaornq?dealType=sale&term=ניסן-אברהם-11-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "קדיש לוז 16, ירושלים": {
+    "validate_down_price_percentage": 10.0,
+    "Price": "2970000",
+    "Agent": true,
+    "Area": "100",
+    "Price_per_meter": 29700.0,
+    "Last_update": "Sun Apr 30 12:06:18 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,300,000 and now is 2,970,000 (-330,000). The seller updated the price within 73 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4158.5,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/hwkXCHzf1Ns?dealType=sale&term=קדיש-לוז-16-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "שדרות ש\\": {
+    "validate_down_price_percentage": 1.02,
+    "Price": "4850000",
+    "Agent": true,
+    "Area": "138",
+    "Price_per_meter": 35144.93,
+    "Last_update": "Sun Apr 30 13:02:19 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,190,000 and now is 4,980,000 (-210,000). The seller updated the price within 26 day(s).",
+      "The price was 4,980,000 and now is 4,900,000 (-80,000). The seller updated the price within 36 day(s).",
+      "The price was 4,900,000 and now is 4,850,000 (-50,000). The seller updated the price within 13 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 8357.52,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/ja2oVBoH1NO?dealType=sale&term=שדרות-שי-עגנון-18-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "ניל\\": {
+    "validate_down_price_percentage": 8.08,
+    "Price": "3300000",
+    "Agent": true,
+    "Area": "80",
+    "Price_per_meter": 41250.0,
+    "Last_update": "Sun Apr 30 14:03:29 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,850,000 and now is 3,699,000 (-151,000). The seller updated the price within 100 day(s).",
+      "The price was 3,699,000 and now is 3,590,000 (-109,000). The seller updated the price within 19 day(s).",
+      "The price was 3,590,000 and now is 3,300,000 (-290,000). The seller updated the price within 118 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 20,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 7262.14,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/kwcxffhv5EQ?dealType=sale&term=נילי-14-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "טוניק יצחק 21, ירושלים": {
+    "validate_down_price_percentage": 90.0,
+    "Price": "2190000",
+    "Agent": true,
+    "Area": "103",
+    "Price_per_meter": 21262.14,
+    "Last_update": "Sun Dec 04 16:21:34 GMT 2022",
+    "Interval_of_down_prices": [
+      "The price was 21,900,000 and now is 2,190,000 (-19,710,000). The seller updated the price within 0.0 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 50,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4693.9,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/doslf8ya5Kc?dealType=sale&term=טוניק-יצחק-21-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "גדעון 15, ירושלים": {
+    "validate_down_price_percentage": 1.04,
+    "Price": "2850000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 40714.29,
+    "Last_update": "Sun Feb 12 09:49:25 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,000,000 and now is 2,880,000 (-120,000). The seller updated the price within 57 day(s).",
+      "The price was 2,880,000 and now is 2,850,000 (-30,000). The seller updated the price within 12 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 5700,
+    "Possibility_of_monthly_rent": 4043.15,
+    "ROI_P_year": 1.56,
+    "madlan_url": "https://www.madlan.co.il/listings/gYjYWPZqmIc?dealType=sale&term=גדעון-15-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "השישה עשר 38, ירושלים": {
+    "validate_down_price_percentage": 1.8,
+    "Price": "2180000",
+    "Agent": true,
+    "Area": "88",
+    "Price_per_meter": 24772.73,
+    "Last_update": "Sun Feb 19 08:50:28 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,200,000 and now is 2,180,000 (-20,000). The seller updated the price within 133 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4672.46,
+    "ROI_P_year": 2.36,
+    "madlan_url": null
+  },
+  "המלך ג'ורג' 7, ירושלים": {
+    "validate_down_price_percentage": 1.97,
+    "Price": "2990000",
+    "Agent": true,
+    "Area": "89",
+    "Price_per_meter": 33595.51,
+    "Last_update": "Sun Feb 26 15:52:01 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,050,000 and now is 2,990,000 (-60,000). The seller updated the price within 32 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": 5175,
+    "Possibility_of_monthly_rent": 6184.68,
+    "ROI_P_year": 2.28,
+    "madlan_url": "https://www.madlan.co.il/listings/fwY6yIvgpGk?dealType=sale&term=המלך-גורג-7-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "דוידסון 20, ירושלים": {
+    "validate_down_price_percentage": 1.56,
+    "Price": "3790000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 42111.11,
+    "Last_update": "Sun Jan 16 14:10:41 GMT 2022",
+    "Interval_of_down_prices": [
+      "The price was 3,850,000 and now is 3,790,000 (-60,000). The seller updated the price within 12 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": null,
+    "Possibility_of_monthly_rent": null,
+    "ROI_P_year": null,
+    "madlan_url": "https://www.madlan.co.il/listings/cRLLZCXzjud?dealType=sale&term=דוידסון-20-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הרפז ניסן 9, ירושלים": {
+    "validate_down_price_percentage": 1.39,
+    "Price": "3550000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 50714.29,
+    "Last_update": "Sun Mar 05 10:28:30 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,600,000 and now is 3,550,000 (-50,000). The seller updated the price within 60 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 10,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4970.59,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/h1GLVX3c7Gu?dealType=sale&term=הרפז-ניסן-9-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "שאר ישוב 16, ירושלים": {
+    "validate_down_price_percentage": 5.56,
+    "Price": "5100000",
+    "Agent": false,
+    "Area": "200",
+    "Price_per_meter": 25500.0,
+    "Last_update": "Sun Mar 19 09:25:26 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,400,000 and now is 5,100,000 (-300,000). The seller updated the price within 47 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 5200,
+    "Possibility_of_monthly_rent": 9458.92,
+    "ROI_P_year": 2.04,
+    "madlan_url": null
+  },
+  "בן אליעזר אריה 49, ירושלים": {
+    "validate_down_price_percentage": 0.44,
+    "Price": "2240000",
+    "Agent": true,
+    "Area": "60",
+    "Price_per_meter": 37333.33,
+    "Last_update": "Sun Mar 19 10:04:26 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,280,000 and now is 2,250,000 (-30,000). The seller updated the price within 11 day(s).",
+      "The price was 2,250,000 and now is 2,240,000 (-10,000). The seller updated the price within 7 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 5,
+    "average_parice_rent": null,
+    "Possibility_of_monthly_rent": null,
+    "ROI_P_year": null,
+    "madlan_url": "https://www.madlan.co.il/listings/iBKEW4iMAyF?dealType=sale&term=בן-אליעזר-אריה-49-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בלפור 8, ירושלים": {
+    "validate_down_price_percentage": 2.78,
+    "Price": "17500000",
+    "Agent": true,
+    "Area": "307",
+    "Price_per_meter": 57003.26,
+    "Last_update": "Sun Mar 19 12:11:18 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 18,000,000 and now is 17,500,000 (-500,000). The seller updated the price within 2 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 25,
+    "average_parice_rent": 8100,
+    "Possibility_of_monthly_rent": 45000.0,
+    "ROI_P_year": 2.83,
+    "madlan_url": "https://www.madlan.co.il/listings/8SmEsXkhwn?dealType=sale&term=בלפור-8-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "יפה שמואל 12, ירושלים": {
+    "validate_down_price_percentage": 4.24,
+    "Price": "1580000",
+    "Agent": true,
+    "Area": "60",
+    "Price_per_meter": 26333.33,
+    "Last_update": "Sun Mar 19 13:46:22 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,580,000 and now is 1,580,000 (0). The seller updated the price within 65 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 3386.46,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/A3J5bp76eX?dealType=sale&term=יפה-שמואל-12-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הרב הרצוג 43, ירושלים": {
+    "validate_down_price_percentage": 3.55,
+    "Price": "2990000",
+    "Agent": true,
+    "Area": "88",
+    "Price_per_meter": 33977.27,
+    "Last_update": "Sun Mar 26 09:27:10 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,330,000 and now is 3,100,000 (-230,000). The seller updated the price within 12 day(s).",
+      "The price was 3,100,000 and now is 2,990,000 (-110,000). The seller updated the price within 140 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 6579.94,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/eEZyhkYlAp1?dealType=sale&term=הרב-הרצוג-43-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בן הלל 15, ירושלים": {
+    "validate_down_price_percentage": 7.84,
+    "Price": "2350000",
+    "Agent": true,
+    "Area": "75",
+    "Price_per_meter": 31333.33,
+    "Last_update": "Sun Mar 26 16:28:46 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,650,000 and now is 2,550,000 (-100,000). The seller updated the price within 18 day(s).",
+      "The price was 2,550,000 and now is 2,350,000 (-200,000). The seller updated the price within 7 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 45,
+    "average_parice_rent": 5175,
+    "Possibility_of_monthly_rent": 4860.87,
+    "ROI_P_year": 2.27,
+    "madlan_url": "https://www.madlan.co.il/listings/iQgo3b78lh9?dealType=sale&term=בן-הלל-15-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בונהונטורה אנצ'ו 12, ירושלים": {
+    "validate_down_price_percentage": 1.92,
+    "Price": "2550000",
+    "Agent": true,
+    "Area": "74",
+    "Price_per_meter": 34459.46,
+    "Last_update": "Sun May 07 05:28:50 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,450,000 and now is 2,350,000 (-100,000). The seller updated the price within 110 day(s).",
+      "The price was 2,350,000 and now is 2,400,000 (50,000). The seller updated the price within 91 day(s).",
+      "The price was 2,400,000 and now is 2,620,000 (220,000). The seller updated the price within 6 day(s).",
+      "The price was 2,620,000 and now is 2,600,000 (-20,000). The seller updated the price within 50 day(s).",
+      "The price was 2,600,000 and now is 2,550,000 (-50,000). The seller updated the price within 2 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 3900,
+    "Possibility_of_monthly_rent": 4609.84,
+    "ROI_P_year": 1.99,
+    "madlan_url": "https://www.madlan.co.il/listings/gofBKsC22DV?dealType=sale&term=בונהונטורה-אנצו-12-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "חברון 115, ירושלים": {
+    "validate_down_price_percentage": 5.65,
+    "Price": "2170000",
+    "Agent": true,
+    "Area": "55",
+    "Price_per_meter": 39454.55,
+    "Last_update": "Sun May 07 07:43:18 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,300,000 and now is 2,170,000 (-130,000). The seller updated the price within 60 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 4250,
+    "Possibility_of_monthly_rent": 5254.99,
+    "ROI_P_year": 2.66,
+    "madlan_url": "https://www.madlan.co.il/listings/dhkhnGKv3De?dealType=sale&term=דרך-חברון-115-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "מקור חיים 40, ירושלים": {
+    "validate_down_price_percentage": 9.11,
+    "Price": "3590000",
+    "Agent": true,
+    "Area": "105",
+    "Price_per_meter": 34190.48,
+    "Last_update": "Sun May 07 11:19:06 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,950,000 and now is 3,590,000 (-360,000). The seller updated the price within 0.125 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 10,
+    "average_parice_rent": 6050,
+    "Possibility_of_monthly_rent": 7132.84,
+    "ROI_P_year": 2.19,
+    "madlan_url": "https://www.madlan.co.il/listings/kt9ydQJa1b4?dealType=sale&term=מקור-חיים-40-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הגומא 27, ירושלים": {
+    "validate_down_price_percentage": 3.06,
+    "Price": "2220000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 31714.29,
+    "Last_update": "Sun May 07 15:49:00 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,300,000 and now is 2,290,000 (-10,000). The seller updated the price within 15 day(s).",
+      "The price was 2,290,000 and now is 2,220,000 (-70,000). The seller updated the price within 41 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 15,
+    "average_parice_rent": null,
+    "Possibility_of_monthly_rent": null,
+    "ROI_P_year": null,
+    "madlan_url": "https://www.madlan.co.il/listings/ddqvc2fSTN4?dealType=sale&term=הגומא-27-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הקרן הקיימת 21, ירושלים": {
+    "validate_down_price_percentage": 7.0,
+    "Price": "2390000",
+    "Agent": true,
+    "Area": "50",
+    "Price_per_meter": 47800.0,
+    "Last_update": "Thu Apr 13 09:21:23 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,570,000 and now is 2,390,000 (-180,000). The seller updated the price within 57 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 6076.27,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/g7dG4CFtxBT?dealType=sale&term=הקרן-הקיימת-21-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "תמיר שמואל 67, ירושלים": {
+    "validate_down_price_percentage": 6.35,
+    "Price": "2800000",
+    "Agent": true,
+    "Area": "124",
+    "Price_per_meter": 22580.65,
+    "Last_update": "Thu Apr 20 09:17:28 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,990,000 and now is 2,800,000 (-190,000). The seller updated the price within 87 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 6001.33,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/bmvf5nbGcer?dealType=sale&term=תמיר-שמואל-67-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "קרית משה 6, ירושלים": {
+    "validate_down_price_percentage": 4.04,
+    "Price": "4750000",
+    "Agent": true,
+    "Area": "145",
+    "Price_per_meter": 32758.62,
+    "Last_update": "Thu Apr 20 10:37:57 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,750,000 and now is 5,590,000 (-160,000). The seller updated the price within 30 day(s).",
+      "The price was 5,590,000 and now is 4,950,000 (-640,000). The seller updated the price within 61 day(s).",
+      "The price was 4,950,000 and now is 4,750,000 (-200,000). The seller updated the price within 57 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 25,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 10207.74,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/bc6AgejH1rl?dealType=sale&term=קרית-משה-6-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "יגאל 8, ירושלים": {
+    "validate_down_price_percentage": 5.13,
+    "Price": "3700000",
+    "Agent": true,
+    "Area": "128",
+    "Price_per_meter": 28906.25,
+    "Last_update": "Thu Apr 20 13:47:12 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,100,000 and now is 3,990,000 (-110,000). The seller updated the price within 84 day(s).",
+      "The price was 3,990,000 and now is 3,900,000 (-90,000). The seller updated the price within 22 day(s).",
+      "The price was 3,900,000 and now is 3,700,000 (-200,000). The seller updated the price within 50 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 5200,
+    "Possibility_of_monthly_rent": 6862.36,
+    "ROI_P_year": 2.04,
+    "madlan_url": "https://www.madlan.co.il/listings/iDZqDgj7FHO?dealType=sale&term=יגאל-8-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "פדרמן דוד 10, ירושלים": {
+    "validate_down_price_percentage": 6.19,
+    "Price": "1970000",
+    "Agent": true,
+    "Area": "83",
+    "Price_per_meter": 23734.94,
+    "Last_update": "Thu Apr 20 17:12:17 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,100,000 and now is 1,970,000 (-130,000). The seller updated the price within 37 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 30,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4222.36,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/c5rwjC1crYa?dealType=sale&term=פדרמן-דוד-10-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "קדושי בבל 2, ירושלים": {
+    "validate_down_price_percentage": 3.12,
+    "Price": "1860000",
+    "Agent": true,
+    "Area": "65",
+    "Price_per_meter": 28615.38,
+    "Last_update": "Thu Apr 27 07:29:07 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,920,000 and now is 1,860,000 (-60,000). The seller updated the price within 56 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 25,
+    "average_parice_rent": 3900,
+    "Possibility_of_monthly_rent": 3362.47,
+    "ROI_P_year": 1.99,
+    "madlan_url": "https://www.madlan.co.il/listings/bsBU7VvMef9?dealType=sale&term=קדושי-בבל-2-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בן יוסף שלמה 342, ירושלים": {
+    "validate_down_price_percentage": 2.9,
+    "Price": "2039000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 22655.56,
+    "Last_update": "Thu Apr 27 07:35:43 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,100,000 and now is 2,039,000 (-61,000). The seller updated the price within 42 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 25,
+    "average_parice_rent": 3900,
+    "Possibility_of_monthly_rent": 3686.06,
+    "ROI_P_year": 1.99,
+    "madlan_url": "https://www.madlan.co.il/listings/faQfVNP4asF?dealType=sale&term=בן-יוסף-שלמה-342-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "קובובי 19, ירושלים": {
+    "validate_down_price_percentage": 5.93,
+    "Price": "3170000",
+    "Agent": true,
+    "Area": "100",
+    "Price_per_meter": 31700.0,
+    "Last_update": "Thu Apr 27 08:14:59 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,690,000 and now is 3,630,000 (940,000). The seller updated the price within 34 day(s).",
+      "The price was 3,630,000 and now is 3,590,000 (-40,000). The seller updated the price within 24 day(s).",
+      "The price was 3,590,000 and now is 3,370,000 (-220,000). The seller updated the price within 4 day(s).",
+      "The price was 3,370,000 and now is 3,170,000 (-200,000). The seller updated the price within 42 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4438.53,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/fNFn8DLtG2q?dealType=sale&term=קובובי-19-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "עמק רפאים 2, ירושלים": {
+    "validate_down_price_percentage": 3.5,
+    "Price": "6900000",
+    "Agent": true,
+    "Area": "141",
+    "Price_per_meter": 48936.17,
+    "Last_update": "Thu Apr 27 08:39:14 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 6,500,000 and now is 7,150,000 (650,000). The seller updated the price within 91 day(s).",
+      "The price was 7,150,000 and now is 6,900,000 (-250,000). The seller updated the price within 150 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 19127.7,
+    "ROI_P_year": 3.05,
+    "madlan_url": "https://www.madlan.co.il/listings/bd2bHL57mcU?dealType=sale&term=עמק-רפאים-2-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "מצפה 9, ירושלים": {
+    "validate_down_price_percentage": 5.88,
+    "Price": "7200000",
+    "Agent": true,
+    "Area": "160",
+    "Price_per_meter": 45000.0,
+    "Last_update": "Thu Apr 27 10:13:38 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 8,500,000 and now is 7,650,000 (-850,000). The seller updated the price within 43 day(s).",
+      "The price was 7,650,000 and now is 7,200,000 (-450,000). The seller updated the price within 21 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 30,
+    "average_parice_rent": 5175,
+    "Possibility_of_monthly_rent": 14892.88,
+    "ROI_P_year": 2.28,
+    "madlan_url": "https://www.madlan.co.il/listings/bBsC7bUYJYe?dealType=sale&term=מצפה-9-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "ברנדויין שמואל 15, ירושלים": {
+    "validate_down_price_percentage": 8.3,
+    "Price": "2100000",
+    "Agent": true,
+    "Area": "82",
+    "Price_per_meter": 25609.76,
+    "Last_update": "Thu Apr 27 10:50:21 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,290,000 and now is 2,100,000 (-190,000). The seller updated the price within 48 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4501.0,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/ejzQEORiKA3?dealType=sale&term=ברנדויין-שמואל-15-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בני בתירא 9, ירושלים": {
+    "validate_down_price_percentage": 1.72,
+    "Price": "2850000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 31666.67,
+    "Last_update": "Thu Apr 27 11:14:32 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,900,000 and now is 2,850,000 (-50,000). The seller updated the price within 56 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 15,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 4911.12,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/el7bMQPrHMI?dealType=sale&term=בני-בתירא-9-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "לבנון צבי 2, ירושלים": {
+    "validate_down_price_percentage": 3.41,
+    "Price": "1980000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 28285.71,
+    "Last_update": "Thu Apr 27 12:13:19 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,050,000 and now is 1,980,000 (-70,000). The seller updated the price within 28 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 35,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4243.8,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/jPibO7nhkZZ?dealType=sale&term=לבנון-צבי-2-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רחל אמנו 37, ירושלים": {
+    "validate_down_price_percentage": 2.72,
+    "Price": "6800000",
+    "Agent": true,
+    "Area": "169",
+    "Price_per_meter": 40236.69,
+    "Last_update": "Thu Apr 27 12:28:09 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 6,990,000 and now is 6,800,000 (-190,000). The seller updated the price within 34 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 25,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 14964.4,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/fz4JXKSI14v?dealType=sale&term=רחל-אמנו-37-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "שמעוני 71, ירושלים": {
+    "validate_down_price_percentage": 2.37,
+    "Price": "3495000",
+    "Agent": true,
+    "Area": "127",
+    "Price_per_meter": 27519.69,
+    "Last_update": "Thu Apr 27 12:36:57 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,580,000 and now is 3,495,000 (-85,000). The seller updated the price within 117 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 6022.58,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/hw1UiGn5rcj?dealType=sale&term=שמעוני-71-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "סולם יעקב 6, ירושלים": {
+    "validate_down_price_percentage": 2.93,
+    "Price": "3640000",
+    "Agent": true,
+    "Area": "122",
+    "Price_per_meter": 29836.07,
+    "Last_update": "Thu Apr 27 14:29:11 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,750,000 and now is 3,640,000 (-110,000). The seller updated the price within 84 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 20,
+    "average_parice_rent": 5200,
+    "Possibility_of_monthly_rent": 6751.07,
+    "ROI_P_year": 2.04,
+    "madlan_url": "https://www.madlan.co.il/listings/kPKAa9Huax5?dealType=sale&term=סולם-יעקב-6-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הדקל 2, ירושלים": {
+    "validate_down_price_percentage": 4.5,
+    "Price": "1910000",
+    "Agent": true,
+    "Area": "44",
+    "Price_per_meter": 43409.09,
+    "Last_update": "Thu Feb 09 13:52:45 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,000,000 and now is 1,980,000 (-20,000). The seller updated the price within 64 day(s).",
+      "The price was 1,980,000 and now is 1,910,000 (-70,000). The seller updated the price within 42 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 5175,
+    "Possibility_of_monthly_rent": 3950.75,
+    "ROI_P_year": 2.27,
+    "madlan_url": "https://www.madlan.co.il/listings/di5FFBDV8Ha?dealType=sale&term=הדקל-2-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אנטיגנוס 6, ירושלים": {
+    "validate_down_price_percentage": 1.41,
+    "Price": "3500000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 31818.18,
+    "Last_update": "Thu Feb 16 10:34:13 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,850,000 and now is 3,550,000 (-300,000). The seller updated the price within 186 day(s).",
+      "The price was 3,550,000 and now is 3,500,000 (-50,000). The seller updated the price within 58 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 6050,
+    "Possibility_of_monthly_rent": 6954.02,
+    "ROI_P_year": 2.19,
+    "madlan_url": "https://www.madlan.co.il/listings/k5Tn9Tc4FJc?dealType=sale&term=אנטיגנוס-6-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "לבונה 5, ירושלים": {
+    "validate_down_price_percentage": 2.22,
+    "Price": "2200000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 20000.0,
+    "Last_update": "Thu Jan 19 08:26:51 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,290,000 and now is 2,250,000 (-40,000). The seller updated the price within 5 day(s).",
+      "The price was 2,250,000 and now is 2,200,000 (-50,000). The seller updated the price within 2 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": null,
+    "Possibility_of_monthly_rent": null,
+    "ROI_P_year": null,
+    "madlan_url": "https://www.madlan.co.il/listings/gD7iT5mbC1m?dealType=sale&term=לבונה-5-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בן יפונה 22, ירושלים": {
+    "validate_down_price_percentage": 0.91,
+    "Price": "5450000",
+    "Agent": true,
+    "Area": "100",
+    "Price_per_meter": 54500.0,
+    "Last_update": "Thu Mar 02 09:01:26 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 6,200,000 and now is 6,200,000 (0). The seller updated the price within 38 day(s).",
+      "The price was 6,200,000 and now is 5,750,000 (-450,000). The seller updated the price within 66 day(s).",
+      "The price was 5,750,000 and now is 5,500,000 (-250,000). The seller updated the price within 289 day(s).",
+      "The price was 5,500,000 and now is 5,450,000 (-50,000). The seller updated the price within 10 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 15,
+    "average_parice_rent": 5700,
+    "Possibility_of_monthly_rent": 7731.63,
+    "ROI_P_year": 1.56,
+    "madlan_url": "https://www.madlan.co.il/listings/hpPpeWHdXyk?dealType=sale&term=בן-יפונה-22-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אנטיגנוס 34, ירושלים": {
+    "validate_down_price_percentage": 3.39,
+    "Price": "2850000",
+    "Agent": true,
+    "Area": "85",
+    "Price_per_meter": 33529.41,
+    "Last_update": "Thu Mar 02 11:54:02 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,950,000 and now is 2,850,000 (-100,000). The seller updated the price within 19 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 35,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 4911.12,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/MVAnYAtceU?dealType=sale&term=אנטיגנוס-34-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הנורית 9, ירושלים": {
+    "validate_down_price_percentage": 5.86,
+    "Price": "2250000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 25000.0,
+    "Last_update": "Thu Mar 02 11:56:00 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,500,000 and now is 2,390,000 (-110,000). The seller updated the price within 2 day(s).",
+      "The price was 2,390,000 and now is 2,250,000 (-140,000). The seller updated the price within 35 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 40,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 3475.41,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/bzu3jlvQSbj?dealType=sale&term=הנורית-9-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "ארזי ראובן 6, ירושלים": {
+    "validate_down_price_percentage": 2.22,
+    "Price": "2200000",
+    "Agent": false,
+    "Area": "85",
+    "Price_per_meter": 25882.35,
+    "Last_update": "Thu Mar 09 11:10:52 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,300,000 and now is 2,250,000 (-50,000). The seller updated the price within 75 day(s).",
+      "The price was 2,250,000 and now is 2,200,000 (-50,000). The seller updated the price within 21 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4715.33,
+    "ROI_P_year": 2.36,
+    "madlan_url": null
+  },
+  "השופט חיים כהן 6, ירושלים": {
+    "validate_down_price_percentage": 1.18,
+    "Price": "4200000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 38181.82,
+    "Last_update": "Thu Mar 16 13:42:19 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,250,000 and now is 4,200,000 (-50,000). The seller updated the price within 128 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 10,
+    "average_parice_rent": 4250,
+    "Possibility_of_monthly_rent": 10170.94,
+    "ROI_P_year": 2.66,
+    "madlan_url": "https://www.madlan.co.il/listings/CmcEv5jk15?dealType=sale&term=השופט-חיים-כהן-6-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "ליכטנשיין 23, ירושלים": {
+    "validate_down_price_percentage": 3.86,
+    "Price": "2490000",
+    "Agent": true,
+    "Area": "89",
+    "Price_per_meter": 27977.53,
+    "Last_update": "Thu Mar 16 20:30:58 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,340,000 and now is 2,590,000 (250,000). The seller updated the price within 389 day(s).",
+      "The price was 2,590,000 and now is 2,490,000 (-100,000). The seller updated the price within 0.0 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6200,
+    "Possibility_of_monthly_rent": 5713.9,
+    "ROI_P_year": 2.52,
+    "madlan_url": "https://www.madlan.co.il/listings/e0O8yxU4vz4?dealType=sale&term=ליכטנשיין-23-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "גרשון מאיר 29, ירושלים": {
+    "validate_down_price_percentage": 0.88,
+    "Price": "1680000",
+    "Agent": true,
+    "Area": "57",
+    "Price_per_meter": 29473.68,
+    "Last_update": "Thu Mar 23 08:54:20 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,695,000 and now is 1,680,000 (-15,000). The seller updated the price within 44 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 3600.8,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/eOfR76NPpsa?dealType=sale&term=גרשון-מאיר-29-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אבא אבן 1, ירושלים": {
+    "validate_down_price_percentage": 0.34,
+    "Price": "4375000",
+    "Agent": true,
+    "Area": "100",
+    "Price_per_meter": 43750.0,
+    "Last_update": "Thu Mar 23 10:52:57 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,390,000 and now is 4,375,000 (-15,000). The seller updated the price within 24 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 5300,
+    "Possibility_of_monthly_rent": 6553.81,
+    "ROI_P_year": 1.65,
+    "madlan_url": "https://www.madlan.co.il/listings/kbjriEp5eDK?dealType=sale&term=אבא-אבן-1-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "התאנה 12, ירושלים": {
+    "validate_down_price_percentage": 3.43,
+    "Price": "1970000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 28142.86,
+    "Last_update": "Thu Mar 23 13:30:49 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,040,000 and now is 1,970,000 (-70,000). The seller updated the price within 35 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 30,
+    "average_parice_rent": null,
+    "Possibility_of_monthly_rent": null,
+    "ROI_P_year": null,
+    "madlan_url": "https://www.madlan.co.il/listings/eeRBCzpOktI?dealType=sale&term=התאנה-12-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "שטרן אברהם 61, ירושלים": {
+    "validate_down_price_percentage": 1.18,
+    "Price": "1670000",
+    "Agent": true,
+    "Area": "40",
+    "Price_per_meter": 41750.0,
+    "Last_update": "Thu Mar 23 15:32:41 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,790,000 and now is 1,750,000 (-40,000). The seller updated the price within 34 day(s).",
+      "The price was 1,750,000 and now is 1,690,000 (-60,000). The seller updated the price within 45 day(s).",
+      "The price was 1,690,000 and now is 1,690,000 (0). The seller updated the price within 28 day(s).",
+      "The price was 1,690,000 and now is 1,670,000 (-20,000). The seller updated the price within 31 day(s).",
+      "The price was 1,670,000 and now is 1,670,000 (0). The seller updated the price within 0.25 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 2579.52,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/d0Fcb9TL2NT?dealType=sale&term=שטרן-אברהם-61-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "טוביה 4, ירושלים": {
+    "validate_down_price_percentage": 3.64,
+    "Price": "2650000",
+    "Agent": true,
+    "Area": "74",
+    "Price_per_meter": 35810.81,
+    "Last_update": "Thu Mar 23 15:38:29 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,300,000 and now is 2,980,000 (-320,000). The seller updated the price within 49 day(s).",
+      "The price was 2,980,000 and now is 2,750,000 (-230,000). The seller updated the price within 93 day(s).",
+      "The price was 2,750,000 and now is 2,650,000 (-100,000). The seller updated the price within 0.0 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 25,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 4566.48,
+    "ROI_P_year": 1.9,
+    "madlan_url": "https://www.madlan.co.il/listings/bsu5sE0yqNp?dealType=sale&term=טוביה-4-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "השופט חיים כהן 17, ירושלים": {
+    "validate_down_price_percentage": 3.54,
+    "Price": "2590000",
+    "Agent": true,
+    "Area": "88",
+    "Price_per_meter": 29431.82,
+    "Last_update": "Thu Mar 30 07:01:59 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,685,000 and now is 2,590,000 (-95,000). The seller updated the price within 27 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 35,
+    "average_parice_rent": 4250,
+    "Possibility_of_monthly_rent": 6272.08,
+    "ROI_P_year": 2.66,
+    "madlan_url": "https://www.madlan.co.il/listings/eXnEygNj73F?dealType=sale&term=השופט-חיים-כהן-17-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הדישון 11, ירושלים": {
+    "validate_down_price_percentage": 3.86,
+    "Price": "3990000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 36272.73,
+    "Last_update": "Thu Mar 30 07:36:28 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,150,000 and now is 3,990,000 (-160,000). The seller updated the price within 31 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 30,
+    "average_parice_rent": 8500,
+    "Possibility_of_monthly_rent": 5202.35,
+    "ROI_P_year": 1.43,
+    "madlan_url": "https://www.madlan.co.il/listings/khoqrH3dZul?dealType=sale&term=הדישון-11-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אדם 32, ירושלים": {
+    "validate_down_price_percentage": 25.4,
+    "Price": "1880000",
+    "Agent": true,
+    "Area": "63",
+    "Price_per_meter": 29841.27,
+    "Last_update": "Thu Mar 30 07:40:39 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,520,000 and now is 1,880,000 (-640,000). The seller updated the price within 3 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 50,
+    "average_parice_rent": 3900,
+    "Possibility_of_monthly_rent": 3398.63,
+    "ROI_P_year": 1.99,
+    "madlan_url": "https://www.madlan.co.il/listings/fz3u428CceE?dealType=sale&term=אדם-32-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רא\\": {
+    "validate_down_price_percentage": 0.36,
+    "Price": "2790000",
+    "Agent": true,
+    "Area": "117",
+    "Price_per_meter": 23846.15,
+    "Last_update": "Thu Mar 30 09:03:40 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,890,000 and now is 2,800,000 (-90,000). The seller updated the price within 59 day(s).",
+      "The price was 2,800,000 and now is 2,790,000 (-10,000). The seller updated the price within 91 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 15,
+    "average_parice_rent": 5700,
+    "Possibility_of_monthly_rent": 3958.03,
+    "ROI_P_year": 1.56,
+    "madlan_url": "https://www.madlan.co.il/listings/cC0HHfdjdZA?dealType=sale&term=ראל-משה-לוי-22-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "דה-רוסי 15, ירושלים": {
+    "validate_down_price_percentage": 2.37,
+    "Price": "5350000",
+    "Agent": true,
+    "Area": "130",
+    "Price_per_meter": 41153.85,
+    "Last_update": "Thu Mar 30 10:45:01 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,450,000 and now is 5,350,000 (-100,000). The seller updated the price within 56 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 7490.89,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/eUvY0hsnKIQ?dealType=sale&term=דה-רוסי-15-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הלוי אליעזר 36, ירושלים": {
+    "validate_down_price_percentage": 0.06,
+    "Price": "3168000",
+    "Agent": true,
+    "Area": "99",
+    "Price_per_meter": 32000.0,
+    "Last_update": "Thu May 04 06:59:20 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,170,000 and now is 3,168,000 (-2,000). The seller updated the price within 125 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 6808.02,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/jQS5FJnFwut?dealType=sale&term=הלוי-אליעזר-36-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "גד 8, ירושלים": {
+    "validate_down_price_percentage": 3.6,
+    "Price": "3750000",
+    "Agent": true,
+    "Area": "85",
+    "Price_per_meter": 44117.65,
+    "Last_update": "Thu May 04 08:16:13 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,900,000 and now is 3,890,000 (-10,000). The seller updated the price within 26 day(s).",
+      "The price was 3,890,000 and now is 3,750,000 (-140,000). The seller updated the price within 114 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 15,
+    "average_parice_rent": 5700,
+    "Possibility_of_monthly_rent": 5319.93,
+    "ROI_P_year": 1.56,
+    "madlan_url": "https://www.madlan.co.il/listings/hHa53deYyTW?dealType=sale&term=גד-8-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רבקה 28, ירושלים": {
+    "validate_down_price_percentage": 8.0,
+    "Price": "2300000",
+    "Agent": true,
+    "Area": "71",
+    "Price_per_meter": 32394.37,
+    "Last_update": "Thu May 04 08:18:17 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,500,000 and now is 2,300,000 (-200,000). The seller updated the price within 77 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4250,
+    "Possibility_of_monthly_rent": 5569.8,
+    "ROI_P_year": 2.66,
+    "madlan_url": "https://www.madlan.co.il/listings/gmgmYkaR0eW?dealType=sale&term=רבקה-8-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "חולדה הנביאה 10, ירושלים": {
+    "validate_down_price_percentage": 6.9,
+    "Price": "2700000",
+    "Agent": true,
+    "Area": "101",
+    "Price_per_meter": 26732.67,
+    "Last_update": "Thu May 04 09:26:04 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,900,000 and now is 2,700,000 (-200,000). The seller updated the price within 320 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 5700,
+    "Possibility_of_monthly_rent": 5496.43,
+    "ROI_P_year": 2.24,
+    "madlan_url": "https://www.madlan.co.il/listings/iTGAkfwpDOA?dealType=sale&term=חולדה-הנביאה-10-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "טרומן הרי 5, ירושלים": {
+    "validate_down_price_percentage": 0.63,
+    "Price": "3130000",
+    "Agent": true,
+    "Area": "97",
+    "Price_per_meter": 32268.04,
+    "Last_update": "Thu May 04 12:55:45 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,150,000 and now is 3,130,000 (-20,000). The seller updated the price within 59 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 5,
+    "average_parice_rent": 5200,
+    "Possibility_of_monthly_rent": 5805.18,
+    "ROI_P_year": 2.04,
+    "madlan_url": "https://www.madlan.co.il/listings/e9eSiWZK9k5?dealType=sale&term=טרומן-הרי-5-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הנשיא השישי 4, ירושלים": {
+    "validate_down_price_percentage": 1.18,
+    "Price": "2520000",
+    "Agent": true,
+    "Area": "60",
+    "Price_per_meter": 42000.0,
+    "Last_update": "Thu May 04 18:23:11 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,550,000 and now is 2,520,000 (-30,000). The seller updated the price within 10 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 10,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 5415.47,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/h1ajdFSFZ3M?dealType=sale&term=הנשיא-השישי-4-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אליעזר שילוני 7, ירושלים": {
+    "validate_down_price_percentage": 20.0,
+    "Price": "5000000",
+    "Agent": true,
+    "Area": "140",
+    "Price_per_meter": 35714.29,
+    "Last_update": "Tue Apr 04 18:12:42 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,390,000 and now is 4,790,000 (400,000). The seller updated the price within 171 day(s).",
+      "The price was 4,790,000 and now is 5,000,000 (210,000). The seller updated the price within 548 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 5700,
+    "Possibility_of_monthly_rent": 11132.81,
+    "ROI_P_year": 2.45,
+    "madlan_url": null
+  },
+  "פנקס 6, ירושלים": {
+    "validate_down_price_percentage": 1.25,
+    "Price": "2370000",
+    "Agent": true,
+    "Area": "63",
+    "Price_per_meter": 37619.05,
+    "Last_update": "Tue Apr 18 06:46:20 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,400,000 and now is 2,370,000 (-30,000). The seller updated the price within 67 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 10,
+    "average_parice_rent": 4900,
+    "Possibility_of_monthly_rent": 5530.0,
+    "ROI_P_year": 2.57,
+    "madlan_url": "https://www.madlan.co.il/listings/i461OGrtz5G?dealType=sale&term=פנקס-6-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "קדושי בבל 5, ירושלים": {
+    "validate_down_price_percentage": 7.5,
+    "Price": "1850000",
+    "Agent": true,
+    "Area": "65",
+    "Price_per_meter": 28461.54,
+    "Last_update": "Tue Apr 18 07:03:48 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,000,000 and now is 1,850,000 (-150,000). The seller updated the price within 75 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 20,
+    "average_parice_rent": 3900,
+    "Possibility_of_monthly_rent": 3344.39,
+    "ROI_P_year": 1.99,
+    "madlan_url": "https://www.madlan.co.il/listings/c9HVeFmSMYR?dealType=sale&term=קדושי-בבל-5-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "נוב 4, ירושלים": {
+    "validate_down_price_percentage": 11.41,
+    "Price": "1320000",
+    "Agent": true,
+    "Area": "15",
+    "Price_per_meter": 88000.0,
+    "Last_update": "Tue Apr 18 08:53:16 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,490,000 and now is 1,320,000 (-170,000). The seller updated the price within 166 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 5175,
+    "Possibility_of_monthly_rent": 2730.36,
+    "ROI_P_year": 2.27,
+    "madlan_url": "https://www.madlan.co.il/listings/j8dUXY57sbq?dealType=sale&term=נוב-4-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "מולכו 6, ירושלים": {
+    "validate_down_price_percentage": 1.72,
+    "Price": "2850000",
+    "Agent": true,
+    "Area": "68",
+    "Price_per_meter": 41911.76,
+    "Last_update": "Tue Apr 18 08:55:02 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,900,000 and now is 2,850,000 (-50,000). The seller updated the price within 33 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 15,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 7245.76,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/iKP54UBOFN?dealType=sale&term=מולכו-6-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אסתר המלכה 12, ירושלים": {
+    "validate_down_price_percentage": 1.18,
+    "Price": "4200000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 38181.82,
+    "Last_update": "Tue Apr 18 08:59:10 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,450,000 and now is 4,350,000 (-100,000). The seller updated the price within 13 day(s).",
+      "The price was 4,350,000 and now is 4,250,000 (-100,000). The seller updated the price within 14 day(s).",
+      "The price was 4,250,000 and now is 4,200,000 (-50,000). The seller updated the price within 35 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 15,
+    "average_parice_rent": 8600,
+    "Possibility_of_monthly_rent": 8809.76,
+    "ROI_P_year": 2.31,
+    "madlan_url": "https://www.madlan.co.il/listings/ioLutLNk6pj?dealType=sale&term=אסתר-המלכה-12-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אסתר המלכה 13, ירושלים": {
+    "validate_down_price_percentage": 1.18,
+    "Price": "4200000",
+    "Agent": true,
+    "Area": "110",
+    "Price_per_meter": 38181.82,
+    "Last_update": "Tue Apr 18 09:00:03 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,350,000 and now is 4,250,000 (-100,000). The seller updated the price within 13 day(s).",
+      "The price was 4,250,000 and now is 4,200,000 (-50,000). The seller updated the price within 35 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 15,
+    "average_parice_rent": 8600,
+    "Possibility_of_monthly_rent": 8809.76,
+    "ROI_P_year": 2.31,
+    "madlan_url": "https://www.madlan.co.il/listings/iLKjZocjE98?dealType=sale&term=אסתר-המלכה-13-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הל\\": {
+    "validate_down_price_percentage": 30.8,
+    "Price": "4000000",
+    "Agent": true,
+    "Area": "104",
+    "Price_per_meter": 38461.54,
+    "Last_update": "Tue Apr 18 10:50:56 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,780,000 and now is 4,000,000 (-1,780,000). The seller updated the price within 272 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 8802.59,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/dw1oMPFy7gV?dealType=sale&term=הלה-46-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "גואטמאלה 5, ירושלים": {
+    "validate_down_price_percentage": 4.18,
+    "Price": "2290000",
+    "Agent": true,
+    "Area": "87",
+    "Price_per_meter": 26321.84,
+    "Last_update": "Tue Apr 18 11:12:43 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,400,000 and now is 2,390,000 (-10,000). The seller updated the price within 10 day(s).",
+      "The price was 2,390,000 and now is 2,290,000 (-100,000). The seller updated the price within 40 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 3537.19,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/k9zL406BIf?dealType=sale&term=גואטמאלה-5-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "גולדברג לאה 216, ירושלים": {
+    "validate_down_price_percentage": 1.35,
+    "Price": "2200000",
+    "Agent": true,
+    "Area": "88",
+    "Price_per_meter": 25000.0,
+    "Last_update": "Tue Apr 18 14:46:49 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,230,000 and now is 2,200,000 (-30,000). The seller updated the price within 70 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 3700,
+    "Possibility_of_monthly_rent": 3894.36,
+    "ROI_P_year": 1.95,
+    "madlan_url": null
+  },
+  "אלטמן אריה 24, ירושלים": {
+    "validate_down_price_percentage": 6.14,
+    "Price": "2750000",
+    "Agent": true,
+    "Area": "130",
+    "Price_per_meter": 21153.85,
+    "Last_update": "Tue Apr 18 14:47:31 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,930,000 and now is 2,750,000 (-180,000). The seller updated the price within 58 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 5894.16,
+    "ROI_P_year": 2.36,
+    "madlan_url": null
+  },
+  "ששת הימים 34, ירושלים": {
+    "validate_down_price_percentage": 15.38,
+    "Price": "11000000",
+    "Agent": true,
+    "Area": "300",
+    "Price_per_meter": 36666.67,
+    "Last_update": "Tue Apr 18 14:48:06 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 13,000,000 and now is 11,000,000 (-2,000,000). The seller updated the price within 120 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": 10000,
+    "Possibility_of_monthly_rent": 35598.71,
+    "ROI_P_year": 3.56,
+    "madlan_url": null
+  },
+  "הרב זווין 50, ירושלים": {
+    "validate_down_price_percentage": 1.71,
+    "Price": "2880000",
+    "Agent": true,
+    "Area": "130",
+    "Price_per_meter": 22153.85,
+    "Last_update": "Tue Apr 18 14:52:09 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,930,000 and now is 2,880,000 (-50,000). The seller updated the price within 283 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 3700,
+    "Possibility_of_monthly_rent": 5098.07,
+    "ROI_P_year": 1.95,
+    "madlan_url": null
+  },
+  "הציונות 11, ירושלים": {
+    "validate_down_price_percentage": 8.4,
+    "Price": "2290000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 32714.29,
+    "Last_update": "Tue Apr 18 15:35:34 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,500,000 and now is 2,290,000 (-210,000). The seller updated the price within 161 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 3537.19,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/f5z3fN6GCvl?dealType=sale&term=הציונות-11-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "פדרמן דוד 2, ירושלים": {
+    "validate_down_price_percentage": 6.19,
+    "Price": "1970000",
+    "Agent": true,
+    "Area": "83",
+    "Price_per_meter": 23734.94,
+    "Last_update": "Tue Apr 18 20:05:33 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,100,000 and now is 1,970,000 (-130,000). The seller updated the price within 42 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 30,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4222.36,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/eKNLoUY2shJ?dealType=sale&term=פדרמן-דוד-2-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "קרן היסוד 9, ירושלים": {
+    "validate_down_price_percentage": 3.36,
+    "Price": "5750000",
+    "Agent": true,
+    "Area": "127",
+    "Price_per_meter": 45275.59,
+    "Last_update": "Tue Apr 25 10:44:03 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,950,000 and now is 5,750,000 (-200,000). The seller updated the price within 128 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 8100,
+    "Possibility_of_monthly_rent": 14785.71,
+    "ROI_P_year": 2.83,
+    "madlan_url": "https://www.madlan.co.il/listings/chDihor3Gvm?dealType=sale&term=קרן-היסוד-9-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הנגבי שבתאי 5, ירושלים": {
+    "validate_down_price_percentage": 54.35,
+    "Price": "2520000",
+    "Agent": true,
+    "Area": "130",
+    "Price_per_meter": 19384.62,
+    "Last_update": "Tue Apr 25 13:44:46 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,520,000 and now is 2,520,000 (-3,000,000). The seller updated the price within 3 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 50,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 5109.81,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/jJPpaD4Apl4?dealType=sale&term=הנגבי-שבתאי-5-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הרב נסים יצחק 15, ירושלים": {
+    "validate_down_price_percentage": 1.21,
+    "Price": "2450000",
+    "Agent": true,
+    "Area": "92",
+    "Price_per_meter": 26630.43,
+    "Last_update": "Tue Feb 07 10:33:37 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,480,000 and now is 2,450,000 (-30,000). The seller updated the price within 8 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 10,
+    "average_parice_rent": 6200,
+    "Possibility_of_monthly_rent": 5622.11,
+    "ROI_P_year": 2.52,
+    "madlan_url": "https://www.madlan.co.il/listings/u40mgAMxqQ?dealType=sale&term=הרב-ניסים-יצחק-15-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "גנרל קניג פייר 21, ירושלים": {
+    "validate_down_price_percentage": 3.76,
+    "Price": "3580000",
+    "Agent": true,
+    "Area": "91",
+    "Price_per_meter": 39340.66,
+    "Last_update": "Tue Feb 14 10:13:26 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,720,000 and now is 3,580,000 (-140,000). The seller updated the price within 29 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 35,
+    "average_parice_rent": 6050,
+    "Possibility_of_monthly_rent": 7112.97,
+    "ROI_P_year": 2.19,
+    "madlan_url": "https://www.madlan.co.il/listings/gfricEI9JzQ?dealType=sale&term=גנרל-קניג-פייר-21-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "חביב חיים 12, ירושלים": {
+    "validate_down_price_percentage": 2.2,
+    "Price": "1780000",
+    "Agent": true,
+    "Area": "42",
+    "Price_per_meter": 42380.95,
+    "Last_update": "Tue Feb 21 16:16:21 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,850,000 and now is 1,820,000 (-30,000). The seller updated the price within 21 day(s).",
+      "The price was 1,820,000 and now is 1,780,000 (-40,000). The seller updated the price within 84 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 15,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 2749.43,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/ku7rrd4KMtA?dealType=sale&term=חביב-חיים-12-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אבא אבן 16, ירושלים": {
+    "validate_down_price_percentage": 1.88,
+    "Price": "4700000",
+    "Agent": true,
+    "Area": "107",
+    "Price_per_meter": 43925.23,
+    "Last_update": "Tue Jan 17 14:11:33 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,790,000 and now is 4,700,000 (-90,000). The seller updated the price within 0.0 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 15,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 10100.29,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/OPouEo2zyA?dealType=sale&term=אבא-אבן-16-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "השופט חיים כהן 12, ירושלים": {
+    "validate_down_price_percentage": 2.44,
+    "Price": "3990000",
+    "Agent": true,
+    "Area": "115",
+    "Price_per_meter": 34695.65,
+    "Last_update": "Tue Mar 07 11:30:46 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,090,000 and now is 3,990,000 (-100,000). The seller updated the price within 9 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4250,
+    "Possibility_of_monthly_rent": 9662.39,
+    "ROI_P_year": 2.66,
+    "madlan_url": "https://www.madlan.co.il/listings/xkvaTYbDpX?dealType=sale&term=השופט-חיים-כהן-12-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רבי בנימין 2, ירושלים": {
+    "validate_down_price_percentage": 2.25,
+    "Price": "4350000",
+    "Agent": true,
+    "Area": "119",
+    "Price_per_meter": 36554.62,
+    "Last_update": "Tue Mar 14 07:19:07 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,800,000 and now is 4,600,000 (-200,000). The seller updated the price within 51 day(s).",
+      "The price was 4,600,000 and now is 4,450,000 (-150,000). The seller updated the price within 126 day(s).",
+      "The price was 4,450,000 and now is 4,350,000 (-100,000). The seller updated the price within 19 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 6000,
+    "Possibility_of_monthly_rent": 7771.95,
+    "ROI_P_year": 1.97,
+    "madlan_url": "https://www.madlan.co.il/listings/GIiuTpj6A8?dealType=sale&term=רבי-בנימין-2-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הטייסים 31, ירושלים": {
+    "validate_down_price_percentage": 4.35,
+    "Price": "3300000",
+    "Agent": true,
+    "Area": "90",
+    "Price_per_meter": 36666.67,
+    "Last_update": "Tue Mar 14 07:21:30 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,650,000 and now is 3,500,000 (-150,000). The seller updated the price within 35 day(s).",
+      "The price was 3,500,000 and now is 3,450,000 (-50,000). The seller updated the price within 73 day(s).",
+      "The price was 3,450,000 and now is 3,300,000 (-150,000). The seller updated the price within 79 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 7262.14,
+    "ROI_P_year": 2.42,
+    "madlan_url": null
+  },
+  "רחמילביץ משה 115, ירושלים": {
+    "validate_down_price_percentage": 2.26,
+    "Price": "2590000",
+    "Agent": true,
+    "Area": "160",
+    "Price_per_meter": 16187.5,
+    "Last_update": "Tue Mar 14 09:39:36 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,690,000 and now is 2,650,000 (-40,000). The seller updated the price within 17 day(s).",
+      "The price was 2,650,000 and now is 2,590,000 (-60,000). The seller updated the price within 36 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 15,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 5551.23,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/dhdbdWhWXLy?dealType=sale&term=רחמילביץ-משה-115-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "חובב משה 7, ירושלים": {
+    "validate_down_price_percentage": 4.67,
+    "Price": "5100000",
+    "Agent": true,
+    "Area": "142",
+    "Price_per_meter": 35915.49,
+    "Last_update": "Tue Mar 14 13:45:14 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,350,000 and now is 5,100,000 (-250,000). The seller updated the price within 155 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 10,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 7140.85,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/dz2yqMJhx1U?dealType=sale&term=חובב-משה-7-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "החלוץ 20, ירושלים": {
+    "validate_down_price_percentage": 1.61,
+    "Price": "6100000",
+    "Agent": true,
+    "Area": "155",
+    "Price_per_meter": 39354.84,
+    "Last_update": "Tue Mar 14 13:46:31 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 6,200,000 and now is 6,100,000 (-100,000). The seller updated the price within 341 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6000,
+    "Possibility_of_monthly_rent": 10898.59,
+    "ROI_P_year": 1.97,
+    "madlan_url": "https://www.madlan.co.il/listings/jHRASNfCvqJ?dealType=sale&term=החלוץ-20-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "יפה נוף 25, ירושלים": {
+    "validate_down_price_percentage": 10.96,
+    "Price": "3250000",
+    "Agent": true,
+    "Area": "85",
+    "Price_per_meter": 38235.29,
+    "Last_update": "Tue Mar 14 18:10:18 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,650,000 and now is 3,250,000 (-400,000). The seller updated the price within 21 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 40,
+    "average_parice_rent": 6000,
+    "Possibility_of_monthly_rent": 5806.63,
+    "ROI_P_year": 1.97,
+    "madlan_url": "https://www.madlan.co.il/listings/d13RjMFKTTj?dealType=sale&term=יפה-נוף-25-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הרב ניסים יצחק 24, ירושלים": {
+    "validate_down_price_percentage": 0.82,
+    "Price": "2430000",
+    "Agent": true,
+    "Area": "85",
+    "Price_per_meter": 28588.24,
+    "Last_update": "Tue Mar 21 11:52:41 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,450,000 and now is 2,430,000 (-20,000). The seller updated the price within 69 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6200,
+    "Possibility_of_monthly_rent": 5576.21,
+    "ROI_P_year": 2.52,
+    "madlan_url": "https://www.madlan.co.il/listings/cxJox2UXucg?dealType=sale&term=הרב-ניסים-יצחק-24-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "נוף הרים 3, ירושלים": {
+    "validate_down_price_percentage": 1.69,
+    "Price": "3490000",
+    "Agent": true,
+    "Area": "95",
+    "Price_per_meter": 36736.84,
+    "Last_update": "Tue Mar 21 12:28:02 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,950,000 and now is 3,800,000 (-150,000). The seller updated the price within 0.041666666666666664 day(s).",
+      "The price was 3,800,000 and now is 3,550,000 (-250,000). The seller updated the price within 20 day(s).",
+      "The price was 3,550,000 and now is 3,490,000 (-60,000). The seller updated the price within 22 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6000,
+    "Possibility_of_monthly_rent": 6235.42,
+    "ROI_P_year": 1.97,
+    "madlan_url": null
+  },
+  "מרדכי היהודי 12, ירושלים": {
+    "validate_down_price_percentage": 3.64,
+    "Price": "5300000",
+    "Agent": true,
+    "Area": "119",
+    "Price_per_meter": 44537.82,
+    "Last_update": "Tue Mar 28 10:05:11 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 5,500,000 and now is 5,300,000 (-200,000). The seller updated the price within 162 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 10,
+    "average_parice_rent": 8600,
+    "Possibility_of_monthly_rent": 11117.07,
+    "ROI_P_year": 2.31,
+    "madlan_url": "https://www.madlan.co.il/listings/gqkVPtqKdiw?dealType=sale&term=מרדכי-היהודי-12-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אורוגואי 14, ירושלים": {
+    "validate_down_price_percentage": 1.67,
+    "Price": "2350000",
+    "Agent": true,
+    "Area": "84",
+    "Price_per_meter": 27976.19,
+    "Last_update": "Tue Mar 28 13:42:30 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,390,000 and now is 2,350,000 (-40,000). The seller updated the price within 7 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 15,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 3629.87,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/iEi9kFRgqsV?dealType=sale&term=אורוגואי-14-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "שדרות דיין משה 154, ירושלים": {
+    "validate_down_price_percentage": 1.74,
+    "Price": "1690000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 24142.86,
+    "Last_update": "Tue Mar 28 15:32:00 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,740,000 and now is 1,740,000 (0). The seller updated the price within 83 day(s).",
+      "The price was 1,740,000 and now is 1,720,000 (-20,000). The seller updated the price within 62 day(s).",
+      "The price was 1,720,000 and now is 1,690,000 (-30,000). The seller updated the price within 20 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 3622.23,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/cPeXAFLn3th?dealType=sale&term=שדרות-דיין-משה-154-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "מעלות דפנה 130, ירושלים": {
+    "validate_down_price_percentage": 1.45,
+    "Price": "4090000",
+    "Agent": true,
+    "Area": "111",
+    "Price_per_meter": 36846.85,
+    "Last_update": "Tue Mar 28 19:04:37 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,350,000 and now is 4,150,000 (-200,000). The seller updated the price within 52 day(s).",
+      "The price was 4,150,000 and now is 4,090,000 (-60,000). The seller updated the price within 64 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 25,
+    "average_parice_rent": null,
+    "Possibility_of_monthly_rent": null,
+    "ROI_P_year": null,
+    "madlan_url": "https://www.madlan.co.il/listings/bWURprPWDUI?dealType=sale&term=מעלות-דפנה-130-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בצלאל 4, ירושלים": {
+    "validate_down_price_percentage": 1.59,
+    "Price": "3100000",
+    "Agent": true,
+    "Area": "65",
+    "Price_per_meter": 47692.31,
+    "Last_update": "Tue May 02 07:47:33 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,300,000 and now is 3,250,000 (-50,000). The seller updated the price within 104 day(s).",
+      "The price was 3,250,000 and now is 3,250,000 (0). The seller updated the price within 0.0 day(s).",
+      "The price was 3,250,000 and now is 3,200,000 (-50,000). The seller updated the price within 8 day(s).",
+      "The price was 3,200,000 and now is 3,150,000 (-50,000). The seller updated the price within 117 day(s).",
+      "The price was 3,150,000 and now is 3,100,000 (-50,000). The seller updated the price within 9 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 10,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 7881.36,
+    "ROI_P_year": 2.8,
+    "madlan_url": "https://www.madlan.co.il/listings/kRmhaeBvxuZ?dealType=sale&term=בצלאל-4-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "רחמילביץ משה 77, ירושלים": {
+    "validate_down_price_percentage": 6.35,
+    "Price": "1770000",
+    "Agent": true,
+    "Area": "69",
+    "Price_per_meter": 25652.17,
+    "Last_update": "Tue May 02 13:13:00 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,060,000 and now is 1,930,000 (-130,000). The seller updated the price within 31 day(s).",
+      "The price was 1,930,000 and now is 1,890,000 (-40,000). The seller updated the price within 38 day(s).",
+      "The price was 1,890,000 and now is 1,770,000 (-120,000). The seller updated the price within 39 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 30,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 3793.7,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/gCWPocA7S1h?dealType=sale&term=רחמילביץ-משה-77-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "סדן דב 4, ירושלים": {
+    "validate_down_price_percentage": 1.1,
+    "Price": "1800000",
+    "Agent": true,
+    "Area": "65",
+    "Price_per_meter": 27692.31,
+    "Last_update": "Tue May 02 23:30:56 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,880,000 and now is 1,870,000 (-10,000). The seller updated the price within 13 day(s).",
+      "The price was 1,870,000 and now is 1,860,000 (-10,000). The seller updated the price within 16 day(s).",
+      "The price was 1,860,000 and now is 1,820,000 (-40,000). The seller updated the price within 30 day(s).",
+      "The price was 1,820,000 and now is 1,800,000 (-20,000). The seller updated the price within 44 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 3858.0,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/jJa26hs3abx?dealType=sale&term=סדן-דב-4-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "סדן דב 1, ירושלים": {
+    "validate_down_price_percentage": 1.1,
+    "Price": "1800000",
+    "Agent": true,
+    "Area": "65",
+    "Price_per_meter": 27692.31,
+    "Last_update": "Tue May 02 23:31:38 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,870,000 and now is 1,860,000 (-10,000). The seller updated the price within 16 day(s).",
+      "The price was 1,860,000 and now is 1,850,000 (-10,000). The seller updated the price within 14 day(s).",
+      "The price was 1,850,000 and now is 1,820,000 (-30,000). The seller updated the price within 16 day(s).",
+      "The price was 1,820,000 and now is 1,800,000 (-20,000). The seller updated the price within 44 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 3858.0,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/fe9U6cJYdXM?dealType=sale&term=סדן-דב-1-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "סדן דב 16, ירושלים": {
+    "validate_down_price_percentage": 1.1,
+    "Price": "1800000",
+    "Agent": true,
+    "Area": "65",
+    "Price_per_meter": 27692.31,
+    "Last_update": "Tue May 02 23:52:27 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,890,000 and now is 1,880,000 (-10,000). The seller updated the price within 25 day(s).",
+      "The price was 1,880,000 and now is 1,870,000 (-10,000). The seller updated the price within 15 day(s).",
+      "The price was 1,870,000 and now is 1,860,000 (-10,000). The seller updated the price within 16 day(s).",
+      "The price was 1,860,000 and now is 1,850,000 (-10,000). The seller updated the price within 14 day(s).",
+      "The price was 1,850,000 and now is 1,820,000 (-30,000). The seller updated the price within 16 day(s).",
+      "The price was 1,820,000 and now is 1,800,000 (-20,000). The seller updated the price within 44 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 3858.0,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/fqHwMvVj5ve?dealType=sale&term=סדן-דב-16-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "גדוד החמישי 28, ירושלים": {
+    "validate_down_price_percentage": 0.49,
+    "Price": "2040000",
+    "Agent": false,
+    "Area": "75",
+    "Price_per_meter": 27200.0,
+    "Last_update": "Wed Apr 19 05:59:04 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,050,000 and now is 2,040,000 (-10,000). The seller updated the price within 1 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4372.4,
+    "ROI_P_year": 2.36,
+    "madlan_url": null
+  },
+  "מרכוס 4, ירושלים": {
+    "validate_down_price_percentage": 6.35,
+    "Price": "5900000",
+    "Agent": true,
+    "Area": "130",
+    "Price_per_meter": 45384.62,
+    "Last_update": "Wed Apr 19 07:29:13 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 6,300,000 and now is 5,900,000 (-400,000). The seller updated the price within 16 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 40,
+    "average_parice_rent": 8100,
+    "Possibility_of_monthly_rent": 15171.43,
+    "ROI_P_year": 2.83,
+    "madlan_url": "https://www.madlan.co.il/listings/izelzNcdRo8?dealType=sale&term=מרכוס-4-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "דוגה שלמה 31, ירושלים": {
+    "validate_down_price_percentage": 5.95,
+    "Price": "3950000",
+    "Agent": false,
+    "Area": "150",
+    "Price_per_meter": 26333.33,
+    "Last_update": "Wed Apr 19 07:34:51 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,200,000 and now is 3,950,000 (-250,000). The seller updated the price within 27 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 35,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 8009.42,
+    "ROI_P_year": 2.23,
+    "madlan_url": null
+  },
+  "מרץ דוד 20, ירושלים": {
+    "validate_down_price_percentage": 5.88,
+    "Price": "8000000",
+    "Agent": false,
+    "Area": "400",
+    "Price_per_meter": 20000.0,
+    "Last_update": "Wed Apr 19 10:15:35 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 8,500,000 and now is 8,000,000 (-500,000). The seller updated the price within 75 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 11201.33,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/fqEczUuryJr?dealType=sale&term=מרץ-דוד-20-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "אבנר חי שאקי 29, ירושלים": {
+    "validate_down_price_percentage": 5.73,
+    "Price": "3950000",
+    "Agent": true,
+    "Area": "120",
+    "Price_per_meter": 32916.67,
+    "Last_update": "Wed Apr 19 11:59:27 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,350,000 and now is 4,190,000 (-160,000). The seller updated the price within 19 day(s).",
+      "The price was 4,190,000 and now is 3,950,000 (-240,000). The seller updated the price within 59 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 30,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 8009.42,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/hzFyzMPd9pZ?dealType=sale&term=אבנר-חי-שאקי-29-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "יפה רום 80, ירושלים": {
+    "validate_down_price_percentage": 28.79,
+    "Price": "2350000",
+    "Agent": true,
+    "Area": "87",
+    "Price_per_meter": 27011.49,
+    "Last_update": "Wed Feb 01 09:32:00 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,300,000 and now is 2,350,000 (-950,000). The seller updated the price within 0.0 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 50,
+    "average_parice_rent": null,
+    "Possibility_of_monthly_rent": null,
+    "ROI_P_year": null,
+    "madlan_url": "https://www.madlan.co.il/listings/hnffJDkmQAu?dealType=sale&term=יפה-רום-80-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בית הערבה 31, ירושלים": {
+    "validate_down_price_percentage": 1.01,
+    "Price": "4880000",
+    "Agent": true,
+    "Area": "145",
+    "Price_per_meter": 33655.17,
+    "Last_update": "Wed Feb 15 11:34:05 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,950,000 and now is 4,930,000 (-20,000). The seller updated the price within 41 day(s).",
+      "The price was 4,930,000 and now is 4,880,000 (-50,000). The seller updated the price within 77 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 4250,
+    "Possibility_of_monthly_rent": 11817.66,
+    "ROI_P_year": 2.66,
+    "madlan_url": "https://www.madlan.co.il/listings/gNYNNldwYyx?dealType=sale&term=בית-הערבה-31-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "עמנואל זיסמן 32, ירושלים": {
+    "validate_down_price_percentage": 2.88,
+    "Price": "2695000",
+    "Agent": false,
+    "Area": "111",
+    "Price_per_meter": 24279.28,
+    "Last_update": "Wed Jan 11 09:05:15 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,775,000 and now is 2,695,000 (-80,000). The seller updated the price within 35 day(s)."
+    ],
+    "general_condition": "asNew",
+    "calculate_pressure": 25,
+    "average_parice_rent": 6200,
+    "Possibility_of_monthly_rent": 6184.32,
+    "ROI_P_year": 2.52,
+    "madlan_url": null
+  },
+  "טוניק יצחק 4, ירושלים": {
+    "validate_down_price_percentage": 4.11,
+    "Price": "2100000",
+    "Agent": true,
+    "Area": "104",
+    "Price_per_meter": 20192.31,
+    "Last_update": "Wed Jan 18 13:40:33 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,190,000 and now is 2,100,000 (-90,000). The seller updated the price within 50 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4501.0,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/eygEpSGZwxp?dealType=sale&term=טוניק-יצחק-4-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "תורן חיים 39, ירושלים": {
+    "validate_down_price_percentage": 6.98,
+    "Price": "2000000",
+    "Agent": true,
+    "Area": "80",
+    "Price_per_meter": 25000.0,
+    "Last_update": "Wed Mar 01 11:01:04 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,150,000 and now is 2,000,000 (-150,000). The seller updated the price within 59 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 25,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 4286.66,
+    "ROI_P_year": 2.36,
+    "madlan_url": "https://www.madlan.co.il/listings/i2kOr6k8Qjy?dealType=sale&term=תורן-חיים-39-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "טהון 8, ירושלים": {
+    "validate_down_price_percentage": 1.82,
+    "Price": "2700000",
+    "Agent": true,
+    "Area": "84",
+    "Price_per_meter": 32142.86,
+    "Last_update": "Wed Mar 15 09:47:03 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,750,000 and now is 2,700,000 (-50,000). The seller updated the price within 14 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 15,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 4170.49,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/eM6xQjfDlzf?dealType=sale&term=טהון-8-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הנטקה 46, ירושלים": {
+    "validate_down_price_percentage": 4.0,
+    "Price": "2400000",
+    "Agent": true,
+    "Area": "75",
+    "Price_per_meter": 32000.0,
+    "Last_update": "Wed Mar 15 09:47:26 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,600,000 and now is 2,500,000 (-100,000). The seller updated the price within 0.9583333333333334 day(s).",
+      "The price was 2,500,000 and now is 2,400,000 (-100,000). The seller updated the price within 20 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 3707.1,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/dXVgryfJL8y?dealType=sale&term=הנטקה-46-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "דלה פרגולה 14, ירושלים": {
+    "validate_down_price_percentage": 6.69,
+    "Price": "2790000",
+    "Agent": true,
+    "Area": "117",
+    "Price_per_meter": 23846.15,
+    "Last_update": "Wed Mar 15 11:42:53 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,990,000 and now is 2,790,000 (-200,000). The seller updated the price within 59 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 25,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 5657.29,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/bcIZAYExb6L?dealType=sale&term=דלה-פרגולה-14-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "פיכמן 1, ירושלים": {
+    "validate_down_price_percentage": 11.86,
+    "Price": "2600000",
+    "Agent": true,
+    "Area": "75",
+    "Price_per_meter": 34666.67,
+    "Last_update": "Wed Mar 29 08:32:54 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,950,000 and now is 2,600,000 (-350,000). The seller updated the price within 26 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 35,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 5721.68,
+    "ROI_P_year": 2.42,
+    "madlan_url": "https://www.madlan.co.il/listings/hX4yrHNSdYC?dealType=sale&term=פיכמן-1-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הכרמל 32, ירושלים": {
+    "validate_down_price_percentage": 0.69,
+    "Price": "1430000",
+    "Agent": true,
+    "Area": "25",
+    "Price_per_meter": 57200.0,
+    "Last_update": "Wed Mar 29 08:39:31 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,460,000 and now is 1,440,000 (-20,000). The seller updated the price within 74 day(s).",
+      "The price was 1,440,000 and now is 1,430,000 (-10,000). The seller updated the price within 51 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 5175,
+    "Possibility_of_monthly_rent": 2957.89,
+    "ROI_P_year": 2.27,
+    "madlan_url": "https://www.madlan.co.il/listings/i7zXklukpEw?dealType=sale&term=הכרמל-32-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "עליאש 11, ירושלים": {
+    "validate_down_price_percentage": 0.69,
+    "Price": "1430000",
+    "Agent": true,
+    "Area": "25",
+    "Price_per_meter": 57200.0,
+    "Last_update": "Wed Mar 29 08:40:03 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 1,460,000 and now is 1,440,000 (-20,000). The seller updated the price within 72 day(s).",
+      "The price was 1,440,000 and now is 1,430,000 (-10,000). The seller updated the price within 51 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 10,
+    "average_parice_rent": 5700,
+    "Possibility_of_monthly_rent": 2911.07,
+    "ROI_P_year": 2.24,
+    "madlan_url": "https://www.madlan.co.il/listings/bzayq4bvuyX?dealType=sale&term=עליאש-11-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "בצלאל 25, ירושלים": {
+    "validate_down_price_percentage": 6.67,
+    "Price": "2800000",
+    "Agent": true,
+    "Area": "70",
+    "Price_per_meter": 40000.0,
+    "Last_update": "Wed Mar 29 08:44:30 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,050,000 and now is 3,000,000 (-50,000). The seller updated the price within 1 day(s).",
+      "The price was 3,000,000 and now is 2,800,000 (-200,000). The seller updated the price within 137 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 5175,
+    "Possibility_of_monthly_rent": 5791.67,
+    "ROI_P_year": 2.28,
+    "madlan_url": "https://www.madlan.co.il/listings/e6h6ooB23Ui?dealType=sale&term=בצלאל-25-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "צייטלין 24, ירושלים": {
+    "validate_down_price_percentage": 5.06,
+    "Price": "3750000",
+    "Agent": true,
+    "Area": "124",
+    "Price_per_meter": 30241.94,
+    "Last_update": "Wed Mar 29 09:43:49 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,950,000 and now is 3,750,000 (-200,000). The seller updated the price within 77 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 5250.63,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/dKrECK5fdiW?dealType=sale&term=צייטלין-24-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "החלוץ 41, ירושלים": {
+    "validate_down_price_percentage": 2.9,
+    "Price": "6700000",
+    "Agent": true,
+    "Area": "175",
+    "Price_per_meter": 38285.71,
+    "Last_update": "Wed Mar 29 09:47:28 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 6,900,000 and now is 6,700,000 (-200,000). The seller updated the price within 217 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6000,
+    "Possibility_of_monthly_rent": 11970.58,
+    "ROI_P_year": 1.97,
+    "madlan_url": "https://www.madlan.co.il/listings/dTY4QAwCnsB?dealType=sale&term=החלוץ-41-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "צייטלין 28, ירושלים": {
+    "validate_down_price_percentage": 5.06,
+    "Price": "3750000",
+    "Agent": true,
+    "Area": "124",
+    "Price_per_meter": 30241.94,
+    "Last_update": "Wed Mar 29 09:47:32 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,950,000 and now is 3,750,000 (-200,000). The seller updated the price within 77 day(s)."
+    ],
+    "general_condition": "preserved",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4500,
+    "Possibility_of_monthly_rent": 5250.63,
+    "ROI_P_year": 1.54,
+    "madlan_url": "https://www.madlan.co.il/listings/gy5nlcFiM4r?dealType=sale&term=צייטלין-28-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הצבר 205, ירושלים": {
+    "validate_down_price_percentage": 4.78,
+    "Price": "2190000",
+    "Agent": true,
+    "Area": "83",
+    "Price_per_meter": 26385.54,
+    "Last_update": "Wed May 03 08:06:04 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,300,000 and now is 2,190,000 (-110,000). The seller updated the price within 74 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 20,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 4440.67,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/i4gTbfyTxuG?dealType=sale&term=הצבר-205-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "מרגלית 302, ירושלים": {
+    "validate_down_price_percentage": 0.95,
+    "Price": "2080000",
+    "Agent": true,
+    "Area": "65",
+    "Price_per_meter": 32000.0,
+    "Last_update": "Wed May 03 08:06:10 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 2,150,000 and now is 2,050,000 (-100,000). The seller updated the price within 4 day(s).",
+      "The price was 2,050,000 and now is 2,080,000 (30,000). The seller updated the price within 22 day(s)."
+    ],
+    "general_condition": "ul",
+    "calculate_pressure": 15,
+    "average_parice_rent": 4275,
+    "Possibility_of_monthly_rent": 4217.62,
+    "ROI_P_year": 2.23,
+    "madlan_url": "https://www.madlan.co.il/listings/cT50rTryQPU?dealType=sale&term=מרגלית-302-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "ושינגטון 24, ירושלים": {
+    "validate_down_price_percentage": 0.39,
+    "Price": "12800000",
+    "Agent": true,
+    "Area": "200",
+    "Price_per_meter": 64000.0,
+    "Last_update": "Wed May 03 08:24:50 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 12,750,000 and now is 12,800,000 (50,000). The seller updated the price within 233 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 5,
+    "average_parice_rent": 8100,
+    "Possibility_of_monthly_rent": 32914.29,
+    "ROI_P_year": 2.83,
+    "madlan_url": "https://www.madlan.co.il/listings/i2Hdm35qFra?dealType=sale&term=ושינגטון-24-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "קוסטה ריקה 11, ירושלים": {
+    "validate_down_price_percentage": 0.32,
+    "Price": "3090000",
+    "Agent": true,
+    "Area": "100",
+    "Price_per_meter": 30900.0,
+    "Last_update": "Wed May 03 08:49:10 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,150,000 and now is 3,100,000 (-50,000). The seller updated the price within 52 day(s).",
+      "The price was 3,100,000 and now is 3,090,000 (-10,000). The seller updated the price within 10 day(s)."
+    ],
+    "general_condition": "new",
+    "calculate_pressure": 5,
+    "average_parice_rent": 3965,
+    "Possibility_of_monthly_rent": 4772.89,
+    "ROI_P_year": 1.7,
+    "madlan_url": "https://www.madlan.co.il/listings/fJfI43oVNjW?dealType=sale&term=קוסטה-ריקה-11-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "מחלקי המים 24, ירושלים": {
+    "validate_down_price_percentage": 1.3,
+    "Price": "3800000",
+    "Agent": true,
+    "Area": "95",
+    "Price_per_meter": 40000.0,
+    "Last_update": "Wed May 03 10:07:18 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 3,790,000 and now is 3,950,000 (160,000). The seller updated the price within 92 day(s).",
+      "The price was 3,950,000 and now is 3,850,000 (-100,000). The seller updated the price within 59 day(s).",
+      "The price was 3,850,000 and now is 3,800,000 (-50,000). The seller updated the price within 3 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 5,
+    "average_parice_rent": 6800,
+    "Possibility_of_monthly_rent": 8362.46,
+    "ROI_P_year": 2.42,
+    "madlan_url": null
+  },
+  "מרדכי היהודי 18, ירושלים": {
+    "validate_down_price_percentage": 2.27,
+    "Price": "4300000",
+    "Agent": true,
+    "Area": "115",
+    "Price_per_meter": 37391.3,
+    "Last_update": "Wed May 03 10:07:57 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 4,450,000 and now is 4,400,000 (-50,000). The seller updated the price within 28 day(s).",
+      "The price was 4,400,000 and now is 4,300,000 (-100,000). The seller updated the price within 162 day(s)."
+    ],
+    "general_condition": "toRenovated",
+    "calculate_pressure": 15,
+    "average_parice_rent": 5700,
+    "Possibility_of_monthly_rent": 6100.19,
+    "ROI_P_year": 1.56,
+    "madlan_url": "https://www.madlan.co.il/listings/hK61TSi6cUq?dealType=sale&term=מרדכי-היהודי-18-ירושלים-ישראל&tracking_search_source=new_search&tracking_event_source=map&marketplace=residential"
+  },
+  "הרב קוסובסקי 14, ירושלים": {
+    "validate_down_price_percentage": 2.99,
+    "Price": "6500000",
+    "Agent": true,
+    "Area": "131",
+    "Price_per_meter": 49618.32,
+    "Last_update": "Wed May 03 11:19:45 GMT 2023",
+    "Interval_of_down_prices": [
+      "The price was 6,800,000 and now is 6,700,000 (-100,000). The seller updated the price within 44 day(s).",
+      "The price was 6,700,000 and now is 6,500,000 (-200,000). The seller updated the price within 16 day(s)."
+    ],
+    "general_condition": "renovated",
+    "calculate_pressure": 20,
+    "average_parice_rent": 7500,
+    "Possibility_of_monthly_rent": 13968.48,
+    "ROI_P_year": 2.36,
+    "madlan_url": null
+  }
+}
