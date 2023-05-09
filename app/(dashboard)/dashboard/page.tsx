@@ -10,6 +10,8 @@ import { PostItem } from "@/components/post-item"
 import { DashboardShell } from "@/components/shell"
 import axios from 'axios'
 import { env } from "@/env.mjs"
+import numeral from 'numeral'
+import { parse, format } from 'date-fns'
 
 export const metadata = {
   title: "Dashboard",
@@ -124,29 +126,31 @@ export default async function DashboardPage() {
                 <tbody className="divide-y overflow-x-scroll divide-gray-200">
                   {tableData && tableData.map((data) => (
                     <tr>
-                      <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
+                      <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap text-right">
                         {data.steet_name}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                        {data.Price}
+                        ₪{numeral(data.Price).format('0,0')}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
                         {data.Area}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                        {data.Price_per_meter}
+                        ₪{numeral(data.Price_per_meter).format('0,0')}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                        {data.Last_update}
+                        {/* Fri Apr 14 08:04:22 GMT 2023 */}
+                        {format(parse(data.Last_update, 'EEE MMM dd HH:mm:ss \'GMT\' yyyy', new Date()), 'MMMM dd, yyyy HH:mm')}
+                        {/* {data.Last_update} */}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
                         {data.general_condition}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                        {data.average_parice_rent}
+                        ₪{numeral(data.average_parice_rent).format('0,0')}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                        {data.Possibility_of_monthly_rent}
+                        ₪{numeral(data.Possibility_of_monthly_rent).format('0,0')}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
                         {data.ROI_P_year}
