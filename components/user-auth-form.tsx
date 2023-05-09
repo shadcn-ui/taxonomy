@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { signIn } from "next-auth/react"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
+import { FaGoogle } from 'react-icons/fa'
 
 import { cn } from "@/lib/utils"
 import { userAuthSchema } from "@/lib/validations/auth"
@@ -94,7 +95,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         </div>
         <div className="relative flex justify-center text-xs uppercase">
           <span className="bg-background px-2 text-muted-foreground">
-            Or continue with
+            continue with
           </span>
         </div>
       </div>
@@ -110,7 +111,7 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
         {isGitHubLoading ? (
           <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
         ) : (
-          <Icons.gitHub className="mr-2 h-4 w-4" />
+          <FaGoogle className="mr-2 h-4 w-4" />
         )}{" "}
         Google
       </button>
