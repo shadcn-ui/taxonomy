@@ -8,6 +8,7 @@ import { DashboardHeader } from "@/components/header"
 import { PostCreateButton } from "@/components/post-create-button"
 import { PostItem } from "@/components/post-item"
 import { DashboardShell } from "@/components/shell"
+import axios from 'axios'
 
 export const metadata = {
   title: "Dashboard",
@@ -35,7 +36,7 @@ export default async function DashboardPage() {
   //   },
   // })
 
-  // const tableData = await fetch("http://localhost:3000/data.json").then(res => res.json())
+  const tableData = await axios.get("http://localhost:3000/data.json").then((res) => { return res.data });
 
   return (
     <DashboardShell>
@@ -115,15 +116,15 @@ export default async function DashboardPage() {
                       scope="col"
                       className="px-6 py-3 text-xs font-bold text-left text-gray-500 uppercase "
                     >
-                      
+
                     </th>
                   </tr>
                 </thead>
                 <tbody className="divide-y overflow-x-scroll divide-gray-200">
-                  {/* {tableData && tableData.map((data) => (
+                  {tableData && tableData.map((data) => (
                     <tr>
                       <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-                        {data.name}
+                        {data.steet_name}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
                         {data.Price}
@@ -166,7 +167,7 @@ export default async function DashboardPage() {
                         </a>
                       </td>
                     </tr>
-                  ))} */}
+                  ))}
 
                 </tbody>
               </table>
