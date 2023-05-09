@@ -35,7 +35,7 @@ export default async function DashboardPage() {
   //   },
   // })
 
-  const tableData = await fetch("http://localhost:3000/data.json").then(res => res.json())
+  // const tableData = await fetch("http://localhost:3000/data.json").then(res => res.json())
 
   return (
     <DashboardShell>
@@ -120,7 +120,7 @@ export default async function DashboardPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y overflow-x-scroll divide-gray-200">
-                  {tableData && tableData.map((data) => (
+                  {/* {tableData && tableData.map((data) => (
                     <tr>
                       <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
                         {data.name}
@@ -166,7 +166,7 @@ export default async function DashboardPage() {
                         </a>
                       </td>
                     </tr>
-                  ))}
+                  ))} */}
 
                 </tbody>
               </table>
