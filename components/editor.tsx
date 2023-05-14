@@ -73,13 +73,11 @@ export function Editor({ post }: EditorProps) {
   }, [])
 
   React.useEffect(() => {
-    if (isMounted) {
-      initializeEditor()
+    if (isMounted) initializeEditor()
 
-      return () => {
-        ref.current?.destroy()
-        ref.current = undefined
-      }
+    return () => {
+      ref.current?.destroy()
+      ref.current = undefined
     }
   }, [isMounted, initializeEditor])
 
