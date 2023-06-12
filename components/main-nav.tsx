@@ -7,6 +7,7 @@ import { useSelectedLayoutSegment } from "next/navigation"
 import { MainNavItem } from "types"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
+import { useShowMobileMenu } from "@/hooks/use-show-mobile-menu"
 import { Icons } from "@/components/icons"
 import { MobileNav } from "@/components/mobile-nav"
 
@@ -17,7 +18,7 @@ interface MainNavProps {
 
 export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment()
-  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
+  const [showMobileMenu, setShowMobileMenu] = useShowMobileMenu()
 
   return (
     <div className="flex gap-6 md:gap-10">
