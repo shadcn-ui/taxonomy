@@ -21,7 +21,7 @@ export default async function MarketingLayout({
         <div className="flex h-20 items-center justify-between py-6">
           <MainNav items={marketingConfig.mainNav} />
           <nav>
-            {user && (
+            {!user && (
               <Link
                 href="/login"
                 className={cn(
