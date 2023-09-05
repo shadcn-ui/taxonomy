@@ -7,7 +7,8 @@
     "build": "set NODE_OPTIONS=--openssl-legacy-provider && next build",
     "serve": "next start",
     "export": "next export",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "prod": "next export"
   },
   "dependencies": {
     "framer-motion": "^2.7.5",
