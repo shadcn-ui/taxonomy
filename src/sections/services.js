@@ -20,21 +20,21 @@ const SERVICES_DATA = [
   {
     image: serviceImage2,
     text:
-      'In 2023, MEGA has created a chapter in China which is responsible for the creation of a hackathon overseas with similar themes.',
+      'In 2023, MEGA hosted a hackathon event in China which was a key creation of a hackathon overseas spreading similar themes and the beginning of our international journey.',
     heading: 'MEGA China - 2023 Hackathon',
     path: 'https://china.megahack.tech/',
   },
   {
     image: serviceImage3,
     text:
-      'Second run of the debate.',
+      'MEGA Partnered with RPS&D to host "WorldWide Debate" which had various competitive debaters compete for the top prize.',
     heading: 'MEGA World Wide Debate - July',
     path: '#',
   },
   {
     image: serviceImage4,
     text:
-      'MEGA Hackathon is running its first annual debate. This debate will focus on the UN SDGs like the hackathon.',
+      'MEGA Hackathon ran the first ever World-Wide Debate Event, which debated over the UNSG.',
     heading: 'MEGA World Wide Debate - May',
     path: '#',
   },
@@ -42,13 +42,13 @@ const SERVICES_DATA = [
     image: serviceImage5,
     text:
       'MEGA teamed up with Columbia PHD students and Professors at Love and Future to educate the youth on the importance of Digital Storytelling through this transfomative course on AI and its impact in climate.',
-    heading: 'MEGA X Columbia University - Digital Storytelling Class',
+    heading: 'MEGA X Columbia University - Digital Storytelling Class with AI',
     path: 'https://megahack.tech/digital-storytelling-class-2023',
   },
   {
     image: serviceImage6,
     text:
-      'Our first annual MEGA Hackathon. It was a blast! Winners took home internships and $50k+ of prizes.',
+      'Our first annual MEGA Hackathon. It was a blast! Winners took home internships and $500k+ of prizes.',
     heading: 'MEGA Hackathon 2022',
     path: 'https://hack2022.megahack.tech/',
   },
