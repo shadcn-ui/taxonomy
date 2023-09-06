@@ -48,7 +48,7 @@ const SERVICES_DATA = [
   {
     image: serviceImage6,
     text:
-      'Our first annual MEGA Hackathon. It was a blast! Winners took home internships and $500k+ of prizes.',
+      'Our first annual MEGA Hackathon. It was a blast! Winners took home internships and $50k+ of prizes.',
     heading: 'MEGA Hackathon 2022',
     path: 'https://hack2022.megahack.tech/',
   },
