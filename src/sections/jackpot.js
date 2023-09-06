@@ -23,6 +23,7 @@ const JACKPOT_DATA = [
 const Jackpot = () => {
   return (
     <Box as="section" sx={styles.jackpot}>
+      <div id = "call-to-action"/>
       <Container>
         <Flex sx={styles.flex}>
           <Box sx={styles.image}>

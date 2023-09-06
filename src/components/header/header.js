@@ -33,9 +33,9 @@ export default function Header({ className }) {
           </Flex>
 
           <Link
-            path="/"
+            path="#newsletter"
             ml={2}
-            label="Work With Us"
+            label="Sign Up"
             sx={styles.headerBtn}
             // variant="buttons.primary"
             style={{backgroundColor: "#000"}}

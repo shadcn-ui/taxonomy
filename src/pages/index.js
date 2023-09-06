@@ -28,7 +28,7 @@ export default function IndexPage() {
           <CallToAction />
           <CallToActionPartTwo />
           {/* <Featured /> */}
-          <Testimonials />
+          {/* <Testimonials /> */}
           <Blogs />
           <FAQ />
           <Subscribe />

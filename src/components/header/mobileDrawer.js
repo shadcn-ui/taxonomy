@@ -8,6 +8,7 @@ import { Link as ScrollLink } from 'react-scroll';
 import menuItems from './header.data';
 import Logo from 'components/logo';
 import logoDark from 'assets/logo-dark.svg';
+import { Link } from 'components/link';
 
 const MobileDrawer = () => {
   const { state, dispatch } = useContext(DrawerContext);
@@ -53,9 +54,11 @@ const MobileDrawer = () => {
           </Box>
 
           <Box sx={styles.menuFooter}>
-            <Button variant="primary" sx={styles.button} style={{backgroundColor: "black"}}>
-              Work With Us
-            </Button>
+            <a href="./#newsletter">
+              <Button variant="primary" sx={styles.button} style={{backgroundColor: "black"}}>
+                Sign Up
+              </Button>
+            </a>
           </Box>
         </Box>
       </Scrollbars>

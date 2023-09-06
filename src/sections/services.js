@@ -29,14 +29,14 @@ const SERVICES_DATA = [
     text:
       'MEGA Partnered with RPS&D to host "WorldWide Debate" which had various competitive debaters compete for the top prize.',
     heading: 'MEGA World Wide Debate - July',
-    path: '#',
+    path: null,
   },
   {
     image: serviceImage4,
     text:
       'MEGA Hackathon ran the first ever World-Wide Debate Event, which debated over the UNSG.',
     heading: 'MEGA World Wide Debate - May',
-    path: '#',
+    path: null,
   },
   {
     image: serviceImage5,

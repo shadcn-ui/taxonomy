@@ -4,6 +4,7 @@ import { Button, Input, Box, Container, Heading, Text } from 'theme-ui';
 const Subscribe = () => {
   return (
     <Box as="section" sx={styles.subscribe}>
+      <div id = "newsletter"/>
       <Container>
         <Heading as="h3">Subscribe to get notified about new events</Heading>
         <Text as="p">
