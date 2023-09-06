@@ -60,8 +60,8 @@ const Blogs = () => {
     <Box as="section" id="news" sx={styles.blogs}>
       <Container>
         <BlockTitle
-          title="Popular blog post we updated"
-          text="Updete newsfeed blog"
+          title="Come See Us Live"
+          text="Mom we're on the news!"
         />
         <Box as={Masonry} options={masonryOptions} sx={styles.blogWrapper}>
           {BLOG_DATA.map(

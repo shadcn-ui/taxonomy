@@ -5,12 +5,12 @@ const TestimonialsCard = ({ image, text, name, username }) => {
     <Box sx={styles.testimonialsCard}>
       <Text as="p">{text}</Text>
       <Box sx={styles.testimonialsInfo}>
-        <Box sx={styles.testimonialsImage}>
+        {/* <Box sx={styles.testimonialsImage}>
           <Image src={image} alt={name} />
-        </Box>
+        </Box> */}
         <Box sx={styles.testimonialsContent}>
           <Heading as="h3">{name}</Heading>
-          <Text as="p">{username}</Text>
+          {/* <Text as="p">{username}</Text> */}
         </Box>
       </Box>
     </Box>

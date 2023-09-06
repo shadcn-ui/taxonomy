@@ -17,49 +17,46 @@ const TESTIMONIALS_DATA = [
   [
     {
       image: testimonialsImage1,
-      text:
-        'I would like to take this oppertunity to thank SA Places for the great service rendered to us and in particular Estelle. You got me the best place ever in just a few moments after I spoke to you.',
+      text: "As a hardcore programming student, I had previously limited the application of programming to technical fields such as software engineering and machine learning. In MEGA's interdisciplinary lectures, I'm excited to get new facts. Now, I have a better understanding of the new possibilities of programming in the cultural industry, and understand that through digital language, programming can spark new sparks in digital art, game design, digital cultural heritage protection and other fields. I have a further understanding of the application value of my major.",
       username: '@hello.mimmie',
-      name: 'Minnie Horn',
+      name: 'Sunette P',
     },
     {
       image: testimonialsImage2,
-      text:
-        'Many thanks for you kind and efficient service. I have already and will definitely continue to recommend your services to others in the future.',
+      text: "Social science is often described as an 'island discipline,' and I used to be anxious about getting a job. Although I have always been passionate about psychology and its theories, I have always felt limited by its traditional application. At MEGA's big game sharing session, the experience of industry seniors changed my previous view on psychological applications. Now, I prefer to combine my knowledge with the individual community. Provide a tailored framework of psychological resources for each marginalized group",
       username: '@merryn.manley',
-      name: 'Merryn Manley',
+      name: 'Jeff Z',
     },
   ],
   [
     {
       image: testimonialsImage3,
-      text:
-        'I would just like to compliment Estelle Pestana. She has been most professional and gone to great lengths to assist me. Her patience with me as I continuously changed my plans is to be commended. Her service re-affirms why I always choose to book through an agency instead of directly. Thank you',
+      text: "I fully enjoyed teaming up with people from diverse cultural, ethnic, and national backgrounds. Through having cross-cultural conversations, I was able to construct a new view on some universal subjects that I thought I understood before — like poverty, climate action, and gender equality. It was interesting to consider the perspectives and philosophies to these issues on a global scale."        ,
       username: '@hi.veona',
-      name: 'Veona Watson',
+      name: 'Sally W',
     },
     {
       image: testimonialsImage4,
       text:
-        'I have seldom experienced such an efficient help and support like from you! Thank you so much. We will do all the bookings during the next few days and I will revert to you with the end result',
+       "Honestly just amazing work at MEGA Hack 2022, had a blast!",
       username: '@hey.nku',
-      name: 'Paseka Nku',
+      name: 'Sunae L',
     },
   ],
   [
     {
       image: testimonialsImage5,
       text:
-        'Thank you for all your help. Your service was excellent and very FAST.',
+        "Really helpful staff at the hackathons during 2023. Never felt I was alone",
       username: '@cherice.me',
-      name: 'Cherice Justin',
+      name: 'Larry J',
     },
     {
       image: testimonialsImage6,
       text:
         'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend',
       username: '@myself.thais',
-      name: 'Thais Carballal',
+      name: 'Oscar K',
     },
   ],
   [
@@ -68,14 +65,14 @@ const TESTIMONIALS_DATA = [
       text:
         'I would like to take this oppertunity to thank SA Places for the great service rendered to us and in particular Estelle. You got me the best place ever in just a few moments after I spoke to you.',
       username: '@hello.mimmie',
-      name: 'Minnie Horn',
+      name: 'Otum U',
     },
     {
       image: testimonialsImage2,
       text:
         'Many thanks for you kind and efficient service. I have already and will definitely continue to recommend your services to others in the future.',
       username: '@merryn.manley',
-      name: 'Merryn Manley',
+      name: 'Marry P',
     },
   ],
   [
@@ -84,14 +81,14 @@ const TESTIMONIALS_DATA = [
       text:
         'I would just like to compliment Estelle Pestana. She has been most professional and gone to great lengths to assist me. Her patience with me as I continuously changed my plans is to be commended. Her service re-affirms why I always choose to book through an agency instead of directly. Thank you',
       username: '@hi.veona',
-      name: 'Veona Watson',
+      name: 'Wendy S',
     },
     {
       image: testimonialsImage4,
       text:
         'I have seldom experienced such an efficient help and support like from you! Thank you so much. We will do all the bookings during the next few days and I will revert to you with the end result',
       username: '@hey.nku',
-      name: 'Paseka Nku',
+      name: 'Liuliu C',
     },
   ],
   [
@@ -100,14 +97,14 @@ const TESTIMONIALS_DATA = [
       text:
         'Thank you for all your help. Your service was excellent and very FAST.',
       username: '@cherice.me',
-      name: 'Cherice Justin',
+      name: 'Sam C',
     },
     {
       image: testimonialsImage6,
       text:
         'For our recent trip to S.A. I booked several accommodation thru SA Places. I just wanted to tell you that everything worked out perfectly with all the bookings and also your booking was very quick and professional. I hope I have the opportunity to re-visit South Africa soon, I will then make my bookings with your company again. I will also recommend',
       username: '@myself.thais',
-      name: 'Thais Carballal',
+      name: 'Cheng H',
     },
   ],
 ];
@@ -146,8 +143,8 @@ const Testimonials = () => {
   return (
     <Box as="section" id="testimonials" sx={styles.testimonials}>
       <BlockTitle
-        title="What client say about us"
-        text="Customer testimonial"
+        title="Testimonials"
+        text="Customer Feedback To MEGA Events"
       />
       <Swiper {...testimonialCarousel}>
         {TESTIMONIALS_DATA.map((item, index) => (

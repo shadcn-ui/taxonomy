@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Container, Flex, Text, Heading, Image } from 'theme-ui';
 import { Link } from 'components/link';
 
-import callImage from 'assets/call-image.png';
+import callImage from 'assets/map.png';
 import BlockTitle from 'components/block-title';
 
 const CallToAction = () => {
@@ -25,24 +25,14 @@ const CallToAction = () => {
               Explore More
             </Link>
           </Box> */}
-          {/* <Heading as="h3" style={{
-            marginLeft: 'auto',
-            marginRight: 'auto',
-            fontSize: 30,
-            fontWeight: 700,
-            marginBottom: 50,
-          }}>
-            Driven by passion
-          </Heading> */}
           <Box         style={{
             marginLeft: 'auto',
             marginRight: 'auto',
-            marginBottom: -100
           }}>
-            <BlockTitle
-              title="Driven By Passion"
-              text="Our intrensic drive to propegate STEAM is what makes a truly MEGA team."
-            />
+          <BlockTitle
+            title="An Everlasting Impact"
+            text="A network of chapters and alumnus all over the world."
+          />
             <Box sx={styles.images}>
               <Image src={callImage} alt="call image" />
             </Box>
@@ -106,6 +96,8 @@ const styles = {
     },
   },
   images: {
-    flex: ['0 0 100%', null, null, null, '0 0 100%'],
+    // flex: ['0 0 100%', null, null, null, '0 0 100%'],
+    marginLeft: 'auto',
+    marginRight: 'auto',
   },
 };
