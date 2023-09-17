@@ -8,7 +8,7 @@ import { useLockBody } from "@/hooks/use-lock-body"
 import { Icons } from "@/components/icons"
 
 interface MobileNavProps {
-  items: MainNavItem[],
+  items: MainNavItem[], 
   setShowMobileMenu: (showMobileMenu: boolean) => void,
   children?: React.ReactNode
 }
