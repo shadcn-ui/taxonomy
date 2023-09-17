@@ -8,11 +8,12 @@ import { useLockBody } from "@/hooks/use-lock-body"
 import { Icons } from "@/components/icons"
 
 interface MobileNavProps {
-  items: MainNavItem[]
+  items: MainNavItem[],
+  setShowMobileMenu: (showMobileMenu: boolean) => void,
   children?: React.ReactNode
 }
 
-export function MobileNav({ items, children }: MobileNavProps) {
+export function MobileNav({ items,setShowMobileMenu, children }: MobileNavProps) {
   useLockBody()
 
   return (
@@ -35,6 +36,7 @@ export function MobileNav({ items, children }: MobileNavProps) {
                 "flex w-full items-center rounded-md p-2 text-sm font-medium hover:underline",
                 item.disabled && "cursor-not-allowed opacity-60"
               )}
+              onClick={()=>setShowMobileMenu(false)}
             >
               {item.title}
             </Link>
@@ -45,3 +47,4 @@ export function MobileNav({ items, children }: MobileNavProps) {
     </div>
   )
 }
+
