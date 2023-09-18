@@ -103,7 +103,7 @@ export default async function IndexPage() {
               </svg>
               <div className="space-y-2">
                 <h3 className="font-bold">React 18</h3>
-                <p className="text-sm">
+                <p className="text-sm text-muted-foreground">
                   Server and Client Components. Use hook.
                 </p>
               </div>
