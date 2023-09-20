@@ -8,16 +8,16 @@ function Team() {
               <h1>Founders</h1>
               <Box sx={styles.founders}>
                 <MemberListing width={oneThird} name="Daniel A" />
-                <MemberListing width={oneThird} name="Max" />
-                <MemberListing width={oneThird} name="Jason" />
+                <MemberListing width={oneThird} name="Max Xiong" />
+                <MemberListing width={oneThird} name="Jason Xu" />
                 <MemberListing width={oneThird} name="Agni" />
                 <MemberListing width={oneThird} name="Daniel" />
               </Box>
 
               <Box sx={styles.teamMembers}>
-                <MemberListing width={oneTenth} name="Name" />
-                <MemberListing width={oneTenth} name="Name" />
-                <MemberListing width={oneTenth} name="Name" />
+                <MemberListing width={oneTenth} name="Ethan Y" />
+                <MemberListing width={oneTenth} name="Gianfranco I" />
+                <MemberListing width={oneTenth} name="Karunya Agarwal" />
                 <MemberListing width={oneTenth} name="Name" />
                 <MemberListing width={oneTenth} name="Name" />
                 <MemberListing width={oneTenth} name="Name" />
