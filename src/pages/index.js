@@ -15,6 +15,7 @@ import Testimonials from 'sections/testimonials';
 import Blogs from 'sections/blogs';
 import FAQ from 'sections/faq';
 import Subscribe from 'sections/subscribe';
+import Team from 'sections/team';
 
 export default function IndexPage() {
   return (
@@ -31,6 +32,7 @@ export default function IndexPage() {
           {/* <Testimonials /> */}
           <Blogs />
           <FAQ />
+          <Team />
           <Subscribe />
         </Layout>
       </StickyProvider>
