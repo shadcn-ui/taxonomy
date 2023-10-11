@@ -19,6 +19,24 @@ export function MainNav({ items, children }: MainNavProps) {
   const segment = useSelectedLayoutSegment()
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
 
+  const toggleMobileMenu = () => {
+    setShowMobileMenu(!showMobileMenu)
+  }
+
+  React.useEffect(() => {
+    const closeMobileMenuOnClickOutside = (event: MouseEvent) => {
+      if (showMobileMenu) {
+        setShowMobileMenu(false)
+      }
+    }
+
+    document.addEventListener("click", closeMobileMenuOnClickOutside)
+
+    return () => {
+      document.removeEventListener("click", closeMobileMenuOnClickOutside)
+    }
+  }, [showMobileMenu])
+
   return (
     <div className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
@@ -48,7 +66,7 @@ export function MainNav({ items, children }: MainNavProps) {
       ) : null}
       <button
         className="flex items-center space-x-2 md:hidden"
-        onClick={() => setShowMobileMenu(!showMobileMenu)}
+        onClick={toggleMobileMenu}
       >
         {showMobileMenu ? <Icons.close /> : <Icons.logo />}
         <span className="font-bold">Menu</span>
