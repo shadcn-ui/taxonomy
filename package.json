@@ -1,10 +1,10 @@
 {
-  "name": "taxonomy",
-  "version": "0.2.0",
+  "name": "run-my-league",
+  "version": "0.1.0",
   "private": true,
   "author": {
-    "name": "shadcn",
-    "url": "https://twitter.com/shadcn"
+    "name": "tjvonbr",
+    "url": "https://twitter.com/tjvonbr"
   },
   "scripts": {
     "dev": "concurrently \"contentlayer dev\" \"next dev\"",
@@ -13,6 +13,7 @@
     "start": "next start",
     "lint": "next lint",
     "preview": "next build && next start",
+    "preinstall": "npx only-allow pnpm",
     "postinstall": "prisma generate"
   },
   "dependencies": {
