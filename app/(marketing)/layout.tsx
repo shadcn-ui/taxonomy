@@ -26,7 +26,7 @@ export default async function MarketingLayout({
               className={cn(
                 buttonVariants({ variant: "secondary", size: "sm" }),
                 "px-4"
-              )}
+              )} 
             >
               Login
             </Link>
