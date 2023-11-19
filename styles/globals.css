@@ -34,6 +34,7 @@
     --ring: 215 20.2% 65.1%;
 
     --radius: 0.5rem;
+    --shadow-color: black
   }
 
   .dark {
@@ -67,7 +68,13 @@
     --ring: 216 34% 17%;
 
     --radius: 0.5rem;
+    --shadow-color: white
   }
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 0 10px 0 var(--shadow-color);
+  transition: box-shadow 0.3s ease;
 }
 
 @layer base {
