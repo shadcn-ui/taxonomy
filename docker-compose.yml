@@ -1,19 +1,15 @@
-version: '3.8'
-
+version: '3.3'
 services:
-  mysql:
-    image: mysql:latest
-    container_name: taxonomy_sql
+  database:
+    image: mysql:5.7
+    container_name: mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: taxonomy
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: 'taxonomy'  
+      MYSQL_ROOT_PASSWORD: 'root'
     ports:
-      - "3306:3306"
-    command: --schema=public
+      - '3306:3306'
+    expose:
+      - '3306'
     volumes:
-      - sql:/var/lib/mysql/data/
-volumes:
-  sql:
+      - './.mysql-data/db:/var/lib/mysql'
