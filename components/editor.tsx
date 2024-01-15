@@ -24,7 +24,7 @@ interface EditorProps {
 type FormData = z.infer<typeof postPatchSchema>
 
 export function Editor({ post }: EditorProps) {
-  const { register, handleSubmit, formState } = useForm<FormData>({
+  const { register, handleSubmit } = useForm<FormData>({
     resolver: zodResolver(postPatchSchema),
   })
   const ref = React.useRef<EditorJS>()
@@ -84,8 +84,6 @@ export function Editor({ post }: EditorProps) {
   }, [isMounted, initializeEditor])
 
   async function onSubmit(data: FormData) {
-    if (!formState.isDirty) return
-
     setIsSaving(true)
 
     const blocks = await ref.current?.save()
@@ -142,7 +140,7 @@ export function Editor({ post }: EditorProps) {
           </div>
           <button
             type="submit"
-            disabled={isSaving || !formState.isDirty}
+            disabled={isSaving}
             className={cn(buttonVariants())}
           >
             {isSaving && (
