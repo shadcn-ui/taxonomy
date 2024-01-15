@@ -138,7 +138,11 @@ export function Editor({ post }: EditorProps) {
               {post.published ? "Published" : "Draft"}
             </p>
           </div>
-          <button type="submit" className={cn(buttonVariants())}>
+          <button
+            type="submit"
+            disabled={isSaving}
+            className={cn(buttonVariants())}
+          >
             {isSaving && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
