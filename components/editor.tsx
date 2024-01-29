@@ -24,13 +24,13 @@ interface EditorProps {
 type FormData = z.infer<typeof postPatchSchema>
 
 export function Editor({ post }: EditorProps) {
-  const { register, handleSubmit } = useForm<FormData>({
+  const { register, handleSubmit, formState: {errors, isSubmitting, isDirty} } = useForm<FormData>({
     resolver: zodResolver(postPatchSchema),
   })
   const ref = React.useRef<EditorJS>()
   const router = useRouter()
-  const [isSaving, setIsSaving] = React.useState<boolean>(false)
   const [isMounted, setIsMounted] = React.useState<boolean>(false)
+  const [editorContentChanged, setEditorContentChanged] = React.useState<boolean>(false);
 
   const initializeEditor = React.useCallback(async () => {
     const EditorJS = (await import("@editorjs/editorjs")).default
@@ -49,6 +49,9 @@ export function Editor({ post }: EditorProps) {
         holder: "editor",
         onReady() {
           ref.current = editor
+        },
+        onChange: () => {
+          setEditorContentChanged(true);
         },
         placeholder: "Type here to write your post...",
         inlineToolbar: true,
@@ -84,7 +87,6 @@ export function Editor({ post }: EditorProps) {
   }, [isMounted, initializeEditor])
 
   async function onSubmit(data: FormData) {
-    setIsSaving(true)
 
     const blocks = await ref.current?.save()
 
@@ -98,8 +100,6 @@ export function Editor({ post }: EditorProps) {
         content: blocks,
       }),
     })
-
-    setIsSaving(false)
 
     if (!response?.ok) {
       return toast({
@@ -138,8 +138,8 @@ export function Editor({ post }: EditorProps) {
               {post.published ? "Published" : "Draft"}
             </p>
           </div>
-          <button type="submit" className={cn(buttonVariants())}>
-            {isSaving && (
+          <button disabled={isSubmitting || !(isDirty || editorContentChanged)}  type="submit" className={cn(buttonVariants())}>
+            {isSubmitting && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
             <span>Save</span>
@@ -154,6 +154,9 @@ export function Editor({ post }: EditorProps) {
             className="w-full resize-none appearance-none overflow-hidden bg-transparent text-5xl font-bold focus:outline-none"
             {...register("title")}
           />
+          {errors.title && (
+            <p className="text-red-500">{`${errors.title.message}`}</p>
+          )}
           <div id="editor" className="min-h-[500px]" />
           <p className="text-sm text-gray-500">
             Use{" "}
