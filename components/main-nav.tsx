@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { useSelectedLayoutSegment } from "next/navigation"
-
+import { ModeToggle } from "@/components/mode-toggle"
 import { MainNavItem } from "types"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -44,6 +44,7 @@ export function MainNav({ items, children }: MainNavProps) {
               {item.title}
             </Link>
           ))}
+           <ModeToggle />
         </nav>
       ) : null}
       <button

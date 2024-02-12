@@ -51,7 +51,9 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             .
           </p>
         </div>
-        <ModeToggle />
+        <span className="block sm:hidden">
+          <ModeToggle />
+        </span>
       </div>
     </footer>
   )
