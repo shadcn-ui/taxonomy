@@ -9,7 +9,11 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
-
+enum Role {
+  ADMIN
+  OWNER
+  MEMBER
+}
 model Account {
   id                String   @id @default(cuid())
   userId            String
