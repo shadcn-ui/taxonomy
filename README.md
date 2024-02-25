@@ -1,9 +1,9 @@
-# Taxonomy
+# LightSpeed
 
-An open source application built using the new router, server components and everything new in Next.js 13.
+An for from taxonomy that helps me to build application at "light speed".
 
 > **Warning**
-> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com/shadcn).
+> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@wolfzer44](https://twitter.com/wolfzer44).
 > See the roadmap below.
 
 ## About this project
@@ -33,12 +33,12 @@ A few people have asked me to turn this into a starter. I think we could do that
 - API Routes and Middlewares
 - Authentication using **NextAuth.js**
 - ORM using **Prisma**
-- Database on **PlanetScale**
-- UI Components built using **Radix UI**
+- Database (Self-hosted) **Docker** (docker run --name container-name -e POSTGRES_USER=root -e POSTGRES_PASSWORD=root -e POSTGRES_DB=dbname -d postgres)
+- UI Components built using **shadcn/ui**
 - Documentation and blog using **MDX** and **Contentlayer**
-- Subscriptions using **Stripe**
+- Payments using **Stripe**
 - Styled using **Tailwind CSS**
-- Validations using **Zod**
+- Validations using **Zod** and **Yup**
 - Written in **TypeScript**
 
 ## Roadmap

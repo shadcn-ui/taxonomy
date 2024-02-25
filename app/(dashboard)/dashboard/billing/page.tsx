@@ -29,7 +29,7 @@ export default async function BillingPage() {
     redirect(authOptions?.pages?.signIn || "/login")
   }
 
-  const subscriptionPlan = await getUserSubscriptionPlan(user.id)
+  const subscriptionPlan = {} //await getUserSubscriptionPlan(user.id)
 
   // If user has a pro plan, check cancel status on Stripe.
   let isCanceled = false

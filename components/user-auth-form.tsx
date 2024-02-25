@@ -34,8 +34,9 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   async function onSubmit(data: FormData) {
     setIsLoading(true)
 
-    const signInResult = await signIn("email", {
+    const signInResult = await signIn("credentials", {
       email: data.email.toLowerCase(),
+      password: 123,
       redirect: false,
       callbackUrl: searchParams?.get("from") || "/dashboard",
     })
