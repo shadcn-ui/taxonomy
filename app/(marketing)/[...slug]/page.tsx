@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { allPages } from "contentlayer/generated"
+import { pages as allPages } from "#site/content"
 
 import { Mdx } from "@/components/mdx-components"
 
@@ -93,7 +93,7 @@ export default async function PagePage({ params }: PageProps) {
         )}
       </div>
       <hr className="my-4" />
-      <Mdx code={page.body.code} />
+      <Mdx code={page.body} />
     </article>
   )
 }

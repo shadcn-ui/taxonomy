@@ -7,8 +7,8 @@
     "url": "https://twitter.com/shadcn"
   },
   "scripts": {
-    "dev": "concurrently \"contentlayer dev\" \"next dev\"",
-    "build": "contentlayer build && next build",
+    "dev": "next dev",
+    "build": "next build",
     "turbo": "next dev --turbo",
     "start": "next start",
     "lint": "next lint",
@@ -63,13 +63,10 @@
     "class-variance-authority": "^0.4.0",
     "clsx": "^1.2.1",
     "cmdk": "^0.1.22",
-    "concurrently": "^8.0.1",
-    "contentlayer": "^0.3.1",
     "date-fns": "^2.29.3",
     "lucide-react": "^0.92.0",
     "next": "13.3.2-canary.13",
     "next-auth": "4.22.1",
-    "next-contentlayer": "^0.3.1",
     "next-themes": "^0.2.1",
     "nodemailer": "^6.9.1",
     "postmark": "^3.0.15",
@@ -80,12 +77,13 @@
     "react-editor-js": "^2.1.0",
     "react-hook-form": "^7.43.9",
     "react-textarea-autosize": "^8.4.1",
-    "sharp": "^0.31.3",
-    "shiki": "^0.11.1",
+    "remark": "^15.0.1",
+    "sharp": "^0.33.2",
+    "shiki": "^1.1.7",
     "stripe": "^11.18.0",
     "tailwind-merge": "^1.12.0",
     "tailwindcss-animate": "^1.0.5",
-    "zod": "^3.21.4"
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.1",
@@ -111,12 +109,11 @@
     "prisma": "^4.13.0",
     "rehype": "^12.0.1",
     "rehype-autolink-headings": "^6.1.1",
-    "rehype-pretty-code": "^0.9.5",
+    "rehype-pretty-code": "^0.13.0",
     "rehype-slug": "^5.1.0",
-    "remark": "^14.0.2",
-    "remark-gfm": "^3.0.1",
     "tailwindcss": "^3.3.1",
     "typescript": "4.7.4",
-    "unist-util-visit": "^4.1.2"
+    "unist-util-visit": "^4.1.2",
+    "velite": "^0.1.0-beta.8"
   }
 }

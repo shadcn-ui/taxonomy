@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { notFound } from "next/navigation"
-import { allGuides } from "contentlayer/generated"
+import { guides as allGuides } from "#site/content"
 
 import { getTableOfContents } from "@/lib/toc"
 import { Icons } from "@/components/icons"
@@ -95,7 +95,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
     <main className="relative py-6 lg:grid lg:grid-cols-[1fr_300px] lg:gap-10 lg:py-10 xl:gap-20">
       <div>
         <DocsPageHeader heading={guide.title} text={guide.description} />
-        <Mdx code={guide.body.code} />
+        <Mdx code={guide.body} />
         <hr className="my-4" />
         <div className="flex justify-center py-6 lg:py-10">
           <Link

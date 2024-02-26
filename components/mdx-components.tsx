@@ -1,10 +1,16 @@
 import * as React from "react"
 import Image from "next/image"
-import { useMDXComponent } from "next-contentlayer/hooks"
+import * as runtime from 'react/jsx-runtime'
+
 
 import { cn } from "@/lib/utils"
 import { Callout } from "@/components/callout"
 import { MdxCard } from "@/components/mdx-card"
+
+const useMDXComponent = (code: string) => {
+  const fn = new Function(code)
+  return fn({ ...runtime }).default
+}
 
 const components = {
   h1: ({ className, ...props }) => (
@@ -150,6 +156,16 @@ const components = {
   Image,
   Callout,
   Card: MdxCard,
+}
+
+interface MdxProps {
+  code: string
+  components?: Record<string, React.ComponentType>
+}
+
+export function MDXContent({ code, components }: MdxProps) {
+  const Component = useMDXComponent(code)
+  return <Component components={{ Image, ...components }} />
 }
 
 interface MdxProps {

@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Doc } from "contentlayer/generated"
+import { Doc } from "#site/content"
 
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"

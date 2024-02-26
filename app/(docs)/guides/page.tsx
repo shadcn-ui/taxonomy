@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { allGuides } from "contentlayer/generated"
+import { guides as allGuides } from "#site/content"
 import { compareDesc } from "date-fns"
 
 import { formatDate } from "@/lib/utils"

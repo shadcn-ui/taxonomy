@@ -1,0 +1,10 @@
+[
+  {
+    "title": "shadcn",
+    "avatar": "/images/avatars/shadcn.png",
+    "twitter": "shadcn",
+    "body": "const{Fragment:n,jsx:t}=arguments[0];function _createMdxContent(e){return t(n,{})}return{default:function(n={}){const{wrapper:e}=n.components||{};return e?t(e,{...n,children:t(_createMdxContent,{...n})}):_createMdxContent()}};",
+    "slug": "/D:\\Coding\\forks\\taxonomy\\content\\authors\\shadcn",
+    "slugAsParams": ""
+  }
+]

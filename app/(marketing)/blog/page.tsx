@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import { allPosts } from "contentlayer/generated"
 import { compareDesc } from "date-fns"
+import { posts as allPosts } from "#site/content"
 
 import { formatDate } from "@/lib/utils"
 
