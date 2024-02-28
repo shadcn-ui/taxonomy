@@ -123,7 +123,7 @@ export default async function PostPage({ params }: PostPageProps) {
             {authors.map((author) =>
               author ? (
                 <Link
-                  key={author._id}
+                  key={author.slug}
                   href={`https://twitter.com/${author.twitter}`}
                   className="flex items-center space-x-2 text-sm"
                 >

@@ -28,7 +28,7 @@ export default function GuidesPage() {
         <div className="grid gap-4 md:grid-cols-2 md:gap-6">
           {guides.map((guide) => (
             <article
-              key={guide._id}
+              key={guide.slug}
               className="group relative rounded-lg border p-6 shadow-md transition-shadow hover:shadow-lg"
             >
               {guide.featured && (
