@@ -1,5 +1,5 @@
 import { notFound, redirect } from "next/navigation"
-import { Post, User } from "@prisma/client"
+import type { Post, User } from "@prisma/client"
 
 import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/db"
