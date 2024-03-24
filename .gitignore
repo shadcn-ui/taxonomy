@@ -37,4 +37,7 @@ yarn-error.log*
 next-env.d.ts
 
 .vscode
-.contentlayer
+
+# velite generated files
+.velite
+public/static

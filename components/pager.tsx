@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Doc } from "contentlayer/generated"
+import { Doc } from "#site/content"
 
 import { docsConfig } from "@/config/docs"
 import { cn } from "@/lib/utils"
@@ -24,7 +24,7 @@ export function DocsPager({ doc }: DocsPagerProps) {
           href={pager.prev.href}
           className={cn(buttonVariants({ variant: "ghost" }))}
         >
-          <Icons.chevronLeft className="mr-2 h-4 w-4" />
+          <Icons.chevronLeft className="mr-2 size-4" />
           {pager.prev.title}
         </Link>
       )}
@@ -34,7 +34,7 @@ export function DocsPager({ doc }: DocsPagerProps) {
           className={cn(buttonVariants({ variant: "ghost" }), "ml-auto")}
         >
           {pager.next.title}
-          <Icons.chevronRight className="ml-2 h-4 w-4" />
+          <Icons.chevronRight className="ml-2 size-4" />
         </Link>
       )}
     </div>

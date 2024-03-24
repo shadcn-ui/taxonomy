@@ -130,22 +130,22 @@ export function Editor({ post }: EditorProps) {
               className={cn(buttonVariants({ variant: "ghost" }))}
             >
               <>
-                <Icons.chevronLeft className="mr-2 h-4 w-4" />
+                <Icons.chevronLeft className="mr-2 size-4" />
                 Back
               </>
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               {post.published ? "Published" : "Draft"}
             </p>
           </div>
           <button type="submit" className={cn(buttonVariants())}>
             {isSaving && (
-              <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+              <Icons.spinner className="mr-2 size-4 animate-spin" />
             )}
             <span>Save</span>
           </button>
         </div>
-        <div className="prose prose-stone mx-auto w-[800px] dark:prose-invert">
+        <div className="prose prose-stone dark:prose-invert mx-auto w-[800px]">
           <TextareaAutosize
             autoFocus
             id="title"
@@ -157,7 +157,7 @@ export function Editor({ post }: EditorProps) {
           <div id="editor" className="min-h-[500px]" />
           <p className="text-sm text-gray-500">
             Use{" "}
-            <kbd className="rounded-md border bg-muted px-1 text-xs uppercase">
+            <kbd className="bg-muted rounded-md border px-1 text-xs uppercase">
               Tab
             </kbd>{" "}
             to open the command menu.

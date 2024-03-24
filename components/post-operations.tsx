@@ -53,8 +53,8 @@ export function PostOperations({ post }: PostOperationsProps) {
   return (
     <>
       <DropdownMenu>
-        <DropdownMenuTrigger className="flex h-8 w-8 items-center justify-center rounded-md border transition-colors hover:bg-muted">
-          <Icons.ellipsis className="h-4 w-4" />
+        <DropdownMenuTrigger className="hover:bg-muted flex size-8 items-center justify-center rounded-md border transition-colors">
+          <Icons.ellipsis className="size-4" />
           <span className="sr-only">Open</span>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
@@ -65,7 +65,7 @@ export function PostOperations({ post }: PostOperationsProps) {
           </DropdownMenuItem>
           <DropdownMenuSeparator />
           <DropdownMenuItem
-            className="flex cursor-pointer items-center text-destructive focus:text-destructive"
+            className="text-destructive focus:text-destructive flex cursor-pointer items-center"
             onSelect={() => setShowDeleteAlert(true)}
           >
             Delete
@@ -100,9 +100,9 @@ export function PostOperations({ post }: PostOperationsProps) {
               className="bg-red-600 focus:ring-red-600"
             >
               {isDeleteLoading ? (
-                <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
+                <Icons.spinner className="mr-2 size-4 animate-spin" />
               ) : (
-                <Icons.trash className="mr-2 h-4 w-4" />
+                <Icons.trash className="mr-2 size-4" />
               )}
               <span>Delete</span>
             </AlertDialogAction>

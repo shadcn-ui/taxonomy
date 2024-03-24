@@ -2,19 +2,24 @@
 
 import * as React from "react"
 
-import { TableOfContents } from "@/lib/toc"
 import { cn } from "@/lib/utils"
 import { useMounted } from "@/hooks/use-mounted"
 
+interface TocEntry {
+  items?: TocEntry[]
+  url: string
+  title: string
+}
+
 interface TocProps {
-  toc: TableOfContents
+  toc: TocEntry[]
 }
 
 export function DashboardTableOfContents({ toc }: TocProps) {
   const itemIds = React.useMemo(
     () =>
-      toc.items
-        ? toc.items
+      toc
+        ? toc
             .flatMap((item) => [item.url, item?.items?.map((item) => item.url)])
             .flat()
             .filter(Boolean)
@@ -24,10 +29,6 @@ export function DashboardTableOfContents({ toc }: TocProps) {
   )
   const activeHeading = useActiveItem(itemIds)
   const mounted = useMounted()
-
-  if (!toc?.items) {
-    return null
-  }
 
   return mounted ? (
     <div className="space-y-2">
@@ -81,15 +82,15 @@ function useActiveItem(itemIds: (string | undefined)[]) {
 }
 
 interface TreeProps {
-  tree: TableOfContents
+  tree: TocEntry[]
   level?: number
   activeItem?: string | null
 }
 
 function Tree({ tree, level = 1, activeItem }: TreeProps) {
-  return tree?.items?.length && level < 3 ? (
+  return tree.length && level < 3 ? (
     <ul className={cn("m-0 list-none", { "pl-4": level !== 1 })}>
-      {tree.items.map((item, index) => {
+      {tree.map((item, index) => {
         return (
           <li key={index} className={cn("mt-0 pt-2")}>
             <a
@@ -97,14 +98,18 @@ function Tree({ tree, level = 1, activeItem }: TreeProps) {
               className={cn(
                 "inline-block no-underline",
                 item.url === `#${activeItem}`
-                  ? "font-medium text-primary"
-                  : "text-sm text-muted-foreground"
+                  ? "text-primary font-medium"
+                  : "text-muted-foreground text-sm"
               )}
             >
               {item.title}
             </a>
             {item.items?.length ? (
-              <Tree tree={item} level={level + 1} activeItem={activeItem} />
+              <Tree
+                tree={item.items}
+                level={level + 1}
+                activeItem={activeItem}
+              />
             ) : null}
           </li>
         )

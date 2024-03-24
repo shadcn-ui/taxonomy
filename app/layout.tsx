@@ -44,10 +44,6 @@ export const metadata = {
     },
   ],
   creator: "shadcn",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -71,13 +67,20 @@ export const metadata = {
   manifest: `${siteConfig.url}/site.webmanifest`,
 }
 
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+}
+
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "bg-background min-h-screen font-sans antialiased",
           fontSans.variable,
           fontHeading.variable
         )}
