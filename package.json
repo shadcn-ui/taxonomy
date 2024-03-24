@@ -114,7 +114,7 @@
     "typescript": "^5.4.2",
     "unist-util-visit": "^5.0.0",
     "vaul": "^0.9.0",
-    "velite": "0.1.0-beta.11",
+    "velite": "0.1.0-beta.13",
     "zod": "^3.22.4"
   }
 }
