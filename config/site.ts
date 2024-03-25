@@ -1,13 +1,13 @@
 import { SiteConfig } from "types"
 
 export const siteConfig: SiteConfig = {
-  name: "Taxonomy",
-  description:
-    "An open source application built using the new router, server components and everything new in Next.js 13.",
-  url: "https://tx.shadcn.com",
-  ogImage: "https://tx.shadcn.com/og.jpg",
+  name: "Berachain Blogs",
+  description: "A place for everything Berachain.",
+  url: "https://berachain.com",
+  ogImage:
+    "https://res.cloudinary.com/duv0g402y/image/upload/f_auto,q_auto/v1/newFoundation/snhokrdrpoyupb9jt0ik",
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/taxonomy",
+    twitter: "https://twitter.com/berachain",
+    github: "https://github.com/berachain",
   },
 }

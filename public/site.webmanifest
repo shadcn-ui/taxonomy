@@ -1,14 +1,14 @@
 {
-  "name": "Taxonomy",
-  "short_name": "Taxonomy",
+  "name": "Berachain Blogs",
+  "short_name": "Blogs",
   "icons": [
     {
-      "src": "/android-chrome-192x192.png",
+      "src": "https://res.cloudinary.com/duv0g402y/image/upload/f_auto,q_auto/v1/newFoundation/snhokrdrpoyupb9jt0ik",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-512x512.png",
+      "src": "https://res.cloudinary.com/duv0g402y/image/upload/f_auto,q_auto/v1/newFoundation/snhokrdrpoyupb9jt0ik",
       "sizes": "512x512",
       "type": "image/png"
     }

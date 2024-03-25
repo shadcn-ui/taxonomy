@@ -40,7 +40,7 @@ export const metadata = {
   authors: [
     {
       name: "shadcn",
-      url: "https://shadcn.com",
+      url: "https://berachain.com",
     },
   ],
   creator: "shadcn",
@@ -60,11 +60,13 @@ export const metadata = {
     card: "summary_large_image",
     title: siteConfig.name,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/og.jpg`],
+    images: [
+      "https://res.cloudinary.com/duv0g402y/image/upload/f_auto,q_auto/v1/newFoundation/snhokrdrpoyupb9jt0ik",
+    ],
     creator: "@shadcn",
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "https://res.cloudinary.com/duv0g402y/image/upload/f_auto,q_auto/v1/newFoundation/snhokrdrpoyupb9jt0ik",
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
