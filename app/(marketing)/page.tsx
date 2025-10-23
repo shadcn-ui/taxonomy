@@ -1,19 +1,24 @@
 import Link from "next/link"
 
-import { env } from "@/env.mjs"
+import { env, isEnvVarSet } from "@/env.mjs"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 
 async function getGitHubStars(): Promise<string | null> {
   try {
+    const headers: Record<string, string> = {
+      Accept: "application/vnd.github+json",
+    }
+
+    if (isEnvVarSet("GITHUB_ACCESS_TOKEN")) {
+      headers.Authorization = `Bearer ${env.GITHUB_ACCESS_TOKEN}`
+    }
+
     const response = await fetch(
       "https://api.github.com/repos/shadcn/taxonomy",
       {
-        headers: {
-          Accept: "application/vnd.github+json",
-          Authorization: `Bearer ${env.GITHUB_ACCESS_TOKEN}`,
-        },
+        headers,
         next: {
           revalidate: 60,
         },
