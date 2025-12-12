@@ -38,3 +38,7 @@ next-env.d.ts
 
 .vscode
 .contentlayer
+
+# Clacc-specific files (machine-specific configuration)
+.clacc/
+init.sh

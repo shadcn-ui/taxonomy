@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "clacc": {
+      "command": "npx",
+      "args": [
+        "tsx",
+        "/Users/DivByZero/Code/app_maker_web/web/lib/mcp-server/index.ts",
+        "--app-id",
+        "taxonomy",
+        "--milestone-id",
+        "cmj2mj1mn000112etre2ckbez",
+        "--user-id",
+        "cmj1dcwl20000j6unfj2y5e1a"
+      ]
+    }
+  }
+}
