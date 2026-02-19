@@ -3,6 +3,7 @@ import * as z from "zod"
 
 import { authOptions } from "@/lib/auth"
 import { db } from "@/lib/db"
+import { generateSlug } from "@/lib/enrichr"
 import { RequiresProPlanError } from "@/lib/exceptions"
 import { getUserSubscriptionPlan } from "@/lib/subscription"
 
@@ -77,7 +78,11 @@ export async function POST(req: Request) {
       },
     })
 
-    return new Response(JSON.stringify(post))
+    // Generate a URL-safe slug from the title (Unicode-aware, handles accents/emoji).
+    // Requires ENRICHR_API_KEY in .env — skipped silently if not set.
+    const slug = await generateSlug(body.title)
+
+    return new Response(JSON.stringify({ ...post, slug }))
   } catch (error) {
     if (error instanceof z.ZodError) {
       return new Response(JSON.stringify(error.issues), { status: 422 })
