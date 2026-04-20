@@ -4,7 +4,7 @@ import { env } from "@/env.mjs"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
-
+import { Icons } from "@/components/icons"
 async function getGitHubStars(): Promise<string | null> {
   try {
     const response = await fetch(
@@ -41,10 +41,10 @@ export default async function IndexPage() {
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <Link
             href={siteConfig.links.twitter}
-            className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium"
+            className="rounded-2xl flex gap-2 bg-muted px-4 py-1.5 text-sm font-medium"
             target="_blank"
           >
-            Follow along on Twitter
+           <span>Follow along on Twitter</span> <Icons.twitter /> 
           </Link>
           <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
             An example app built using Next.js 13 server components.
