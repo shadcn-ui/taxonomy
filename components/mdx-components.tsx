@@ -1,5 +1,5 @@
 import * as React from "react"
-import Image from "next/image"
+import Image, { ImageProps } from "next/image"
 import { useMDXComponent } from "next-contentlayer/hooks"
 
 import { cn } from "@/lib/utils"
@@ -91,14 +91,7 @@ const components = {
       {...props}
     />
   ),
-  img: ({
-    className,
-    alt,
-    ...props
-  }: React.ImgHTMLAttributes<HTMLImageElement>) => (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img className={cn("rounded-md border", className)} alt={alt} {...props} />
-  ),
+  Image: (props: ImageProps) => <Image {...props} />,
   hr: ({ ...props }) => <hr className="my-4 md:my-8" {...props} />,
   table: ({ className, ...props }: React.HTMLAttributes<HTMLTableElement>) => (
     <div className="my-6 w-full overflow-y-auto">
@@ -147,7 +140,6 @@ const components = {
       {...props}
     />
   ),
-  Image,
   Callout,
   Card: MdxCard,
 }
