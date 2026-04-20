@@ -41,7 +41,7 @@ This project as an experiment to see how a modern app (with features like authen
 - [x] ~Subscriptions using Stripe~
 - [x] ~Responsive styles~
 - [x] ~Add OG image for blog using @vercel/og~
-- [x] Dark mode
+- [x] ~Dark mode~
 
 ## Known Issues
 
