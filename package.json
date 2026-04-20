@@ -13,7 +13,8 @@
     "start": "next start",
     "lint": "next lint",
     "preview": "next build && next start",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "docker-dev": "./docker-run.sh"
   },
   "dependencies": {
     "@editorjs/code": "^2.8.0",
