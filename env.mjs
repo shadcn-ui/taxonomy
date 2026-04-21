@@ -1,3 +1,6 @@
+// IMPORTANT: Set NEXTAUTH_URL to your local or production domain to avoid 405 errors and authentication issues.
+// For local dev: NEXTAUTH_URL=http://localhost:3000
+// For prod:     NEXTAUTH_URL=https://yourdomain.com
 import { createEnv } from "@t3-oss/env-nextjs"
 import { z } from "zod"
 
