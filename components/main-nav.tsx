@@ -40,6 +40,7 @@ export function MainNav({ items, children }: MainNavProps) {
                   : "text-foreground/60",
                 item.disabled && "cursor-not-allowed opacity-80"
               )}
+              onClick={()=> setShowMobileMenu(false)} 
             >
               {item.title}
             </Link>
