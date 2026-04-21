@@ -23,7 +23,7 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
       <DropdownMenuTrigger>
         <UserAvatar
           user={{ name: user.name || null, image: user.image || null }}
-          className="h-8 w-8"
+          className="size-8"
         />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -31,7 +31,7 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
           <div className="flex flex-col space-y-1 leading-none">
             {user.name && <p className="font-medium">{user.name}</p>}
             {user.email && (
-              <p className="w-[200px] truncate text-sm text-muted-foreground">
+              <p className="text-muted-foreground w-[200px] truncate text-sm">
                 {user.email}
               </p>
             )}

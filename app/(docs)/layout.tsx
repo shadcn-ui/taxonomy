@@ -15,7 +15,7 @@ interface DocsLayoutProps {
 export default function DocsLayout({ children }: DocsLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="sticky top-0 z-40 w-full border-b bg-background">
+      <header className="bg-background sticky top-0 z-40 w-full border-b">
         <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
           <MainNav items={docsConfig.mainNav}>
             <DocsSidebarNav items={docsConfig.sidebarNav} />
@@ -30,7 +30,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
                 target="_blank"
                 rel="noreferrer"
               >
-                <Icons.gitHub className="h-7 w-7" />
+                <Icons.gitHub className="size-7" />
                 <span className="sr-only">GitHub</span>
               </Link>
             </nav>
