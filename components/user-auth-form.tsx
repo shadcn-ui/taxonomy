@@ -34,20 +34,37 @@ export function UserAuthForm({ className, ...props }: UserAuthFormProps) {
   async function onSubmit(data: FormData) {
     setIsLoading(true)
 
-    const signInResult = await signIn("email", {
-      email: data.email.toLowerCase(),
-      redirect: false,
-      callbackUrl: searchParams?.get("from") || "/dashboard",
-    })
+    let signInResult: any = null;
+    try {
+      signInResult = await signIn("email", {
+        email: data.email.toLowerCase(),
+        redirect: false,
+        callbackUrl: searchParams?.get("from") || "/dashboard",
+      });
+    } catch (err) {
+      setIsLoading(false);
+      return toast({
+        title: "Something went wrong.",
+        description: "Could not reach the authentication server. Please try again later.",
+        variant: "destructive",
+      });
+    }
 
     setIsLoading(false)
 
-    if (!signInResult?.ok) {
+    // Handle empty or invalid response
+    if (!signInResult || signInResult.error || !signInResult.ok) {
+      let description = "Your sign in request failed. Please try again.";
+      if (signInResult && signInResult.error === "Callback") {
+        description = "Authentication server returned an error. Please check your configuration or try again later.";
+      } else if (signInResult && signInResult.status === 405) {
+        description = "Authentication method not allowed. Please contact support or try again later.";
+      }
       return toast({
         title: "Something went wrong.",
-        description: "Your sign in request failed. Please try again.",
+        description,
         variant: "destructive",
-      })
+      });
     }
 
     return toast({
