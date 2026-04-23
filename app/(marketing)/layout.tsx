@@ -22,7 +22,7 @@ export default async function MarketingLayout({
             <Link
               href="/login"
               className={cn(
-                buttonVariants({ variant: "secondary", size: "sm" }),
+                buttonVariants({ variant: "outline", size: "sm" }),
                 "px-4"
               )}
             >
