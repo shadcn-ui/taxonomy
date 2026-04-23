@@ -147,7 +147,9 @@ const components = {
       {...props}
     />
   ),
-  Image,
+  Image: (props: React.ComponentProps<typeof Image>) => (
+    <Image {...props} alt={props.alt} />
+  ),
   Callout,
   Card: MdxCard,
 }
