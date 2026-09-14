@@ -61,6 +61,7 @@ export function PostCreateButton({
     <button
       onClick={onClick}
       className={cn(
+        "shrink-0",
         buttonVariants({ variant }),
         {
           "cursor-not-allowed opacity-60": isLoading,
